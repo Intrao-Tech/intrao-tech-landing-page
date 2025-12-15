@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/sections/HeroSection";
+import StatsSection from "@/components/sections/StatsSection";
 import ClientsSection from "@/components/sections/ClientsSection";
 import ChallengesSection from "@/components/sections/ChallengesSection";
 import ServicesSection from "@/components/sections/ServicesSection";
@@ -31,17 +32,16 @@ const Index = () => {
       
       <main>
         <HeroSection />
-        <div className="relative z-10 bg-background">
-          <ClientsSection />
-          <ChallengesSection />
-          <ServicesSection />
-          <CasesSection />
-          <ExpertiseSection />
-          <TeamSection />
-          <WhyUsSection />
-          <TestimonialsSection />
-          <ContactFormSection />
-        </div>
+        <StatsSection />
+        <ClientsSection />
+        <ChallengesSection />
+        <ServicesSection />
+        <CasesSection />
+        <ExpertiseSection />
+        <TeamSection />
+        <WhyUsSection />
+        <TestimonialsSection />
+        <ContactFormSection />
       </main>
 
       <Footer />
