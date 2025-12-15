@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ArrowUpRight } from "lucide-react";
-import logoFull from "@/assets/logo-full.jpg";
+import logoFull from "@/assets/logo.svg";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -51,7 +51,7 @@ const Header = () => {
               <img
                 src={logoFull}
                 alt="Intrao Tech"
-                className="h-8 md:h-10 w-auto object-contain"
+                className="h-8 w-auto object-contain"
               />
             </motion.div>
           </Link>

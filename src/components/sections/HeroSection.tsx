@@ -5,12 +5,6 @@ import { ArrowRight } from "lucide-react";
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen bg-dark text-dark-foreground flex items-center overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-1/4 -right-1/4 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[120px]" />
-        <div className="absolute bottom-1/4 -left-1/4 w-[400px] h-[400px] bg-primary/10 rounded-full blur-[100px]" />
-      </div>
-
       <div className="container mx-auto px-6 pt-32 pb-20 relative z-10">
         {/* Subtitle */}
         <motion.p
@@ -68,18 +62,6 @@ const HeroSection = () => {
             <h3 className="text-xl md:text-2xl lg:text-3xl font-medium leading-relaxed">
               From MVP to market domination – your reliable partner in UI/UX design and web development
             </h3>
-          </div>
-          
-          {/* Scroll Indicator */}
-          <div className="flex items-center gap-4">
-            <span className="text-sm text-dark-muted uppercase tracking-wider">Scroll</span>
-            <motion.div
-              animate={{ y: [0, 8, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-              className="w-6 h-10 border border-dark-muted rounded-full flex items-start justify-center p-2"
-            >
-              <div className="w-1 h-2 bg-dark-foreground rounded-full" />
-            </motion.div>
           </div>
         </motion.div>
       </div>
