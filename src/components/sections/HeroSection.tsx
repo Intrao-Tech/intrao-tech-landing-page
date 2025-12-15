@@ -43,14 +43,14 @@ const HeroSection = () => {
         >
           <Link
             to="/contacts"
-            className="group inline-flex items-center justify-center gap-3 bg-primary text-primary-foreground px-8 py-5 text-sm font-semibold uppercase tracking-wider transition-all duration-300 hover:bg-primary/90"
+            className="group inline-flex items-center justify-center gap-3 bg-primary text-primary-foreground px-8 py-5 rounded-full text-sm font-semibold uppercase tracking-wider transition-all duration-300 hover:bg-primary/90"
           >
             Let's Talk
             <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
           </Link>
           <Link
             to="/cases"
-            className="group inline-flex items-center justify-center gap-3 border border-dark-muted text-dark-foreground px-8 py-5 text-sm font-semibold uppercase tracking-wider transition-all duration-300 hover:bg-dark-foreground hover:text-dark"
+            className="group inline-flex items-center justify-center gap-3 border border-dark-muted text-dark-foreground px-8 py-5 rounded-full text-sm font-semibold uppercase tracking-wider transition-all duration-300 hover:bg-dark-foreground hover:text-dark"
           >
             View Our Cases
             <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
