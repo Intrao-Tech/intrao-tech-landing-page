@@ -88,7 +88,7 @@ const Header = () => {
           >
             <Link
               to="/contacts"
-              className="group flex items-center gap-2 border border-dark-muted px-6 py-3 text-sm font-semibold uppercase tracking-wider text-dark-foreground transition-all duration-300 hover:bg-dark-foreground hover:text-dark rounded-full"
+              className="group flex items-center gap-2 border border-dark-muted px-6 py-3 text-sm font-semibold uppercase tracking-wider text-dark-foreground transition-all duration-300 hover:bg-dark-foreground hover:text-dark rounded-xl"
             >
               Get in Touch
               <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
@@ -149,7 +149,7 @@ const Header = () => {
                 >
                   <Link
                     to="/contacts"
-                    className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-full text-sm font-semibold uppercase tracking-wider"
+                    className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-xl text-sm font-semibold uppercase tracking-wider"
                   >
                     Get in Touch
                     <ArrowUpRight className="w-4 h-4" />
