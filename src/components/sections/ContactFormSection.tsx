@@ -26,7 +26,7 @@ const ContactFormSection = () => {
   };
 
   return (
-    <section id="contact-form" className="bg-background text-foreground py-24 lg:py-32">
+    <section id="contact-form" className="bg-dark text-dark-foreground py-24 lg:py-32">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
           {/* Form */}
@@ -44,7 +44,7 @@ const ContactFormSection = () => {
 
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label className="text-sm text-muted-foreground mb-2 block">
+                <label className="text-sm text-dark-muted mb-2 block">
                   Your Name
                 </label>
                 <input
@@ -55,12 +55,12 @@ const ContactFormSection = () => {
                   }
                   placeholder="Enter your name"
                   required
-                  className="w-full bg-transparent border-b border-border py-4 text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors duration-300"
+                  className="w-full bg-transparent border-b border-dark-muted/30 py-4 text-dark-foreground placeholder:text-dark-muted focus:outline-none focus:border-primary transition-colors duration-300"
                 />
               </div>
 
               <div>
-                <label className="text-sm text-muted-foreground mb-2 block">
+                <label className="text-sm text-dark-muted mb-2 block">
                   Your Email
                 </label>
                 <input
@@ -71,12 +71,12 @@ const ContactFormSection = () => {
                   }
                   placeholder="Enter your email"
                   required
-                  className="w-full bg-transparent border-b border-border py-4 text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors duration-300"
+                  className="w-full bg-transparent border-b border-dark-muted/30 py-4 text-dark-foreground placeholder:text-dark-muted focus:outline-none focus:border-primary transition-colors duration-300"
                 />
               </div>
 
               <div>
-                <label className="text-sm text-muted-foreground mb-2 block">
+                <label className="text-sm text-dark-muted mb-2 block">
                   Message
                 </label>
                 <textarea
@@ -86,12 +86,12 @@ const ContactFormSection = () => {
                   }
                   placeholder="Tell us about your project"
                   rows={4}
-                  className="w-full bg-transparent border-b border-border py-4 text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors duration-300 resize-none"
+                  className="w-full bg-transparent border-b border-dark-muted/30 py-4 text-dark-foreground placeholder:text-dark-muted focus:outline-none focus:border-primary transition-colors duration-300 resize-none"
                 />
               </div>
 
               <div>
-                <label className="text-sm text-muted-foreground mb-4 block">
+                <label className="text-sm text-dark-muted mb-4 block">
                   Your budget for this project?
                 </label>
                 <div className="flex flex-wrap gap-3">
@@ -103,7 +103,7 @@ const ContactFormSection = () => {
                       className={`px-6 py-3 rounded-xl text-sm transition-all duration-300 ${
                         formData.budget === option
                           ? "bg-primary text-primary-foreground"
-                          : "border border-border text-muted-foreground hover:text-foreground hover:border-foreground"
+                          : "border border-dark-muted/30 text-dark-muted hover:text-dark-foreground hover:border-dark-foreground"
                       }`}
                     >
                       {option}
@@ -130,8 +130,8 @@ const ContactFormSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="lg:pl-12"
           >
-            <div className="border border-border p-8 lg:p-10 h-full">
-              <h3 className="text-xl font-semibold mb-8">
+            <div className="border border-dark-muted/30 p-8 lg:p-10 h-full">
+              <h3 className="text-xl font-semibold mb-8 text-dark-foreground">
                 Have a project to discuss?
               </h3>
 
@@ -164,12 +164,12 @@ const ContactFormSection = () => {
                   </div>
                 </div>
 
-                <div className="border-t border-border pt-8">
-                  <h4 className="text-sm text-muted-foreground uppercase tracking-wider mb-4">
+                <div className="border-t border-dark-muted/30 pt-8">
+                  <h4 className="text-sm text-dark-muted uppercase tracking-wider mb-4">
                     Have a partnership in mind?
                   </h4>
                   <div className="flex items-start gap-4">
-                    <div className="w-16 h-16 bg-muted rounded-full overflow-hidden flex-shrink-0">
+                    <div className="w-16 h-16 bg-dark-muted/20 rounded-full overflow-hidden flex-shrink-0">
                       <img
                         src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&h=200&fit=crop"
                         alt="Founder"
@@ -177,11 +177,11 @@ const ContactFormSection = () => {
                       />
                     </div>
                     <div>
-                      <p className="font-semibold">Co-Founder</p>
+                      <p className="font-semibold text-dark-foreground">Co-Founder</p>
                       <div className="flex items-center gap-2 mt-2">
                         <a
                           href="#"
-                          className="w-8 h-8 border border-border rounded-full flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-all duration-300"
+                          className="w-8 h-8 border border-dark-muted/30 rounded-full flex items-center justify-center text-dark-muted hover:text-primary hover:border-primary transition-all duration-300"
                         >
                           <Linkedin className="w-4 h-4" />
                         </a>
