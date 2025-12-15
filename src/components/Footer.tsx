@@ -28,9 +28,9 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-dark text-dark-foreground">
+    <footer className="bg-background text-foreground">
       {/* CTA Section */}
-      <div className="border-b border-dark-muted/20">
+      <div className="border-b border-border">
         <div className="container mx-auto px-6 py-20">
           <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
             <motion.div
@@ -53,7 +53,7 @@ const Footer = () => {
             >
               <Link
                 to="/contacts"
-                className="group inline-flex items-center gap-3 bg-primary text-primary-foreground px-10 py-5 rounded-xl text-sm font-semibold uppercase tracking-wider transition-all duration-300 hover:bg-primary/90"
+                className="group inline-flex items-center gap-3 bg-dark text-dark-foreground px-10 py-5 rounded-xl text-sm font-semibold uppercase tracking-wider transition-all duration-300 hover:bg-dark/90"
               >
                 Contact Us
                 <ArrowUpRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
@@ -75,12 +75,12 @@ const Footer = () => {
                 className="h-10 w-auto object-contain"
               />
             </Link>
-            <p className="text-dark-muted text-sm leading-relaxed mb-6">
+            <p className="text-muted-foreground text-sm leading-relaxed mb-6">
               We're a web development agency helping startups and businesses launch, scale, and succeed in the digital world.
             </p>
             <a
               href="mailto:hello@intrao.tech"
-              className="inline-flex items-center gap-2 text-dark-foreground hover:text-primary transition-colors duration-300"
+              className="inline-flex items-center gap-2 text-foreground hover:text-primary transition-colors duration-300"
             >
               <Mail className="w-4 h-4" />
               hello@intrao.tech
@@ -97,7 +97,7 @@ const Footer = () => {
                 <li key={link.name}>
                   <Link
                     to={link.href}
-                    className="text-dark-muted hover:text-dark-foreground transition-colors duration-300"
+                    className="text-muted-foreground hover:text-foreground transition-colors duration-300"
                   >
                     {link.name}
                   </Link>
@@ -116,7 +116,7 @@ const Footer = () => {
                 <li key={link.name}>
                   <Link
                     to={link.href}
-                    className="text-dark-muted hover:text-dark-foreground transition-colors duration-300"
+                    className="text-muted-foreground hover:text-foreground transition-colors duration-300"
                   >
                     {link.name}
                   </Link>
@@ -136,7 +136,7 @@ const Footer = () => {
                   key={social.label}
                   href={social.href}
                   aria-label={social.label}
-                  className="w-10 h-10 border border-dark-muted/30 rounded-full flex items-center justify-center text-dark-muted hover:text-primary hover:border-primary transition-all duration-300"
+                  className="w-10 h-10 border border-border rounded-full flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-all duration-300"
                 >
                   <social.icon className="w-4 h-4" />
                 </a>
@@ -146,20 +146,20 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-16 pt-8 border-t border-dark-muted/20 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-dark-muted text-sm">
+        <div className="mt-16 pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-muted-foreground text-sm">
             © {currentYear} Intrao Tech. All rights reserved.
           </p>
-          <div className="flex gap-6 text-sm text-dark-muted">
+          <div className="flex gap-6 text-sm text-muted-foreground">
             <Link
               to="/privacy"
-              className="hover:text-dark-foreground transition-colors duration-300"
+              className="hover:text-foreground transition-colors duration-300"
             >
               Privacy Policy
             </Link>
             <Link
               to="/terms"
-              className="hover:text-dark-foreground transition-colors duration-300"
+              className="hover:text-foreground transition-colors duration-300"
             >
               Terms of Service
             </Link>
