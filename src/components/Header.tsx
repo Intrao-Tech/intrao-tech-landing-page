@@ -149,7 +149,7 @@ const Header = () => {
                 >
                   <Link
                     to="/contacts"
-                    className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 text-sm font-semibold uppercase tracking-wider"
+                    className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-full text-sm font-semibold uppercase tracking-wider"
                   >
                     Get in Touch
                     <ArrowUpRight className="w-4 h-4" />
