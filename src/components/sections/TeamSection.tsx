@@ -3,84 +3,167 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
 const TeamSection = () => {
-  const teamImages = [
-    "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop",
-    "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop",
-    "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop",
-    "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop",
-    "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
-    "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
+  // Team photos with different sizes for asymmetric grid
+  const teamPhotos = [
+    {
+      src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=800&fit=crop",
+      alt: "Team working together",
+      size: "tall", // spans 2 rows
+    },
+    {
+      src: "https://images.unsplash.com/photo-1543269865-cbf427effbad?w=600&h=400&fit=crop",
+      alt: "Team collaboration",
+      size: "wide", // spans 2 columns
+    },
+    {
+      src: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=400&h=400&fit=crop",
+      alt: "Office work",
+      size: "normal",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=400&fit=crop",
+      alt: "Team meeting",
+      size: "normal",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=400&h=500&fit=crop",
+      alt: "Team discussion",
+      size: "normal",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=400&h=500&fit=crop",
+      alt: "Team event",
+      size: "normal",
+    },
   ];
 
   return (
     <section className="bg-background text-foreground py-24 lg:py-32 overflow-hidden">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Content */}
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="max-w-3xl mb-16"
+        >
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-8">
+            Meet the team driving your product's success
+          </h2>
+          <p className="text-muted-foreground text-lg leading-relaxed">
+            Established in 2019, Intrao Tech was built with one goal—to become the leading digital product design agency for startups looking to launch, scale, and innovate. Our team of strategists, designers, developers, and product experts spans Canada, the U.S., Ukraine, Poland, Estonia, and Switzerland, bringing global expertise to every project.
+          </p>
+        </motion.div>
+
+        {/* Photo Grid - Asymmetric Bento Layout */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 auto-rows-[200px]">
+          {/* Row 1 */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="row-span-2 rounded-2xl overflow-hidden"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6">
-              Meet the team driving
-              <br />
-              <span className="text-primary">your product's success</span>
-            </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-8 max-w-lg">
-              Established with one goal—to become the leading digital product design agency for businesses looking to launch, scale, and innovate. Our team of strategists, designers, developers, and product experts brings global expertise to every project.
-            </p>
-
-            <div className="flex items-center gap-8 mb-8">
-              <div>
-                <div className="text-4xl font-bold text-primary">50+</div>
-                <p className="text-sm text-muted-foreground">Team members</p>
-              </div>
-              <div className="w-px h-12 bg-border" />
-              <div>
-                <div className="text-4xl font-bold text-primary">5+</div>
-                <p className="text-sm text-muted-foreground">Countries</p>
-              </div>
-            </div>
-
-            <Link
-              to="/about"
-              className="inline-flex items-center gap-2 border border-foreground text-foreground px-8 py-4 text-sm font-semibold uppercase tracking-wider transition-all duration-300 hover:bg-foreground hover:text-background"
-            >
-              Learn More
-              <ArrowRight className="w-4 h-4" />
-            </Link>
+            <img
+              src={teamPhotos[0].src}
+              alt={teamPhotos[0].alt}
+              className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+            />
           </motion.div>
 
-          {/* Team Grid */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="grid grid-cols-3 gap-4"
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="row-span-2 rounded-2xl overflow-hidden"
           >
-            {teamImages.map((image, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                className={`relative overflow-hidden ${
-                  index % 3 === 1 ? "mt-8" : ""
-                }`}
-              >
-                <div className="aspect-square">
-                  <img
-                    src={image}
-                    alt={`Team member ${index + 1}`}
-                    className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
-                  />
-                </div>
-              </motion.div>
-            ))}
+            <img
+              src={teamPhotos[1].src}
+              alt={teamPhotos[1].alt}
+              className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+            />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="col-span-2 row-span-2 rounded-2xl overflow-hidden hidden md:block"
+          >
+            <img
+              src={teamPhotos[2].src}
+              alt={teamPhotos[2].alt}
+              className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+            />
+          </motion.div>
+
+          {/* Row 2 */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="rounded-2xl overflow-hidden"
+          >
+            <img
+              src={teamPhotos[3].src}
+              alt={teamPhotos[3].alt}
+              className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+            />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className="rounded-2xl overflow-hidden"
+          >
+            <img
+              src={teamPhotos[4].src}
+              alt={teamPhotos[4].alt}
+              className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+            />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+            className="rounded-2xl overflow-hidden"
+          >
+            <img
+              src={teamPhotos[5].src}
+              alt={teamPhotos[5].alt}
+              className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+            />
+          </motion.div>
+
+          {/* Stats Card */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.7 }}
+            className="bg-muted/50 rounded-2xl p-8 flex flex-col justify-between"
+          >
+            <div>
+              <h3 className="text-3xl md:text-4xl font-bold leading-tight">
+                50+ team members
+              </h3>
+            </div>
+            <Link
+              to="/about"
+              className="inline-flex items-center gap-2 text-foreground font-semibold uppercase text-sm tracking-wider group mt-auto"
+            >
+              Learn More
+              <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+            </Link>
           </motion.div>
         </div>
       </div>
