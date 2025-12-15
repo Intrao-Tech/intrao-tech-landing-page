@@ -1,36 +1,35 @@
 import { motion } from "framer-motion";
-import { CheckCircle } from "lucide-react";
 
 const WhyUsSection = () => {
   const reasons = [
     {
-      title: "Design that meets regulation",
-      subtitle: "GDPR-certified expertise",
+      label: "Design that meets regulation",
+      title: "HIPAA- and GDPR-certified expertise for Healthcare and beyond.",
       description:
-        "We've gained GDPR certifications and industry recognition, delivering hundreds of products in Healthcare, SaaS, FinTech, and EdTech — where compliance and UX go hand in hand.",
+        "Since 2019, we've gained HIPAA and GDPR certifications and industry recognition, delivering hundreds of products in Healthcare, SaaS, FinTech, and EdTech — where compliance and UX go hand in hand.",
     },
     {
-      title: "Design that lasts beyond trends",
-      subtitle: "We don't chase fads",
+      label: "Design that lasts beyond trends",
+      title: "We don't chase fads. We build digital products that stay relevant.",
       description:
         "Our work looks sharp today and stays usable tomorrow — designed around long-term value, not short-term gimmicks. Scalable systems, brand consistency, and smart UX that grows with your product.",
     },
     {
-      title: "Design that's developer-ready",
-      subtitle: "We design for implementation",
+      label: "Design that's developer-ready",
+      title: "We design for implementation, not handoff.",
       description:
         "Every component is built with devs in mind: design tokens, accessibility, reusability, and real-world constraints. We collaborate with your team and stay involved until everything's live.",
     },
     {
-      title: "Local presence. Global delivery",
-      subtitle: "Work directly with the doers",
+      label: "Local presence. Global delivery",
+      title: "Work directly with the doers — not a chain of account managers.",
       description:
         "Collaborate with UX strategists globally, while our senior design and development teams deliver fast, consistent results. We integrate into your tools and workflow, working as part of your team.",
     },
   ];
 
   return (
-    <section className="bg-dark text-dark-foreground py-24 lg:py-32">
+    <section className="bg-background text-foreground py-24 lg:py-32">
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <motion.div
@@ -40,36 +39,34 @@ const WhyUsSection = () => {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+          <p className="text-muted-foreground text-sm uppercase tracking-[0.2em] mb-4">
+            Why choose us?
+          </p>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
             Your success is our priority
           </h2>
         </motion.div>
 
-        {/* Reasons Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+        {/* Reasons Grid - 2x2 layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {reasons.map((reason, index) => (
             <motion.div
-              key={reason.title}
+              key={reason.label}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="group"
+              className="bg-muted/50 rounded-2xl p-8 lg:p-12 flex flex-col"
             >
-              <div className="border border-dark-muted/30 p-8 lg:p-10 h-full transition-all duration-500 hover:border-primary/50">
-                <div className="flex items-start gap-4 mb-4">
-                  <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                  <div>
-                    <h3 className="text-xl md:text-2xl font-semibold group-hover:text-primary transition-colors duration-300">
-                      {reason.title}
-                    </h3>
-                    <p className="text-primary text-sm mt-1">{reason.subtitle}</p>
-                  </div>
-                </div>
-                <p className="text-dark-muted leading-relaxed pl-10">
-                  {reason.description}
-                </p>
-              </div>
+              <p className="text-muted-foreground text-xs uppercase tracking-[0.15em] mb-6">
+                {reason.label}
+              </p>
+              <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold leading-tight mb-8">
+                {reason.title}
+              </h3>
+              <p className="text-muted-foreground leading-relaxed mt-auto">
+                {reason.description}
+              </p>
             </motion.div>
           ))}
         </div>
