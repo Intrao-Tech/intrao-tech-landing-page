@@ -38,7 +38,7 @@ const TeamSection = () => {
   ];
 
   return (
-    <section className="bg-background text-foreground py-24 lg:py-32 overflow-hidden">
+    <section data-header-theme="light" className="bg-background text-foreground py-24 lg:py-32 overflow-hidden">
       <div className="container mx-auto px-6">
         {/* Header */}
         <motion.div

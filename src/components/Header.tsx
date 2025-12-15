@@ -3,11 +3,16 @@ import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 import logoFull from "@/assets/logo.svg";
+import logoFullDark from "@/assets/logo-dark.svg";
+import { useHeaderTheme } from "@/contexts/HeaderThemeContext";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const { theme } = useHeaderTheme();
+
+  const isLight = theme === "light";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,7 +40,9 @@ const Header = () => {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? "bg-dark/95 backdrop-blur-md py-4"
+            ? isLight
+              ? "bg-background/95 backdrop-blur-md py-4"
+              : "bg-dark/95 backdrop-blur-md py-4"
             : "bg-transparent py-6"
         }`}
       >
@@ -49,9 +56,9 @@ const Header = () => {
               className="flex items-center"
             >
               <img
-                src={logoFull}
+                src={isLight ? logoFullDark : logoFull}
                 alt="Intrao Tech"
-                className="h-8 w-auto object-contain"
+                className="h-8 w-auto object-contain transition-opacity duration-300"
               />
             </motion.div>
           </Link>
@@ -70,7 +77,9 @@ const Header = () => {
                   className={`text-sm font-medium uppercase tracking-wider transition-colors duration-300 ${
                     location.pathname === link.href
                       ? "text-primary"
-                      : "text-dark-foreground hover:text-primary"
+                      : isLight
+                        ? "text-foreground hover:text-primary"
+                        : "text-dark-foreground hover:text-primary"
                   }`}
                 >
                   {link.name}
@@ -88,7 +97,11 @@ const Header = () => {
           >
             <Link
               to="/contacts"
-              className="group flex items-center gap-2 border border-dark-muted px-8 py-4 text-sm font-semibold uppercase tracking-wider text-dark-foreground transition-all duration-300 hover:bg-dark-foreground hover:text-dark rounded-xl"
+              className={`group flex items-center gap-2 border px-8 py-4 text-sm font-semibold uppercase tracking-wider transition-all duration-300 rounded-xl ${
+                isLight
+                  ? "border-muted-foreground text-foreground hover:bg-foreground hover:text-background"
+                  : "border-dark-muted text-dark-foreground hover:bg-dark-foreground hover:text-dark"
+              }`}
             >
               Get in Touch
               <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
@@ -98,7 +111,13 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden relative z-50 text-dark-foreground p-2"
+            className={`lg:hidden relative z-50 p-2 transition-colors duration-300 ${
+              isMobileMenuOpen
+                ? "text-dark-foreground"
+                : isLight
+                  ? "text-foreground"
+                  : "text-dark-foreground"
+            }`}
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? (

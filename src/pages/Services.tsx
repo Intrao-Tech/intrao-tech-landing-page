@@ -101,7 +101,7 @@ const Services = () => {
 
       <main>
         {/* Hero Section */}
-        <section className="bg-dark text-dark-foreground pt-32 pb-20">
+        <section data-header-theme="dark" className="bg-dark text-dark-foreground pt-32 pb-20">
           <div className="container mx-auto px-6">
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -134,7 +134,7 @@ const Services = () => {
         </section>
 
         {/* Services Grid */}
-        <section className="bg-background text-foreground py-24">
+        <section data-header-theme="light" className="bg-background text-foreground py-24">
           <div className="container mx-auto px-6">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
@@ -180,7 +180,7 @@ const Services = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="bg-dark text-dark-foreground py-24">
+        <section data-header-theme="dark" className="bg-dark text-dark-foreground py-24">
           <div className="container mx-auto px-6 text-center">
             <motion.h2
               initial={{ opacity: 0, y: 30 }}

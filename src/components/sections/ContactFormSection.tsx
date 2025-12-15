@@ -26,7 +26,7 @@ const ContactFormSection = () => {
   };
 
   return (
-    <section id="contact-form" className="bg-dark text-dark-foreground py-24 lg:py-32">
+    <section id="contact-form" data-header-theme="dark" className="bg-dark text-dark-foreground py-24 lg:py-32">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
           {/* Form */}

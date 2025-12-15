@@ -29,7 +29,7 @@ const TestimonialsSection = () => {
   ];
 
   return (
-    <section className="bg-background text-foreground py-24 lg:py-32">
+    <section data-header-theme="light" className="bg-background text-foreground py-24 lg:py-32">
       <div className="container mx-auto px-6">
         {/* Header Row */}
         <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8 mb-16">

@@ -49,7 +49,7 @@ const Contacts = () => {
 
       <main>
         {/* Hero Section */}
-        <section className="bg-dark text-dark-foreground pt-32 pb-20">
+        <section data-header-theme="dark" className="bg-dark text-dark-foreground pt-32 pb-20">
           <div className="container mx-auto px-6">
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -82,7 +82,7 @@ const Contacts = () => {
         </section>
 
         {/* Contact Section */}
-        <section className="bg-background text-foreground py-24">
+        <section data-header-theme="light" className="bg-background text-foreground py-24">
           <div className="container mx-auto px-6">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
               {/* Form */}

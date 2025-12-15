@@ -47,7 +47,7 @@ const CasesSection = () => {
   ];
 
   return (
-    <section className="bg-background text-foreground py-24 lg:py-32">
+    <section data-header-theme="light" className="bg-background text-foreground py-24 lg:py-32">
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <motion.div

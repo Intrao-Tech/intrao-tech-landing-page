@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen bg-dark text-dark-foreground flex items-center overflow-hidden">
+    <section data-header-theme="dark" className="relative min-h-screen bg-dark text-dark-foreground flex items-center overflow-hidden">
       <div className="container mx-auto px-6 pt-32 pb-20 relative z-10">
         {/* Subtitle */}
         <motion.p
