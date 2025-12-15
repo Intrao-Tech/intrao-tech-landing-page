@@ -5,10 +5,10 @@ import StatsSection from "./StatsSection";
 
 const HeroSection = () => {
   return (
-    <div className="relative">
-      {/* Sticky Hero Container */}
-      <div className="sticky top-0 z-0">
-        <section className="relative min-h-screen bg-dark text-dark-foreground flex flex-col overflow-hidden">
+    <div className="relative h-[200vh]">
+      {/* Sticky Hero Container - stays fixed while scrolling */}
+      <div className="sticky top-0 h-screen">
+        <section className="relative h-full bg-dark text-dark-foreground flex flex-col overflow-hidden">
           {/* Background gradient */}
           <div className="absolute inset-0 opacity-30">
             <div className="absolute top-1/4 -right-1/4 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[120px]" />
@@ -92,9 +92,6 @@ const HeroSection = () => {
           <StatsSection />
         </section>
       </div>
-      
-      {/* Spacer to allow scroll overlap effect */}
-      <div className="h-[50vh]" />
     </div>
   );
 };
