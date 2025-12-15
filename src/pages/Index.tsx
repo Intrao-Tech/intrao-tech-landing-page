@@ -31,15 +31,17 @@ const Index = () => {
       
       <main>
         <HeroSection />
-        <ClientsSection />
-        <ChallengesSection />
-        <ServicesSection />
-        <CasesSection />
-        <ExpertiseSection />
-        <TeamSection />
-        <WhyUsSection />
-        <TestimonialsSection />
-        <ContactFormSection />
+        <div className="relative z-10 bg-background">
+          <ClientsSection />
+          <ChallengesSection />
+          <ServicesSection />
+          <CasesSection />
+          <ExpertiseSection />
+          <TeamSection />
+          <WhyUsSection />
+          <TestimonialsSection />
+          <ContactFormSection />
+        </div>
       </main>
 
       <Footer />
