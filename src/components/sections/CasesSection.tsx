@@ -1,6 +1,7 @@
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { useRef } from "react";
 
 const CasesSection = () => {
   const cases = [
@@ -63,75 +64,15 @@ const CasesSection = () => {
           </h2>
         </motion.div>
 
-        {/* Cases */}
-        <div className="space-y-16 lg:space-y-24">
+        {/* Stacking Cases */}
+        <div className="relative">
           {cases.map((caseItem, index) => (
-            <motion.div
+            <StackingCard
               key={caseItem.title}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="group"
-            >
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-                {/* Image */}
-                <div className={`relative overflow-hidden ${index % 2 === 1 ? "lg:order-2" : ""}`}>
-                  <div className="aspect-[4/3] overflow-hidden">
-                    <img
-                      src={caseItem.image}
-                      alt={caseItem.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    />
-                  </div>
-                  <div className="absolute inset-0 bg-primary/0 transition-colors duration-500 group-hover:bg-primary/10" />
-                </div>
-
-                {/* Content */}
-                <div className={index % 2 === 1 ? "lg:order-1" : ""}>
-                  <div className="flex items-center gap-4 mb-4">
-                    <span className="text-sm text-muted-foreground">{caseItem.company}</span>
-                    <span className="w-1 h-1 bg-muted-foreground rounded-full" />
-                    <span className="text-sm text-muted-foreground">{caseItem.location}</span>
-                  </div>
-
-                  <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 group-hover:text-primary transition-colors duration-300">
-                    {caseItem.title}
-                  </h3>
-
-                  <div className="grid grid-cols-2 gap-6 mb-8">
-                    <div>
-                      <p className="text-sm text-muted-foreground mb-1">Tech Stack</p>
-                      <p className="font-medium">{caseItem.techStack}</p>
-                    </div>
-                    <div>
-                      <p className="text-sm text-muted-foreground mb-1">Timeline</p>
-                      <p className="font-medium">{caseItem.timeline}</p>
-                    </div>
-                  </div>
-
-                  <div className="mb-8">
-                    <p className="text-sm text-muted-foreground mb-3">Results</p>
-                    <ul className="space-y-2">
-                      {caseItem.results.map((result, i) => (
-                        <li key={i} className="flex items-center gap-3">
-                          <span className="w-2 h-2 bg-primary rounded-full" />
-                          <span className="font-medium">{result}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <Link
-                    to="/cases"
-                    className="inline-flex items-center gap-2 text-primary font-semibold group/link"
-                  >
-                    Explore
-                    <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover/link:translate-x-1 group-hover/link:-translate-y-1" />
-                  </Link>
-                </div>
-              </div>
-            </motion.div>
+              caseItem={caseItem}
+              index={index}
+              totalCards={cases.length}
+            />
           ))}
         </div>
 
@@ -153,6 +94,129 @@ const CasesSection = () => {
         </motion.div>
       </div>
     </section>
+  );
+};
+
+interface StackingCardProps {
+  caseItem: {
+    title: string;
+    company: string;
+    location: string;
+    techStack: string;
+    timeline: string;
+    results: string[];
+    image: string;
+  };
+  index: number;
+  totalCards: number;
+}
+
+const StackingCard = ({ caseItem, index, totalCards }: StackingCardProps) => {
+  const cardRef = useRef<HTMLDivElement>(null);
+  
+  const { scrollYProgress } = useScroll({
+    target: cardRef,
+    offset: ["start end", "end start"],
+  });
+
+  // Scale down slightly as card scrolls up (creates stacking depth effect)
+  const scale = useTransform(
+    scrollYProgress,
+    [0, 0.5, 1],
+    [0.9, 1, 0.95]
+  );
+
+  // Rotate slightly for depth
+  const rotateX = useTransform(
+    scrollYProgress,
+    [0, 0.5, 1],
+    [5, 0, -2]
+  );
+
+  return (
+    <motion.div
+      ref={cardRef}
+      style={{
+        scale,
+        rotateX,
+        transformPerspective: 1000,
+      }}
+      className="sticky bg-background rounded-3xl shadow-xl mb-8 overflow-hidden"
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.6, delay: index * 0.1 }}
+      // Each card sticks at a slightly different top position to create stacking
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
+      style={{
+        scale,
+        rotateX,
+        transformPerspective: 1000,
+        top: `${100 + index * 40}px`,
+        zIndex: totalCards - index,
+      }}
+    >
+      <div className="group p-8 lg:p-12 bg-muted/30 border border-border rounded-3xl">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+          {/* Image */}
+          <div className={`relative overflow-hidden rounded-2xl ${index % 2 === 1 ? "lg:order-2" : ""}`}>
+            <div className="aspect-[4/3] overflow-hidden rounded-2xl">
+              <img
+                src={caseItem.image}
+                alt={caseItem.title}
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+            </div>
+            <div className="absolute inset-0 bg-primary/0 transition-colors duration-500 group-hover:bg-primary/10 rounded-2xl" />
+          </div>
+
+          {/* Content */}
+          <div className={index % 2 === 1 ? "lg:order-1" : ""}>
+            <div className="flex items-center gap-4 mb-4">
+              <span className="text-sm text-muted-foreground">{caseItem.company}</span>
+              <span className="w-1 h-1 bg-muted-foreground rounded-full" />
+              <span className="text-sm text-muted-foreground">{caseItem.location}</span>
+            </div>
+
+            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 group-hover:text-primary transition-colors duration-300">
+              {caseItem.title}
+            </h3>
+
+            <div className="grid grid-cols-2 gap-6 mb-8">
+              <div>
+                <p className="text-sm text-muted-foreground mb-1">Tech Stack</p>
+                <p className="font-medium">{caseItem.techStack}</p>
+              </div>
+              <div>
+                <p className="text-sm text-muted-foreground mb-1">Timeline</p>
+                <p className="font-medium">{caseItem.timeline}</p>
+              </div>
+            </div>
+
+            <div className="mb-8">
+              <p className="text-sm text-muted-foreground mb-3">Results</p>
+              <ul className="space-y-2">
+                {caseItem.results.map((result, i) => (
+                  <li key={i} className="flex items-center gap-3">
+                    <span className="w-2 h-2 bg-primary rounded-full" />
+                    <span className="font-medium">{result}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <Link
+              to="/cases"
+              className="inline-flex items-center gap-2 text-primary font-semibold group/link"
+            >
+              Explore
+              <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover/link:translate-x-1 group-hover/link:-translate-y-1" />
+            </Link>
+          </div>
+        </div>
+      </div>
+    </motion.div>
   );
 };
 
