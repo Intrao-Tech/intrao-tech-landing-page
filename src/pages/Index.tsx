@@ -3,6 +3,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/sections/HeroSection";
 import StatsSection from "@/components/sections/StatsSection";
+import DarkSectionsWrapper from "@/components/sections/DarkSectionsWrapper";
+import LightSectionsWrapper from "@/components/sections/LightSectionsWrapper";
 import ClientsSection from "@/components/sections/ClientsSection";
 import ChallengesSection from "@/components/sections/ChallengesSection";
 import ServicesSection from "@/components/sections/ServicesSection";
@@ -31,17 +33,24 @@ const Index = () => {
       <Header />
       
       <main>
-        <HeroSection />
-        <StatsSection />
-        <ClientsSection />
-        <ChallengesSection />
-        <ServicesSection />
-        <CasesSection />
-        <ExpertiseSection />
-        <TeamSection />
-        <WhyUsSection />
-        <TestimonialsSection />
-        <ContactFormSection />
+        {/* Dark sections - sticky while scrolling */}
+        <DarkSectionsWrapper>
+          <HeroSection />
+          <StatsSection />
+        </DarkSectionsWrapper>
+        
+        {/* Light sections - scroll over dark sections */}
+        <LightSectionsWrapper>
+          <ClientsSection />
+          <ChallengesSection />
+          <ServicesSection />
+          <CasesSection />
+          <ExpertiseSection />
+          <TeamSection />
+          <WhyUsSection />
+          <TestimonialsSection />
+          <ContactFormSection />
+        </LightSectionsWrapper>
       </main>
 
       <Footer />
