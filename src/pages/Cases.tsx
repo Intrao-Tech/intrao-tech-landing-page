@@ -234,7 +234,7 @@ const Cases = () => {
             >
               <Link
                 to="/contacts"
-                className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-8 py-5 text-sm font-semibold uppercase tracking-wider transition-all duration-300 hover:bg-primary/90"
+                className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-8 py-5 rounded-full text-sm font-semibold uppercase tracking-wider transition-all duration-300 hover:bg-primary/90"
               >
                 Start Your Project
                 <ArrowRight className="w-4 h-4" />

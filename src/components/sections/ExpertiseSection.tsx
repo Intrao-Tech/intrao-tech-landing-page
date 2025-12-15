@@ -107,7 +107,7 @@ const ExpertiseSection = () => {
             <button
               key={industry.name}
               onClick={() => setActiveIndustry(index)}
-              className={`px-6 py-3 text-sm font-semibold transition-all duration-300 ${
+              className={`px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 ${
                 activeIndustry === index
                   ? "bg-primary text-primary-foreground"
                   : "bg-dark-muted/10 text-dark-muted hover:text-dark-foreground"
