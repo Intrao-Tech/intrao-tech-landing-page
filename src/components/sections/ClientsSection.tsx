@@ -14,31 +14,37 @@ const ClientsSection = () => {
   ];
 
   return (
-    <section className="bg-dark text-dark-foreground py-16 border-t border-dark-muted/20 overflow-hidden">
-      <div className="container mx-auto px-6 mb-8">
+    <section className="relative z-10 bg-background text-foreground py-20 overflow-hidden rounded-t-[60px]">
+      <div className="container mx-auto px-6 mb-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="flex items-center gap-8"
+          className="flex flex-col gap-4"
         >
-          <p className="text-dark-muted text-sm uppercase tracking-wider whitespace-nowrap">
-            Trusted by
+          <p className="text-muted-foreground text-sm uppercase tracking-[0.2em]">
+            Product Design and Development Agency
           </p>
-          <div className="flex-1 h-px bg-dark-muted/20" />
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">
+            Our featured client wins
+          </h2>
         </motion.div>
       </div>
+      
+      <div className="container mx-auto px-6 mb-8">
+        <div className="h-px bg-border" />
+      </div>
 
-      {/* Marquee */}
-      <div className="relative">
-        <div className="flex animate-marquee">
-          {[...clients, ...clients].map((client, index) => (
+      {/* Client Grid */}
+      <div className="container mx-auto px-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-border">
+          {clients.map((client, index) => (
             <div
               key={index}
-              className="flex items-center justify-center min-w-[200px] px-8"
+              className="flex items-center justify-center bg-background py-16 px-8 hover:bg-muted/50 transition-colors duration-300"
             >
-              <span className="text-2xl md:text-3xl font-bold text-dark-muted/50 hover:text-dark-foreground transition-colors duration-300">
+              <span className="text-xl md:text-2xl font-bold text-foreground">
                 {client}
               </span>
             </div>
