@@ -32,41 +32,30 @@ export const HeaderThemeProvider = ({ children }: HeaderThemeProviderProps) => {
   }, [location.pathname]);
 
   useEffect(() => {
-    const observerCallback: IntersectionObserverCallback = (entries) => {
-      // Find the section that's most visible at the top of the viewport
-      let topSection: Element | null = null;
-      let topIntersection = Infinity;
+    const updateTheme = () => {
+      const sections = document.querySelectorAll("[data-header-theme]");
+      const headerHeight = 80; // Approximate header height
 
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const rect = entry.boundingClientRect;
-          // We want the section closest to the top of the viewport
-          if (Math.abs(rect.top) < topIntersection) {
-            topIntersection = Math.abs(rect.top);
-            topSection = entry.target;
+      for (const section of sections) {
+        const rect = section.getBoundingClientRect();
+        // Check if section is at the top of the viewport (behind header)
+        if (rect.top <= headerHeight && rect.bottom > headerHeight) {
+          const sectionTheme = section.getAttribute("data-header-theme");
+          if (sectionTheme === "light" || sectionTheme === "dark") {
+            setTheme(sectionTheme);
           }
-        }
-      });
-
-      if (topSection) {
-        const sectionTheme = topSection.getAttribute("data-header-theme");
-        if (sectionTheme === "light" || sectionTheme === "dark") {
-          setTheme(sectionTheme);
+          break;
         }
       }
     };
 
-    const observer = new IntersectionObserver(observerCallback, {
-      // Only observe the top portion where header is
-      rootMargin: "0px 0px -90% 0px",
-      threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5],
-    });
+    // Initial check
+    updateTheme();
 
-    // Observe all sections with data-header-theme attribute
-    const sections = document.querySelectorAll("[data-header-theme]");
-    sections.forEach((section) => observer.observe(section));
+    // Update on scroll
+    window.addEventListener("scroll", updateTheme, { passive: true });
 
-    return () => observer.disconnect();
+    return () => window.removeEventListener("scroll", updateTheme);
   }, [location.pathname]);
 
   return (
