@@ -14,7 +14,7 @@ const ClientsSection = () => {
   ];
 
   return (
-    <section className="bg-background text-foreground py-20 overflow-hidden">
+    <section className="relative z-10 bg-background text-foreground py-20 overflow-hidden rounded-t-[60px] -mt-16">
       <div className="container mx-auto px-6 mb-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
