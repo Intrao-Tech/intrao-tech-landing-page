@@ -145,7 +145,7 @@ const CasesSection = () => {
         >
           <Link
             to="/cases"
-            className="inline-flex items-center gap-2 border border-foreground text-foreground px-8 py-4 rounded-xl text-sm font-semibold uppercase tracking-wider transition-all duration-300 hover:bg-foreground hover:text-background"
+            className="inline-flex items-center gap-2 border border-foreground text-foreground px-10 py-5 rounded-xl text-sm font-semibold uppercase tracking-wider transition-all duration-300 hover:bg-foreground hover:text-background"
           >
             Explore All Cases
             <ArrowRight className="w-4 h-4" />
