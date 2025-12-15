@@ -126,7 +126,7 @@ const Insights = () => {
                           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                         />
                         <div className="absolute top-4 left-4">
-                          <span className="px-3 py-1 rounded-full bg-primary text-primary-foreground text-xs font-semibold uppercase tracking-wider">
+                          <span className="px-3 py-1 rounded-xl bg-primary text-primary-foreground text-xs font-semibold uppercase tracking-wider">
                             {article.category}
                           </span>
                         </div>

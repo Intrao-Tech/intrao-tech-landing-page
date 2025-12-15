@@ -95,7 +95,7 @@ const ServicesSection = () => {
             <button
               key={tab}
               onClick={() => setActiveTab(index)}
-              className={`px-6 py-3 rounded-full text-sm font-semibold uppercase tracking-wider transition-all duration-300 ${
+              className={`px-6 py-3 rounded-xl text-sm font-semibold uppercase tracking-wider transition-all duration-300 ${
                 activeTab === index
                   ? "bg-primary text-primary-foreground"
                   : "border border-dark-muted text-dark-muted hover:text-dark-foreground hover:border-dark-foreground"
@@ -149,7 +149,7 @@ const ServicesSection = () => {
         >
           <Link
             to="/services"
-            className="inline-flex items-center gap-2 border border-dark-muted text-dark-foreground px-8 py-4 rounded-full text-sm font-semibold uppercase tracking-wider transition-all duration-300 hover:bg-dark-foreground hover:text-dark"
+            className="inline-flex items-center gap-2 border border-dark-muted text-dark-foreground px-8 py-4 rounded-xl text-sm font-semibold uppercase tracking-wider transition-all duration-300 hover:bg-dark-foreground hover:text-dark"
           >
             Explore All Services
             <ArrowRight className="w-4 h-4" />
