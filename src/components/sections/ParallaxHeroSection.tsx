@@ -1,0 +1,179 @@
+import { motion, useInView } from "framer-motion";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
+import { useRef, useState, useEffect } from "react";
+import showreelVideo from "@/assets/tinyvid_optimized_showreel_2.mp4";
+
+interface StatProps {
+  value: string;
+  suffix?: string;
+  label: string;
+  delay?: number;
+}
+
+const AnimatedStat = ({ value, suffix = "", label, delay = 0 }: StatProps) => {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const [displayValue, setDisplayValue] = useState("0");
+
+  useEffect(() => {
+    if (isInView) {
+      const numValue = parseInt(value.replace(/\D/g, ""));
+      const duration = 2000;
+      const steps = 60;
+      const increment = numValue / steps;
+      let current = 0;
+
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= numValue) {
+          setDisplayValue(value);
+          clearInterval(timer);
+        } else {
+          setDisplayValue(Math.floor(current).toString());
+        }
+      }, duration / steps);
+
+      return () => clearInterval(timer);
+    }
+  }, [isInView, value]);
+
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 30 }}
+      animate={isInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.6, delay }}
+      className="text-center"
+    >
+      <div className="text-4xl md:text-5xl lg:text-6xl font-bold text-dark-foreground mb-2">
+        {displayValue}
+        {suffix}
+      </div>
+      <p className="text-dark-muted text-sm uppercase tracking-wider">{label}</p>
+    </motion.div>
+  );
+};
+
+const ParallaxHeroSection = () => {
+  const stats = [
+    { value: "98", suffix: "%", label: "Customer satisfaction rate" },
+    { value: "35", suffix: "%+", label: "Boost in conversions after redesign" },
+    { value: "50", suffix: "+", label: "Top-tier designers and developers" },
+    { value: "100", suffix: "+", label: "Projects delivered successfully" },
+  ];
+
+  return (
+    <section data-header-theme="dark" className="relative bg-dark text-dark-foreground">
+      {/* Hero Block - Full Width */}
+      <div className="container mx-auto px-6 pt-32 lg:pt-40 pb-16">
+        {/* Subtitle */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-dark-muted text-sm uppercase tracking-[0.3em] mb-8"
+        >
+          Product Design and Development Agency
+        </motion.p>
+
+        {/* Main Heading */}
+        <motion.h1
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] mb-12 max-w-5xl"
+        >
+          Empowering startups to{" "}
+          <span className="text-primary">launch</span>, scale, and{" "}
+          <span className="text-primary">succeed</span> faster
+        </motion.h1>
+
+        {/* CTA Buttons */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="flex flex-col sm:flex-row gap-4"
+        >
+          <Link
+            to="/contacts"
+            className="group inline-flex items-center justify-center gap-3 bg-primary text-primary-foreground px-8 py-5 rounded-xl text-sm font-semibold uppercase tracking-wider transition-all duration-300 hover:bg-primary/90"
+          >
+            Let's Talk
+            <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+          </Link>
+          <Link
+            to="/cases"
+            className="group inline-flex items-center justify-center gap-3 border border-dark-muted text-dark-foreground px-8 py-5 rounded-xl text-sm font-semibold uppercase tracking-wider transition-all duration-300 hover:bg-dark-foreground hover:text-dark"
+          >
+            View Our Cases
+            <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+          </Link>
+        </motion.div>
+      </div>
+
+      {/* Parallax Section - Two Columns */}
+      <div className="grid grid-cols-1 lg:grid-cols-2">
+        {/* Left Column - Sticky Video */}
+        <div className="relative h-[50vh] lg:h-auto lg:sticky lg:top-0 lg:self-start p-4 lg:p-6">
+          <div className="w-full h-full lg:h-[calc(100vh-48px)] rounded-3xl overflow-hidden">
+            <video
+              src={showreelVideo}
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+
+        {/* Right Column - Scrolling Content */}
+        <div className="relative">
+          {/* Description Block */}
+          <div className="px-6 lg:px-12 xl:px-20 py-20 lg:py-32">
+            <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-2xl md:text-3xl lg:text-4xl font-medium leading-relaxed italic"
+            >
+              From MVP to market domination – your reliable partner in UI/UX design and development
+            </motion.h2>
+          </div>
+
+          {/* Stats Block */}
+          <div className="px-6 lg:px-12 xl:px-20 py-20 lg:py-32 border-t border-dark-muted/20">
+            {/* Stats Header */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-dark-muted text-sm uppercase tracking-[0.3em] mb-12"
+            >
+              Intrao Tech in Numbers
+            </motion.p>
+
+            {/* Stats Grid */}
+            <div className="grid grid-cols-2 gap-8 lg:gap-12">
+              {stats.map((stat, index) => (
+                <AnimatedStat
+                  key={stat.label}
+                  value={stat.value}
+                  suffix={stat.suffix}
+                  label={stat.label}
+                  delay={index * 0.1}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ParallaxHeroSection;
