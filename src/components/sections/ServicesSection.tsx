@@ -1,65 +1,129 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowRight, Code, Palette, Rocket, Users } from "lucide-react";
-import { useState } from "react";
+import { ArrowRight } from "lucide-react";
+import { useState, useEffect, useRef } from "react";
 
-const ServicesSection = () => {
-  const [activeTab, setActiveTab] = useState(0);
+interface Service {
+  name: string;
+  description: string;
+}
 
-  const tabs = ["Pre-launch", "Growth", "Scale"];
+interface Stage {
+  id: string;
+  name: string;
+  headline: string;
+  services: Service[];
+}
 
-  const services = {
-    0: [
+const stages: Stage[] = [
+  {
+    id: "pre-seed",
+    name: "Pre-seed",
+    headline: "Validate your idea & attract early investors",
+    services: [
       {
-        icon: Palette,
-        name: "Design Prototype",
+        name: "Design prototype",
         description: "Test product ideas fast with clickable user journeys and visual flows.",
       },
       {
-        icon: Rocket,
-        name: "Product Discovery",
-        description: "Map out key features, user flows, and architecture to align your team.",
+        name: "Product discovery",
+        description: "Map out key features, user flows, and architecture to align your team and reduce risks.",
       },
       {
-        icon: Code,
-        name: "Website Development",
+        name: "Website development",
         description: "Launch a fast, scalable site that converts and supports product growth.",
       },
     ],
-    1: [
+  },
+  {
+    id: "seed",
+    name: "Seed",
+    headline: "Build your product & gain market traction",
+    services: [
       {
-        icon: Palette,
         name: "Branding",
         description: "Develop a brand that resonates — visually, emotionally, and strategically.",
       },
       {
-        icon: Rocket,
-        name: "Custom MVP Development",
+        name: "Technical workshop",
+        description: "Validate your tech stack, architecture, and scalability path.",
+      },
+      {
+        name: "Custom MVP development",
         description: "Expand your prototype into a fully functional, production-ready product.",
       },
       {
-        icon: Users,
-        name: "Dedicated Team",
+        name: "Rapid MVP development",
+        description: "Get your MVP 50% faster with lean sprints and pre-built frameworks.",
+      },
+      {
+        name: "Dedicated team",
         description: "Access a team of experts to fuel your product's growth.",
       },
     ],
-    2: [
+  },
+  {
+    id: "series-a",
+    name: "Series A & beyond",
+    headline: "Scale, optimize & reach more users",
+    services: [
       {
-        icon: Palette,
-        name: "UX Audit",
-        description: "Identify usability bottlenecks and optimize for conversions.",
+        name: "UX audit",
+        description: "Identify usability bottlenecks, improve engagement, and optimize for conversions.",
       },
       {
-        icon: Rocket,
-        name: "Product Redesign",
-        description: "Upgrade legacy interfaces with scalable, business-driven UX and UI.",
+        name: "Product redesign",
+        description: "Upgrade legacy interfaces with scalable, business-driven UX and UI from a top-notch design agency.",
       },
       {
-        icon: Users,
-        name: "Team Extension",
+        name: "Team extension",
         description: "Instantly scale with dedicated designers and developers ready to start.",
       },
+      {
+        name: "Website redesign",
+        description: "Modernize your web presence with a digital product design agency that drives engagement and brand authority.",
+      },
     ],
+  },
+];
+
+const ServicesSection = () => {
+  const [activeStage, setActiveStage] = useState(0);
+  const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  useEffect(() => {
+    const observers: IntersectionObserver[] = [];
+
+    sectionRefs.current.forEach((ref, index) => {
+      if (ref) {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                setActiveStage(index);
+              }
+            });
+          },
+          {
+            rootMargin: "-40% 0px -40% 0px",
+            threshold: 0,
+          }
+        );
+        observer.observe(ref);
+        observers.push(observer);
+      }
+    });
+
+    return () => {
+      observers.forEach((observer) => observer.disconnect());
+    };
+  }, []);
+
+  const scrollToStage = (index: number) => {
+    sectionRefs.current[index]?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
   };
 
   return (
@@ -71,90 +135,101 @@ const ServicesSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-16"
+          className="mb-16 lg:mb-24"
         >
+          <p className="text-dark-muted text-sm uppercase tracking-wider mb-4">
+            Product Design and Development Agency Services
+          </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6">
             Tailored support from first prototype
             <br />
             <span className="text-dark-muted">to long-term scale</span>
           </h2>
-          <p className="text-dark-muted text-lg max-w-2xl">
-            Great products don't happen by accident. We help startups grow through smart strategy, solid UX, and scalable development from day one.
+          <p className="text-dark-muted text-lg max-w-3xl">
+            Great products don't happen by accident. As a digital product design agency, we help startups grow through smart strategy, solid UX, and scalable development from day one.
           </p>
         </motion.div>
 
-        {/* Tabs */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex flex-wrap gap-4 mb-12"
-        >
-          {tabs.map((tab, index) => (
-            <button
-              key={tab}
-              onClick={() => setActiveTab(index)}
-              className={`px-8 py-4 rounded-xl text-sm font-semibold uppercase tracking-wider transition-all duration-300 ${
-                activeTab === index
-                  ? "bg-primary text-primary-foreground"
-                  : "border border-dark-muted text-dark-muted hover:text-dark-foreground hover:border-dark-foreground"
-              }`}
-            >
-              {tab}
-            </button>
-          ))}
-        </motion.div>
-
-        {/* Services Grid */}
-        <motion.div
-          key={activeTab}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12"
-        >
-          {services[activeTab as keyof typeof services].map((service, index) => (
-            <motion.div
-              key={service.name}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: index * 0.1 }}
-              className="group border border-dark-muted/30 p-8 transition-all duration-500 hover:border-primary/50"
-            >
-              <service.icon className="w-10 h-10 text-primary mb-6" />
-              <h3 className="text-xl font-semibold mb-4 group-hover:text-primary transition-colors duration-300">
-                {service.name}
-              </h3>
-              <p className="text-dark-muted leading-relaxed mb-6">
-                {service.description}
-              </p>
-              <Link
-                to="/services"
-                className="inline-flex items-center gap-2 text-sm text-dark-foreground hover:text-primary transition-colors duration-300"
-              >
-                Explore
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-            </motion.div>
-          ))}
-        </motion.div>
-
-        {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-        >
-          <Link
-            to="/services"
-            className="inline-flex items-center gap-2 border border-dark-muted text-dark-foreground px-10 py-5 rounded-xl text-sm font-semibold uppercase tracking-wider transition-all duration-300 hover:bg-dark-foreground hover:text-dark"
+        {/* Main Content */}
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
+          {/* Sidebar - Sticky on desktop */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="lg:w-48 lg:sticky lg:top-32 lg:self-start"
           >
-            Explore All Services
-            <ArrowRight className="w-4 h-4" />
-          </Link>
-        </motion.div>
+            <nav className="flex flex-row lg:flex-col gap-2 lg:gap-4 mb-8 lg:mb-12">
+              {stages.map((stage, index) => (
+                <button
+                  key={stage.id}
+                  onClick={() => scrollToStage(index)}
+                  className={`text-left text-lg lg:text-xl font-medium transition-colors duration-300 ${
+                    activeStage === index
+                      ? "text-dark-foreground"
+                      : "text-dark-muted hover:text-dark-foreground"
+                  }`}
+                >
+                  {stage.name}
+                </button>
+              ))}
+            </nav>
+            <Link
+              to="/services"
+              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-4 rounded-lg text-sm font-semibold uppercase tracking-wider transition-all duration-300 hover:opacity-90"
+            >
+              Explore All
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </motion.div>
+
+          {/* Content Sections */}
+          <div className="flex-1">
+            {stages.map((stage, stageIndex) => (
+              <div
+                key={stage.id}
+                ref={(el) => (sectionRefs.current[stageIndex] = el)}
+                className={stageIndex < stages.length - 1 ? "mb-24 lg:mb-32" : ""}
+              >
+                <motion.h3
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5 }}
+                  className="text-2xl md:text-3xl lg:text-4xl font-bold mb-12"
+                >
+                  {stage.headline}
+                </motion.h3>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8">
+                  {stage.services.map((service, serviceIndex) => (
+                    <motion.div
+                      key={service.name}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.4, delay: serviceIndex * 0.1 }}
+                      className="border-t border-dark-muted/30 py-8"
+                    >
+                      <h4 className="text-lg font-medium mb-4">{service.name}</h4>
+                      <p className="text-dark-muted text-sm leading-relaxed mb-6">
+                        {service.description}
+                      </p>
+                      <Link
+                        to="/services"
+                        className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-dark-muted hover:text-dark-foreground transition-colors duration-300"
+                      >
+                        Explore
+                        <ArrowRight className="w-3 h-3" />
+                      </Link>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
