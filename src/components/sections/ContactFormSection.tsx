@@ -26,7 +26,21 @@ const ContactFormSection = () => {
   };
 
   return (
-    <section id="contact-form" data-header-theme="dark" className="bg-dark text-dark-foreground py-24 lg:py-32">
+    <section id="contact-form" data-header-theme="dark" className="relative z-10 bg-dark text-dark-foreground py-24 lg:py-32">
+      {/* Top curve */}
+      <div className="absolute top-0 left-0 w-full -translate-y-full pointer-events-none z-20">
+        <svg
+          viewBox="0 0 1440 120"
+          preserveAspectRatio="none"
+          className="w-full h-[60px] md:h-[80px] lg:h-[100px]"
+        >
+          <path
+            className="fill-dark"
+            d="M0,120 L0,120 C360,120 360,40 720,40 C1080,40 1080,120 1440,120 L1440,120 Z"
+          />
+        </svg>
+      </div>
+
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
           {/* Form */}
@@ -200,6 +214,20 @@ const ContactFormSection = () => {
             </div>
           </motion.div>
         </div>
+      </div>
+
+      {/* Bottom curve */}
+      <div className="absolute bottom-0 left-0 w-full translate-y-full pointer-events-none z-20">
+        <svg
+          viewBox="0 0 1440 120"
+          preserveAspectRatio="none"
+          className="w-full h-[60px] md:h-[80px] lg:h-[100px]"
+        >
+          <path
+            className="fill-dark"
+            d="M0,0 L0,0 C360,0 360,80 720,80 C1080,80 1080,0 1440,0 L1440,0 Z"
+          />
+        </svg>
       </div>
     </section>
   );
