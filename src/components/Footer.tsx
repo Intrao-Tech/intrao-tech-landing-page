@@ -28,9 +28,9 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-background text-foreground">
+    <footer className="bg-background text-foreground pt-[60px] md:pt-[80px] lg:pt-[100px]">
       {/* CTA Section */}
-      <div className="border-b border-border">
+      {/* <div className="border-b border-border">
         <div className="container mx-auto px-6 py-20">
           <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
             <motion.div
@@ -61,7 +61,7 @@ const Footer = () => {
             </motion.div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Main Footer */}
       <div className="container mx-auto px-6 py-16">
