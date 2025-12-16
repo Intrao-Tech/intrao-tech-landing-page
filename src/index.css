@@ -20,12 +20,12 @@
     --primary: 270 93% 56%;
     --primary-foreground: 0 0% 100%;
 
-    /* Secondary - Light gray */
-    --secondary: 0 0% 96%;
+    /* Secondary - White */
+    --secondary: 0 0% 100%;
     --secondary-foreground: 0 0% 7%;
 
-    /* Muted */
-    --muted: 0 0% 94%;
+    /* Muted - White */
+    --muted: 0 0% 100%;
     --muted-foreground: 0 0% 45%;
 
     /* Accent */
