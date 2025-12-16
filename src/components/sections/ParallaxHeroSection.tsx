@@ -44,9 +44,9 @@ const AnimatedStat = ({ value, suffix = "", label, delay = 0 }: StatProps) => {
       initial={{ opacity: 0, y: 30 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6, delay }}
-      className="text-center"
+      className="text-center py-8 lg:py-12"
     >
-      <div className="text-4xl md:text-5xl lg:text-6xl font-bold text-dark-foreground mb-2">
+      <div className="text-4xl md:text-5xl lg:text-6xl font-bold text-dark-foreground mb-3">
         {displayValue}
         {suffix}
       </div>
@@ -132,7 +132,7 @@ const ParallaxHeroSection = () => {
         {/* Right Column - Scrolling Content */}
         <div className="relative">
           {/* Description Block */}
-          <div className="px-6 lg:px-12 xl:px-20 py-20 lg:py-32">
+          <div className="px-6 lg:px-12 xl:px-20 pt-20 lg:pt-32 pb-12 lg:pb-16">
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -145,7 +145,7 @@ const ParallaxHeroSection = () => {
           </div>
 
           {/* Stats Block */}
-          <div className="px-6 lg:px-12 xl:px-20 py-20 lg:py-32 border-t border-dark-muted/20">
+          <div className="px-6 lg:px-12 xl:px-20 pt-8 lg:pt-12 pb-20 lg:pb-32">
             {/* Stats Header */}
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -158,15 +158,23 @@ const ParallaxHeroSection = () => {
             </motion.p>
 
             {/* Stats Grid */}
-            <div className="grid grid-cols-2 gap-8 lg:gap-12">
+            <div className="grid grid-cols-2 border-t border-dark-muted/20">
               {stats.map((stat, index) => (
-                <AnimatedStat
+                <div
                   key={stat.label}
-                  value={stat.value}
-                  suffix={stat.suffix}
-                  label={stat.label}
-                  delay={index * 0.1}
-                />
+                  className={`${
+                    index % 2 === 0 ? "border-r" : ""
+                  } ${
+                    index < 2 ? "border-b" : ""
+                  } border-dark-muted/20`}
+                >
+                  <AnimatedStat
+                    value={stat.value}
+                    suffix={stat.suffix}
+                    label={stat.label}
+                    delay={index * 0.1}
+                  />
+                </div>
               ))}
             </div>
           </div>
