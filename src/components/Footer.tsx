@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
-import { ArrowUpRight, Mail, Linkedin, Instagram, Twitter } from "lucide-react";
-import logoFull from "@/assets/logo-full.jpg";
+import { Mail, Linkedin, Instagram, Twitter } from "lucide-react";
+import logoFull from "@/assets/logo-dark.svg";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -29,40 +28,6 @@ const Footer = () => {
 
   return (
     <footer className="bg-background text-foreground pt-[60px] md:pt-[80px] lg:pt-[100px]">
-      {/* CTA Section */}
-      {/* <div className="border-b border-border">
-        <div className="container mx-auto px-6 py-20">
-          <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                Have a project in mind?
-                <br />
-                <span className="text-primary">Let's chat</span>
-              </h2>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              <Link
-                to="/contacts"
-                className="group inline-flex items-center gap-3 bg-dark text-dark-foreground px-10 py-5 rounded-xl text-sm font-semibold uppercase tracking-wider transition-all duration-300 hover:bg-dark/90"
-              >
-                Contact Us
-                <ArrowUpRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
-              </Link>
-            </motion.div>
-          </div>
-        </div>
-      </div> */}
-
       {/* Main Footer */}
       <div className="container mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
