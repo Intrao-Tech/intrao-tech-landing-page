@@ -1,53 +1,75 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useRef } from "react";
 
+interface CaseItem {
+  tags: string[];
+  title: string;
+  subtitle: string;
+  company: string;
+  location: string;
+  locationFlag: string;
+  techStack: string;
+  timeline: string;
+  results: string[];
+  image: string;
+}
+
 const CasesSection = () => {
-  const cases = [
+  const cases: CaseItem[] = [
     {
-      title: "E-Commerce Platform Redesign",
-      company: "RetailPro",
+      tags: ["WEBSITE DESIGN", "WEBSITE DEVELOPMENT"],
+      title: "Shaga Odyssey",
+      subtitle: "an award-winning web3 gamepad platform",
+      company: "SHAGA.XYZ",
       location: "USA",
-      techStack: "React, Node.js, PostgreSQL",
-      timeline: "4 months",
-      results: [
-        "+45% increase in conversions",
-        "2x faster page load times",
-        "40% reduction in cart abandonment",
-      ],
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
-    },
-    {
-      title: "SaaS Dashboard Development",
-      company: "DataSync",
-      location: "Germany",
-      techStack: "Next.js, TypeScript, AWS",
-      timeline: "6 months",
-      results: [
-        "+60% user engagement",
-        "3x faster data processing",
-        "Enterprise-ready security",
-      ],
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
-    },
-    {
-      title: "FinTech Mobile App",
-      company: "PayFlow",
-      location: "UK",
-      techStack: "React Native, Firebase",
+      locationFlag: "🇺🇸",
+      techStack: "Webflow",
       timeline: "5 months",
       results: [
-        "+35% transaction completion",
-        "4.8 App Store rating",
-        "100K+ downloads in 3 months",
+        "+40% increase in user engagement",
+        "3x faster platform navigation",
+        "Awwwards \"Site of the Day\" for Best Interactive Design",
+      ],
+      image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&h=600&fit=crop",
+    },
+    {
+      tags: ["UX AUDIT", "PRODUCT REDESIGN", "WEB DEVELOPMENT"],
+      title: "KlickEx",
+      subtitle: "frictionless cross-border payments for the Pacific Island communities",
+      company: "NOMUPAY",
+      location: "NEW ZEALAND",
+      locationFlag: "🇳🇿",
+      techStack: "Next.js, TypeScript, React Redux",
+      timeline: "6 months",
+      results: [
+        "+35% \"Add Money\" conversion rate",
+        "+30% \"Money Transfer\" completion rate",
+        "Raised $1M in additional funding within 6 months",
       ],
       image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&h=600&fit=crop",
+    },
+    {
+      tags: ["UX AUDIT", "PRODUCT REDESIGN", "WEB DEVELOPMENT", "TEAM EXTENSION"],
+      title: "Isora",
+      subtitle: "optimizing governance, risk & compliance for top institutions",
+      company: "SALTYCLOUD",
+      location: "TEXAS, USA",
+      locationFlag: "🇺🇸",
+      techStack: "React, Python, AWS",
+      timeline: "12 months, ongoing",
+      results: [
+        "2x faster user workflows",
+        "50% shorter time-to-market",
+        "Nominated for UX Design Award 2024",
+      ],
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
     },
   ];
 
   return (
-    <section data-header-theme="light" className="bg-background text-foreground py-24 lg:py-32">
+    <section data-header-theme="light" className="bg-white text-gray-900 py-24 lg:py-32">
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <motion.div
@@ -57,10 +79,11 @@ const CasesSection = () => {
           transition={{ duration: 0.6 }}
           className="mb-16 lg:mb-24"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
-            Discover how we're driving change
-            <br />
-            <span className="text-muted-foreground">through innovative projects</span>
+          <p className="text-sm font-medium uppercase tracking-widest text-gray-500 mb-6">
+            Featured Cases
+          </p>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight max-w-5xl text-gray-900">
+            Discover how we're driving change through innovative projects, strong partnerships, and measurable outcomes
           </h2>
         </motion.div>
 
@@ -86,7 +109,7 @@ const CasesSection = () => {
         >
           <Link
             to="/cases"
-            className="inline-flex items-center gap-2 border border-foreground text-foreground px-10 py-5 rounded-xl text-sm font-semibold uppercase tracking-wider transition-all duration-300 hover:bg-foreground hover:text-background"
+            className="inline-flex items-center gap-2 text-gray-900 font-semibold uppercase tracking-wider text-sm border-b-2 border-gray-900 pb-1 transition-all duration-300 hover:opacity-70"
           >
             Explore All Cases
             <ArrowRight className="w-4 h-4" />
@@ -98,124 +121,130 @@ const CasesSection = () => {
 };
 
 interface StackingCardProps {
-  caseItem: {
-    title: string;
-    company: string;
-    location: string;
-    techStack: string;
-    timeline: string;
-    results: string[];
-    image: string;
-  };
+  caseItem: CaseItem;
   index: number;
   totalCards: number;
 }
 
 const StackingCard = ({ caseItem, index, totalCards }: StackingCardProps) => {
   const cardRef = useRef<HTMLDivElement>(null);
-  
+
   const { scrollYProgress } = useScroll({
     target: cardRef,
     offset: ["start end", "end start"],
   });
 
-  // Scale down slightly as card scrolls up (creates stacking depth effect)
-  const scale = useTransform(
+  // Opacity fades as card scrolls past center (for stacking effect)
+  const opacity = useTransform(
     scrollYProgress,
-    [0, 0.5, 1],
-    [0.9, 1, 0.95]
+    [0, 0.3, 0.5, 0.7, 1],
+    [0.3, 1, 1, index === totalCards - 1 ? 1 : 0.3, 0.3]
   );
 
-  // Rotate slightly for depth
-  const rotateX = useTransform(
+  // Scale down slightly as card is passed
+  const scale = useTransform(
     scrollYProgress,
-    [0, 0.5, 1],
-    [5, 0, -2]
+    [0, 0.3, 0.5, 0.7, 1],
+    [0.95, 1, 1, index === totalCards - 1 ? 1 : 0.98, 0.95]
   );
 
   return (
     <motion.div
       ref={cardRef}
       style={{
+        opacity,
         scale,
-        rotateX,
-        transformPerspective: 1000,
+        top: "100px",
+        zIndex: index + 1,
       }}
-      className="sticky bg-background rounded-3xl shadow-xl mb-8 overflow-hidden"
-      initial={{ opacity: 0, y: 100 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-50px" }}
-      transition={{ duration: 0.6, delay: index * 0.1 }}
-      // Each card sticks at a slightly different top position to create stacking
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-ignore
-      style={{
-        scale,
-        rotateX,
-        transformPerspective: 1000,
-        top: `${100 + index * 40}px`,
-        zIndex: totalCards - index,
-      }}
+      className="sticky bg-white"
     >
-      <div className="group p-8 lg:p-12 bg-muted/30 border border-border rounded-3xl">
+      {/* Top border (skip for first item) */}
+      {index > 0 && <div className="border-t border-gray-200" />}
+
+      <div className="py-12 lg:py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Image */}
-          <div className={`relative overflow-hidden rounded-2xl ${index % 2 === 1 ? "lg:order-2" : ""}`}>
-            <div className="aspect-[4/3] overflow-hidden rounded-2xl">
-              <img
-                src={caseItem.image}
-                alt={caseItem.title}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-            </div>
-            <div className="absolute inset-0 bg-primary/0 transition-colors duration-500 group-hover:bg-primary/10 rounded-2xl" />
+          <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
+            <img
+              src={caseItem.image}
+              alt={caseItem.title}
+              className="w-full h-full object-cover"
+            />
           </div>
 
           {/* Content */}
-          <div className={index % 2 === 1 ? "lg:order-1" : ""}>
-            <div className="flex items-center gap-4 mb-4">
-              <span className="text-sm text-muted-foreground">{caseItem.company}</span>
-              <span className="w-1 h-1 bg-muted-foreground rounded-full" />
-              <span className="text-sm text-muted-foreground">{caseItem.location}</span>
+          <div className="flex flex-col">
+            {/* Tags */}
+            <div className="flex flex-wrap gap-2 mb-6">
+              {caseItem.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="text-xs font-medium uppercase tracking-wider text-gray-500"
+                >
+                  #{tag}
+                </span>
+              ))}
             </div>
 
-            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 group-hover:text-primary transition-colors duration-300">
-              {caseItem.title}
+            {/* Title */}
+            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+              {caseItem.title} – {caseItem.subtitle}
             </h3>
 
-            <div className="grid grid-cols-2 gap-6 mb-8">
+            {/* Company & Location Pills */}
+            <div className="flex flex-wrap gap-3 mb-8">
+              <span className="inline-flex items-center px-4 py-2 bg-gray-900 text-white text-sm font-medium rounded-full">
+                {caseItem.company}
+              </span>
+              <span className="inline-flex items-center gap-2 px-4 py-2 bg-gray-900 text-white text-sm font-medium rounded-full">
+                <span>{caseItem.locationFlag}</span>
+                {caseItem.location}
+              </span>
+            </div>
+
+            {/* Tech Stack & Timeline */}
+            <div className="grid grid-cols-2 gap-6 mb-8 pb-8 border-b border-gray-200">
               <div>
-                <p className="text-sm text-muted-foreground mb-1">Tech Stack</p>
-                <p className="font-medium">{caseItem.techStack}</p>
+                <p className="text-xs font-medium uppercase tracking-wider text-gray-500 mb-2">
+                  Tech Stack
+                </p>
+                <p className="text-gray-900 font-medium">{caseItem.techStack}</p>
               </div>
-              <div>
-                <p className="text-sm text-muted-foreground mb-1">Timeline</p>
-                <p className="font-medium">{caseItem.timeline}</p>
+              <div className="border-l border-gray-200 pl-6">
+                <p className="text-xs font-medium uppercase tracking-wider text-gray-500 mb-2">
+                  Timeline
+                </p>
+                <p className="text-gray-900 font-medium">{caseItem.timeline}</p>
               </div>
             </div>
 
+            {/* Results */}
             <div className="mb-8">
-              <p className="text-sm text-muted-foreground mb-3">Results</p>
+              <p className="text-xs font-medium uppercase tracking-wider text-gray-500 mb-4">
+                Results
+              </p>
               <ul className="space-y-2">
                 {caseItem.results.map((result, i) => (
-                  <li key={i} className="flex items-center gap-3">
-                    <span className="w-2 h-2 bg-primary rounded-full" />
-                    <span className="font-medium">{result}</span>
+                  <li key={i} className="text-gray-900">
+                    {result}
                   </li>
                 ))}
               </ul>
             </div>
 
+            {/* Explore Button */}
             <Link
               to="/cases"
-              className="inline-flex items-center gap-2 text-primary font-semibold group/link"
+              className="btn-primary rounded-xl self-start"
             >
               Explore
-              <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover/link:translate-x-1 group-hover/link:-translate-y-1" />
+              <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>
       </div>
+
     </motion.div>
   );
 };
