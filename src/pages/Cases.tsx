@@ -2,16 +2,44 @@ import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-import { ArrowUpRight, ArrowRight } from "lucide-react";
+import { useState } from "react";
+import { ArrowRight } from "lucide-react";
+
+type Category = "all" | "web-app" | "mobile-app" | "website" | "branding";
+
+interface CaseItem {
+  title: string;
+  company: string;
+  location: string;
+  locationFlag: string;
+  tags: string[];
+  category: Exclude<Category, "all">;
+  techStack: string;
+  timeline: string;
+  results: string[];
+  image: string;
+  link: string;
+}
 
 const Cases = () => {
-  const cases = [
+  const [activeCategory, setActiveCategory] = useState<Category>("all");
+
+  const categories: { id: Category; label: string }[] = [
+    { id: "all", label: "ALL PROJECTS" },
+    { id: "web-app", label: "WEB APP" },
+    { id: "mobile-app", label: "MOBILE APP" },
+    { id: "website", label: "WEBSITE" },
+    { id: "branding", label: "BRANDING" },
+  ];
+
+  const cases: CaseItem[] = [
     {
-      title: "E-Commerce Platform Redesign",
-      company: "RetailPro",
-      industry: "E-Commerce",
+      title: "RetailPro - transforming online shopping with seamless e-commerce experience",
+      company: "RETAILPRO",
       location: "USA",
+      locationFlag: "\ud83c\uddfa\ud83c\uddf8",
+      tags: ["UX AUDIT", "PRODUCT REDESIGN", "WEB DEVELOPMENT"],
+      category: "website",
       techStack: "React, Node.js, PostgreSQL",
       timeline: "4 months",
       results: [
@@ -20,12 +48,15 @@ const Cases = () => {
         "40% reduction in cart abandonment",
       ],
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
+      link: "#",
     },
     {
-      title: "SaaS Dashboard Development",
-      company: "DataSync",
-      industry: "SaaS",
-      location: "Germany",
+      title: "DataSync - enterprise-grade analytics dashboard for data-driven decisions",
+      company: "DATASYNC",
+      location: "GERMANY",
+      locationFlag: "\ud83c\udde9\ud83c\uddea",
+      tags: ["SAAS", "DASHBOARD", "DATA VISUALIZATION"],
+      category: "web-app",
       techStack: "Next.js, TypeScript, AWS",
       timeline: "6 months",
       results: [
@@ -34,12 +65,15 @@ const Cases = () => {
         "Enterprise-ready security",
       ],
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
+      link: "#",
     },
     {
-      title: "FinTech Mobile App",
-      company: "PayFlow",
-      industry: "FinTech",
+      title: "PayFlow - revolutionizing mobile payments for modern consumers",
+      company: "PAYFLOW",
       location: "UK",
+      locationFlag: "\ud83c\uddec\ud83c\udde7",
+      tags: ["FINTECH", "MOBILE APP", "UX DESIGN"],
+      category: "mobile-app",
       techStack: "React Native, Firebase",
       timeline: "5 months",
       results: [
@@ -48,12 +82,15 @@ const Cases = () => {
         "100K+ downloads in 3 months",
       ],
       image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&h=600&fit=crop",
+      link: "#",
     },
     {
-      title: "Healthcare Patient Portal",
-      company: "MediCare Plus",
-      industry: "Healthcare",
-      location: "Canada",
+      title: "MediCare Plus - HIPAA-compliant patient portal for healthcare providers",
+      company: "MEDICARE PLUS",
+      location: "CANADA",
+      locationFlag: "\ud83c\udde8\ud83c\udde6",
+      tags: ["HEALTHCARE", "PATIENT PORTAL", "WEB DEVELOPMENT"],
+      category: "web-app",
       techStack: "Vue.js, Python, GCP",
       timeline: "8 months",
       results: [
@@ -62,12 +99,15 @@ const Cases = () => {
         "30% reduction in admin tasks",
       ],
       image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=800&h=600&fit=crop",
+      link: "#",
     },
     {
-      title: "EdTech Learning Platform",
-      company: "LearnHub",
-      industry: "EdTech",
-      location: "Australia",
+      title: "LearnHub - gamified learning platform for modern education",
+      company: "LEARNHUB",
+      location: "AUSTRALIA",
+      locationFlag: "\ud83c\udde6\ud83c\uddfa",
+      tags: ["EDTECH", "LEARNING PLATFORM", "GAMIFICATION"],
+      category: "web-app",
       techStack: "Next.js, MongoDB, Vercel",
       timeline: "5 months",
       results: [
@@ -76,12 +116,15 @@ const Cases = () => {
         "10K+ active learners",
       ],
       image: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&h=600&fit=crop",
+      link: "#",
     },
     {
-      title: "Real Estate Marketplace",
-      company: "PropertyHub",
-      industry: "Real Estate",
+      title: "PropertyHub - comprehensive real estate marketplace with virtual tours",
+      company: "PROPERTYHUB",
       location: "UAE",
+      locationFlag: "\ud83c\udde6\ud83c\uddea",
+      tags: ["REAL ESTATE", "MARKETPLACE", "VIRTUAL TOURS"],
+      category: "website",
       techStack: "React, Express, PostgreSQL",
       timeline: "7 months",
       results: [
@@ -90,8 +133,13 @@ const Cases = () => {
         "Advanced search filters",
       ],
       image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop",
+      link: "#",
     },
   ];
+
+  const filteredCases = activeCategory === "all"
+    ? cases
+    : cases.filter((c) => c.category === activeCategory);
 
   return (
     <>
@@ -107,139 +155,182 @@ const Cases = () => {
 
       <main>
         {/* Hero Section */}
-        <section data-header-theme="dark" className="bg-dark text-dark-foreground pt-32 pb-20">
+        <section data-header-theme="light" className="bg-background text-foreground pt-32 pb-16">
           <div className="container mx-auto px-6">
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-dark-muted text-sm uppercase tracking-[0.3em] mb-8"
-            >
-              Our Work
-            </motion.p>
-
             <motion.h1
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] mb-8 max-w-4xl"
+              transition={{ duration: 0.8 }}
+              className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] mb-12"
             >
-              Driving change through{" "}
-              <span className="text-primary">innovative projects</span>
+              Explore our projects
             </motion.h1>
 
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
+            {/* Category Filter Tabs */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="text-dark-muted text-xl max-w-2xl"
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="flex flex-wrap gap-2"
             >
-              Explore our portfolio of successful projects and see how we've helped businesses transform their digital presence.
-            </motion.p>
+              {categories.map((cat) => (
+                <button
+                  key={cat.id}
+                  onClick={() => setActiveCategory(cat.id)}
+                  className={`px-6 py-3 rounded-lg text-xs font-semibold tracking-wider transition-all duration-300 ${
+                    activeCategory === cat.id
+                      ? "bg-foreground text-background"
+                      : "bg-transparent text-foreground hover:bg-muted"
+                  }`}
+                >
+                  {cat.label}
+                </button>
+              ))}
+            </motion.div>
           </div>
         </section>
 
-        {/* Cases Grid */}
-        <section data-header-theme="light" className="bg-background text-foreground py-24">
+        {/* Cases List */}
+        <section data-header-theme="light" className="bg-background text-foreground">
           <div className="container mx-auto px-6">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
-              {cases.map((caseItem, index) => (
-                <motion.div
-                  key={caseItem.title}
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="group"
-                >
-                  <div className="border border-border overflow-hidden transition-all duration-500 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5">
-                    {/* Image */}
-                    <div className="relative aspect-[16/10] overflow-hidden">
+            {filteredCases.map((caseItem, index) => (
+              <motion.div
+                key={caseItem.title}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="border-t border-border"
+              >
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 py-16 lg:py-24">
+                  {/* Left Side - Sticky Image */}
+                  <div className="lg:sticky lg:top-24 lg:self-start">
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.95 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.6, delay: 0.1 }}
+                      className="relative aspect-[4/3] overflow-hidden bg-muted rounded-xl"
+                    >
                       <img
                         src={caseItem.image}
                         alt={caseItem.title}
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        className="w-full h-full object-cover"
                       />
-                      <div className="absolute inset-0 bg-primary/0 transition-colors duration-500 group-hover:bg-primary/10" />
-                    </div>
+                    </motion.div>
+                  </div>
 
-                    {/* Content */}
-                    <div className="p-8">
-                      <div className="flex items-center gap-4 mb-4">
-                        <span className="text-sm text-muted-foreground">
-                          {caseItem.industry}
+                  {/* Right Side - Content */}
+                  <div className="flex flex-col justify-center">
+                    {/* Tags */}
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: 0.1 }}
+                      className="flex flex-wrap gap-3 mb-6"
+                    >
+                      {caseItem.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="text-xs font-medium tracking-wider text-muted-foreground"
+                        >
+                          #{tag}
                         </span>
-                        <span className="w-1 h-1 bg-muted-foreground rounded-full" />
-                        <span className="text-sm text-muted-foreground">
-                          {caseItem.location}
-                        </span>
+                      ))}
+                    </motion.div>
+
+                    {/* Title */}
+                    <motion.h2
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: 0.15 }}
+                      className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight mb-6"
+                    >
+                      {caseItem.title}
+                    </motion.h2>
+
+                    {/* Company and Location Badges */}
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: 0.2 }}
+                      className="flex flex-wrap gap-3 mb-8"
+                    >
+                      <span className="inline-flex items-center px-4 py-2 bg-foreground text-background text-xs font-semibold tracking-wider rounded-lg">
+                        {caseItem.company}
+                      </span>
+                      <span className="inline-flex items-center gap-2 px-4 py-2 bg-foreground text-background text-xs font-semibold tracking-wider rounded-lg">
+                        <span>{caseItem.locationFlag}</span>
+                        {caseItem.location}
+                      </span>
+                    </motion.div>
+
+                    {/* Tech Stack and Timeline */}
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: 0.25 }}
+                      className="grid grid-cols-2 gap-8 mb-8 pb-8 border-b border-border"
+                    >
+                      <div>
+                        <p className="text-xs font-semibold tracking-wider text-muted-foreground mb-2">
+                          TECH STACK
+                        </p>
+                        <p className="text-sm font-medium">{caseItem.techStack}</p>
                       </div>
-
-                      <h3 className="text-xl md:text-2xl font-bold mb-4 group-hover:text-primary transition-colors duration-300">
-                        {caseItem.title}
-                      </h3>
-
-                      <div className="flex flex-wrap gap-4 mb-6 text-sm">
-                        <div>
-                          <span className="text-muted-foreground">Tech: </span>
-                          <span>{caseItem.techStack}</span>
-                        </div>
-                        <div>
-                          <span className="text-muted-foreground">Timeline: </span>
-                          <span>{caseItem.timeline}</span>
-                        </div>
+                      <div>
+                        <p className="text-xs font-semibold tracking-wider text-muted-foreground mb-2">
+                          TIMELINE
+                        </p>
+                        <p className="text-sm font-medium">{caseItem.timeline}</p>
                       </div>
+                    </motion.div>
 
-                      <ul className="space-y-2 mb-6">
-                        {caseItem.results.slice(0, 2).map((result, i) => (
-                          <li key={i} className="flex items-center gap-2 text-sm">
-                            <span className="w-1.5 h-1.5 bg-primary rounded-full" />
+                    {/* Results */}
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: 0.3 }}
+                      className="mb-8"
+                    >
+                      <p className="text-xs font-semibold tracking-wider text-muted-foreground mb-4">
+                        RESULTS
+                      </p>
+                      <ul className="space-y-3">
+                        {caseItem.results.map((result, i) => (
+                          <li key={i} className="text-sm font-medium">
                             {result}
                           </li>
                         ))}
                       </ul>
+                    </motion.div>
 
-                      <Link
-                        to="/contacts"
-                        className="inline-flex items-center gap-2 text-primary font-semibold group/link"
+                    {/* Explore Button */}
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: 0.35 }}
+                    >
+                      <a
+                        href={caseItem.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-10 py-5 rounded-xl text-sm font-semibold uppercase tracking-wider transition-all duration-300 hover:bg-primary/90 group"
                       >
-                        View Project
-                        <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover/link:translate-x-1 group-hover/link:-translate-y-1" />
-                      </Link>
-                    </div>
+                        EXPLORE
+                        <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+                      </a>
+                    </motion.div>
                   </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section data-header-theme="dark" className="bg-dark text-dark-foreground py-24">
-          <div className="container mx-auto px-6 text-center">
-            <motion.h2
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8"
-            >
-              Want to be our next success story?
-            </motion.h2>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              <Link
-                to="/contacts"
-                className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-10 py-6 rounded-xl text-sm font-semibold uppercase tracking-wider transition-all duration-300 hover:bg-primary/90"
-              >
-                Start Your Project
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-            </motion.div>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </section>
       </main>
