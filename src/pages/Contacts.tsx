@@ -3,14 +3,13 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { ArrowRight, Mail, Phone, MapPin, Linkedin, Instagram, Twitter } from "lucide-react";
+import { ArrowRight, Linkedin, Mail } from "lucide-react";
 import { toast } from "sonner";
 
 const Contacts = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    company: "",
     message: "",
     budget: "",
   });
@@ -26,13 +25,40 @@ const Contacts = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast.success("Thank you for reaching out! We'll get back to you within 24 hours.");
-    setFormData({ name: "", email: "", company: "", message: "", budget: "" });
+    setFormData({ name: "", email: "", message: "", budget: "" });
   };
 
-  const socialLinks = [
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Instagram, href: "#", label: "Instagram" },
-    { icon: Twitter, href: "#", label: "Twitter" },
+  const locations = [
+    {
+      flag: "🇺🇸",
+      country: "UNITED STATES",
+      city: "NEW YORK",
+      company: "Intrao Tech Inc.",
+      details: "123 Tech Avenue, Suite 500, NY 10001",
+    },
+    {
+      flag: "🇵🇱",
+      country: "POLAND",
+      city: "WARSAW",
+      company: "Intrao Tech Sp. z o.o.",
+      details: "ul. Marszałkowska 1/100, 00-001",
+    },
+    {
+      flag: "🇺🇦",
+      country: "UKRAINE",
+      city: "KYIV",
+      company: "Intrao Tech LLC",
+      details: "1 Khreshchatyk St, Kyiv 01001",
+    },
+  ];
+
+  const flagPositions = [
+    { flag: "🇨🇦", top: "28%", left: "18%" },
+    { flag: "🇺🇸", top: "42%", left: "22%" },
+    { flag: "🇪🇪", top: "22%", left: "58%" },
+    { flag: "🇵🇱", top: "32%", left: "54%" },
+    { flag: "🇺🇦", top: "34%", left: "60%" },
+    { flag: "🇨🇭", top: "38%", left: "52%" },
   ];
 
   return (
@@ -49,7 +75,7 @@ const Contacts = () => {
 
       <main>
         {/* Hero Section */}
-        <section data-header-theme="dark" className="bg-dark text-dark-foreground pt-32 pb-20">
+        <section data-header-theme="dark" className="bg-dark text-dark-foreground pt-32 pb-16">
           <div className="container mx-auto px-6">
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -57,110 +83,85 @@ const Contacts = () => {
               transition={{ duration: 0.6 }}
               className="text-dark-muted text-sm uppercase tracking-[0.3em] mb-8"
             >
-              Contact Us
+              We turn bold ideas into successful products
             </motion.p>
 
             <motion.h1
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] mb-8 max-w-4xl"
+              className="text-6xl md:text-7xl lg:text-8xl font-bold leading-[1.1]"
             >
-              Let's build something{" "}
-              <span className="text-primary">amazing together</span>
+              Got an idea?
+              <br />
+              Let's talk!
             </motion.h1>
-
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="text-dark-muted text-xl max-w-2xl"
-            >
-              Ready to start your project? Fill out the form below or reach out directly. We'll get back to you within 24 hours.
-            </motion.p>
           </div>
         </section>
 
-        {/* Contact Section */}
-        <section data-header-theme="light" className="bg-background text-foreground py-24">
+        {/* Contact Form Section */}
+        <section data-header-theme="dark" className="relative bg-dark text-dark-foreground py-20">
           <div className="container mx-auto px-6">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
               {/* Form */}
               <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
+                className="lg:col-span-2"
               >
-                <h2 className="text-2xl font-bold mb-8">Send us a message</h2>
-
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="text-sm text-muted-foreground mb-2 block">
-                        Your Name *
-                      </label>
-                      <input
-                        type="text"
-                        value={formData.name}
-                        onChange={(e) =>
-                          setFormData({ ...formData, name: e.target.value })
-                        }
-                        placeholder="John Doe"
-                        required
-                        className="w-full bg-transparent border border-border rounded-lg px-4 py-3 text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors duration-300"
-                      />
-                    </div>
-                    <div>
-                      <label className="text-sm text-muted-foreground mb-2 block">
-                        Your Email *
-                      </label>
-                      <input
-                        type="email"
-                        value={formData.email}
-                        onChange={(e) =>
-                          setFormData({ ...formData, email: e.target.value })
-                        }
-                        placeholder="john@company.com"
-                        required
-                        className="w-full bg-transparent border border-border rounded-lg px-4 py-3 text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors duration-300"
-                      />
-                    </div>
-                  </div>
-
+                <form onSubmit={handleSubmit} className="space-y-8">
                   <div>
-                    <label className="text-sm text-muted-foreground mb-2 block">
-                      Company
+                    <label className="text-dark-muted text-xs uppercase tracking-[0.2em] mb-3 block">
+                      Your Name
                     </label>
                     <input
                       type="text"
-                      value={formData.company}
+                      value={formData.name}
                       onChange={(e) =>
-                        setFormData({ ...formData, company: e.target.value })
+                        setFormData({ ...formData, name: e.target.value })
                       }
-                      placeholder="Your company name"
-                      className="w-full bg-transparent border border-border rounded-lg px-4 py-3 text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors duration-300"
+                      placeholder="Enter your name"
+                      required
+                      className="w-full bg-transparent border-0 border-b border-dark-muted/30 pb-4 text-lg text-dark-foreground placeholder:text-dark-muted/50 focus:outline-none focus:border-primary transition-colors duration-300"
                     />
                   </div>
 
                   <div>
-                    <label className="text-sm text-muted-foreground mb-2 block">
-                      Message *
+                    <label className="text-dark-muted text-xs uppercase tracking-[0.2em] mb-3 block">
+                      Your Email
+                    </label>
+                    <input
+                      type="email"
+                      value={formData.email}
+                      onChange={(e) =>
+                        setFormData({ ...formData, email: e.target.value })
+                      }
+                      placeholder="Enter your email"
+                      required
+                      className="w-full bg-transparent border-0 border-b border-dark-muted/30 pb-4 text-lg text-dark-foreground placeholder:text-dark-muted/50 focus:outline-none focus:border-primary transition-colors duration-300"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="text-dark-muted text-xs uppercase tracking-[0.2em] mb-3 block">
+                      Message
                     </label>
                     <textarea
                       value={formData.message}
                       onChange={(e) =>
                         setFormData({ ...formData, message: e.target.value })
                       }
-                      placeholder="Tell us about your project, goals, and timeline"
-                      rows={5}
+                      placeholder="Tell us about your project"
+                      rows={3}
                       required
-                      className="w-full bg-transparent border border-border rounded-lg px-4 py-3 text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors duration-300 resize-none"
+                      className="w-full bg-transparent border-0 border-b border-dark-muted/30 pb-4 text-lg text-dark-foreground placeholder:text-dark-muted/50 focus:outline-none focus:border-primary transition-colors duration-300 resize-none"
                     />
                   </div>
 
                   <div>
-                    <label className="text-sm text-muted-foreground mb-4 block">
+                    <label className="text-dark-muted text-xs uppercase tracking-[0.2em] mb-4 block">
                       Your budget for this project?
                     </label>
                     <div className="flex flex-wrap gap-3">
@@ -169,10 +170,10 @@ const Contacts = () => {
                           key={option}
                           type="button"
                           onClick={() => setFormData({ ...formData, budget: option })}
-                          className={`px-6 py-3 text-sm rounded-xl transition-all duration-300 ${
+                          className={`px-5 py-3 text-sm rounded-lg transition-all duration-300 ${
                             formData.budget === option
                               ? "bg-primary text-primary-foreground"
-                              : "border border-border text-muted-foreground hover:text-foreground hover:border-foreground"
+                              : "border border-dark-muted/30 text-dark-muted hover:text-dark-foreground hover:border-dark-foreground"
                           }`}
                         >
                           {option}
@@ -183,96 +184,210 @@ const Contacts = () => {
 
                   <button
                     type="submit"
-                    className="group inline-flex items-center gap-3 bg-primary text-primary-foreground px-10 py-5 rounded-xl text-sm font-semibold uppercase tracking-wider transition-all duration-300 hover:bg-primary/90"
+                    className="group inline-flex items-center gap-3 bg-primary text-primary-foreground px-10 py-5 rounded-xl text-sm font-semibold uppercase tracking-wider transition-all duration-300 hover:bg-primary/90 mt-4"
                   >
-                    Send Message
+                    Submit
                     <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
                   </button>
                 </form>
               </motion.div>
 
-              {/* Contact Info */}
+              {/* Contact Cards */}
               <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="space-y-8"
+                className="lg:col-span-1 space-y-6"
               >
-                <div>
-                  <h2 className="text-2xl font-bold mb-8">Get in touch</h2>
+                {/* Card 1 - Project Discussion */}
+                <div className="border border-dark-muted/20 rounded-2xl p-6">
+                  <h3 className="text-xl font-semibold mb-5">
+                    Have a project to discuss?
+                  </h3>
 
-                  <div className="space-y-6">
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 border border-border rounded-full flex items-center justify-center flex-shrink-0">
-                        <Mail className="w-5 h-5 text-primary" />
+                  <div className="flex items-start gap-4">
+                    <div className="relative flex-shrink-0">
+                      <div className="w-14 h-14 rounded-full bg-gradient-to-br from-rose-400 to-rose-600 flex items-center justify-center overflow-hidden">
+                        <span className="text-xl font-semibold text-white">AE</span>
                       </div>
-                      <div>
-                        <p className="text-sm text-muted-foreground mb-1">Email</p>
-                        <a
-                          href="mailto:hello@intrao.tech"
-                          className="text-lg font-medium hover:text-primary transition-colors duration-300"
-                        >
-                          hello@intrao.tech
-                        </a>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 border border-border rounded-full flex items-center justify-center flex-shrink-0">
-                        <Phone className="w-5 h-5 text-primary" />
-                      </div>
-                      <div>
-                        <p className="text-sm text-muted-foreground mb-1">Phone</p>
-                        <a
-                          href="tel:+1234567890"
-                          className="text-lg font-medium hover:text-primary transition-colors duration-300"
-                        >
-                          +1 (234) 567-890
-                        </a>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 border border-border rounded-full flex items-center justify-center flex-shrink-0">
-                        <MapPin className="w-5 h-5 text-primary" />
-                      </div>
-                      <div>
-                        <p className="text-sm text-muted-foreground mb-1">Location</p>
-                        <p className="text-lg font-medium">
-                          Global team, remote-first
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="pt-8 border-t border-border">
-                  <h3 className="text-lg font-semibold mb-4">Follow us</h3>
-                  <div className="flex gap-4">
-                    {socialLinks.map((social) => (
                       <a
-                        key={social.label}
-                        href={social.href}
-                        aria-label={social.label}
-                        className="w-12 h-12 border border-border rounded-full flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-all duration-300"
+                        href="#"
+                        aria-label="LinkedIn"
+                        className="absolute -bottom-1 -right-1 w-7 h-7 bg-dark border border-dark-muted/30 rounded-full flex items-center justify-center text-dark-muted hover:text-primary hover:border-primary transition-all duration-300"
                       >
-                        <social.icon className="w-5 h-5" />
+                        <Linkedin className="w-3.5 h-3.5" />
                       </a>
-                    ))}
+                    </div>
+                    <div className="flex-1">
+                      <p className="font-semibold">Account Executive</p>
+                      <a
+                        href="mailto:hello@intrao.tech"
+                        className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors duration-300 text-sm mt-2"
+                      >
+                        <Mail className="w-4 h-4" />
+                        hello@intrao.tech
+                      </a>
+                    </div>
                   </div>
                 </div>
 
-                <div className="p-8 bg-muted/30 rounded-lg">
-                  <h3 className="text-lg font-semibold mb-2">Office Hours</h3>
-                  <p className="text-muted-foreground mb-4">
-                    We're available Monday to Friday, 9am - 6pm CET
-                  </p>
-                  <p className="text-sm text-muted-foreground">
-                    Expect a response within 24 hours
-                  </p>
+                {/* Card 2 - Partnership */}
+                <div className="border border-dark-muted/20 rounded-2xl p-6">
+                  <h3 className="text-dark-muted text-xs uppercase tracking-[0.2em] mb-5">
+                    Have a partnership in mind?
+                  </h3>
+
+                  <div className="flex items-start gap-4">
+                    <div className="relative flex-shrink-0">
+                      <div className="w-14 h-14 rounded-full bg-gradient-to-br from-blue-400 to-indigo-600 flex items-center justify-center overflow-hidden">
+                        <span className="text-xl font-semibold text-white">CF</span>
+                      </div>
+                      <a
+                        href="#"
+                        aria-label="LinkedIn"
+                        className="absolute -bottom-1 -right-1 w-7 h-7 bg-dark border border-dark-muted/30 rounded-full flex items-center justify-center text-dark-muted hover:text-primary hover:border-primary transition-all duration-300"
+                      >
+                        <Linkedin className="w-3.5 h-3.5" />
+                      </a>
+                    </div>
+                    <div className="flex-1">
+                      <p className="font-semibold">Co-Founder</p>
+                      <a
+                        href="mailto:partner@intrao.tech"
+                        className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors duration-300 text-sm mt-2"
+                      >
+                        <Mail className="w-4 h-4" />
+                        partner@intrao.tech
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </motion.div>
+            </div>
+          </div>
+
+          {/* Bottom curve */}
+          <div className="absolute bottom-0 left-0 w-full translate-y-full pointer-events-none z-20">
+            <svg
+              viewBox="0 0 1440 120"
+              preserveAspectRatio="none"
+              className="w-full h-[60px] md:h-[80px] lg:h-[100px]"
+            >
+              <path
+                className="fill-dark"
+                d="M0,0 L0,0 C360,0 360,80 720,80 C1080,80 1080,0 1440,0 L1440,0 Z"
+              />
+            </svg>
+          </div>
+        </section>
+
+        {/* World Map Section */}
+        <section data-header-theme="light" className="bg-background text-foreground pt-32 lg:pt-40 pb-24">
+          <div className="container mx-auto px-6">
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-muted-foreground text-sm uppercase tracking-[0.3em] mb-6"
+            >
+              Worldwide, where you need us
+            </motion.p>
+
+            <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.15] mb-16 max-w-4xl"
+            >
+              Collaborating across borders to deliver seamless solutions — wherever you are
+            </motion.h2>
+
+            {/* Map Container */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="relative w-full aspect-[2/1] max-w-5xl mx-auto"
+            >
+              {/* World Map SVG */}
+              <svg
+                viewBox="0 0 1000 500"
+                className="w-full h-full"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                {/* Simplified world map paths */}
+                <g fill="currentColor" className="text-muted-foreground/10">
+                  {/* North America */}
+                  <path d="M150 120 Q180 100 220 110 Q260 105 280 130 Q290 160 270 180 Q280 200 260 230 Q240 250 200 260 Q170 270 140 250 Q120 230 130 200 Q110 170 130 140 Q140 120 150 120 Z" />
+                  <path d="M180 260 Q220 270 240 300 Q250 330 230 360 Q200 380 170 370 Q140 350 150 320 Q160 290 180 260 Z" />
+                  {/* South America */}
+                  <path d="M250 350 Q280 340 300 360 Q320 400 310 450 Q290 480 260 470 Q230 450 240 410 Q235 380 250 350 Z" />
+                  {/* Europe */}
+                  <path d="M480 130 Q520 120 560 130 Q590 140 600 160 Q610 190 590 210 Q560 230 520 220 Q490 210 480 180 Q470 150 480 130 Z" />
+                  {/* Africa */}
+                  <path d="M500 250 Q540 240 570 260 Q600 290 590 340 Q570 390 530 400 Q490 390 480 350 Q470 300 500 250 Z" />
+                  {/* Asia */}
+                  <path d="M620 100 Q700 90 780 110 Q840 130 860 180 Q870 230 840 270 Q800 300 740 290 Q680 280 650 240 Q620 200 610 160 Q610 120 620 100 Z" />
+                  {/* Australia */}
+                  <path d="M780 360 Q820 350 850 370 Q880 400 870 440 Q850 470 810 460 Q770 450 770 410 Q765 380 780 360 Z" />
+                </g>
+              </svg>
+
+              {/* Flag Markers */}
+              {flagPositions.map((pos, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, scale: 0 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
+                  className="absolute text-2xl md:text-3xl"
+                  style={{ top: pos.top, left: pos.left }}
+                >
+                  {pos.flag}
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Office Locations Section */}
+        <section data-header-theme="light" className="bg-background text-foreground pb-24">
+          <div className="container mx-auto px-6">
+            <div className="border-t border-border">
+              {locations.map((location, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="grid grid-cols-12 gap-4 py-8 border-b border-border items-center"
+                >
+                  {/* Flag */}
+                  <div className="col-span-2 md:col-span-1">
+                    <span className="text-3xl md:text-4xl">{location.flag}</span>
+                  </div>
+
+                  {/* Location */}
+                  <div className="col-span-10 md:col-span-4">
+                    <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
+                      {location.country}, {location.city}
+                    </p>
+                  </div>
+
+                  {/* Company Details */}
+                  <div className="col-span-12 md:col-span-7 md:text-right">
+                    <p className="font-semibold text-lg">{location.company}</p>
+                    <p className="text-muted-foreground">{location.details}</p>
+                  </div>
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>
