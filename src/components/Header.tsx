@@ -51,9 +51,11 @@ const Header = () => {
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
             ? isLight
-              ? "bg-background/95 backdrop-blur-md py-4"
-              : "bg-dark/95 backdrop-blur-md py-4"
-            : "bg-transparent py-6"
+              ? "bg-background py-4"
+              : "bg-dark py-4"
+            : isLight
+              ? "bg-background py-6"
+              : "bg-dark py-6"
         }`}
       >
         <div className="container mx-auto px-6 flex items-center justify-between">
