@@ -13,6 +13,18 @@ import Insights from "./pages/Insights";
 import Contacts from "./pages/Contacts";
 import Team from "./pages/Team";
 import Careers from "./pages/Careers";
+import WebAppDesign from "./pages/services/WebAppDesign";
+import MobileAppDesign from "./pages/services/MobileAppDesign";
+import WebsiteDesign from "./pages/services/WebsiteDesign";
+import WebsiteRedesign from "./pages/services/WebsiteRedesign";
+import Branding from "./pages/services/Branding";
+import WebDevelopment from "./pages/services/WebDevelopment";
+import MobileDevelopment from "./pages/services/MobileDevelopment";
+import WebsiteDevelopment from "./pages/services/WebsiteDevelopment";
+import NoCodeDevelopment from "./pages/services/NoCodeDevelopment";
+import BlockchainDevelopment from "./pages/services/BlockchainDevelopment";
+import UXAudit from "./pages/services/UXAudit";
+import ProductDiscovery from "./pages/services/ProductDiscovery";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -34,6 +46,18 @@ const App = () => (
               <Route path="/contacts" element={<Contacts />} />
               <Route path="/team" element={<Team />} />
               <Route path="/careers" element={<Careers />} />
+              <Route path="/services/web-app-design" element={<WebAppDesign />} />
+              <Route path="/services/mobile-app-design" element={<MobileAppDesign />} />
+              <Route path="/services/website-design" element={<WebsiteDesign />} />
+              <Route path="/services/website-redesign" element={<WebsiteRedesign />} />
+              <Route path="/services/branding" element={<Branding />} />
+              <Route path="/services/web-development" element={<WebDevelopment />} />
+              <Route path="/services/mobile-development" element={<MobileDevelopment />} />
+              <Route path="/services/website-development" element={<WebsiteDevelopment />} />
+              <Route path="/services/no-code-development" element={<NoCodeDevelopment />} />
+              <Route path="/services/blockchain-development" element={<BlockchainDevelopment />} />
+              <Route path="/services/ux-audit" element={<UXAudit />} />
+              <Route path="/services/product-discovery" element={<ProductDiscovery />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>

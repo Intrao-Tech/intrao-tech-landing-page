@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ArrowUpRight, ChevronDown } from "lucide-react";
+import { Menu, X, ArrowUpRight, ChevronDown, ChevronRight } from "lucide-react";
 import logoFull from "@/assets/logo.svg";
 import logoFullDark from "@/assets/logo-dark.svg";
 import { useHeaderTheme } from "@/contexts/HeaderThemeContext";
@@ -11,6 +11,9 @@ const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isCompanyDropdownOpen, setIsCompanyDropdownOpen] = useState(false);
   const [isMobileCompanyExpanded, setIsMobileCompanyExpanded] = useState(false);
+  const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
+  const [activeServiceCategory, setActiveServiceCategory] = useState<string>("DESIGN");
+  const [isMobileServicesExpanded, setIsMobileServicesExpanded] = useState(false);
   const location = useLocation();
   const { theme } = useHeaderTheme();
 
@@ -29,12 +32,15 @@ const Header = () => {
     setIsMobileMenuOpen(false);
     setIsCompanyDropdownOpen(false);
     setIsMobileCompanyExpanded(false);
+    setIsServicesDropdownOpen(false);
+    setIsMobileServicesExpanded(false);
+    setActiveServiceCategory("DESIGN");
   }, [location]);
 
   const navLinks = [
-    { name: "Services", href: "/services" },
+    { name: "Services", href: "#", hasDropdown: true, dropdownType: "services" },
     { name: "Cases", href: "/cases" },
-    { name: "Company", href: "#", hasDropdown: true },
+    { name: "Company", href: "#", hasDropdown: true, dropdownType: "company" },
     { name: "Insights", href: "/insights" },
     { name: "Contacts", href: "/contacts" },
   ];
@@ -43,6 +49,37 @@ const Header = () => {
     { name: "About us", href: "/about" },
     { name: "Team and Advisors", href: "/team" },
     { name: "Careers", href: "/careers" },
+  ];
+
+  const serviceCategories = [
+    {
+      name: "DESIGN",
+      items: [
+        { name: "Web app design", href: "/services/web-app-design" },
+        { name: "Mobile app design", href: "/services/mobile-app-design" },
+        { name: "Website design", href: "/services/website-design" },
+        { name: "Website redesign", href: "/services/website-redesign" },
+        { name: "Branding", href: "/services/branding" },
+      ],
+    },
+    {
+      name: "DEVELOPMENT",
+      items: [
+        { name: "Web development", href: "/services/web-development" },
+        { name: "Mobile development", href: "/services/mobile-development" },
+        { name: "Website development", href: "/services/website-development" },
+        { name: "No-code development", href: "/services/no-code-development" },
+        { name: "Blockchain development", href: "/services/blockchain-development" },
+      ],
+    },
+    {
+      name: "RESEARCH",
+      items: [
+        { name: "UX audit", href: "/services/ux-audit" },
+        { name: "Product discovery", href: "/services/product-discovery" },
+        { name: "Technical workshop", href: "/services/technical-workshop" },
+      ],
+    },
   ];
 
   return (
@@ -77,49 +114,75 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-8">
-            {navLinks.map((link, index) => (
-              <motion.div
-                key={link.name}
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, delay: index * 0.1 }}
-                className="relative"
-                onMouseEnter={() => link.hasDropdown && setIsCompanyDropdownOpen(true)}
-                onMouseLeave={() => link.hasDropdown && setIsCompanyDropdownOpen(false)}
-              >
-                {link.hasDropdown ? (
-                  <button
-                    className={`flex items-center gap-1 text-sm font-medium uppercase tracking-wider transition-colors duration-300 ${
-                      ["/about", "/team", "/careers"].includes(location.pathname)
-                        ? "text-primary"
-                        : isLight
-                          ? "text-foreground hover:text-primary"
-                          : "text-dark-foreground hover:text-primary"
-                    }`}
-                  >
-                    {link.name}
-                    <ChevronDown
-                      className={`w-4 h-4 transition-transform duration-300 ${
-                        isCompanyDropdownOpen ? "rotate-180" : ""
+            {navLinks.map((link, index) => {
+              const isServicesActive = link.dropdownType === "services" &&
+                (location.pathname.startsWith("/services/") || isServicesDropdownOpen);
+              const isCompanyActive = link.dropdownType === "company" &&
+                ["/about", "/team", "/careers"].includes(location.pathname);
+              const isDropdownOpen = link.dropdownType === "services"
+                ? isServicesDropdownOpen
+                : link.dropdownType === "company"
+                  ? isCompanyDropdownOpen
+                  : false;
+
+              return (
+                <motion.div
+                  key={link.name}
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3, delay: index * 0.1 }}
+                  className="relative"
+                  onMouseEnter={() => {
+                    if (link.dropdownType === "services") {
+                      setIsServicesDropdownOpen(true);
+                      setIsCompanyDropdownOpen(false);
+                    } else if (link.dropdownType === "company") {
+                      setIsCompanyDropdownOpen(true);
+                      setIsServicesDropdownOpen(false);
+                    }
+                  }}
+                  onMouseLeave={() => {
+                    if (link.dropdownType === "services") {
+                      setIsServicesDropdownOpen(false);
+                    } else if (link.dropdownType === "company") {
+                      setIsCompanyDropdownOpen(false);
+                    }
+                  }}
+                >
+                  {link.hasDropdown ? (
+                    <button
+                      className={`flex items-center gap-1 text-sm font-medium uppercase tracking-wider transition-colors duration-300 ${
+                        isServicesActive || isCompanyActive
+                          ? "text-primary"
+                          : isLight
+                            ? "text-foreground hover:text-primary"
+                            : "text-dark-foreground hover:text-primary"
                       }`}
-                    />
-                  </button>
-                ) : (
-                  <Link
-                    to={link.href}
-                    className={`text-sm font-medium uppercase tracking-wider transition-colors duration-300 ${
-                      location.pathname === link.href
-                        ? "text-primary"
-                        : isLight
-                          ? "text-foreground hover:text-primary"
-                          : "text-dark-foreground hover:text-primary"
-                    }`}
-                  >
-                    {link.name}
-                  </Link>
-                )}
-              </motion.div>
-            ))}
+                    >
+                      {link.name}
+                      <ChevronDown
+                        className={`w-4 h-4 transition-transform duration-300 ${
+                          isDropdownOpen ? "rotate-180" : ""
+                        }`}
+                      />
+                    </button>
+                  ) : (
+                    <Link
+                      to={link.href}
+                      className={`text-sm font-medium uppercase tracking-wider transition-colors duration-300 ${
+                        location.pathname === link.href
+                          ? "text-primary"
+                          : isLight
+                            ? "text-foreground hover:text-primary"
+                            : "text-dark-foreground hover:text-primary"
+                      }`}
+                    >
+                      {link.name}
+                    </Link>
+                  )}
+                </motion.div>
+              );
+            })}
           </nav>
 
           {/* CTA Button */}
@@ -160,6 +223,74 @@ const Header = () => {
           </button>
         </div>
       </header>
+
+      {/* Services Dropdown */}
+      <AnimatePresence>
+        {isServicesDropdownOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.2 }}
+            className="fixed left-0 right-0 z-[45] hidden lg:block"
+            style={{ top: isScrolled ? "76px" : "92px" }}
+            onMouseEnter={() => setIsServicesDropdownOpen(true)}
+            onMouseLeave={() => setIsServicesDropdownOpen(false)}
+          >
+            <div className={`${isLight ? "bg-white" : "bg-dark"}`}>
+              <div className="container mx-auto px-6 py-12">
+                <div className="grid grid-cols-[240px_1fr] gap-12 max-w-4xl">
+                  {/* Left: Categories */}
+                  <div className="flex flex-col gap-2">
+                    {serviceCategories.map((category) => (
+                      <button
+                        key={category.name}
+                        onMouseEnter={() => setActiveServiceCategory(category.name)}
+                        className={`flex items-center justify-between px-4 py-3 rounded-lg text-sm font-medium uppercase tracking-wider transition-all duration-200 ${
+                          activeServiceCategory === category.name
+                            ? isLight
+                              ? "bg-gray-100 text-foreground"
+                              : "bg-dark-muted/30 text-dark-foreground"
+                            : isLight
+                              ? "text-muted-foreground hover:text-foreground hover:bg-gray-50"
+                              : "text-dark-muted hover:text-dark-foreground hover:bg-dark-muted/20"
+                        }`}
+                      >
+                        {category.name}
+                        <ChevronRight className={`w-4 h-4 transition-opacity ${
+                          activeServiceCategory === category.name ? "opacity-100" : "opacity-0"
+                        }`} />
+                      </button>
+                    ))}
+                  </div>
+
+                  {/* Right: Sub-items */}
+                  <div className="flex flex-col gap-3">
+                    {serviceCategories
+                      .find((cat) => cat.name === activeServiceCategory)
+                      ?.items.map((item) => (
+                        <Link
+                          key={item.name}
+                          to={item.href}
+                          className={`text-xl font-medium transition-colors duration-300 ${
+                            location.pathname === item.href
+                              ? "text-primary"
+                              : isLight
+                                ? "text-foreground hover:text-primary"
+                                : "text-dark-foreground hover:text-primary"
+                          }`}
+                        >
+                          {item.name}
+                        </Link>
+                      ))}
+                  </div>
+                </div>
+              </div>
+              <div className={`h-px ${isLight ? "bg-gray-100" : "bg-white/20"}`} />
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Company Dropdown */}
       <AnimatePresence>
@@ -244,54 +375,116 @@ const Header = () => {
                     transition={{ duration: 0.3, delay: index * 0.1 }}
                   >
                     {link.hasDropdown ? (
-                      <div>
-                        <button
-                          onClick={() => setIsMobileCompanyExpanded(!isMobileCompanyExpanded)}
-                          className={`flex items-center gap-2 text-2xl font-semibold uppercase tracking-wider transition-colors duration-300 ${
-                            ["/about", "/team", "/careers"].includes(location.pathname)
-                              ? "text-primary"
-                              : isLight
-                                ? "text-foreground hover:text-primary"
-                                : "text-dark-foreground hover:text-primary"
-                          }`}
-                        >
-                          {link.name}
-                          <ChevronDown
-                            className={`w-5 h-5 transition-transform duration-300 ${
-                              isMobileCompanyExpanded ? "rotate-180" : ""
+                      link.dropdownType === "services" ? (
+                        <div>
+                          <button
+                            onClick={() => setIsMobileServicesExpanded(!isMobileServicesExpanded)}
+                            className={`flex items-center gap-2 text-2xl font-semibold uppercase tracking-wider transition-colors duration-300 ${
+                              location.pathname.startsWith("/services/")
+                                ? "text-primary"
+                                : isLight
+                                  ? "text-foreground hover:text-primary"
+                                  : "text-dark-foreground hover:text-primary"
                             }`}
-                          />
-                        </button>
-                        <AnimatePresence>
-                          {isMobileCompanyExpanded && (
-                            <motion.div
-                              initial={{ opacity: 0, height: 0 }}
-                              animate={{ opacity: 1, height: "auto" }}
-                              exit={{ opacity: 0, height: 0 }}
-                              transition={{ duration: 0.2 }}
-                              className="overflow-hidden"
-                            >
-                              <div className="flex flex-col gap-3 pl-4 pt-4">
-                                {companyLinks.map((subLink) => (
-                                  <Link
-                                    key={subLink.name}
-                                    to={subLink.href}
-                                    className={`text-lg font-medium transition-colors duration-300 ${
-                                      location.pathname === subLink.href
-                                        ? "text-primary"
-                                        : isLight
-                                          ? "text-muted-foreground hover:text-primary"
-                                          : "text-dark-muted hover:text-primary"
-                                    }`}
-                                  >
-                                    {subLink.name}
-                                  </Link>
-                                ))}
-                              </div>
-                            </motion.div>
-                          )}
-                        </AnimatePresence>
-                      </div>
+                          >
+                            {link.name}
+                            <ChevronDown
+                              className={`w-5 h-5 transition-transform duration-300 ${
+                                isMobileServicesExpanded ? "rotate-180" : ""
+                              }`}
+                            />
+                          </button>
+                          <AnimatePresence>
+                            {isMobileServicesExpanded && (
+                              <motion.div
+                                initial={{ opacity: 0, height: 0 }}
+                                animate={{ opacity: 1, height: "auto" }}
+                                exit={{ opacity: 0, height: 0 }}
+                                transition={{ duration: 0.2 }}
+                                className="overflow-hidden"
+                              >
+                                <div className="flex flex-col gap-4 pl-4 pt-4">
+                                  {serviceCategories.map((category) => (
+                                    <div key={category.name}>
+                                      <span className={`text-xs font-semibold uppercase tracking-wider ${
+                                        isLight ? "text-muted-foreground" : "text-dark-muted"
+                                      }`}>
+                                        {category.name}
+                                      </span>
+                                      <div className="flex flex-col gap-2 mt-2">
+                                        {category.items.map((item) => (
+                                          <Link
+                                            key={item.name}
+                                            to={item.href}
+                                            className={`text-lg font-medium transition-colors duration-300 ${
+                                              location.pathname === item.href
+                                                ? "text-primary"
+                                                : isLight
+                                                  ? "text-foreground hover:text-primary"
+                                                  : "text-dark-foreground hover:text-primary"
+                                            }`}
+                                          >
+                                            {item.name}
+                                          </Link>
+                                        ))}
+                                      </div>
+                                    </div>
+                                  ))}
+                                </div>
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
+                        </div>
+                      ) : (
+                        <div>
+                          <button
+                            onClick={() => setIsMobileCompanyExpanded(!isMobileCompanyExpanded)}
+                            className={`flex items-center gap-2 text-2xl font-semibold uppercase tracking-wider transition-colors duration-300 ${
+                              ["/about", "/team", "/careers"].includes(location.pathname)
+                                ? "text-primary"
+                                : isLight
+                                  ? "text-foreground hover:text-primary"
+                                  : "text-dark-foreground hover:text-primary"
+                            }`}
+                          >
+                            {link.name}
+                            <ChevronDown
+                              className={`w-5 h-5 transition-transform duration-300 ${
+                                isMobileCompanyExpanded ? "rotate-180" : ""
+                              }`}
+                            />
+                          </button>
+                          <AnimatePresence>
+                            {isMobileCompanyExpanded && (
+                              <motion.div
+                                initial={{ opacity: 0, height: 0 }}
+                                animate={{ opacity: 1, height: "auto" }}
+                                exit={{ opacity: 0, height: 0 }}
+                                transition={{ duration: 0.2 }}
+                                className="overflow-hidden"
+                              >
+                                <div className="flex flex-col gap-3 pl-4 pt-4">
+                                  {companyLinks.map((subLink) => (
+                                    <Link
+                                      key={subLink.name}
+                                      to={subLink.href}
+                                      className={`text-lg font-medium transition-colors duration-300 ${
+                                        location.pathname === subLink.href
+                                          ? "text-primary"
+                                          : isLight
+                                            ? "text-muted-foreground hover:text-primary"
+                                            : "text-dark-muted hover:text-primary"
+                                      }`}
+                                    >
+                                      {subLink.name}
+                                    </Link>
+                                  ))}
+                                </div>
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
+                        </div>
+                      )
                     ) : (
                       <Link
                         to={link.href}
