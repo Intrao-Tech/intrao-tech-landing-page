@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ArrowUpRight, ChevronDown, ChevronRight } from "lucide-react";
@@ -16,6 +16,9 @@ const Header = () => {
   const [isMobileServicesExpanded, setIsMobileServicesExpanded] = useState(false);
   const location = useLocation();
   const { theme } = useHeaderTheme();
+
+  const servicesTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const companyTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const isLight = theme === "light";
 
@@ -82,6 +85,43 @@ const Header = () => {
     },
   ];
 
+  const handleServicesMouseEnter = () => {
+    if (servicesTimeoutRef.current) {
+      clearTimeout(servicesTimeoutRef.current);
+      servicesTimeoutRef.current = null;
+    }
+    setIsServicesDropdownOpen(true);
+    setIsCompanyDropdownOpen(false);
+  };
+
+  const handleServicesMouseLeave = () => {
+    servicesTimeoutRef.current = setTimeout(() => {
+      setIsServicesDropdownOpen(false);
+    }, 150);
+  };
+
+  const handleCompanyMouseEnter = () => {
+    if (companyTimeoutRef.current) {
+      clearTimeout(companyTimeoutRef.current);
+      companyTimeoutRef.current = null;
+    }
+    setIsCompanyDropdownOpen(true);
+    setIsServicesDropdownOpen(false);
+  };
+
+  const handleCompanyMouseLeave = () => {
+    companyTimeoutRef.current = setTimeout(() => {
+      setIsCompanyDropdownOpen(false);
+    }, 150);
+  };
+
+  useEffect(() => {
+    return () => {
+      if (servicesTimeoutRef.current) clearTimeout(servicesTimeoutRef.current);
+      if (companyTimeoutRef.current) clearTimeout(companyTimeoutRef.current);
+    };
+  }, []);
+
   return (
     <>
       <header
@@ -134,18 +174,16 @@ const Header = () => {
                   className="relative"
                   onMouseEnter={() => {
                     if (link.dropdownType === "services") {
-                      setIsServicesDropdownOpen(true);
-                      setIsCompanyDropdownOpen(false);
+                      handleServicesMouseEnter();
                     } else if (link.dropdownType === "company") {
-                      setIsCompanyDropdownOpen(true);
-                      setIsServicesDropdownOpen(false);
+                      handleCompanyMouseEnter();
                     }
                   }}
                   onMouseLeave={() => {
                     if (link.dropdownType === "services") {
-                      setIsServicesDropdownOpen(false);
+                      handleServicesMouseLeave();
                     } else if (link.dropdownType === "company") {
-                      setIsCompanyDropdownOpen(false);
+                      handleCompanyMouseLeave();
                     }
                   }}
                 >
@@ -234,8 +272,8 @@ const Header = () => {
             transition={{ duration: 0.2 }}
             className="fixed left-0 right-0 z-[45] hidden lg:block"
             style={{ top: isScrolled ? "76px" : "92px" }}
-            onMouseEnter={() => setIsServicesDropdownOpen(true)}
-            onMouseLeave={() => setIsServicesDropdownOpen(false)}
+            onMouseEnter={handleServicesMouseEnter}
+            onMouseLeave={handleServicesMouseLeave}
           >
             <div className={`${isLight ? "bg-white" : "bg-dark"}`}>
               <div className="container mx-auto px-6 py-12">
@@ -302,8 +340,8 @@ const Header = () => {
             transition={{ duration: 0.2 }}
             className="fixed left-0 right-0 z-[45] hidden lg:block"
             style={{ top: isScrolled ? "76px" : "92px" }}
-            onMouseEnter={() => setIsCompanyDropdownOpen(true)}
-            onMouseLeave={() => setIsCompanyDropdownOpen(false)}
+            onMouseEnter={handleCompanyMouseEnter}
+            onMouseLeave={handleCompanyMouseLeave}
           >
             <div className={`${isLight ? "bg-white" : "bg-dark"}`}>
               <div className="container mx-auto px-6 py-12">
