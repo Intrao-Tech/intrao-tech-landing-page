@@ -125,7 +125,7 @@ const Header = () => {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-[padding,background-color] duration-300 ${
           isScrolled
             ? isLight
               ? "bg-background py-4"
@@ -133,6 +133,12 @@ const Header = () => {
             : isLight
               ? "bg-background py-6"
               : "bg-dark py-6"
+        } ${
+          (isServicesDropdownOpen || isCompanyDropdownOpen)
+            ? isLight
+              ? "border-b border-gray-300"
+              : "border-b border-dark-muted/20"
+            : ""
         }`}
       >
         <div className="container mx-auto px-6 flex items-center justify-between">
@@ -324,7 +330,7 @@ const Header = () => {
                   </div>
                 </div>
               </div>
-              <div className={`h-px ${isLight ? "bg-gray-100" : "bg-white/20"}`} />
+              <div className={`h-px ${isLight ? "bg-gray-300" : "bg-dark-muted/20"}`} />
             </div>
           </motion.div>
         )}
@@ -385,7 +391,7 @@ const Header = () => {
                   </div>
                 </div>
               </div>
-              <div className={`h-px ${isLight ? "bg-gray-100" : "bg-white/20"}`} />
+              <div className={`h-px ${isLight ? "bg-gray-300" : "bg-dark-muted/20"}`} />
             </div>
           </motion.div>
         )}
