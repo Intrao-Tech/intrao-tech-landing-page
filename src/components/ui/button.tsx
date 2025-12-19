@@ -18,7 +18,7 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        tab: "bg-transparent text-muted-foreground hover:text-foreground data-[active=true]:bg-dark data-[active=true]:text-dark-foreground",
+        tab: "bg-transparent text-muted-foreground hover:text-dark-foreground data-[active=true]:bg-dark data-[active=true]:text-dark-foreground",
         "icon-circle": "rounded-full border border-border text-muted-foreground hover:text-primary hover:border-primary",
       },
       size: {
@@ -48,6 +48,7 @@ const circleHoverClasses: Record<string, string> = {
   primary: "btn-circle-hover btn-circle-primary",
   "outline-dark": "btn-circle-hover btn-circle-outline-dark",
   "outline-light": "btn-circle-hover btn-circle-outline-light",
+  tab: "btn-circle-hover btn-circle-tab",
 };
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(

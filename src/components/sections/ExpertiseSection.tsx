@@ -110,7 +110,7 @@ const ExpertiseSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex flex-wrap gap-2 mb-12"
+          className="flex flex-wrap gap-2 mb-12 border-b border-border pb-8"
         >
           {industries.map((industry, index) => (
             <Button
@@ -149,13 +149,21 @@ const ExpertiseSection = () => {
               {industries[activeIndustry].title}
             </h3>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* Challenges */}
-              <div>
-                <p className="label-small text-muted-foreground mb-6">
+            <div>
+              {/* Headers */}
+              <div className="grid grid-cols-1 md:grid-cols-2 border-b border-border">
+                <p className="label-small text-muted-foreground pb-4 md:pr-8">
                   Challenges:
                 </p>
-                <ul className="space-y-4">
+                <p className="label-small text-muted-foreground pb-4 md:pl-8">
+                  How we solve them:
+                </p>
+              </div>
+
+              {/* Content */}
+              <div className="grid grid-cols-1 md:grid-cols-2">
+                {/* Challenges */}
+                <ul className="space-y-4 pt-6 md:pr-8">
                   {industries[activeIndustry].challenges.map((challenge, i) => (
                     <li key={i} className="flex items-start gap-3">
                       <span className="text-primary mt-1">✱</span>
@@ -163,14 +171,9 @@ const ExpertiseSection = () => {
                     </li>
                   ))}
                 </ul>
-              </div>
 
-              {/* Solutions */}
-              <div>
-                <p className="label-small text-muted-foreground mb-6">
-                  How we solve them:
-                </p>
-                <ul className="space-y-4">
+                {/* Solutions */}
+                <ul className="space-y-4 pt-6 md:border-l md:border-border md:pl-8">
                   {industries[activeIndustry].solutions.map((solution, i) => (
                     <li key={i} className="flex items-start gap-3">
                       <span className="text-primary mt-1">✱</span>
