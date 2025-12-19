@@ -2,37 +2,31 @@ import { motion } from "framer-motion";
 import { ArrowLink } from "@/components/ui/arrow-link";
 
 const TeamSection = () => {
-  // Team photos with different sizes for asymmetric grid
+  // Team photos for scattered layout
   const teamPhotos = [
     {
-      src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=800&fit=crop",
+      src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=500&fit=crop",
       alt: "Team working together",
-      size: "tall", // spans 2 rows
     },
     {
-      src: "https://images.unsplash.com/photo-1543269865-cbf427effbad?w=600&h=400&fit=crop",
+      src: "https://images.unsplash.com/photo-1543269865-cbf427effbad?w=800&h=500&fit=crop",
       alt: "Team collaboration",
-      size: "wide", // spans 2 columns
     },
     {
-      src: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=400&h=400&fit=crop",
+      src: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=500&h=600&fit=crop",
       alt: "Office work",
-      size: "normal",
     },
     {
-      src: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=400&fit=crop",
+      src: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=600&fit=crop",
       alt: "Team meeting",
-      size: "normal",
     },
     {
-      src: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=400&h=500&fit=crop",
+      src: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&h=500&fit=crop",
       alt: "Team discussion",
-      size: "normal",
     },
     {
-      src: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=400&h=500&fit=crop",
+      src: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=600&h=500&fit=crop",
       alt: "Team event",
-      size: "normal",
     },
   ];
 
@@ -55,15 +49,15 @@ const TeamSection = () => {
           </p>
         </motion.div>
 
-        {/* Photo Grid - Asymmetric Bento Layout */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 auto-rows-[200px]">
+        {/* Photo Grid - Scattered Layout */}
+        <div className="grid grid-cols-12 gap-4 lg:gap-6">
           {/* Row 1 */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="row-span-2 rounded-lg overflow-hidden"
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="col-span-6 md:col-span-4 lg:col-span-3 h-[280px] md:h-[350px] rounded-2xl overflow-hidden"
           >
             <img
               src={teamPhotos[0].src}
@@ -72,12 +66,15 @@ const TeamSection = () => {
             />
           </motion.div>
 
+          {/* Empty space */}
+          <div className="hidden lg:block lg:col-span-2" />
+
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="row-span-2 rounded-lg overflow-hidden"
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="col-span-6 md:col-span-8 lg:col-span-7 h-[280px] md:h-[350px] rounded-2xl overflow-hidden"
           >
             <img
               src={teamPhotos[1].src}
@@ -86,12 +83,13 @@ const TeamSection = () => {
             />
           </motion.div>
 
+          {/* Row 2 */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="col-span-2 row-span-2 rounded-lg overflow-hidden hidden md:block"
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="col-span-6 md:col-span-4 lg:col-span-3 h-[300px] md:h-[380px] rounded-2xl overflow-hidden"
           >
             <img
               src={teamPhotos[2].src}
@@ -100,13 +98,12 @@ const TeamSection = () => {
             />
           </motion.div>
 
-          {/* Row 2 */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            className="rounded-lg overflow-hidden"
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="col-span-6 md:col-span-4 lg:col-span-3 h-[300px] md:h-[380px] rounded-2xl overflow-hidden"
           >
             <img
               src={teamPhotos[3].src}
@@ -115,12 +112,15 @@ const TeamSection = () => {
             />
           </motion.div>
 
+          {/* Empty space */}
+          <div className="hidden lg:block lg:col-span-2" />
+
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.5 }}
-            className="rounded-lg overflow-hidden"
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="col-span-6 md:col-span-4 lg:col-span-4 h-[300px] md:h-[380px] rounded-2xl overflow-hidden"
           >
             <img
               src={teamPhotos[4].src}
@@ -129,12 +129,13 @@ const TeamSection = () => {
             />
           </motion.div>
 
+          {/* Row 3 - Two photos + Stats Card */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.6 }}
-            className="rounded-lg overflow-hidden"
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="col-span-6 md:col-span-4 lg:col-span-4 h-[350px] md:h-[450px] rounded-2xl overflow-hidden"
           >
             <img
               src={teamPhotos[5].src}
@@ -143,16 +144,30 @@ const TeamSection = () => {
             />
           </motion.div>
 
-          {/* Stats Card */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.7 }}
-            className="bg-muted/50 rounded-lg p-8 flex flex-col justify-between"
+            transition={{ duration: 0.6, delay: 0.7 }}
+            className="col-span-6 md:col-span-4 lg:col-span-5 h-[350px] md:h-[450px] rounded-2xl overflow-hidden"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&h=600&fit=crop"
+              alt="Team gathering"
+              className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+            />
+          </motion.div>
+
+          {/* Stats Card */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+            className="col-span-12 md:col-span-4 lg:col-span-3 h-[280px] md:h-[450px] bg-[#f5f5f5] rounded-2xl p-8 md:p-10 flex flex-col justify-between"
           >
             <div>
-              <h3 className="heading-3">
+              <h3 className="text-3xl md:text-4xl lg:text-5xl font-medium leading-tight">
                 50+ team members
               </h3>
             </div>
