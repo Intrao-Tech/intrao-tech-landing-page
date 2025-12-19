@@ -423,7 +423,7 @@ const Header = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className={`fixed inset-0 z-40 pt-24 lg:hidden ${
+            className={`fixed inset-0 z-40 pt-24 lg:hidden overflow-y-auto overscroll-contain ${
               isLight ? "bg-background" : "bg-dark"
             }`}
           >
