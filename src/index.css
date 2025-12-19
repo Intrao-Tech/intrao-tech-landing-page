@@ -46,15 +46,14 @@
     --dark-foreground: 0 0% 100%;
     --dark-muted: 0 0% 60%;
 
-    /* Sidebar - keeping for consistency */
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Light sections (for light cards/areas on dark pages) */
+    --light-bg: 0 0% 100%;
+    --light-foreground: 0 0% 7%;
+    --light-muted-foreground: 0 0% 45%;
+    --light-border: 0 0% 90%;
+
+    /* Primary hover state */
+    --primary-hover: 270 93% 65%;
   }
 
   .dark {
@@ -85,15 +84,6 @@
     --border: 0 0% 20%;
     --input: 0 0% 20%;
     --ring: 270 93% 56%;
-
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
 
@@ -202,7 +192,7 @@
 
   /* Primary button circle - lighter flash effect */
   .btn-circle-primary::before {
-    background: hsl(270 93% 65%);
+    background: hsl(var(--primary-hover));
   }
 
   /* Outline dark button circle */

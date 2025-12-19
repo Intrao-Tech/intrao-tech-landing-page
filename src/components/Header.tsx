@@ -138,7 +138,7 @@ const Header = () => {
         } ${
           (isServicesDropdownOpen || isCompanyDropdownOpen)
             ? isLight
-              ? "border-b border-gray-300"
+              ? "border-b border-light-border"
               : "border-b border-dark-muted/20"
             : ""
         }`}
@@ -295,11 +295,11 @@ const Header = () => {
             onMouseEnter={handleServicesMouseEnter}
             onMouseLeave={handleServicesMouseLeave}
           >
-            <div className={`${isLight ? "bg-white" : "bg-dark"}`}>
+            <div className={`${isLight ? "bg-light" : "bg-dark"}`}>
               <div className="container mx-auto">
                 <div className="flex max-w-4xl">
                   {/* Left: Categories */}
-                  <div className="flex flex-col gap-2 py-12 pr-8 w-[240px] shrink-0">
+                  <div className="flex flex-col gap-2 pt-10 pb-4 pr-8 w-[240px] shrink-0">
                     {serviceCategories.map((category) => (
                       <button
                         key={category.name}
@@ -321,10 +321,10 @@ const Header = () => {
                   </div>
 
                   {/* Vertical Divider */}
-                  <div className={`w-px ${isLight ? "bg-gray-300" : "bg-dark-muted/20"}`} />
+                  <div className={`w-px ${isLight ? "bg-light-border" : "bg-dark-muted/20"}`} />
 
                   {/* Right: Sub-items */}
-                  <div className="flex flex-col gap-3 py-12 pl-8">
+                  <div className="flex flex-col gap-3 pt-10 pb-4 pl-8">
                     {serviceCategories
                       .find((cat) => cat.name === activeServiceCategory)
                       ?.items.map((item) => (
@@ -345,7 +345,7 @@ const Header = () => {
                   </div>
                 </div>
               </div>
-              <div className={`h-px ${isLight ? "bg-gray-300" : "bg-dark-muted/20"}`} />
+              <div className={`h-px ${isLight ? "bg-light-border" : "bg-dark-muted/20"}`} />
             </div>
           </motion.div>
         )}
@@ -364,13 +364,13 @@ const Header = () => {
             onMouseEnter={handleCompanyMouseEnter}
             onMouseLeave={handleCompanyMouseLeave}
           >
-            <div className={`${isLight ? "bg-white" : "bg-dark"}`}>
+            <div className={`${isLight ? "bg-light" : "bg-dark"}`}>
               <div className="container mx-auto">
                 <div className="flex">
                   {/* Left: CTA Block */}
-                  <div className="py-8 pr-8 w-[280px] shrink-0">
+                  <div className="pt-10 pb-4 pr-8 w-[280px] shrink-0">
                     <div className={`rounded-2xl p-6 h-full flex flex-col ${
-                      isLight ? "bg-gray-50 border border-gray-100" : "bg-dark-muted/20"
+                      isLight ? "bg-light/50 border border-light-border" : "bg-dark-muted/20"
                     }`}>
                       <h3 className={`text-2xl md:text-3xl font-bold leading-tight mb-auto ${
                         isLight ? "text-foreground" : "text-dark-foreground"
@@ -387,10 +387,10 @@ const Header = () => {
                   </div>
 
                   {/* Vertical Divider */}
-                  <div className={`w-px ${isLight ? "bg-gray-300" : "bg-dark-muted/20"}`} />
+                  <div className={`w-px ${isLight ? "bg-light-border" : "bg-dark-muted/20"}`} />
 
                   {/* Right: Navigation Links */}
-                  <div className="flex flex-col justify-center gap-4 py-12 pl-8">
+                  <div className="flex flex-col gap-4 pt-10 pb-4 pl-8">
                     {companyLinks.map((link) => (
                       <Link
                         key={link.name}
@@ -409,7 +409,7 @@ const Header = () => {
                   </div>
                 </div>
               </div>
-              <div className={`h-px ${isLight ? "bg-gray-300" : "bg-dark-muted/20"}`} />
+              <div className={`h-px ${isLight ? "bg-light-border" : "bg-dark-muted/20"}`} />
             </div>
           </motion.div>
         )}

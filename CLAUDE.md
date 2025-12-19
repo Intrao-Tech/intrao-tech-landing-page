@@ -43,6 +43,28 @@ This is a React landing page for Intrao Tech built with Vite, TypeScript, and sh
 - Custom animations: `animate-marquee`, `animate-float`, `animate-fade-in-up`
 - Fonts: Poppins (primary), Helvetica (fallback)
 
+### Color System
+
+All colors use CSS variables in HSL format with Tailwind mappings.
+
+**Theme colors** (standard shadcn):
+
+- `bg-background`, `text-foreground`, `text-muted-foreground`, `border-border`
+
+**Dark sections** (dark backgrounds):
+
+- `bg-dark`, `text-dark-foreground`, `text-dark-muted`
+
+**Light sections** (light cards/areas on dark pages):
+
+- `bg-light`, `text-light-foreground`, `text-light-muted-foreground`, `border-light-border`
+
+**Primary** (brand purple):
+
+- `bg-primary`, `text-primary-foreground`, `hover:bg-primary-hover`
+
+**Important**: Never use hardcoded Tailwind grays (`gray-100`, `gray-500`, `gray-900`, etc.) or `bg-white`. Always use the theme color classes above.
+
 ### Adding Routes
 
 Add new routes in `src/App.tsx` above the catch-all `*` route. Create corresponding page in `src/pages/`.

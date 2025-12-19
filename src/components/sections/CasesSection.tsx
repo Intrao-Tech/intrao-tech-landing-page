@@ -71,7 +71,7 @@ const CasesSection = () => {
   ];
 
   return (
-    <section data-header-theme="light" className="bg-white text-gray-900 py-24 lg:py-32">
+    <section data-header-theme="light" className="bg-light text-light-foreground py-24 lg:py-32">
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <motion.div
@@ -81,10 +81,10 @@ const CasesSection = () => {
           transition={{ duration: 0.6 }}
           className="mb-16 lg:mb-24"
         >
-          <p className="text-sm font-medium uppercase tracking-widest text-gray-500 mb-6">
+          <p className="text-sm font-medium uppercase tracking-widest text-light-muted-foreground mb-6">
             Featured Cases
           </p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight max-w-5xl text-gray-900">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight max-w-5xl text-light-foreground">
             Discover how we're driving change through innovative projects, strong partnerships, and measurable outcomes
           </h2>
         </motion.div>
@@ -111,7 +111,7 @@ const CasesSection = () => {
         >
           <Link
             to="/cases"
-            className="inline-flex items-center gap-2 text-gray-900 font-semibold uppercase tracking-wider text-sm border-b-2 border-gray-900 pb-1 transition-all duration-300 hover:opacity-70"
+            className="inline-flex items-center gap-2 text-light-foreground font-semibold uppercase tracking-wider text-sm border-b-2 border-light-foreground pb-1 transition-all duration-300 hover:opacity-70"
           >
             Explore All Cases
             <ArrowRight className="w-4 h-4" />
@@ -159,10 +159,10 @@ const StackingCard = ({ caseItem, index, totalCards }: StackingCardProps) => {
         top: "100px",
         zIndex: index + 1,
       }}
-      className="sticky bg-white"
+      className="sticky bg-light"
     >
       {/* Top border (skip for first item) */}
-      {index > 0 && <div className="border-t border-gray-200" />}
+      {index > 0 && <div className="border-t border-light-border" />}
 
       <div className="py-12 lg:py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
@@ -182,7 +182,7 @@ const StackingCard = ({ caseItem, index, totalCards }: StackingCardProps) => {
               {caseItem.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="text-xs font-medium uppercase tracking-wider text-gray-500"
+                  className="text-xs font-medium uppercase tracking-wider text-light-muted-foreground"
                 >
                   #{tag}
                 </span>
@@ -190,45 +190,45 @@ const StackingCard = ({ caseItem, index, totalCards }: StackingCardProps) => {
             </div>
 
             {/* Title */}
-            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-light-foreground mb-6">
               {caseItem.title} – {caseItem.subtitle}
             </h3>
 
             {/* Company & Location Pills */}
             <div className="flex flex-wrap gap-3 mb-8">
-              <span className="inline-flex items-center px-4 py-2 bg-gray-900 text-white text-sm font-medium rounded-full">
+              <span className="inline-flex items-center px-4 py-2 bg-dark text-dark-foreground text-sm font-medium rounded-full">
                 {caseItem.company}
               </span>
-              <span className="inline-flex items-center gap-2 px-4 py-2 bg-gray-900 text-white text-sm font-medium rounded-full">
+              <span className="inline-flex items-center gap-2 px-4 py-2 bg-dark text-dark-foreground text-sm font-medium rounded-full">
                 <span>{caseItem.locationFlag}</span>
                 {caseItem.location}
               </span>
             </div>
 
             {/* Tech Stack & Timeline */}
-            <div className="grid grid-cols-2 gap-6 mb-8 pb-8 border-b border-gray-200">
+            <div className="grid grid-cols-2 gap-6 mb-8 pb-8 border-b border-light-border">
               <div>
-                <p className="text-xs font-medium uppercase tracking-wider text-gray-500 mb-2">
+                <p className="text-xs font-medium uppercase tracking-wider text-light-muted-foreground mb-2">
                   Tech Stack
                 </p>
-                <p className="text-gray-900 font-medium">{caseItem.techStack}</p>
+                <p className="text-light-foreground font-medium">{caseItem.techStack}</p>
               </div>
-              <div className="border-l border-gray-200 pl-6">
-                <p className="text-xs font-medium uppercase tracking-wider text-gray-500 mb-2">
+              <div className="border-l border-light-border pl-6">
+                <p className="text-xs font-medium uppercase tracking-wider text-light-muted-foreground mb-2">
                   Timeline
                 </p>
-                <p className="text-gray-900 font-medium">{caseItem.timeline}</p>
+                <p className="text-light-foreground font-medium">{caseItem.timeline}</p>
               </div>
             </div>
 
             {/* Results */}
             <div className="mb-8">
-              <p className="text-xs font-medium uppercase tracking-wider text-gray-500 mb-4">
+              <p className="text-xs font-medium uppercase tracking-wider text-light-muted-foreground mb-4">
                 Results
               </p>
               <ul className="space-y-2">
                 {caseItem.results.map((result, i) => (
-                  <li key={i} className="text-gray-900">
+                  <li key={i} className="text-light-foreground">
                     {result}
                   </li>
                 ))}
