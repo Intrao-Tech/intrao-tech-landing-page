@@ -64,7 +64,7 @@ const TeamSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="row-span-2 rounded-2xl overflow-hidden"
+            className="row-span-2 rounded-xl overflow-hidden"
           >
             <img
               src={teamPhotos[0].src}
@@ -78,7 +78,7 @@ const TeamSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="row-span-2 rounded-2xl overflow-hidden"
+            className="row-span-2 rounded-xl overflow-hidden"
           >
             <img
               src={teamPhotos[1].src}
@@ -92,7 +92,7 @@ const TeamSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="col-span-2 row-span-2 rounded-2xl overflow-hidden hidden md:block"
+            className="col-span-2 row-span-2 rounded-xl overflow-hidden hidden md:block"
           >
             <img
               src={teamPhotos[2].src}
@@ -107,7 +107,7 @@ const TeamSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="rounded-2xl overflow-hidden"
+            className="rounded-xl overflow-hidden"
           >
             <img
               src={teamPhotos[3].src}
@@ -121,7 +121,7 @@ const TeamSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.5 }}
-            className="rounded-2xl overflow-hidden"
+            className="rounded-xl overflow-hidden"
           >
             <img
               src={teamPhotos[4].src}
@@ -135,7 +135,7 @@ const TeamSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.6 }}
-            className="rounded-2xl overflow-hidden"
+            className="rounded-xl overflow-hidden"
           >
             <img
               src={teamPhotos[5].src}
@@ -150,7 +150,7 @@ const TeamSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.7 }}
-            className="bg-muted/50 rounded-2xl p-8 flex flex-col justify-between"
+            className="bg-muted/50 rounded-xl p-8 flex flex-col justify-between"
           >
             <div>
               <h3 className="heading-3">

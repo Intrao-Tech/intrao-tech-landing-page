@@ -304,7 +304,7 @@ const Header = () => {
                       <button
                         key={category.name}
                         onMouseEnter={() => setActiveServiceCategory(category.name)}
-                        className={`flex items-center justify-between px-4 py-3 rounded-lg text-sm font-medium uppercase tracking-wider transition-all duration-200 ${
+                        className={`flex items-center justify-between px-4 py-3 rounded-xl text-sm font-medium uppercase tracking-wider transition-all duration-200 ${
                           activeServiceCategory === category.name
                             ? isLight
                               ? "text-foreground"
@@ -369,7 +369,7 @@ const Header = () => {
                 <div className="flex">
                   {/* Left: CTA Block */}
                   <div className="pt-10 pb-4 pr-8 w-[280px] shrink-0">
-                    <div className={`rounded-2xl p-6 h-full flex flex-col ${
+                    <div className={`rounded-xl p-6 h-full flex flex-col ${
                       isLight ? "bg-light/50 border border-light-border" : "bg-dark-muted/20"
                     }`}>
                       <h3 className={`text-2xl md:text-3xl font-bold leading-tight mb-auto ${

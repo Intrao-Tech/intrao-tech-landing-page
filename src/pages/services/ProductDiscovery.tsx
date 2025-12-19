@@ -283,7 +283,7 @@ const ProductDiscovery = () => {
         <div className="container mx-auto px-6 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div {...fadeInUp}>
-              <span className="inline-block px-4 py-2 bg-primary/20 text-primary rounded-full text-sm font-medium mb-6">
+              <span className="inline-block px-4 py-2 bg-primary/20 text-primary rounded-xl text-sm font-medium mb-6">
                 PRODUCT DISCOVERY
               </span>
               <h1 className="heading-2 mb-6">
@@ -317,7 +317,7 @@ const ProductDiscovery = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="relative"
             >
-              <div className="aspect-square bg-gradient-to-br from-primary/20 to-primary/5 rounded-3xl flex items-center justify-center">
+              <div className="aspect-square bg-gradient-to-br from-primary/20 to-primary/5 rounded-xl flex items-center justify-center">
                 <div className="text-9xl font-bold text-primary/30">PD</div>
               </div>
             </motion.div>
@@ -332,7 +332,7 @@ const ProductDiscovery = () => {
       >
         <div className="container mx-auto px-6">
           <motion.div {...fadeInUp} className="max-w-3xl mb-16">
-            <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-6">
+            <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-xl text-sm font-medium mb-6">
               CHALLENGES
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -368,7 +368,7 @@ const ProductDiscovery = () => {
       >
         <div className="container mx-auto px-6">
           <motion.div {...fadeInUp} className="max-w-3xl mb-16">
-            <span className="inline-block px-4 py-2 bg-primary/20 text-primary rounded-full text-sm font-medium mb-6">
+            <span className="inline-block px-4 py-2 bg-primary/20 text-primary rounded-xl text-sm font-medium mb-6">
               WHAT'S INCLUDED
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -391,7 +391,7 @@ const ProductDiscovery = () => {
                   initial: { opacity: 0, y: 20 },
                   whileInView: { opacity: 1, y: 0 },
                 }}
-                className="p-8 bg-dark-foreground/5 rounded-2xl border border-dark-foreground/10 hover:border-primary/50 transition-colors"
+                className="p-8 bg-dark-foreground/5 rounded-xl border border-dark-foreground/10 hover:border-primary/50 transition-colors"
               >
                 <span className="text-primary text-sm font-medium">
                   {service.number}
@@ -429,7 +429,7 @@ const ProductDiscovery = () => {
                   initial: { opacity: 0, y: 20 },
                   whileInView: { opacity: 1, y: 0 },
                 }}
-                className="p-8 bg-dark-foreground/5 rounded-2xl"
+                className="p-8 bg-dark-foreground/5 rounded-xl"
               >
                 <div className="text-primary mb-4">{benefit.icon}</div>
                 <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
@@ -447,7 +447,7 @@ const ProductDiscovery = () => {
       >
         <div className="container mx-auto px-6">
           <motion.div {...fadeInUp} className="max-w-3xl mb-16">
-            <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-6">
+            <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-xl text-sm font-medium mb-6">
               OUR PROCESS
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -467,7 +467,7 @@ const ProductDiscovery = () => {
                   initial: { opacity: 0, y: 20 },
                   whileInView: { opacity: 1, y: 0 },
                 }}
-                className="grid md:grid-cols-12 gap-6 p-6 bg-muted/30 rounded-2xl items-center"
+                className="grid md:grid-cols-12 gap-6 p-6 bg-muted/30 rounded-xl items-center"
               >
                 <div className="md:col-span-1">
                   <span className="text-4xl font-bold text-primary/30">
@@ -517,7 +517,7 @@ const ProductDiscovery = () => {
                   initial: { opacity: 0, y: 20 },
                   whileInView: { opacity: 1, y: 0 },
                 }}
-                className="p-6 bg-muted/30 rounded-2xl"
+                className="p-6 bg-muted/30 rounded-xl"
               >
                 <span className="text-xs font-medium text-primary">
                   {card.label}

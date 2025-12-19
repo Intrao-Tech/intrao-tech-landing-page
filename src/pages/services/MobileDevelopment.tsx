@@ -214,7 +214,7 @@ const MobileDevelopment = () => {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
             >
-              <div className="bg-dark-muted/20 rounded-2xl p-8 aspect-video flex items-center justify-center">
+              <div className="bg-dark-muted/20 rounded-xl p-8 aspect-video flex items-center justify-center">
                 <div className="text-dark-muted text-center">
                   <div className="w-16 h-16 mx-auto mb-4 rounded-xl bg-dark-muted/30 flex items-center justify-center">
                     <Smartphone className="w-8 h-8" />
@@ -307,7 +307,7 @@ const MobileDevelopment = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="p-8 border border-dark-muted/30 rounded-2xl"
+                  className="p-8 border border-dark-muted/30 rounded-xl"
                 >
                   <service.icon className="w-10 h-10 text-dark-muted mb-6" strokeWidth={1.5} />
                   <h3 className="text-xl font-semibold mb-4">{service.title}</h3>
@@ -339,7 +339,7 @@ const MobileDevelopment = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="p-8 border border-dark-muted/30 rounded-2xl"
+                  className="p-8 border border-dark-muted/30 rounded-xl"
                 >
                   <item.icon className="w-8 h-8 text-dark-muted mb-8" strokeWidth={1.5} />
                   <h3 className="text-xl font-semibold mb-4">{item.title}</h3>
@@ -381,7 +381,7 @@ const MobileDevelopment = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="p-6 border border-dark-muted/30 rounded-2xl text-center"
+                  className="p-6 border border-dark-muted/30 rounded-xl text-center"
                 >
                   <p className="text-xs text-dark-muted uppercase tracking-wider mb-2">{tech.category}</p>
                   <h3 className="text-xl font-semibold mb-2">{tech.name}</h3>
@@ -469,7 +469,7 @@ const MobileDevelopment = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-muted/50 p-8 rounded-2xl"
+                  className="bg-muted/50 p-8 rounded-xl"
                 >
                   <p className="text-muted-foreground text-xs uppercase tracking-[0.2em] mb-4">
                     {card.label}

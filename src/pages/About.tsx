@@ -214,9 +214,9 @@ const About = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="relative bg-muted/30 border border-border rounded-2xl p-8 min-h-[200px]"
+                  className="relative bg-muted/30 border border-border rounded-xl p-8 min-h-[200px]"
                 >
-                  <span className="absolute top-6 right-6 bg-foreground text-background text-xs font-semibold px-3 py-1.5 rounded-full">
+                  <span className="absolute top-6 right-6 bg-foreground text-background text-xs font-semibold px-3 py-1.5 rounded-xl">
                     {principle.number}
                   </span>
                   <h3 className="text-2xl font-bold mb-4 pr-16">{principle.title}</h3>
@@ -258,7 +258,7 @@ const About = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-dark-foreground/5 border border-dark-foreground/10 rounded-2xl p-8"
+                  className="bg-dark-foreground/5 border border-dark-foreground/10 rounded-xl p-8"
                 >
                   <div className="flex justify-center mb-6">
                     <div className="w-14 h-14 rounded-full bg-background flex items-center justify-center">
@@ -312,7 +312,7 @@ const About = () => {
             >
               <Link
                 to="/contacts"
-                className="block border-2 border-primary rounded-2xl py-16 text-center hover:bg-primary/5 transition-colors duration-300"
+                className="block border-2 border-primary rounded-xl py-16 text-center hover:bg-primary/5 transition-colors duration-300"
               >
                 <span className="text-3xl md:text-4xl font-bold">Get a quote</span>
               </Link>

@@ -167,7 +167,7 @@ const StackingCard = ({ caseItem, index, totalCards }: StackingCardProps) => {
       <div className="py-12 lg:py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Image */}
-          <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
+          <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
             <img
               src={caseItem.image}
               alt={caseItem.title}
@@ -196,10 +196,10 @@ const StackingCard = ({ caseItem, index, totalCards }: StackingCardProps) => {
 
             {/* Company & Location Pills */}
             <div className="flex flex-wrap gap-3 mb-8">
-              <span className="inline-flex items-center px-4 py-2 bg-dark text-dark-foreground text-sm font-medium rounded-full">
+              <span className="inline-flex items-center px-4 py-2 bg-dark text-dark-foreground text-sm font-medium rounded-xl">
                 {caseItem.company}
               </span>
-              <span className="inline-flex items-center gap-2 px-4 py-2 bg-dark text-dark-foreground text-sm font-medium rounded-full">
+              <span className="inline-flex items-center gap-2 px-4 py-2 bg-dark text-dark-foreground text-sm font-medium rounded-xl">
                 <span>{caseItem.locationFlag}</span>
                 {caseItem.location}
               </span>

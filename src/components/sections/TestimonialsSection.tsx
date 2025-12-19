@@ -60,7 +60,7 @@ const TestimonialsSection = () => {
             className="flex gap-4"
           >
             {/* Clutch Badge */}
-            <div className="bg-muted/50 rounded-2xl p-6 flex flex-col items-center min-w-[120px]">
+            <div className="bg-muted/50 rounded-xl p-6 flex flex-col items-center min-w-[120px]">
               <div className="w-12 h-12 bg-dark rounded-full flex items-center justify-center mb-3">
                 <span className="text-dark-foreground font-bold text-lg">C</span>
               </div>
@@ -73,7 +73,7 @@ const TestimonialsSection = () => {
             </div>
 
             {/* DesignRush Badge */}
-            <div className="bg-muted/50 rounded-2xl p-6 flex flex-col items-center min-w-[120px]">
+            <div className="bg-muted/50 rounded-xl p-6 flex flex-col items-center min-w-[120px]">
               <div className="w-12 h-12 bg-dark rounded-full flex items-center justify-center mb-3">
                 <span className="text-dark-foreground font-bold text-lg">D</span>
               </div>
@@ -96,7 +96,7 @@ const TestimonialsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`bg-muted/50 rounded-2xl overflow-hidden ${
+              className={`bg-muted/50 rounded-xl overflow-hidden ${
                 testimonial.type === "video" ? "" : "p-8"
               }`}
             >

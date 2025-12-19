@@ -114,7 +114,7 @@ const ParallaxHeroSection = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2">
         {/* Left Column - Sticky Video */}
         <div className="relative h-[50vh] lg:h-auto lg:sticky lg:top-0 lg:self-start p-4 lg:p-6">
-          <div className="w-full h-full lg:h-[calc(100vh-48px)] rounded-3xl overflow-hidden">
+          <div className="w-full h-full lg:h-[calc(100vh-48px)] rounded-xl overflow-hidden">
             <video
               src={showreelVideo}
               autoPlay

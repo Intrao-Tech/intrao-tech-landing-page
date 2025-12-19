@@ -86,13 +86,20 @@ const ChallengesSection = () => {
                 </div>
 
                 {/* Video/Image Placeholder - Right Column */}
-                <div className="relative aspect-[3/4] lg:aspect-[4/5] rounded-2xl overflow-hidden bg-muted order-first lg:order-last">
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.9, rotateY: -15, rotateX: 5 }}
+                  whileInView={{ opacity: 1, scale: 1, rotateY: 0, rotateX: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, ease: "easeOut" }}
+                  style={{ transformPerspective: 1000 }}
+                  className="relative aspect-[3/4] lg:aspect-[4/5] rounded-xl overflow-hidden bg-muted order-first lg:order-last"
+                >
                   <img
                     src={challenge.image}
                     alt=""
                     className="w-full h-full object-cover"
                   />
-                </div>
+                </motion.div>
               </div>
             </motion.div>
           </div>

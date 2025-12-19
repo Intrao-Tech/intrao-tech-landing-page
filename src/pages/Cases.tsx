@@ -178,7 +178,7 @@ const Cases = () => {
                 <button
                   key={cat.id}
                   onClick={() => setActiveCategory(cat.id)}
-                  className={`px-6 py-3 rounded-lg text-xs font-semibold tracking-wider transition-all duration-300 ${
+                  className={`px-6 py-3 rounded-xl text-xs font-semibold tracking-wider transition-all duration-300 ${
                     activeCategory === cat.id
                       ? "bg-foreground text-background"
                       : "bg-transparent text-foreground hover:bg-muted"
@@ -260,10 +260,10 @@ const Cases = () => {
                       transition={{ duration: 0.5, delay: 0.2 }}
                       className="flex flex-wrap gap-3 mb-8"
                     >
-                      <span className="inline-flex items-center px-4 py-2 bg-foreground text-background text-xs font-semibold tracking-wider rounded-lg">
+                      <span className="inline-flex items-center px-4 py-2 bg-foreground text-background text-xs font-semibold tracking-wider rounded-xl">
                         {caseItem.company}
                       </span>
-                      <span className="inline-flex items-center gap-2 px-4 py-2 bg-foreground text-background text-xs font-semibold tracking-wider rounded-lg">
+                      <span className="inline-flex items-center gap-2 px-4 py-2 bg-foreground text-background text-xs font-semibold tracking-wider rounded-xl">
                         <span>{caseItem.locationFlag}</span>
                         {caseItem.location}
                       </span>

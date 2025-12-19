@@ -135,7 +135,7 @@ const ClientCard = ({ client, index }: ClientCardProps) => {
       <AnimatePresence>
         {isHovered && (
           <motion.div
-            className="absolute inset-3 bg-dark rounded-2xl p-5 md:p-8 flex flex-col justify-between"
+            className="absolute inset-3 bg-dark rounded-xl p-5 md:p-8 flex flex-col justify-between"
             initial={{
               opacity: 0,
               y: 40,
