@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ArrowUpRight, ChevronDown, ChevronRight } from "lucide-react";
+import { ArrowUpRight, ChevronDown, ChevronRight } from "lucide-react";
 import logoFull from "@/assets/logo.svg";
 import logoFullDark from "@/assets/logo-dark.svg";
 import { useHeaderTheme } from "@/contexts/HeaderThemeContext";
@@ -259,11 +259,24 @@ const Header = () => {
             }`}
             aria-label="Toggle menu"
           >
-            {isMobileMenuOpen ? (
-              <X className="w-6 h-6" />
-            ) : (
-              <Menu className="w-6 h-6" />
-            )}
+            <div className="w-6 h-6 flex flex-col justify-center items-center relative">
+              <motion.span
+                className={`absolute block h-0.5 w-5 rounded-full ${isLight ? 'bg-foreground' : 'bg-dark-foreground'}`}
+                animate={{
+                  rotate: isMobileMenuOpen ? 45 : 0,
+                  y: isMobileMenuOpen ? 0 : -4,
+                }}
+                transition={{ duration: 0.3 }}
+              />
+              <motion.span
+                className={`absolute block h-0.5 w-5 rounded-full ${isLight ? 'bg-foreground' : 'bg-dark-foreground'}`}
+                animate={{
+                  rotate: isMobileMenuOpen ? -45 : 0,
+                  y: isMobileMenuOpen ? 0 : 4,
+                }}
+                transition={{ duration: 0.3 }}
+              />
+            </div>
           </button>
         </div>
       </header>

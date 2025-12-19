@@ -84,9 +84,7 @@ const ParallaxHeroSection = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] mb-12 max-w-5xl"
         >
-          Empowering startups to{" "}
-          <span className="text-primary">launch</span>, scale, and{" "}
-          <span className="text-primary">succeed</span> faster
+          Empowering startups to launch, scale, and succeed faster
         </motion.h1>
 
         {/* CTA Buttons */}
