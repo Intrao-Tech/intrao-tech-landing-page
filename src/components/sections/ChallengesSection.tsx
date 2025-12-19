@@ -92,7 +92,7 @@ const ChallengesSection = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, ease: "easeOut" }}
                   style={{ transformPerspective: 1000 }}
-                  className="relative aspect-[3/4] lg:aspect-[4/5] rounded-xl overflow-hidden bg-muted order-first lg:order-last"
+                  className="relative aspect-[3/4] lg:aspect-[4/5] rounded-lg overflow-hidden bg-muted order-first lg:order-last"
                 >
                   <img
                     src={challenge.image}

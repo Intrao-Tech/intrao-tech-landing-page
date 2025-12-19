@@ -180,7 +180,7 @@ const Insights = () => {
                 >
                   <Link to="#" className="block">
                     {/* Image */}
-                    <div className="relative aspect-[16/10] overflow-hidden rounded-xl mb-6">
+                    <div className="relative aspect-[16/10] overflow-hidden rounded-lg mb-6">
                       <img
                         src={article.image}
                         alt={article.title}

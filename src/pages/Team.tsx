@@ -186,7 +186,7 @@ const Team = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                <Button asChild variant="secondary" size="sm" className="rounded-xl group">
+                <Button asChild variant="secondary" size="sm" className="rounded-lg group">
                   <Link to="/contacts">
                     Get in Touch
                     <ButtonArrows />
@@ -203,9 +203,9 @@ const Team = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.05 }}
-                  className="group border border-border rounded-xl p-5 transition-all duration-300 hover:shadow-lg"
+                  className="group border border-border rounded-lg p-5 transition-all duration-300 hover:shadow-lg"
                 >
-                  <div className="aspect-[4/5] overflow-hidden rounded-xl mb-5">
+                  <div className="aspect-[4/5] overflow-hidden rounded-lg mb-5">
                     <img
                       src={member.image}
                       alt={member.name}
@@ -260,12 +260,12 @@ const Team = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center p-6 rounded-xl transition-all duration-300 cursor-pointer ${
+                  className={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center p-6 rounded-lg transition-all duration-300 cursor-pointer ${
                     activeAdvisor === index ? "bg-muted/30" : "hover:bg-muted/20"
                   }`}
                   onClick={() => setActiveAdvisor(index)}
                 >
-                  <div className="aspect-[4/5] max-w-md overflow-hidden rounded-xl">
+                  <div className="aspect-[4/5] max-w-md overflow-hidden rounded-lg">
                     <img
                       src={advisor.image}
                       alt={advisor.name}
@@ -279,7 +279,7 @@ const Team = () => {
                       {advisor.name.split(" ").slice(1).join(" ")}
                     </h3>
                     <p className="text-muted-foreground mb-6">{advisor.role}</p>
-                    <button className="inline-flex items-center gap-2 bg-dark text-dark-foreground px-5 py-3 rounded-xl text-sm font-semibold uppercase tracking-wider transition-all duration-300 hover:bg-dark/90 mb-6">
+                    <button className="inline-flex items-center gap-2 bg-dark text-dark-foreground px-5 py-3 rounded-lg text-sm font-semibold uppercase tracking-wider transition-all duration-300 hover:bg-dark/90 mb-6">
                       <ArrowUpRight className="w-4 h-4" />
                       Visit Website
                     </button>
@@ -377,7 +377,7 @@ const Team = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: awards.length * 0.1 }}
-                className="bg-muted/30 rounded-xl p-8 flex items-center justify-center"
+                className="bg-muted/30 rounded-lg p-8 flex items-center justify-center"
               >
                 <p className="text-4xl md:text-5xl font-bold">32+ others</p>
               </motion.div>

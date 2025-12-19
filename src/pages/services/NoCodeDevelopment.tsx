@@ -271,7 +271,7 @@ const NoCodeDevelopment = () => {
         <div className="container mx-auto px-6 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div {...fadeInUp}>
-              <span className="inline-block px-4 py-2 bg-primary/20 text-primary rounded-xl text-sm font-medium mb-6">
+              <span className="inline-block px-4 py-2 bg-primary/20 text-primary rounded-lg text-sm font-medium mb-6">
                 NO-CODE DEVELOPMENT
               </span>
               <h1 className="heading-2 mb-6">
@@ -305,7 +305,7 @@ const NoCodeDevelopment = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="relative"
             >
-              <div className="aspect-square bg-gradient-to-br from-primary/20 to-primary/5 rounded-xl flex items-center justify-center">
+              <div className="aspect-square bg-gradient-to-br from-primary/20 to-primary/5 rounded-lg flex items-center justify-center">
                 <div className="text-9xl font-bold text-primary/30">NC</div>
               </div>
             </motion.div>
@@ -320,7 +320,7 @@ const NoCodeDevelopment = () => {
       >
         <div className="container mx-auto px-6">
           <motion.div {...fadeInUp} className="max-w-3xl mb-16">
-            <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-xl text-sm font-medium mb-6">
+            <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-lg text-sm font-medium mb-6">
               CHALLENGES
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -356,7 +356,7 @@ const NoCodeDevelopment = () => {
       >
         <div className="container mx-auto px-6">
           <motion.div {...fadeInUp} className="max-w-3xl mb-16">
-            <span className="inline-block px-4 py-2 bg-primary/20 text-primary rounded-xl text-sm font-medium mb-6">
+            <span className="inline-block px-4 py-2 bg-primary/20 text-primary rounded-lg text-sm font-medium mb-6">
               OUR SERVICES
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -379,7 +379,7 @@ const NoCodeDevelopment = () => {
                   initial: { opacity: 0, y: 20 },
                   whileInView: { opacity: 1, y: 0 },
                 }}
-                className="p-8 bg-dark-foreground/5 rounded-xl border border-dark-foreground/10 hover:border-primary/50 transition-colors"
+                className="p-8 bg-dark-foreground/5 rounded-lg border border-dark-foreground/10 hover:border-primary/50 transition-colors"
               >
                 <span className="text-primary text-sm font-medium">
                   {service.number}
@@ -417,7 +417,7 @@ const NoCodeDevelopment = () => {
                   initial: { opacity: 0, y: 20 },
                   whileInView: { opacity: 1, y: 0 },
                 }}
-                className="p-8 bg-dark-foreground/5 rounded-xl"
+                className="p-8 bg-dark-foreground/5 rounded-lg"
               >
                 <div className="text-primary mb-4">{benefit.icon}</div>
                 <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
@@ -435,7 +435,7 @@ const NoCodeDevelopment = () => {
       >
         <div className="container mx-auto px-6">
           <motion.div {...fadeInUp} className="max-w-3xl mb-16">
-            <span className="inline-block px-4 py-2 bg-primary/20 text-primary rounded-xl text-sm font-medium mb-6">
+            <span className="inline-block px-4 py-2 bg-primary/20 text-primary rounded-lg text-sm font-medium mb-6">
               PLATFORMS
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -458,7 +458,7 @@ const NoCodeDevelopment = () => {
                   initial: { opacity: 0, y: 20 },
                   whileInView: { opacity: 1, y: 0 },
                 }}
-                className="p-6 bg-dark-foreground/5 rounded-xl border border-dark-foreground/10"
+                className="p-6 bg-dark-foreground/5 rounded-lg border border-dark-foreground/10"
               >
                 <h3 className="text-lg font-semibold mb-2">{platform.name}</h3>
                 <p className="text-dark-foreground/60 text-sm">
@@ -477,7 +477,7 @@ const NoCodeDevelopment = () => {
       >
         <div className="container mx-auto px-6">
           <motion.div {...fadeInUp} className="max-w-3xl mb-16">
-            <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-xl text-sm font-medium mb-6">
+            <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-lg text-sm font-medium mb-6">
               OUR PROCESS
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -536,7 +536,7 @@ const NoCodeDevelopment = () => {
                   initial: { opacity: 0, y: 20 },
                   whileInView: { opacity: 1, y: 0 },
                 }}
-                className="p-6 bg-muted/30 rounded-xl"
+                className="p-6 bg-muted/30 rounded-lg"
               >
                 <span className="text-xs font-medium text-primary">
                   {card.label}

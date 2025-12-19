@@ -119,7 +119,7 @@ const ExpertiseSection = () => {
               size="sm"
               onClick={() => setActiveIndustry(index)}
               data-active={activeIndustry === index}
-              className="rounded-xl"
+              className="rounded-lg"
             >
               {industry.name}
             </Button>
@@ -135,7 +135,7 @@ const ExpertiseSection = () => {
           className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16"
         >
           {/* Image */}
-          <div className="rounded-xl overflow-hidden">
+          <div className="rounded-lg overflow-hidden">
             <img
               src={industries[activeIndustry].image}
               alt={industries[activeIndustry].name}

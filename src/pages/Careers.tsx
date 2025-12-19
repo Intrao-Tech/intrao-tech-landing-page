@@ -102,7 +102,7 @@ const Careers = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="group border border-border rounded-xl p-6 hover:border-primary transition-colors duration-300"
+                  className="group border border-border rounded-lg p-6 hover:border-primary transition-colors duration-300"
                 >
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                     <div>

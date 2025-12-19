@@ -56,7 +56,7 @@ const WhyUsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-muted/50 rounded-xl p-8 lg:p-12 flex flex-col"
+              className="bg-muted/50 rounded-lg p-8 lg:p-12 flex flex-col"
             >
               <p className="label-small text-muted-foreground mb-6">
                 {reason.label}

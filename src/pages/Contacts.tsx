@@ -171,7 +171,7 @@ const Contacts = () => {
                           key={option}
                           type="button"
                           onClick={() => setFormData({ ...formData, budget: option })}
-                          className={`px-5 py-3 text-sm rounded-xl transition-all duration-300 ${
+                          className={`px-5 py-3 text-sm rounded-lg transition-all duration-300 ${
                             formData.budget === option
                               ? "bg-primary text-primary-foreground"
                               : "border border-dark-muted/30 text-dark-muted hover:text-dark-foreground hover:border-dark-foreground"
@@ -199,7 +199,7 @@ const Contacts = () => {
                 className="lg:col-span-1 space-y-6"
               >
                 {/* Card 1 - Project Discussion */}
-                <div className="border border-dark-muted/20 rounded-xl p-6">
+                <div className="border border-dark-muted/20 rounded-lg p-6">
                   <h3 className="text-xl font-semibold mb-5">
                     Have a project to discuss?
                   </h3>
@@ -229,7 +229,7 @@ const Contacts = () => {
                 </div>
 
                 {/* Card 2 - Partnership */}
-                <div className="border border-dark-muted/20 rounded-xl p-6">
+                <div className="border border-dark-muted/20 rounded-lg p-6">
                   <h3 className="text-dark-muted text-xs uppercase tracking-[0.2em] mb-5">
                     Have a partnership in mind?
                   </h3>

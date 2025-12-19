@@ -226,9 +226,9 @@ const WebAppDesign = () => {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
             >
-              <div className="bg-dark-muted/20 rounded-xl p-8 aspect-video flex items-center justify-center">
+              <div className="bg-dark-muted/20 rounded-lg p-8 aspect-video flex items-center justify-center">
                 <div className="text-dark-muted text-center">
-                  <div className="w-16 h-16 mx-auto mb-4 rounded-xl bg-dark-muted/30 flex items-center justify-center">
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-lg bg-dark-muted/30 flex items-center justify-center">
                     <Code className="w-8 h-8" />
                   </div>
                   <p className="text-sm">Web App Interface Preview</p>
@@ -322,7 +322,7 @@ const WebAppDesign = () => {
               >
                 <Link
                   to="/contacts"
-                  className="inline-flex items-center gap-2 border border-dark-muted text-dark-foreground px-8 py-4 rounded-xl text-sm font-semibold uppercase tracking-wider transition-all duration-300 hover:bg-dark-foreground hover:text-dark"
+                  className="inline-flex items-center gap-2 border border-dark-muted text-dark-foreground px-8 py-4 rounded-lg text-sm font-semibold uppercase tracking-wider transition-all duration-300 hover:bg-dark-foreground hover:text-dark"
                 >
                   Get in Touch
                   <ArrowUpRight className="w-4 h-4" />
@@ -370,7 +370,7 @@ const WebAppDesign = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="p-8 border border-dark-muted/30 rounded-xl"
+                  className="p-8 border border-dark-muted/30 rounded-lg"
                 >
                   <item.icon className="w-8 h-8 text-dark-muted mb-8" strokeWidth={1.5} />
                   <h3 className="text-xl font-semibold mb-4">{item.title}</h3>
@@ -466,7 +466,7 @@ const WebAppDesign = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-muted/50 p-8 rounded-xl"
+                  className="bg-muted/50 p-8 rounded-lg"
                 >
                   <p className="text-muted-foreground text-xs uppercase tracking-[0.2em] mb-4">
                     {card.label}
