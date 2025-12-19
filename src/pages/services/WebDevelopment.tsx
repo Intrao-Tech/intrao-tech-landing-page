@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight, ArrowUpRight, Code, Globe, Settings, Layout, Users, Palette, Layers, TrendingUp, Sparkles, Heart, Server, Database, Cloud, Container } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const WebDevelopment = () => {
   const challenges = [
@@ -211,20 +212,18 @@ const WebDevelopment = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="flex flex-wrap gap-4 mb-16"
             >
-              <Link
-                to="/contacts"
-                className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-xl text-sm font-semibold uppercase tracking-wider transition-all duration-300 hover:bg-primary/90"
-              >
-                Let's Talk
-                <ArrowUpRight className="w-4 h-4" />
-              </Link>
-              <Link
-                to="/cases"
-                className="inline-flex items-center gap-2 border border-dark-muted text-dark-foreground px-8 py-4 rounded-xl text-sm font-semibold uppercase tracking-wider transition-all duration-300 hover:bg-dark-foreground hover:text-dark"
-              >
-                View Our Cases
-                <ArrowUpRight className="w-4 h-4" />
-              </Link>
+              <Button asChild>
+                <Link to="/contacts">
+                  Let's Talk
+                  <ArrowUpRight />
+                </Link>
+              </Button>
+              <Button asChild variant="outline-dark">
+                <Link to="/cases">
+                  View Our Cases
+                  <ArrowUpRight />
+                </Link>
+              </Button>
             </motion.div>
 
             <motion.div
@@ -544,13 +543,12 @@ const WebDevelopment = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <Link
-                to="/contacts"
-                className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-10 py-6 rounded-xl text-sm font-semibold uppercase tracking-wider transition-all duration-300 hover:bg-primary/90"
-              >
-                Get in Touch
-                <ArrowRight className="w-4 h-4" />
-              </Link>
+              <Button asChild size="xl">
+                <Link to="/contacts">
+                  Get in Touch
+                  <ArrowRight />
+                </Link>
+              </Button>
             </motion.div>
           </div>
         </section>

@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight, ArrowUpRight, TrendingUp, Globe, Handshake } from "lucide-react";
 import { useState } from "react";
+import { Button } from "@/components/ui/button";
 
 const Team = () => {
   const [activeAdvisor, setActiveAdvisor] = useState(0);
@@ -155,13 +156,12 @@ const Team = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              <Link
-                to="/contacts"
-                className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-8 py-5 rounded-xl text-sm font-semibold uppercase tracking-wider transition-all duration-300 hover:bg-primary/90"
-              >
-                Let's Talk
-                <ArrowRight className="w-4 h-4" />
-              </Link>
+              <Button asChild>
+                <Link to="/contacts">
+                  Let's Talk
+                  <ArrowRight />
+                </Link>
+              </Button>
             </motion.div>
           </div>
         </section>
@@ -185,13 +185,12 @@ const Team = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                <Link
-                  to="/contacts"
-                  className="inline-flex items-center gap-3 bg-dark text-dark-foreground px-6 py-4 rounded-full text-sm font-semibold uppercase tracking-wider transition-all duration-300 hover:bg-dark/90"
-                >
-                  Get in Touch
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
+                <Button asChild variant="secondary" size="sm" className="rounded-full">
+                  <Link to="/contacts">
+                    Get in Touch
+                    <ArrowRight />
+                  </Link>
+                </Button>
               </motion.div>
             </div>
 
@@ -403,13 +402,12 @@ const Team = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <Link
-                to="/careers"
-                className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-10 py-6 rounded-xl text-sm font-semibold uppercase tracking-wider transition-all duration-300 hover:bg-primary/90"
-              >
-                View Careers
-                <ArrowRight className="w-4 h-4" />
-              </Link>
+              <Button asChild size="lg">
+                <Link to="/careers">
+                  View Careers
+                  <ArrowRight />
+                </Link>
+              </Button>
             </motion.div>
           </div>
         </section>

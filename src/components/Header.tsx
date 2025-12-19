@@ -5,6 +5,7 @@ import { ArrowUpRight, ChevronDown, ChevronRight } from "lucide-react";
 import logoFull from "@/assets/logo.svg";
 import logoFullDark from "@/assets/logo-dark.svg";
 import { useHeaderTheme } from "@/contexts/HeaderThemeContext";
+import { Button } from "@/components/ui/button";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -236,17 +237,16 @@ const Header = () => {
             transition={{ duration: 0.5 }}
             className="hidden lg:block"
           >
-            <Link
-              to="/contacts"
-              className={`group flex items-center gap-2 border px-8 py-4 text-sm font-semibold uppercase tracking-wider transition-all duration-300 rounded-xl ${
-                isLight
-                  ? "border-muted-foreground text-foreground hover:bg-foreground hover:text-background"
-                  : "border-dark-muted text-dark-foreground hover:bg-dark-foreground hover:text-dark"
-              }`}
+            <Button
+              asChild
+              variant={isLight ? "outline-light" : "outline-dark"}
+              className="group"
             >
-              Get in Touch
-              <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
-            </Link>
+              <Link to="/contacts">
+                Get in Touch
+                <ArrowUpRight className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
+              </Link>
+            </Button>
           </motion.div>
 
           {/* Mobile Menu Button */}
@@ -376,13 +376,12 @@ const Header = () => {
                       }`}>
                         Ready to bring your idea to life?
                       </h3>
-                      <Link
-                        to="/contacts"
-                        className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-xl text-sm font-semibold uppercase tracking-wider transition-all duration-300 hover:bg-primary/90 mt-8"
-                      >
-                        Let's Talk
-                        <ArrowUpRight className="w-4 h-4" />
-                      </Link>
+                      <Button asChild className="mt-8">
+                        <Link to="/contacts">
+                          Let's Talk
+                          <ArrowUpRight />
+                        </Link>
+                      </Button>
                     </div>
                   </div>
 
@@ -569,13 +568,12 @@ const Header = () => {
                   transition={{ duration: 0.3, delay: navLinks.length * 0.1 }}
                   className="mt-6"
                 >
-                  <Link
-                    to="/contacts"
-                    className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-10 py-5 rounded-xl text-sm font-semibold uppercase tracking-wider"
-                  >
+                  <Button asChild size="lg">
+                  <Link to="/contacts">
                     Get in Touch
-                    <ArrowUpRight className="w-4 h-4" />
+                    <ArrowUpRight />
                   </Link>
+                </Button>
                 </motion.div>
               </div>
             </nav>

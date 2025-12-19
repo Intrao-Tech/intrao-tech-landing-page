@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { ArrowRight, Linkedin, Mail } from "lucide-react";
 import { toast } from "sonner";
+import { Button } from "@/components/ui/button";
 
 const Contacts = () => {
   const [formData, setFormData] = useState({
@@ -182,13 +183,10 @@ const Contacts = () => {
                     </div>
                   </div>
 
-                  <button
-                    type="submit"
-                    className="group inline-flex items-center gap-3 bg-primary text-primary-foreground px-10 py-5 rounded-xl text-sm font-semibold uppercase tracking-wider transition-all duration-300 hover:bg-primary/90 mt-4"
-                  >
+                  <Button type="submit" size="lg" className="group mt-4">
                     Submit
-                    <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-                  </button>
+                    <ArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
+                  </Button>
                 </form>
               </motion.div>
 
@@ -211,13 +209,11 @@ const Contacts = () => {
                       <div className="w-14 h-14 rounded-full bg-gradient-to-br from-rose-400 to-rose-600 flex items-center justify-center overflow-hidden">
                         <span className="text-xl font-semibold text-white">AE</span>
                       </div>
-                      <a
-                        href="#"
-                        aria-label="LinkedIn"
-                        className="absolute -bottom-1 -right-1 w-7 h-7 bg-dark border border-dark-muted/30 rounded-full flex items-center justify-center text-dark-muted hover:text-primary hover:border-primary transition-all duration-300"
-                      >
-                        <Linkedin className="w-3.5 h-3.5" />
-                      </a>
+                      <Button asChild variant="icon-circle" size="icon" className="absolute -bottom-1 -right-1 w-7 h-7 bg-dark border-dark-muted/30 text-dark-muted">
+                        <a href="#" aria-label="LinkedIn">
+                          <Linkedin className="w-3.5 h-3.5" />
+                        </a>
+                      </Button>
                     </div>
                     <div className="flex-1">
                       <p className="font-semibold">Account Executive</p>
@@ -243,13 +239,11 @@ const Contacts = () => {
                       <div className="w-14 h-14 rounded-full bg-gradient-to-br from-blue-400 to-indigo-600 flex items-center justify-center overflow-hidden">
                         <span className="text-xl font-semibold text-white">CF</span>
                       </div>
-                      <a
-                        href="#"
-                        aria-label="LinkedIn"
-                        className="absolute -bottom-1 -right-1 w-7 h-7 bg-dark border border-dark-muted/30 rounded-full flex items-center justify-center text-dark-muted hover:text-primary hover:border-primary transition-all duration-300"
-                      >
-                        <Linkedin className="w-3.5 h-3.5" />
-                      </a>
+                      <Button asChild variant="icon-circle" size="icon" className="absolute -bottom-1 -right-1 w-7 h-7 bg-dark border-dark-muted/30 text-dark-muted">
+                        <a href="#" aria-label="LinkedIn">
+                          <Linkedin className="w-3.5 h-3.5" />
+                        </a>
+                      </Button>
                     </div>
                     <div className="flex-1">
                       <p className="font-semibold">Co-Founder</p>

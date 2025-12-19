@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { ArrowRight, Mail, Linkedin } from "lucide-react";
 import { toast } from "sonner";
+import { Button } from "@/components/ui/button";
 
 const ContactFormSection = () => {
   const [formData, setFormData] = useState({
@@ -126,13 +127,10 @@ const ContactFormSection = () => {
                 </div>
               </div>
 
-              <button
-                type="submit"
-                className="group inline-flex items-center gap-3 bg-primary text-primary-foreground px-10 py-5 rounded-xl text-sm font-semibold uppercase tracking-wider transition-all duration-300 hover:bg-primary/90 mt-4"
-              >
+              <Button type="submit" size="lg" className="group mt-4">
                 Submit
-                <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-              </button>
+                <ArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
+              </Button>
             </form>
           </motion.div>
 
@@ -161,12 +159,11 @@ const ContactFormSection = () => {
                   <div>
                     <p className="font-semibold">Account Executive</p>
                     <div className="flex items-center gap-2 mt-2">
-                      <a
-                        href="#"
-                        className="w-8 h-8 border border-border rounded-full flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-all duration-300"
-                      >
-                        <Linkedin className="w-4 h-4" />
-                      </a>
+                      <Button asChild variant="icon-circle" size="icon" className="h-8 w-8">
+                        <a href="#">
+                          <Linkedin />
+                        </a>
+                      </Button>
                     </div>
                     <a
                       href="mailto:hello@intrao.tech"
@@ -193,12 +190,11 @@ const ContactFormSection = () => {
                     <div>
                       <p className="font-semibold text-dark-foreground">Co-Founder</p>
                       <div className="flex items-center gap-2 mt-2">
-                        <a
-                          href="#"
-                          className="w-8 h-8 border border-dark-muted/30 rounded-full flex items-center justify-center text-dark-muted hover:text-primary hover:border-primary transition-all duration-300"
-                        >
-                          <Linkedin className="w-4 h-4" />
-                        </a>
+                        <Button asChild variant="icon-circle" size="icon" className="h-8 w-8 border-dark-muted/30 text-dark-muted">
+                          <a href="#">
+                            <Linkedin />
+                          </a>
+                        </Button>
                       </div>
                       <a
                         href="mailto:partner@intrao.tech"

@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight, ArrowDownRight, Quote, Building2 } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const About = () => {
   const principles = [
@@ -121,13 +122,12 @@ const About = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              <Link
-                to="/contacts"
-                className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-8 py-4 rounded-xl text-sm font-semibold uppercase tracking-wider transition-all duration-300 hover:bg-primary/90"
-              >
-                Let's talk
-                <ArrowRight className="w-4 h-4" />
-              </Link>
+              <Button asChild>
+                <Link to="/contacts">
+                  Let's talk
+                  <ArrowRight />
+                </Link>
+              </Button>
             </motion.div>
           </div>
         </section>
@@ -412,13 +412,12 @@ const About = () => {
                 <p className="text-muted-foreground mb-8">
                   Check out the projects we have completed for our clients
                 </p>
-                <Link
-                  to="/cases"
-                  className="inline-flex items-center gap-3 bg-foreground text-background px-8 py-4 rounded-xl text-sm font-semibold uppercase tracking-wider transition-all duration-300 hover:bg-foreground/90"
-                >
-                  View Our Projects
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
+                <Button asChild variant="secondary">
+                  <Link to="/cases">
+                    View Our Projects
+                    <ArrowRight />
+                  </Link>
+                </Button>
               </motion.div>
 
               <motion.div
@@ -432,13 +431,12 @@ const About = () => {
                 <p className="text-muted-foreground mb-8">
                   Discover the multitude of methods we can use to enhance your product
                 </p>
-                <Link
-                  to="/services"
-                  className="inline-flex items-center gap-3 bg-foreground text-background px-8 py-4 rounded-xl text-sm font-semibold uppercase tracking-wider transition-all duration-300 hover:bg-foreground/90"
-                >
-                  View Our Services
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
+                <Button asChild variant="secondary">
+                  <Link to="/services">
+                    View Our Services
+                    <ArrowRight />
+                  </Link>
+                </Button>
               </motion.div>
             </div>
           </div>

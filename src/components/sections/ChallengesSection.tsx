@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight, Play } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const ChallengesSection = () => {
   const challenges = [
@@ -76,13 +77,12 @@ const ChallengesSection = () => {
                   <p className="text-2xl md:text-3xl lg:text-4xl font-light italic leading-relaxed text-foreground/90 mb-8 lg:mb-12">
                     {challenge.answer}
                   </p>
-                  <Link
-                    to={challenge.href}
-                    className="inline-flex items-center justify-center gap-3 bg-primary text-primary-foreground px-8 py-4 rounded-xl text-sm font-semibold uppercase tracking-wider transition-all duration-300 hover:bg-primary/90 w-fit group"
-                  >
-                    {challenge.cta}
-                    <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-                  </Link>
+                  <Button asChild className="group w-fit">
+                    <Link to={challenge.href}>
+                      {challenge.cta}
+                      <ArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
+                    </Link>
+                  </Button>
                 </div>
 
                 {/* Video/Image Placeholder - Right Column */}

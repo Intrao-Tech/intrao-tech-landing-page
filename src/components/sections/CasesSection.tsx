@@ -2,6 +2,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { useRef } from "react";
+import { Button } from "@/components/ui/button";
 
 interface CaseItem {
   tags: string[];
@@ -234,13 +235,12 @@ const StackingCard = ({ caseItem, index, totalCards }: StackingCardProps) => {
             </div>
 
             {/* Explore Button */}
-            <Link
-              to="/cases"
-              className="btn-primary rounded-xl self-start"
-            >
-              Explore
-              <ArrowRight className="w-4 h-4" />
-            </Link>
+            <Button asChild className="self-start">
+              <Link to="/cases">
+                Explore
+                <ArrowRight />
+              </Link>
+            </Button>
           </div>
         </div>
       </div>

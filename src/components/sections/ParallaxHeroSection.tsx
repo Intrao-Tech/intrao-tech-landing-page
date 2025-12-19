@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { useRef, useState, useEffect } from "react";
 import showreelVideo from "@/assets/tinyvid_optimized_showreel_2.mp4";
+import { Button } from "@/components/ui/button";
 
 interface StatProps {
   value: string;
@@ -94,20 +95,18 @@ const ParallaxHeroSection = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="flex flex-col sm:flex-row gap-4"
         >
-          <Link
-            to="/contacts"
-            className="group inline-flex items-center justify-center gap-3 bg-primary text-primary-foreground px-8 py-5 rounded-xl text-sm font-semibold uppercase tracking-wider transition-all duration-300 hover:bg-primary/90"
-          >
-            Let's Talk
-            <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-          </Link>
-          <Link
-            to="/cases"
-            className="group inline-flex items-center justify-center gap-3 border border-dark-muted text-dark-foreground px-8 py-5 rounded-xl text-sm font-semibold uppercase tracking-wider transition-all duration-300 hover:bg-dark-foreground hover:text-dark"
-          >
-            View Our Cases
-            <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-          </Link>
+          <Button asChild className="group">
+            <Link to="/contacts">
+              Let's Talk
+              <ArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
+            </Link>
+          </Button>
+          <Button asChild variant="outline-dark" className="group">
+            <Link to="/cases">
+              View Our Cases
+              <ArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
+            </Link>
+          </Button>
         </motion.div>
       </div>
 

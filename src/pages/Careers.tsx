@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight, MapPin, Clock } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Careers = () => {
   const openPositions = [
@@ -160,13 +161,12 @@ const Careers = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <Link
-                to="/contacts"
-                className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-10 py-6 rounded-xl text-sm font-semibold uppercase tracking-wider transition-all duration-300 hover:bg-primary/90"
-              >
-                Get in Touch
-                <ArrowRight className="w-4 h-4" />
-              </Link>
+              <Button asChild size="lg">
+                <Link to="/contacts">
+                  Get in Touch
+                  <ArrowRight />
+                </Link>
+              </Button>
             </motion.div>
           </div>
         </section>

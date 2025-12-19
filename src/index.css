@@ -126,22 +126,6 @@
     @apply bg-background text-foreground;
   }
 
-  /* Button variants */
-  .btn-primary {
-    @apply bg-primary text-primary-foreground px-8 py-4 font-semibold uppercase tracking-wider text-sm 
-           transition-all duration-300 hover:opacity-90 inline-flex items-center gap-2;
-  }
-
-  .btn-outline-dark {
-    @apply border border-dark-muted text-dark-foreground px-8 py-4 font-semibold uppercase tracking-wider text-sm 
-           transition-all duration-300 hover:bg-dark-foreground hover:text-dark inline-flex items-center gap-2;
-  }
-
-  .btn-outline-light {
-    @apply border border-border text-foreground px-8 py-4 font-semibold uppercase tracking-wider text-sm 
-           transition-all duration-300 hover:bg-foreground hover:text-background inline-flex items-center gap-2;
-  }
-
   /* Link hover animation */
   .link-hover {
     @apply relative inline-block;

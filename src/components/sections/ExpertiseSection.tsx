@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { useState } from "react";
+import { Button } from "@/components/ui/button";
 
 const ExpertiseSection = () => {
   const [activeIndustry, setActiveIndustry] = useState(0);
@@ -112,17 +113,16 @@ const ExpertiseSection = () => {
           className="flex flex-wrap gap-2 mb-12"
         >
           {industries.map((industry, index) => (
-            <button
+            <Button
               key={industry.name}
+              variant="tab"
+              size="sm"
               onClick={() => setActiveIndustry(index)}
-              className={`px-6 py-3 rounded-lg text-sm font-semibold uppercase tracking-wider transition-all duration-300 ${
-                activeIndustry === index
-                  ? "bg-dark text-dark-foreground"
-                  : "bg-transparent text-muted-foreground hover:text-foreground"
-              }`}
+              data-active={activeIndustry === index}
+              className="rounded-lg"
             >
               {industry.name}
-            </button>
+            </Button>
           ))}
         </motion.div>
 
@@ -181,13 +181,12 @@ const ExpertiseSection = () => {
               </div>
             </div>
 
-            <Link
-              to="/cases"
-              className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-8 py-4 rounded-xl text-sm font-semibold uppercase tracking-wider transition-all duration-300 hover:bg-primary/90 mt-10"
-            >
-              Explore
-              <ArrowRight className="w-4 h-4" />
-            </Link>
+            <Button asChild className="mt-10">
+              <Link to="/cases">
+                Explore
+                <ArrowRight />
+              </Link>
+            </Button>
           </div>
         </motion.div>
       </div>

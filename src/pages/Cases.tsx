@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 type Category = "all" | "web-app" | "mobile-app" | "website" | "branding";
 
@@ -317,15 +318,12 @@ const Cases = () => {
                       viewport={{ once: true }}
                       transition={{ duration: 0.5, delay: 0.35 }}
                     >
-                      <a
-                        href={caseItem.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-10 py-5 rounded-xl text-sm font-semibold uppercase tracking-wider transition-all duration-300 hover:bg-primary/90 group"
-                      >
-                        EXPLORE
-                        <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-                      </a>
+                      <Button asChild className="group">
+                        <a href={caseItem.link} target="_blank" rel="noopener noreferrer">
+                          EXPLORE
+                          <ArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
+                        </a>
+                      </Button>
                     </motion.div>
                   </div>
                 </div>

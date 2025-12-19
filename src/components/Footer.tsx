@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Mail, Linkedin, Instagram, Twitter } from "lucide-react";
 import logoFull from "@/assets/logo-dark.svg";
+import { Button } from "@/components/ui/button";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -97,14 +98,16 @@ const Footer = () => {
             </h3>
             <div className="flex gap-4">
               {socialLinks.map((social) => (
-                <a
+                <Button
                   key={social.label}
-                  href={social.href}
-                  aria-label={social.label}
-                  className="w-10 h-10 border border-border rounded-full flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-all duration-300"
+                  asChild
+                  variant="icon-circle"
+                  size="icon"
                 >
-                  <social.icon className="w-4 h-4" />
-                </a>
+                  <a href={social.href} aria-label={social.label}>
+                    <social.icon />
+                  </a>
+                </Button>
               ))}
             </div>
           </div>

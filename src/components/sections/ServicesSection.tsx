@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
+import { Button } from "@/components/ui/button";
 
 interface Service {
   name: string;
@@ -189,13 +190,12 @@ const ServicesSection = () => {
                 </button>
               ))}
             </nav>
-            <Link
-              to="/services"
-              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-4 rounded-lg text-sm font-semibold uppercase tracking-wider transition-all duration-300 hover:opacity-90"
-            >
-              Explore All
-              <ArrowRight className="w-4 h-4" />
-            </Link>
+            <Button asChild size="sm">
+              <Link to="/services">
+                Explore All
+                <ArrowRight />
+              </Link>
+            </Button>
           </motion.div>
 
           {/* Content Sections */}
