@@ -275,19 +275,29 @@ const Cases = () => {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.5, delay: 0.25 }}
-                      className="grid grid-cols-2 gap-8 mb-8 pb-8 border-b border-border"
+                      className="mb-8"
                     >
-                      <div>
-                        <p className="text-xs font-semibold tracking-wider text-muted-foreground mb-2">
-                          TECH STACK
-                        </p>
-                        <p className="text-sm font-medium">{caseItem.techStack}</p>
+                      {/* Labels row with bottom border */}
+                      <div className="grid grid-cols-2">
+                        <div className="pb-2 border-b border-border">
+                          <p className="text-xs font-semibold tracking-wider text-muted-foreground">
+                            TECH STACK
+                          </p>
+                        </div>
+                        <div className="pb-2 border-b border-l border-border pl-6">
+                          <p className="text-xs font-semibold tracking-wider text-muted-foreground">
+                            TIMELINE
+                          </p>
+                        </div>
                       </div>
-                      <div>
-                        <p className="text-xs font-semibold tracking-wider text-muted-foreground mb-2">
-                          TIMELINE
-                        </p>
-                        <p className="text-sm font-medium">{caseItem.timeline}</p>
+                      {/* Values row */}
+                      <div className="grid grid-cols-2 pt-4">
+                        <div>
+                          <p className="text-sm font-medium">{caseItem.techStack}</p>
+                        </div>
+                        <div className="border-l border-border pl-6">
+                          <p className="text-sm font-medium">{caseItem.timeline}</p>
+                        </div>
                       </div>
                     </motion.div>
 
@@ -299,7 +309,7 @@ const Cases = () => {
                       transition={{ duration: 0.5, delay: 0.3 }}
                       className="mb-8"
                     >
-                      <p className="text-xs font-semibold tracking-wider text-muted-foreground mb-4">
+                      <p className="text-xs font-semibold tracking-wider text-muted-foreground pb-2 border-b border-border mb-4">
                         RESULTS
                       </p>
                       <ul className="space-y-3">

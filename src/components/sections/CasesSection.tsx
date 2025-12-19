@@ -107,7 +107,7 @@ const CasesSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mt-16 lg:mt-24 text-center"
+          className="mt-4 lg:mt-6 text-center"
         >
           <Link
             to="/cases"
@@ -167,13 +167,19 @@ const StackingCard = ({ caseItem, index, totalCards }: StackingCardProps) => {
       <div className="py-12 lg:py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Image */}
-          <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="relative aspect-[4/3] overflow-hidden rounded-lg"
+          >
             <img
               src={caseItem.image}
               alt={caseItem.title}
               className="w-full h-full object-cover"
             />
-          </div>
+          </motion.div>
 
           {/* Content */}
           <div className="flex flex-col">
@@ -206,24 +212,34 @@ const StackingCard = ({ caseItem, index, totalCards }: StackingCardProps) => {
             </div>
 
             {/* Tech Stack & Timeline */}
-            <div className="grid grid-cols-2 gap-6 mb-8 pb-8 border-b border-light-border">
-              <div>
-                <p className="text-xs font-medium uppercase tracking-wider text-light-muted-foreground mb-2">
-                  Tech Stack
-                </p>
-                <p className="text-light-foreground font-medium">{caseItem.techStack}</p>
+            <div className="mb-8">
+              {/* Labels row with bottom border */}
+              <div className="grid grid-cols-2">
+                <div className="pb-2 border-b border-light-border">
+                  <p className="text-xs font-medium uppercase tracking-wider text-light-muted-foreground">
+                    Tech Stack
+                  </p>
+                </div>
+                <div className="pb-2 border-b border-l border-light-border pl-6">
+                  <p className="text-xs font-medium uppercase tracking-wider text-light-muted-foreground">
+                    Timeline
+                  </p>
+                </div>
               </div>
-              <div className="border-l border-light-border pl-6">
-                <p className="text-xs font-medium uppercase tracking-wider text-light-muted-foreground mb-2">
-                  Timeline
-                </p>
-                <p className="text-light-foreground font-medium">{caseItem.timeline}</p>
+              {/* Values row */}
+              <div className="grid grid-cols-2 pt-4">
+                <div>
+                  <p className="text-light-foreground font-medium">{caseItem.techStack}</p>
+                </div>
+                <div className="border-l border-light-border pl-6">
+                  <p className="text-light-foreground font-medium">{caseItem.timeline}</p>
+                </div>
               </div>
             </div>
 
             {/* Results */}
             <div className="mb-8">
-              <p className="text-xs font-medium uppercase tracking-wider text-light-muted-foreground mb-4">
+              <p className="text-xs font-medium uppercase tracking-wider text-light-muted-foreground pb-2 border-b border-light-border mb-4">
                 Results
               </p>
               <ul className="space-y-2">
