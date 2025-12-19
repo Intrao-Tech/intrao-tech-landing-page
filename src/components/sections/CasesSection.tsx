@@ -1,9 +1,9 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
 import { useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { ButtonArrows } from "@/components/ui/button-arrows";
+import { ArrowLink } from "@/components/ui/arrow-link";
 
 interface CaseItem {
   tags: string[];
@@ -109,13 +109,9 @@ const CasesSection = () => {
           transition={{ duration: 0.6 }}
           className="mt-4 lg:mt-6 text-center"
         >
-          <Link
-            to="/cases"
-            className="inline-flex items-center gap-2 text-light-foreground font-semibold uppercase tracking-wider text-sm border-b-2 border-light-foreground pb-1 transition-all duration-300 hover:opacity-70"
-          >
+          <ArrowLink to="/cases" variant="dark">
             Explore All Cases
-            <ArrowRight className="w-4 h-4" />
-          </Link>
+          </ArrowLink>
         </motion.div>
       </div>
     </section>

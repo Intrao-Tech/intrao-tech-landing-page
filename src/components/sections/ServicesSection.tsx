@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
+import { ArrowLink } from "@/components/ui/arrow-link";
 
 interface Service {
   name: string;
@@ -230,13 +231,9 @@ const ServicesSection = () => {
                       <p className="text-dark-muted text-sm leading-relaxed mb-6">
                         {service.description}
                       </p>
-                      <Link
-                        to="/services"
-                        className="inline-flex items-center gap-2 label-small text-dark-muted hover:text-dark-foreground transition-colors duration-300"
-                      >
+                      <ArrowLink to="/services" variant="light">
                         Explore
-                        <ArrowRight className="w-3 h-3" />
-                      </Link>
+                      </ArrowLink>
                     </motion.div>
                   ))}
                 </div>

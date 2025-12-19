@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import { ArrowLink } from "@/components/ui/arrow-link";
 
 const TeamSection = () => {
   // Team photos with different sizes for asymmetric grid
@@ -157,13 +156,9 @@ const TeamSection = () => {
                 50+ team members
               </h3>
             </div>
-            <Link
-              to="/about"
-              className="inline-flex items-center gap-2 text-foreground font-semibold uppercase text-sm tracking-wider group mt-auto"
-            >
+            <ArrowLink to="/about" variant="dark" className="mt-auto">
               Learn More
-              <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-            </Link>
+            </ArrowLink>
           </motion.div>
         </div>
       </div>
