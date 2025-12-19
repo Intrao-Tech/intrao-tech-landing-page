@@ -3,6 +3,8 @@ import { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { ButtonArrows } from "@/components/ui/button-arrows";
 
 const ProductDiscovery = () => {
   useEffect(() => {
@@ -294,18 +296,18 @@ const ProductDiscovery = () => {
                 unnecessary features.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  to="/contacts"
-                  className="btn-primary text-center px-8 py-4"
-                >
-                  LET'S TALK
-                </Link>
-                <Link
-                  to="/cases"
-                  className="btn-outline-dark text-center px-8 py-4"
-                >
-                  VIEW OUR CASES
-                </Link>
+                <Button asChild className="group">
+                  <Link to="/contacts">
+                    LET'S TALK
+                    <ButtonArrows />
+                  </Link>
+                </Button>
+                <Button asChild variant="outline-dark" className="group">
+                  <Link to="/cases">
+                    VIEW OUR CASES
+                    <ButtonArrows />
+                  </Link>
+                </Button>
               </div>
             </motion.div>
 
@@ -546,9 +548,12 @@ const ProductDiscovery = () => {
               Let's transform your vision into a clear, actionable roadmap for
               successful development.
             </p>
-            <Link to="/contacts" className="btn-primary px-8 py-4">
-              GET IN TOUCH
-            </Link>
+            <Button asChild className="group">
+              <Link to="/contacts">
+                GET IN TOUCH
+                <ButtonArrows />
+              </Link>
+            </Button>
           </motion.div>
         </div>
       </section>

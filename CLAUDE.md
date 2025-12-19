@@ -38,7 +38,8 @@ This is a React landing page for Intrao Tech built with Vite, TypeScript, and sh
 ### Styling Conventions
 
 - CSS variables defined in `src/index.css` for colors (primary = purple, HSL format)
-- Custom component classes: `section-dark`, `section-light`, `btn-primary`, `btn-outline-dark`
+- Custom component classes: `section-dark`, `section-light`, `btn-circle-hover`
+- Buttons: Use shadcn `Button` component with variants (`default`, `outline-dark`, `outline-light`)
 - Custom animations: `animate-marquee`, `animate-float`, `animate-fade-in-up`
 - Fonts: Poppins (primary), Helvetica (fallback)
 

@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find:*)",
+      "Bash(cat:*)",
+      "mcp__ide__getDiagnostics",
+      "WebFetch(domain:phenomenonstudio.com)",
+      "WebSearch",
+      "Bash(for file in src/pages/services/WebAppDesign.tsx src/pages/services/WebsiteRedesign.tsx src/pages/services/Branding.tsx src/pages/services/MobileAppDesign.tsx src/pages/services/MobileDevelopment.tsx src/pages/services/WebsiteDesign.tsx)",
+      "Bash(do head -10 \"$file\")",
+      "Bash(done)",
+      "Bash(npm run build:*)",
+      "Bash(grep:*)"
+    ]
+  }
+}
