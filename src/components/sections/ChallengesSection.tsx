@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ButtonArrows } from "@/components/ui/button-arrows";
 
@@ -93,19 +92,6 @@ const ChallengesSection = () => {
                     alt=""
                     className="w-full h-full object-cover"
                   />
-                  {/* Play Button Overlay */}
-                  <button className="absolute bottom-4 left-4 flex items-center gap-3 bg-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:bg-primary/90 group">
-                    <span className="w-8 h-8 rounded-full bg-primary-foreground/20 flex items-center justify-center">
-                      <Play className="w-4 h-4 fill-current" />
-                    </span>
-                    <span className="pr-2">Watch video</span>
-                  </button>
-                  {/* Caption overlay */}
-                  <div className="absolute bottom-4 right-4 bg-primary/90 text-primary-foreground px-3 py-1 rounded text-sm">
-                    {index === 0 && "the right fit."}
-                    {index === 1 && "and touch points."}
-                    {index === 2 && "your vision."}
-                  </div>
                 </div>
               </div>
             </motion.div>
