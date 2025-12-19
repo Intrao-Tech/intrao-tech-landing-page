@@ -175,10 +175,10 @@ const ClientCard = ({ client, index }: ClientCardProps) => {
 
             {/* Tags */}
             <div className="flex flex-wrap gap-2 mt-4">
-              <span className="px-2 md:px-3 py-1 bg-white/10 rounded text-[10px] md:text-xs text-dark-foreground uppercase tracking-wider font-medium">
+              <span className="px-2 md:px-3 py-1 bg-dark-foreground/10 rounded text-[10px] md:text-xs text-dark-foreground uppercase tracking-wider font-medium">
                 {client.category}
               </span>
-              <span className="px-2 md:px-3 py-1 bg-white/10 rounded text-[10px] md:text-xs text-dark-foreground flex items-center gap-1">
+              <span className="px-2 md:px-3 py-1 bg-dark-foreground/10 rounded text-[10px] md:text-xs text-dark-foreground flex items-center gap-1">
                 <span>{client.countryFlag}</span>
                 <span>{client.country}</span>
               </span>
@@ -201,10 +201,10 @@ const ClientsSection = () => {
           transition={{ duration: 0.6 }}
           className="flex flex-col gap-4"
         >
-          <p className="text-muted-foreground text-sm uppercase tracking-[0.2em]">
+          <p className="label text-muted-foreground">
             Product Design and Development Agency
           </p>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">
+          <h2 className="heading-1 text-foreground">
             Our featured client wins
           </h2>
         </motion.div>

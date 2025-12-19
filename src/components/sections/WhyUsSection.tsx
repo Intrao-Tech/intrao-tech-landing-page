@@ -39,10 +39,10 @@ const WhyUsSection = () => {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <p className="text-muted-foreground text-sm uppercase tracking-[0.2em] mb-4">
+          <p className="label text-muted-foreground mb-4">
             Why choose us?
           </p>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+          <h2 className="heading-1">
             Your success is our priority
           </h2>
         </motion.div>
@@ -58,10 +58,10 @@ const WhyUsSection = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="bg-muted/50 rounded-2xl p-8 lg:p-12 flex flex-col"
             >
-              <p className="text-muted-foreground text-xs uppercase tracking-[0.15em] mb-6">
+              <p className="label-small text-muted-foreground mb-6">
                 {reason.label}
               </p>
-              <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold leading-tight mb-8">
+              <h3 className="heading-3 mb-8">
                 {reason.title}
               </h3>
               <p className="text-muted-foreground leading-relaxed mt-auto">

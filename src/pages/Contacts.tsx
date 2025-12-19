@@ -82,7 +82,7 @@ const Contacts = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-dark-muted text-sm uppercase tracking-[0.3em] mb-8"
+              className="label text-dark-muted mb-8"
             >
               We turn bold ideas into successful products
             </motion.p>
@@ -91,7 +91,7 @@ const Contacts = () => {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-6xl md:text-7xl lg:text-8xl font-bold leading-[1.1]"
+              className="heading-1"
             >
               Got an idea?
               <br />
@@ -207,7 +207,7 @@ const Contacts = () => {
                   <div className="flex items-start gap-4">
                     <div className="relative flex-shrink-0">
                       <div className="w-14 h-14 rounded-full bg-gradient-to-br from-rose-400 to-rose-600 flex items-center justify-center overflow-hidden">
-                        <span className="text-xl font-semibold text-white">AE</span>
+                        <span className="text-xl font-semibold text-dark-foreground">AE</span>
                       </div>
                       <Button asChild variant="icon-circle" size="icon" className="absolute -bottom-1 -right-1 w-7 h-7 bg-dark border-dark-muted/30 text-dark-muted">
                         <a href="#" aria-label="LinkedIn">
@@ -237,7 +237,7 @@ const Contacts = () => {
                   <div className="flex items-start gap-4">
                     <div className="relative flex-shrink-0">
                       <div className="w-14 h-14 rounded-full bg-gradient-to-br from-blue-400 to-indigo-600 flex items-center justify-center overflow-hidden">
-                        <span className="text-xl font-semibold text-white">CF</span>
+                        <span className="text-xl font-semibold text-dark-foreground">CF</span>
                       </div>
                       <Button asChild variant="icon-circle" size="icon" className="absolute -bottom-1 -right-1 w-7 h-7 bg-dark border-dark-muted/30 text-dark-muted">
                         <a href="#" aria-label="LinkedIn">
@@ -284,7 +284,7 @@ const Contacts = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="text-muted-foreground text-sm uppercase tracking-[0.3em] mb-6"
+              className="label text-muted-foreground mb-6"
             >
               Worldwide, where you need us
             </motion.p>
@@ -294,7 +294,7 @@ const Contacts = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.15] mb-16 max-w-4xl"
+              className="heading-1 mb-16 max-w-4xl"
             >
               Collaborating across borders to deliver seamless solutions — wherever you are
             </motion.h2>

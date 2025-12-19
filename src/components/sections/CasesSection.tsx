@@ -81,10 +81,10 @@ const CasesSection = () => {
           transition={{ duration: 0.6 }}
           className="mb-16 lg:mb-24"
         >
-          <p className="text-sm font-medium uppercase tracking-widest text-light-muted-foreground mb-6">
+          <p className="label text-light-muted-foreground mb-6">
             Featured Cases
           </p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight max-w-5xl text-light-foreground">
+          <h2 className="heading-1 max-w-5xl text-light-foreground">
             Discover how we're driving change through innovative projects, strong partnerships, and measurable outcomes
           </h2>
         </motion.div>
@@ -190,7 +190,7 @@ const StackingCard = ({ caseItem, index, totalCards }: StackingCardProps) => {
             </div>
 
             {/* Title */}
-            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-light-foreground mb-6">
+            <h3 className="heading-3 text-light-foreground mb-6">
               {caseItem.title} – {caseItem.subtitle}
             </h3>
 

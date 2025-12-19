@@ -152,10 +152,10 @@ const ServicesSection = () => {
           transition={{ duration: 0.6 }}
           className="mb-16 lg:mb-24"
         >
-          <p className="text-dark-muted text-sm uppercase tracking-wider mb-4">
+          <p className="label text-dark-muted mb-4">
             Product Design and Development Agency Services
           </p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6">
+          <h2 className="heading-2 mb-6">
             Tailored support from first prototype
             <br />
             <span className="text-dark-muted">to long-term scale</span>
@@ -211,7 +211,7 @@ const ServicesSection = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5 }}
-                  className="text-2xl md:text-3xl lg:text-4xl font-bold mb-12"
+                  className="heading-3 mb-12"
                 >
                   {stage.headline}
                 </motion.h3>
@@ -226,13 +226,13 @@ const ServicesSection = () => {
                       transition={{ duration: 0.4, delay: serviceIndex * 0.1 }}
                       className="border-t border-dark-muted/30 py-8"
                     >
-                      <h4 className="text-lg font-medium mb-4">{service.name}</h4>
+                      <h4 className="heading-4 mb-4">{service.name}</h4>
                       <p className="text-dark-muted text-sm leading-relaxed mb-6">
                         {service.description}
                       </p>
                       <Link
                         to="/services"
-                        className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-dark-muted hover:text-dark-foreground transition-colors duration-300"
+                        className="inline-flex items-center gap-2 label-small text-dark-muted hover:text-dark-foreground transition-colors duration-300"
                       >
                         Explore
                         <ArrowRight className="w-3 h-3" />

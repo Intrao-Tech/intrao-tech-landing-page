@@ -109,7 +109,7 @@ const Services = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-dark-muted text-sm uppercase tracking-[0.3em] mb-8"
+              className="label text-dark-muted mb-8"
             >
               Our Services
             </motion.p>
@@ -118,7 +118,7 @@ const Services = () => {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] mb-8 max-w-4xl"
+              className="heading-1 mb-8 max-w-4xl"
             >
               Tailored solutions for your{" "}
               <span className="text-primary">digital success</span>
@@ -150,7 +150,7 @@ const Services = () => {
                 >
                   <div className="border border-border p-8 h-full flex flex-col transition-all duration-500 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5">
                     <service.icon className="w-12 h-12 text-primary mb-6" />
-                    <h3 className="text-2xl font-semibold mb-4 group-hover:text-primary transition-colors duration-300">
+                    <h3 className="heading-4 mb-4 group-hover:text-primary transition-colors duration-300">
                       {service.title}
                     </h3>
                     <p className="text-muted-foreground leading-relaxed mb-6">
@@ -189,7 +189,7 @@ const Services = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8"
+              className="heading-2 mb-8"
             >
               Ready to start your project?
             </motion.h2>

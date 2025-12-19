@@ -136,7 +136,7 @@ const Team = () => {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.05] mb-8 max-w-4xl"
+              className="heading-1 mb-8 max-w-4xl"
             >
               Intrao Tech Team
               <br />

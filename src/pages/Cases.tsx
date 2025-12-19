@@ -162,7 +162,7 @@ const Cases = () => {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] mb-12"
+              className="heading-2 mb-12"
             >
               Explore our projects
             </motion.h1>
@@ -247,7 +247,7 @@ const Cases = () => {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.5, delay: 0.15 }}
-                      className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight mb-6"
+                      className="heading-3 mb-6"
                     >
                       {caseItem.title}
                     </motion.h2>

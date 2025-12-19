@@ -104,7 +104,7 @@ const About = () => {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-[1.05] mb-8 max-w-5xl"
+              className="heading-1 mb-8 max-w-5xl"
             >
               International full-cycle product development company
             </motion.h1>
@@ -141,7 +141,7 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="text-muted-foreground text-sm uppercase tracking-[0.3em] mb-8"
+              className="label text-muted-foreground mb-8"
             >
               Mission
             </motion.p>
@@ -151,7 +151,7 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-16 max-w-5xl"
+              className="heading-1 mb-16 max-w-5xl"
             >
               Delivering innovative digital products and solutions, which users do want, for our clients worldwide.
             </motion.h2>
@@ -161,7 +161,7 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-3xl md:text-4xl font-bold mb-10"
+              className="heading-2 mb-10"
             >
               How did we get here?
             </motion.h3>
@@ -191,7 +191,7 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="text-muted-foreground text-sm uppercase tracking-[0.3em] mb-8"
+              className="label text-muted-foreground mb-8"
             >
               Principles
             </motion.p>
@@ -201,7 +201,7 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-16 max-w-4xl"
+              className="heading-2 mb-16 max-w-4xl"
             >
               We work with startups & established businesses to help them meet today's evolving business challenges
             </motion.h2>
@@ -235,7 +235,7 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="text-dark-muted text-sm uppercase tracking-[0.3em] mb-8"
+              className="label text-dark-muted mb-8"
             >
               Reviews
             </motion.p>
@@ -245,7 +245,7 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-16"
+              className="heading-1 mb-16"
             >
               What do people say about us?
             </motion.h2>
@@ -268,7 +268,7 @@ const About = () => {
 
                   <Quote className="w-8 h-8 text-primary mb-4" />
 
-                  <p className="text-dark-foreground/90 mb-8 leading-relaxed">
+                  <p className="text-dark-foreground mb-8 leading-relaxed">
                     {testimonial.quote}
                   </p>
 
@@ -328,7 +328,7 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="text-dark-muted text-sm uppercase tracking-[0.3em] mb-8"
+              className="label text-dark-muted mb-8"
             >
               Awards
             </motion.p>
@@ -338,7 +338,7 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-16"
+              className="heading-1 mb-16"
             >
               Intrao is facts and figures
             </motion.h2>
@@ -396,7 +396,7 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-16 max-w-3xl"
+              className="heading-1 mb-16 max-w-3xl"
             >
               Explore opportunities to create excellent products
             </motion.h2>

@@ -42,7 +42,7 @@ const ChallengesSection = () => {
         transition={{ duration: 0.6 }}
         className="container mx-auto px-6 py-16 lg:py-24"
       >
-        <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight max-w-4xl">
+        <h2 className="heading-1 max-w-4xl">
           Building a startup is hard, but finding the right partner shouldn't be
         </h2>
       </motion.div>
@@ -68,14 +68,14 @@ const ChallengesSection = () => {
               <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr_380px] gap-8 lg:gap-12 py-12 lg:py-16 min-h-[60vh] lg:min-h-[70vh] items-start lg:items-center">
                 {/* Question - Left Column */}
                 <div className="lg:pr-4">
-                  <p className="text-lg md:text-xl text-foreground/80 leading-relaxed">
+                  <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
                     {challenge.question}
                   </p>
                 </div>
 
                 {/* Answer + CTA - Center Column */}
                 <div className="flex flex-col justify-center">
-                  <p className="text-2xl md:text-3xl lg:text-4xl font-light italic leading-relaxed text-foreground/90 mb-8 lg:mb-12">
+                  <p className="text-quote text-foreground mb-8 lg:mb-12">
                     {challenge.answer}
                   </p>
                   <Button asChild className="group w-fit">

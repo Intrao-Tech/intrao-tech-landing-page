@@ -126,7 +126,7 @@ const Insights = () => {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1]"
+              className="heading-1"
             >
               Expert articles
             </motion.h1>
@@ -209,7 +209,7 @@ const Insights = () => {
                     </div>
 
                     {/* Title */}
-                    <h3 className="text-2xl md:text-3xl font-semibold mb-4 group-hover:text-primary transition-colors duration-300">
+                    <h3 className="heading-3 mb-4 group-hover:text-primary transition-colors duration-300">
                       {article.title}
                     </h3>
 

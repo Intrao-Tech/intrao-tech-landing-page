@@ -41,10 +41,10 @@ const TestimonialsSection = () => {
             transition={{ duration: 0.6 }}
             className="max-w-xl"
           >
-            <p className="text-muted-foreground text-sm uppercase tracking-[0.2em] mb-4">
+            <p className="label text-muted-foreground mb-4">
               What our clients say
             </p>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+            <h2 className="heading-1">
               5.0 is our average
               <br />
               on clutch & designrush

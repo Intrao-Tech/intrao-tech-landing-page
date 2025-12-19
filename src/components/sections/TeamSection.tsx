@@ -48,7 +48,7 @@ const TeamSection = () => {
           transition={{ duration: 0.6 }}
           className="max-w-3xl mb-16"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-8">
+          <h2 className="heading-1 mb-8">
             Meet the team driving your product's success
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed">
@@ -153,7 +153,7 @@ const TeamSection = () => {
             className="bg-muted/50 rounded-2xl p-8 flex flex-col justify-between"
           >
             <div>
-              <h3 className="text-3xl md:text-4xl font-bold leading-tight">
+              <h3 className="heading-3">
                 50+ team members
               </h3>
             </div>

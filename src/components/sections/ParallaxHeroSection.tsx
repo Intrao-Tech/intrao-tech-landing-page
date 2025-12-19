@@ -47,11 +47,11 @@ const AnimatedStat = ({ value, suffix = "", label, delay = 0 }: StatProps) => {
       transition={{ duration: 0.6, delay }}
       className="text-center py-8 lg:py-12"
     >
-      <div className="text-4xl md:text-5xl lg:text-6xl font-bold text-dark-foreground mb-3">
+      <div className="heading-1 text-dark-foreground mb-3">
         {displayValue}
         {suffix}
       </div>
-      <p className="text-dark-muted text-sm uppercase tracking-wider">{label}</p>
+      <p className="label text-dark-muted">{label}</p>
     </motion.div>
   );
 };
@@ -73,7 +73,7 @@ const ParallaxHeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-dark-muted text-sm uppercase tracking-[0.3em] mb-8"
+          className="label text-dark-muted mb-8"
         >
           Product Design and Development Agency
         </motion.p>
@@ -83,7 +83,7 @@ const ParallaxHeroSection = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] mb-12 max-w-5xl"
+          className="heading-1 mb-12 max-w-5xl"
         >
           Empowering startups to launch, scale, and succeed faster
         </motion.h1>
@@ -135,7 +135,7 @@ const ParallaxHeroSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="text-2xl md:text-3xl lg:text-4xl font-medium leading-relaxed italic"
+              className="text-quote"
             >
               From MVP to market domination – your reliable partner in UI/UX design and development
             </motion.h2>
@@ -149,7 +149,7 @@ const ParallaxHeroSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="text-dark-muted text-sm uppercase tracking-[0.3em] mb-12"
+              className="label text-dark-muted mb-12"
             >
               Intrao Tech in Numbers
             </motion.p>

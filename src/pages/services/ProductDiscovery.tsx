@@ -286,7 +286,7 @@ const ProductDiscovery = () => {
               <span className="inline-block px-4 py-2 bg-primary/20 text-primary rounded-full text-sm font-medium mb-6">
                 PRODUCT DISCOVERY
               </span>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+              <h1 className="heading-2 mb-6">
                 Product Discovery
               </h1>
               <p className="text-xl text-dark-foreground/80 mb-8">

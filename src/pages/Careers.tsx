@@ -64,7 +64,7 @@ const Careers = () => {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] mb-8 max-w-4xl"
+              className="heading-1 mb-8 max-w-4xl"
             >
               Build your career with{" "}
               <span className="text-primary">Intrao Tech</span>

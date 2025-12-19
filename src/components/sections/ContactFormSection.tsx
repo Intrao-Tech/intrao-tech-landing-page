@@ -51,7 +51,7 @@ const ContactFormSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-8">
+            <h2 className="heading-2 mb-8">
               Have a project in mind?
               <br />
               <span className="text-primary">Let's chat</span>
@@ -143,7 +143,7 @@ const ContactFormSection = () => {
             className="lg:pl-12"
           >
             <div className="border border-dark-muted/30 p-8 lg:p-10 h-full">
-              <h3 className="text-xl font-semibold mb-8 text-dark-foreground">
+              <h3 className="heading-4 mb-8 text-dark-foreground">
                 Have a project to discuss?
               </h3>
 
@@ -176,7 +176,7 @@ const ContactFormSection = () => {
                 </div>
 
                 <div className="border-t border-dark-muted/30 pt-8">
-                  <h4 className="text-sm text-dark-muted uppercase tracking-wider mb-4">
+                  <h4 className="label text-dark-muted mb-4">
                     Have a partnership in mind?
                   </h4>
                   <div className="flex items-start gap-4">
