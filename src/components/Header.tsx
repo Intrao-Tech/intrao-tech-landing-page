@@ -282,10 +282,10 @@ const Header = () => {
             onMouseLeave={handleServicesMouseLeave}
           >
             <div className={`${isLight ? "bg-white" : "bg-dark"}`}>
-              <div className="container mx-auto px-6 py-12">
-                <div className="grid grid-cols-[240px_1fr] gap-12 max-w-4xl">
+              <div className="container mx-auto">
+                <div className="flex max-w-4xl">
                   {/* Left: Categories */}
-                  <div className="flex flex-col gap-2">
+                  <div className="flex flex-col gap-2 py-12 pr-8 w-[240px] shrink-0">
                     {serviceCategories.map((category) => (
                       <button
                         key={category.name}
@@ -293,23 +293,24 @@ const Header = () => {
                         className={`flex items-center justify-between px-4 py-3 rounded-lg text-sm font-medium uppercase tracking-wider transition-all duration-200 ${
                           activeServiceCategory === category.name
                             ? isLight
-                              ? "bg-gray-100 text-foreground"
-                              : "bg-dark-muted/30 text-dark-foreground"
+                              ? "text-foreground"
+                              : "text-dark-foreground"
                             : isLight
-                              ? "text-muted-foreground hover:text-foreground hover:bg-gray-50"
-                              : "text-dark-muted hover:text-dark-foreground hover:bg-dark-muted/20"
+                              ? "text-muted-foreground hover:text-foreground"
+                              : "text-dark-muted hover:text-dark-foreground"
                         }`}
                       >
                         {category.name}
-                        <ChevronRight className={`w-4 h-4 transition-opacity ${
-                          activeServiceCategory === category.name ? "opacity-100" : "opacity-0"
-                        }`} />
+                        <ChevronRight className="w-4 h-4" />
                       </button>
                     ))}
                   </div>
 
+                  {/* Vertical Divider */}
+                  <div className={`w-px ${isLight ? "bg-gray-300" : "bg-dark-muted/20"}`} />
+
                   {/* Right: Sub-items */}
-                  <div className="flex flex-col gap-3">
+                  <div className="flex flex-col gap-3 py-12 pl-8">
                     {serviceCategories
                       .find((cat) => cat.name === activeServiceCategory)
                       ?.items.map((item) => (
@@ -350,29 +351,33 @@ const Header = () => {
             onMouseLeave={handleCompanyMouseLeave}
           >
             <div className={`${isLight ? "bg-white" : "bg-dark"}`}>
-              <div className="container mx-auto px-6 py-12">
-
-                <div className="grid grid-cols-2 gap-12 max-w-4xl">
+              <div className="container mx-auto">
+                <div className="flex">
                   {/* Left: CTA Block */}
-                  <div className={`rounded-2xl p-8 ${
-                    isLight ? "bg-gray-50 border border-gray-100" : "bg-dark-muted/20"
-                  }`}>
-                    <h3 className={`text-2xl md:text-3xl font-bold leading-tight mb-6 ${
-                      isLight ? "text-foreground" : "text-dark-foreground"
+                  <div className="py-8 pr-8 w-[280px] shrink-0">
+                    <div className={`rounded-2xl p-6 h-full flex flex-col ${
+                      isLight ? "bg-gray-50 border border-gray-100" : "bg-dark-muted/20"
                     }`}>
-                      Ready to bring your idea to life?
-                    </h3>
-                    <Link
-                      to="/contacts"
-                      className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-xl text-sm font-semibold uppercase tracking-wider transition-all duration-300 hover:bg-primary/90"
-                    >
-                      Let's Talk
-                      <ArrowUpRight className="w-4 h-4" />
-                    </Link>
+                      <h3 className={`text-2xl md:text-3xl font-bold leading-tight mb-auto ${
+                        isLight ? "text-foreground" : "text-dark-foreground"
+                      }`}>
+                        Ready to bring your idea to life?
+                      </h3>
+                      <Link
+                        to="/contacts"
+                        className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-xl text-sm font-semibold uppercase tracking-wider transition-all duration-300 hover:bg-primary/90 mt-8"
+                      >
+                        Let's Talk
+                        <ArrowUpRight className="w-4 h-4" />
+                      </Link>
+                    </div>
                   </div>
 
+                  {/* Vertical Divider */}
+                  <div className={`w-px ${isLight ? "bg-gray-300" : "bg-dark-muted/20"}`} />
+
                   {/* Right: Navigation Links */}
-                  <div className="flex flex-col justify-center gap-4">
+                  <div className="flex flex-col justify-center gap-4 py-12 pl-8">
                     {companyLinks.map((link) => (
                       <Link
                         key={link.name}
