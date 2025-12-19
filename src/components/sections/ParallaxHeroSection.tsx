@@ -1,9 +1,9 @@
 import { motion, useInView } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
 import { useRef, useState, useEffect } from "react";
 import showreelVideo from "@/assets/tinyvid_optimized_showreel_2.mp4";
 import { Button } from "@/components/ui/button";
+import { ButtonArrows } from "@/components/ui/button-arrows";
 
 interface StatProps {
   value: string;
@@ -98,13 +98,13 @@ const ParallaxHeroSection = () => {
           <Button asChild className="group">
             <Link to="/contacts">
               Let's Talk
-              <ArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
+              <ButtonArrows />
             </Link>
           </Button>
           <Button asChild variant="outline-dark" className="group">
             <Link to="/cases">
               View Our Cases
-              <ArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
+              <ButtonArrows />
             </Link>
           </Button>
         </motion.div>

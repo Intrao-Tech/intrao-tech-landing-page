@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { useRef } from "react";
 import { Button } from "@/components/ui/button";
+import { ButtonArrows } from "@/components/ui/button-arrows";
 
 interface CaseItem {
   tags: string[];
@@ -235,10 +236,10 @@ const StackingCard = ({ caseItem, index, totalCards }: StackingCardProps) => {
             </div>
 
             {/* Explore Button */}
-            <Button asChild className="self-start">
+            <Button asChild className="self-start group">
               <Link to="/cases">
                 Explore
-                <ArrowRight />
+                <ButtonArrows />
               </Link>
             </Button>
           </div>

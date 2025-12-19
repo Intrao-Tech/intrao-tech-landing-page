@@ -3,9 +3,10 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowRight, ArrowUpRight, TrendingUp, Globe, Handshake } from "lucide-react";
+import { ArrowUpRight, TrendingUp, Globe, Handshake } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { ButtonArrows } from "@/components/ui/button-arrows";
 
 const Team = () => {
   const [activeAdvisor, setActiveAdvisor] = useState(0);
@@ -156,10 +157,10 @@ const Team = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              <Button asChild>
+              <Button asChild className="group">
                 <Link to="/contacts">
                   Let's Talk
-                  <ArrowRight />
+                  <ButtonArrows />
                 </Link>
               </Button>
             </motion.div>
@@ -185,10 +186,10 @@ const Team = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                <Button asChild variant="secondary" size="sm" className="rounded-full">
+                <Button asChild variant="secondary" size="sm" className="rounded-full group">
                   <Link to="/contacts">
                     Get in Touch
-                    <ArrowRight />
+                    <ButtonArrows />
                   </Link>
                 </Button>
               </motion.div>
@@ -402,10 +403,10 @@ const Team = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <Button asChild size="lg">
+              <Button asChild size="lg" className="group">
                 <Link to="/careers">
                   View Careers
-                  <ArrowRight />
+                  <ButtonArrows />
                 </Link>
               </Button>
             </motion.div>

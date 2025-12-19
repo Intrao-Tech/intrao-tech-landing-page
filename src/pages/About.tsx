@@ -3,8 +3,9 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowRight, ArrowDownRight, Quote, Building2 } from "lucide-react";
+import { ArrowDownRight, Quote, Building2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ButtonArrows } from "@/components/ui/button-arrows";
 
 const About = () => {
   const principles = [
@@ -122,10 +123,10 @@ const About = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              <Button asChild>
+              <Button asChild className="group">
                 <Link to="/contacts">
                   Let's talk
-                  <ArrowRight />
+                  <ButtonArrows />
                 </Link>
               </Button>
             </motion.div>
@@ -412,10 +413,10 @@ const About = () => {
                 <p className="text-muted-foreground mb-8">
                   Check out the projects we have completed for our clients
                 </p>
-                <Button asChild variant="secondary">
+                <Button asChild variant="secondary" className="group">
                   <Link to="/cases">
                     View Our Projects
-                    <ArrowRight />
+                    <ButtonArrows />
                   </Link>
                 </Button>
               </motion.div>
@@ -431,10 +432,10 @@ const About = () => {
                 <p className="text-muted-foreground mb-8">
                   Discover the multitude of methods we can use to enhance your product
                 </p>
-                <Button asChild variant="secondary">
+                <Button asChild variant="secondary" className="group">
                   <Link to="/services">
                     View Our Services
-                    <ArrowRight />
+                    <ButtonArrows />
                   </Link>
                 </Button>
               </motion.div>

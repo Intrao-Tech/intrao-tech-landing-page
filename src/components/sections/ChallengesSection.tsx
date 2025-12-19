@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowRight, Play } from "lucide-react";
+import { Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ButtonArrows } from "@/components/ui/button-arrows";
 
 const ChallengesSection = () => {
   const challenges = [
@@ -80,7 +81,7 @@ const ChallengesSection = () => {
                   <Button asChild className="group w-fit">
                     <Link to={challenge.href}>
                       {challenge.cta}
-                      <ArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
+                      <ButtonArrows />
                     </Link>
                   </Button>
                 </div>

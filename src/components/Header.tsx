@@ -1,11 +1,12 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowUpRight, ChevronDown, ChevronRight } from "lucide-react";
+import { ChevronDown, ChevronRight } from "lucide-react";
 import logoFull from "@/assets/logo.svg";
 import logoFullDark from "@/assets/logo-dark.svg";
 import { useHeaderTheme } from "@/contexts/HeaderThemeContext";
 import { Button } from "@/components/ui/button";
+import { ButtonArrows } from "@/components/ui/button-arrows";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -244,7 +245,7 @@ const Header = () => {
             >
               <Link to="/contacts">
                 Get in Touch
-                <ArrowUpRight className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
+                <ButtonArrows />
               </Link>
             </Button>
           </motion.div>
@@ -376,10 +377,10 @@ const Header = () => {
                       }`}>
                         Ready to bring your idea to life?
                       </h3>
-                      <Button asChild className="mt-8">
+                      <Button asChild className="mt-8 group">
                         <Link to="/contacts">
                           Let's Talk
-                          <ArrowUpRight />
+                          <ButtonArrows />
                         </Link>
                       </Button>
                     </div>
@@ -568,10 +569,10 @@ const Header = () => {
                   transition={{ duration: 0.3, delay: navLinks.length * 0.1 }}
                   className="mt-6"
                 >
-                  <Button asChild size="lg">
+                  <Button asChild size="lg" className="group">
                   <Link to="/contacts">
                     Get in Touch
-                    <ArrowUpRight />
+                    <ButtonArrows />
                   </Link>
                 </Button>
                 </motion.div>

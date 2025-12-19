@@ -3,8 +3,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ButtonArrows } from "@/components/ui/button-arrows";
 
 type Category = "all" | "web-app" | "mobile-app" | "website" | "branding";
 
@@ -321,7 +321,7 @@ const Cases = () => {
                       <Button asChild className="group">
                         <a href={caseItem.link} target="_blank" rel="noopener noreferrer">
                           EXPLORE
-                          <ArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
+                          <ButtonArrows />
                         </a>
                       </Button>
                     </motion.div>

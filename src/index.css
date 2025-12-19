@@ -176,6 +176,42 @@
   .gradient-text {
     @apply bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent;
   }
+
+  /* Button circle hover effect */
+  .btn-circle-hover {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+  }
+
+  .btn-circle-hover::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 9999px;
+    transform: scale(0);
+    transition: transform 0.5s ease-out;
+    z-index: -1;
+  }
+
+  .btn-circle-hover:hover::before {
+    transform: scale(2.5);
+  }
+
+  /* Primary button circle - lighter flash effect */
+  .btn-circle-primary::before {
+    background: hsl(270 93% 65%);
+  }
+
+  /* Outline dark button circle */
+  .btn-circle-outline-dark::before {
+    background: hsl(var(--dark-foreground));
+  }
+
+  /* Outline light button circle */
+  .btn-circle-outline-light::before {
+    background: hsl(var(--foreground));
+  }
 }
 
 @layer utilities {

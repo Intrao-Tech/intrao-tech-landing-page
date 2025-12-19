@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight, Code, Palette, Rocket, Users, Zap, Target } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ButtonArrows } from "@/components/ui/button-arrows";
 
 const Services = () => {
   const services = [
@@ -198,10 +199,10 @@ const Services = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <Button asChild size="lg">
+              <Button asChild size="lg" className="group">
                 <Link to="/contacts">
                   Get in Touch
-                  <ArrowRight />
+                  <ButtonArrows />
                 </Link>
               </Button>
             </motion.div>

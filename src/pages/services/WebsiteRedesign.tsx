@@ -3,8 +3,9 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowRight, ArrowUpRight, RefreshCw, Award, Accessibility, TrendingUp, Sparkles, Heart, Building2, ShoppingBag, Store, Users, Search, FileCode } from "lucide-react";
+import { RefreshCw, Award, Accessibility, TrendingUp, Sparkles, Heart, Building2, ShoppingBag, Store, Users, Search, FileCode } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ButtonArrows } from "@/components/ui/button-arrows";
 
 const WebsiteRedesign = () => {
   const challenges = [
@@ -185,16 +186,16 @@ const WebsiteRedesign = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="flex flex-wrap gap-4 mb-16"
             >
-              <Button asChild>
+              <Button asChild className="group">
                 <Link to="/contacts">
                   Let's Talk
-                  <ArrowUpRight />
+                  <ButtonArrows />
                 </Link>
               </Button>
-              <Button asChild variant="outline-dark">
+              <Button asChild variant="outline-dark" className="group">
                 <Link to="/cases">
                   View Our Cases
-                  <ArrowUpRight />
+                  <ButtonArrows />
                 </Link>
               </Button>
             </motion.div>
@@ -462,10 +463,10 @@ const WebsiteRedesign = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <Button asChild size="lg">
+              <Button asChild size="lg" className="group">
                 <Link to="/contacts">
                   Get in Touch
-                  <ArrowRight />
+                  <ButtonArrows />
                 </Link>
               </Button>
             </motion.div>
