@@ -43,71 +43,79 @@ const ContactFormSection = () => {
       </div>
 
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+        {/* Heading with bottom border */}
+        <motion.h2
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="heading-2 pb-8 border-b border-dark-muted/30"
+        >
+          Let's chat
+        </motion.h2>
+
+        <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr]">
           {/* Form */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            className="pt-12 lg:pr-12 lg:border-r lg:border-dark-muted/30"
           >
-            <h2 className="heading-2 mb-8">
-              Have a project in mind?
-              <br />
-              <span className="text-primary">Let's chat</span>
-            </h2>
-
             <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label className="text-sm text-dark-muted mb-2 block">
-                  Your Name
-                </label>
-                <input
-                  type="text"
-                  value={formData.name}
-                  onChange={(e) =>
-                    setFormData({ ...formData, name: e.target.value })
-                  }
-                  placeholder="Enter your name"
-                  required
-                  className="w-full bg-transparent border-b border-dark-muted/30 py-4 text-dark-foreground placeholder:text-dark-muted focus:outline-none focus:border-primary transition-colors duration-300"
-                />
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                <div>
+                  <label className="label text-dark-muted mb-2 block">
+                    YOUR NAME
+                  </label>
+                  <input
+                    type="text"
+                    value={formData.name}
+                    onChange={(e) =>
+                      setFormData({ ...formData, name: e.target.value })
+                    }
+                    placeholder="ENTER YOUR NAME *"
+                    required
+                    className="w-full bg-transparent border-b border-dark-muted/30 py-4 text-dark-foreground placeholder:text-dark-muted placeholder:uppercase focus:outline-none focus:border-primary transition-colors duration-300"
+                  />
+                </div>
+
+                <div>
+                  <label className="label text-dark-muted mb-2 block">
+                    YOUR EMAIL
+                  </label>
+                  <input
+                    type="email"
+                    value={formData.email}
+                    onChange={(e) =>
+                      setFormData({ ...formData, email: e.target.value })
+                    }
+                    placeholder="ENTER YOUR EMAIL *"
+                    required
+                    className="w-full bg-transparent border-b border-dark-muted/30 py-4 text-dark-foreground placeholder:text-dark-muted placeholder:uppercase focus:outline-none focus:border-primary transition-colors duration-300"
+                  />
+                </div>
               </div>
 
               <div>
-                <label className="text-sm text-dark-muted mb-2 block">
-                  Your Email
-                </label>
-                <input
-                  type="email"
-                  value={formData.email}
-                  onChange={(e) =>
-                    setFormData({ ...formData, email: e.target.value })
-                  }
-                  placeholder="Enter your email"
-                  required
-                  className="w-full bg-transparent border-b border-dark-muted/30 py-4 text-dark-foreground placeholder:text-dark-muted focus:outline-none focus:border-primary transition-colors duration-300"
-                />
-              </div>
-
-              <div>
-                <label className="text-sm text-dark-muted mb-2 block">
-                  Message
+                <label className="label text-dark-muted mb-2 block">
+                  MESSAGE
                 </label>
                 <textarea
                   value={formData.message}
                   onChange={(e) =>
                     setFormData({ ...formData, message: e.target.value })
                   }
-                  placeholder="Tell us about your project"
+                  placeholder="TELL US ABOUT YOUR PROJECT"
                   rows={4}
-                  className="w-full bg-transparent border-b border-dark-muted/30 py-4 text-dark-foreground placeholder:text-dark-muted focus:outline-none focus:border-primary transition-colors duration-300 resize-none"
+                  className="w-full bg-transparent border-b border-dark-muted/30 py-4 text-dark-foreground placeholder:text-dark-muted placeholder:uppercase focus:outline-none focus:border-primary transition-colors duration-300 resize-none"
                 />
               </div>
 
               <div>
-                <label className="text-sm text-dark-muted mb-4 block">
-                  Your budget for this project?
+                <label className="label text-dark-muted mb-4 block">
+                  YOUR BUDGET FOR THIS PROJECT?
                 </label>
                 <div className="flex flex-wrap gap-3">
                   {budgetOptions.map((option) => (
@@ -115,10 +123,10 @@ const ContactFormSection = () => {
                       key={option}
                       type="button"
                       onClick={() => setFormData({ ...formData, budget: option })}
-                      className={`px-6 py-3 rounded-lg text-sm transition-all duration-300 ${
+                      className={`px-6 py-3 rounded-lg text-sm uppercase transition-all duration-300 ${
                         formData.budget === option
-                          ? "bg-primary text-primary-foreground"
-                          : "border border-dark-muted/30 text-dark-muted hover:text-dark-foreground hover:border-dark-foreground"
+                          ? "bg-dark-foreground text-dark"
+                          : "border border-dark-muted/50 text-dark-foreground hover:border-dark-foreground"
                       }`}
                     >
                       {option}
@@ -127,10 +135,22 @@ const ContactFormSection = () => {
                 </div>
               </div>
 
-              <Button type="submit" size="lg" className="group mt-4">
-                Submit
-                <ArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
-              </Button>
+              <div className="flex flex-col sm:flex-row sm:items-center gap-4 mt-4">
+                <Button type="submit" size="lg" className="group">
+                  Submit
+                  <ArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
+                </Button>
+                <p className="text-sm text-dark-muted uppercase">
+                  BY CLICKING THIS BUTTON YOU ACCEPT{" "}
+                  <a href="#" className="text-dark-foreground underline hover:text-primary transition-colors">
+                    TERMS OF SERVICE
+                  </a>{" "}
+                  AND{" "}
+                  <a href="#" className="text-dark-foreground underline hover:text-primary transition-colors">
+                    PRIVACY POLICY
+                  </a>
+                </p>
+              </div>
             </form>
           </motion.div>
 
@@ -140,71 +160,77 @@ const ContactFormSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="lg:pl-12"
+            className="border-t border-dark-muted/30 lg:border-t-0"
           >
-            <div className="border border-dark-muted/30 p-8 lg:p-10 h-full">
+            {/* First contact */}
+            <div className="pt-12 pb-8 lg:pl-12">
               <h3 className="heading-4 mb-8 text-dark-foreground">
                 Have a project to discuss?
               </h3>
-
-              <div className="space-y-8">
-                <div className="flex items-start gap-4">
-                  <div className="w-16 h-16 bg-muted rounded-full overflow-hidden flex-shrink-0">
-                    <img
-                      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop"
-                      alt="Account Executive"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div>
-                    <p className="font-semibold">Account Executive</p>
-                    <div className="flex items-center gap-2 mt-2">
-                      <Button asChild variant="icon-circle" size="icon" className="h-8 w-8">
-                        <a href="#">
-                          <Linkedin />
-                        </a>
-                      </Button>
-                    </div>
-                    <a
-                      href="mailto:hello@intrao.tech"
-                      className="inline-flex items-center gap-2 text-primary mt-3"
-                    >
-                      <Mail className="w-4 h-4" />
-                      hello@intrao.tech
-                    </a>
-                  </div>
+              <div className="flex items-start gap-4">
+                <div className="w-20 h-20 bg-muted rounded-lg overflow-hidden flex-shrink-0">
+                  <img
+                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop"
+                    alt="Account Executive"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-
-                <div className="border-t border-dark-muted/30 pt-8">
-                  <h4 className="label text-dark-muted mb-4">
-                    Have a partnership in mind?
-                  </h4>
-                  <div className="flex items-start gap-4">
-                    <div className="w-16 h-16 bg-dark-muted/20 rounded-full overflow-hidden flex-shrink-0">
-                      <img
-                        src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&h=200&fit=crop"
-                        alt="Founder"
-                        className="w-full h-full object-cover"
-                      />
+                <div className="flex-1">
+                  <div className="flex items-start justify-between">
+                    <div>
+                      <p className="font-semibold text-dark-foreground">Account Executive</p>
                     </div>
+                    <Button asChild variant="icon-circle" size="icon" className="h-8 w-8">
+                      <a href="#">
+                        <Linkedin />
+                      </a>
+                    </Button>
+                  </div>
+                  <a
+                    href="mailto:hello@intrao.tech"
+                    className="inline-flex items-center gap-2 text-dark-foreground underline mt-3 hover:text-primary transition-colors"
+                  >
+                    <Mail className="w-4 h-4" />
+                    HELLO@INTRAO.TECH
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Divider - extends to vertical border */}
+            <div className="border-t border-dark-muted/30" />
+
+            {/* Second contact */}
+            <div className="pt-8 lg:pl-12">
+              <h4 className="heading-4 mb-6 text-dark-foreground">
+                Have a partnership in mind?
+              </h4>
+              <div className="flex items-start gap-4">
+                <div className="w-20 h-20 bg-dark-muted/20 rounded-lg overflow-hidden flex-shrink-0">
+                  <img
+                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&h=200&fit=crop"
+                    alt="Founder"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="flex-1">
+                  <div className="flex items-start justify-between">
                     <div>
                       <p className="font-semibold text-dark-foreground">Co-Founder</p>
-                      <div className="flex items-center gap-2 mt-2">
-                        <Button asChild variant="icon-circle" size="icon" className="h-8 w-8 border-dark-muted/30 text-dark-muted">
-                          <a href="#">
-                            <Linkedin />
-                          </a>
-                        </Button>
-                      </div>
-                      <a
-                        href="mailto:partner@intrao.tech"
-                        className="inline-flex items-center gap-2 text-primary mt-3"
-                      >
-                        <Mail className="w-4 h-4" />
-                        partner@intrao.tech
-                      </a>
                     </div>
+                    <Button asChild variant="icon-circle" size="icon" className="h-8 w-8">
+                      <a href="#">
+                        <Linkedin />
+                      </a>
+                    </Button>
                   </div>
+                  <a
+                    href="mailto:partner@intrao.tech"
+                    className="inline-flex items-center gap-2 text-dark-foreground underline mt-3 hover:text-primary transition-colors"
+                  >
+                    <Mail className="w-4 h-4" />
+                    PARTNER@INTRAO.TECH
+                  </a>
                 </div>
               </div>
             </div>
