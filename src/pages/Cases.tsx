@@ -156,7 +156,7 @@ const Cases = () => {
 
       <main>
         {/* Hero Section */}
-        <section data-header-theme="light" className="bg-background text-foreground pt-32 pb-16">
+        <section data-header-theme="light" className="bg-background text-foreground pt-32 pb-4">
           <div className="container mx-auto px-6">
             <motion.h1
               initial={{ opacity: 0, y: 40 }}
@@ -175,17 +175,16 @@ const Cases = () => {
               className="flex flex-wrap gap-2"
             >
               {categories.map((cat) => (
-                <button
+                <Button
                   key={cat.id}
+                  variant="tab"
+                  size="sm"
                   onClick={() => setActiveCategory(cat.id)}
-                  className={`px-6 py-3 rounded-lg text-xs font-semibold tracking-wider transition-all duration-300 ${
-                    activeCategory === cat.id
-                      ? "bg-foreground text-background"
-                      : "bg-transparent text-foreground hover:bg-muted"
-                  }`}
+                  data-active={activeCategory === cat.id}
+                  className="rounded-lg"
                 >
                   {cat.label}
-                </button>
+                </Button>
               ))}
             </motion.div>
           </div>
@@ -201,7 +200,7 @@ const Cases = () => {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
-                className="border-t border-border"
+                className={index > 0 ? "border-t border-border" : ""}
               >
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 py-16 lg:py-24">
                   {/* Left Side - Sticky Image */}

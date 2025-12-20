@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 
 const Insights = () => {
   const [activeCategory, setActiveCategory] = useState("ALL");
@@ -146,17 +147,16 @@ const Insights = () => {
               className="flex flex-wrap gap-3"
             >
               {categories.map((category) => (
-                <button
+                <Button
                   key={category}
+                  variant="tab"
+                  size="sm"
                   onClick={() => setActiveCategory(category)}
-                  className={`px-6 py-3 text-xs font-semibold uppercase tracking-[0.15em] transition-all duration-300 ${
-                    activeCategory === category
-                      ? "bg-foreground text-background"
-                      : "bg-transparent text-foreground hover:bg-muted"
-                  }`}
+                  data-active={activeCategory === category}
+                  className="rounded-lg"
                 >
                   {category}
-                </button>
+                </Button>
               ))}
             </motion.div>
           </div>
@@ -223,7 +223,7 @@ const Insights = () => {
                       {article.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="px-4 py-2 text-xs font-semibold uppercase tracking-[0.1em] border border-border text-foreground"
+                          className="px-4 py-2 text-xs font-semibold uppercase tracking-[0.1em] bg-input text-foreground rounded-lg"
                         >
                           {tag}
                         </span>
