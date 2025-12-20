@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Star, Play } from "lucide-react";
+import { Star, Play, Flame } from "lucide-react";
 
 const TestimonialsSection = () => {
   const testimonials = [
@@ -25,6 +25,29 @@ const TestimonialsSection = () => {
       avatar: "",
       isCompany: true,
       videoThumbnail: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=400&fit=crop",
+    },
+    {
+      type: "quote",
+      quote:
+        "The quality of the designs is fantastic. Intrao Tech works at speed and is extremely punctual with timelines. They deliver top-notch outcomes with exceptional designs.",
+      author: "George Fry",
+      role: "Founder at Neap",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop",
+    },
+    {
+      type: "video",
+      author: "Andre Guerra",
+      role: "Co-Owner at RADCAT Design",
+      avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop",
+      videoThumbnail: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=400&fit=crop",
+    },
+    {
+      type: "quote",
+      quote:
+        "Intrao Tech's ability to translate concepts and rough design mock-ups into high-fidelity assets, designs, and visuals was very impressive. The goal was to maintain simple elegance in the design aesthetic, and they did it very well.",
+      author: "Kevin Alvarez",
+      role: "Founder & General Partner, Predictive",
+      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop",
     },
   ];
 
@@ -60,26 +83,26 @@ const TestimonialsSection = () => {
             className="flex gap-4"
           >
             {/* Clutch Badge */}
-            <div className="bg-muted/50 rounded-lg p-6 flex flex-col items-center min-w-[120px]">
-              <div className="w-12 h-12 bg-dark rounded-full flex items-center justify-center mb-3">
-                <span className="text-dark-foreground font-bold text-lg">C</span>
+            <div className="bg-[#f5f5f5] rounded-xl p-6 flex flex-col items-center min-w-[120px]">
+              <div className="w-12 h-12 flex items-center justify-center mb-3">
+                <span className="text-red-500 font-bold text-3xl">C</span>
               </div>
               <div className="flex gap-0.5 mb-1">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-3 h-3 fill-primary text-primary" />
+                  <Star key={i} className="w-3 h-3 fill-orange-500 text-orange-500" />
                 ))}
               </div>
               <span className="text-foreground font-semibold">5.0</span>
             </div>
 
             {/* DesignRush Badge */}
-            <div className="bg-muted/50 rounded-lg p-6 flex flex-col items-center min-w-[120px]">
-              <div className="w-12 h-12 bg-dark rounded-full flex items-center justify-center mb-3">
-                <span className="text-dark-foreground font-bold text-lg">D</span>
+            <div className="bg-[#f5f5f5] rounded-xl p-6 flex flex-col items-center min-w-[120px]">
+              <div className="w-12 h-12 flex items-center justify-center mb-3">
+                <Flame className="w-8 h-8 text-foreground fill-foreground" />
               </div>
               <div className="flex gap-0.5 mb-1">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-3 h-3 fill-primary text-primary" />
+                  <Star key={i} className="w-3 h-3 fill-orange-500 text-orange-500" />
                 ))}
               </div>
               <span className="text-foreground font-semibold">4.9</span>
@@ -96,35 +119,35 @@ const TestimonialsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`bg-muted/50 rounded-lg overflow-hidden ${
+              className={`bg-[#f5f5f5] rounded-xl overflow-hidden ${
                 testimonial.type === "video" ? "" : "p-8"
               }`}
             >
               {testimonial.type === "video" ? (
-                <div className="flex flex-col h-full">
+                <div className="flex flex-col h-full p-6">
                   {/* Author Header */}
-                  <div className="flex items-center gap-3 p-6">
+                  <div className="flex items-center gap-4 mb-6">
                     {testimonial.isCompany ? (
-                      <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
-                        <span className="text-primary-foreground font-bold text-sm">K</span>
+                      <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center">
+                        <span className="text-primary-foreground font-bold text-xl">K</span>
                       </div>
                     ) : (
                       <img
                         src={testimonial.avatar}
                         alt={testimonial.author}
-                        className="w-10 h-10 rounded-full object-cover"
+                        className="w-16 h-16 rounded-full object-cover"
                       />
                     )}
                     <div>
-                      <p className="font-semibold text-foreground">{testimonial.author}</p>
+                      <p className="text-xl font-semibold text-foreground">{testimonial.author}</p>
                       {testimonial.role && (
-                        <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                        <p className="text-base text-muted-foreground">{testimonial.role}</p>
                       )}
                     </div>
                   </div>
-                  
+
                   {/* Video Thumbnail */}
-                  <div className="relative flex-1 min-h-[250px] group cursor-pointer">
+                  <div className="relative flex-1 min-h-[300px] group cursor-pointer rounded-xl overflow-hidden">
                     <img
                       src={testimonial.videoThumbnail}
                       alt="Video testimonial"
@@ -146,15 +169,15 @@ const TestimonialsSection = () => {
               ) : (
                 <div className="flex flex-col h-full min-h-[350px]">
                   {/* Author Header */}
-                  <div className="flex items-center gap-3 mb-8">
+                  <div className="flex items-center gap-4 mb-8">
                     <img
                       src={testimonial.avatar}
                       alt={testimonial.author}
-                      className="w-10 h-10 rounded-full object-cover"
+                      className="w-16 h-16 rounded-full object-cover"
                     />
                     <div>
-                      <p className="font-semibold text-foreground">{testimonial.author}</p>
-                      <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                      <p className="text-xl font-semibold text-foreground">{testimonial.author}</p>
+                      <p className="text-base text-muted-foreground">{testimonial.role}</p>
                     </div>
                   </div>
                   

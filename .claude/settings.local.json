@@ -10,7 +10,8 @@
       "Bash(do head -10 \"$file\")",
       "Bash(done)",
       "Bash(npm run build:*)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Bash(xxd:*)"
     ]
   }
 }
