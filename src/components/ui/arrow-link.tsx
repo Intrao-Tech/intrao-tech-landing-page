@@ -7,6 +7,7 @@ interface ArrowLinkProps {
   href?: string;
   children: React.ReactNode;
   variant?: "dark" | "light";
+  showArrow?: boolean;
   className?: string;
 }
 
@@ -15,6 +16,7 @@ export const ArrowLink = ({
   href,
   children,
   variant = "dark",
+  showArrow = true,
   className,
 }: ArrowLinkProps) => {
   const baseClasses = cn(
@@ -26,7 +28,7 @@ export const ArrowLink = ({
   const content = (
     <>
       <span className="arrow-link-text">{children}</span>
-      <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+      {showArrow && <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />}
     </>
   );
 

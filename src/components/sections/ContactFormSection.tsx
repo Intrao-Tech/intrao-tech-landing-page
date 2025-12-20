@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { ArrowRight, Mail, Linkedin } from "lucide-react";
+import { ArrowRight, Linkedin } from "lucide-react";
+import { ArrowLink } from "@/components/ui/arrow-link";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 
@@ -142,13 +143,13 @@ const ContactFormSection = () => {
                 </Button>
                 <p className="text-sm text-dark-muted uppercase">
                   BY CLICKING THIS BUTTON YOU ACCEPT{" "}
-                  <a href="#" className="text-dark-foreground underline hover:text-primary transition-colors">
+                  <ArrowLink href="#" variant="light" showArrow={false}>
                     TERMS OF SERVICE
-                  </a>{" "}
+                  </ArrowLink>{" "}
                   AND{" "}
-                  <a href="#" className="text-dark-foreground underline hover:text-primary transition-colors">
+                  <ArrowLink href="#" variant="light" showArrow={false}>
                     PRIVACY POLICY
-                  </a>
+                  </ArrowLink>
                 </p>
               </div>
             </form>
@@ -186,13 +187,9 @@ const ContactFormSection = () => {
                       </a>
                     </Button>
                   </div>
-                  <a
-                    href="mailto:hello@intrao.tech"
-                    className="inline-flex items-center gap-2 text-dark-foreground underline mt-3 hover:text-primary transition-colors"
-                  >
-                    <Mail className="w-4 h-4" />
+                  <ArrowLink href="mailto:hello@intrao.tech" variant="light" showArrow={false} className="mt-3">
                     HELLO@INTRAO.TECH
-                  </a>
+                  </ArrowLink>
                 </div>
               </div>
             </div>
@@ -224,13 +221,9 @@ const ContactFormSection = () => {
                       </a>
                     </Button>
                   </div>
-                  <a
-                    href="mailto:partner@intrao.tech"
-                    className="inline-flex items-center gap-2 text-dark-foreground underline mt-3 hover:text-primary transition-colors"
-                  >
-                    <Mail className="w-4 h-4" />
+                  <ArrowLink href="mailto:partner@intrao.tech" variant="light" showArrow={false} className="mt-3">
                     PARTNER@INTRAO.TECH
-                  </a>
+                  </ArrowLink>
                 </div>
               </div>
             </div>
