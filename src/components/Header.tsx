@@ -370,7 +370,7 @@ const Header = () => {
                   {/* Left: CTA Block */}
                   <div className="pt-10 pb-4 pr-8 w-[280px] shrink-0">
                     <div className={`rounded-lg p-6 h-full flex flex-col ${
-                      isLight ? "bg-light/50 border border-light-border" : "bg-dark-muted/20"
+                      isLight ? "bg-foreground/5" : "bg-dark-muted/20"
                     }`}>
                       <h3 className={`text-2xl md:text-3xl font-bold leading-tight mb-auto ${
                         isLight ? "text-foreground" : "text-dark-foreground"
