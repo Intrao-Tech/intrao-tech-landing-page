@@ -209,9 +209,9 @@ const Contacts = () => {
                       <div className="w-14 h-14 rounded-full bg-gradient-to-br from-rose-400 to-rose-600 flex items-center justify-center overflow-hidden">
                         <span className="text-xl font-semibold text-dark-foreground">AE</span>
                       </div>
-                      <Button asChild variant="icon-circle" size="icon" className="absolute -bottom-1 -right-1 w-7 h-7 bg-dark border-dark-muted/30 text-dark-muted">
+                      <Button asChild variant="icon-dark" size="icon-sm" className="absolute -bottom-1 -right-1 !h-7 !w-7 [&_svg]:!size-3.5">
                         <a href="#" aria-label="LinkedIn">
-                          <Linkedin className="w-3.5 h-3.5" />
+                          <Linkedin />
                         </a>
                       </Button>
                     </div>
@@ -239,9 +239,9 @@ const Contacts = () => {
                       <div className="w-14 h-14 rounded-full bg-gradient-to-br from-blue-400 to-indigo-600 flex items-center justify-center overflow-hidden">
                         <span className="text-xl font-semibold text-dark-foreground">CF</span>
                       </div>
-                      <Button asChild variant="icon-circle" size="icon" className="absolute -bottom-1 -right-1 w-7 h-7 bg-dark border-dark-muted/30 text-dark-muted">
+                      <Button asChild variant="icon-dark" size="icon-sm" className="absolute -bottom-1 -right-1 !h-7 !w-7 [&_svg]:!size-3.5">
                         <a href="#" aria-label="LinkedIn">
-                          <Linkedin className="w-3.5 h-3.5" />
+                          <Linkedin />
                         </a>
                       </Button>
                     </div>

@@ -181,7 +181,7 @@ const ContactFormSection = () => {
                     <div>
                       <p className="font-semibold text-dark-foreground">Account Executive</p>
                     </div>
-                    <Button asChild variant="icon-circle" size="icon" className="h-8 w-8">
+                    <Button asChild variant="icon-dark" size="icon-sm" className="!h-8 !w-8">
                       <a href="#">
                         <Linkedin />
                       </a>
@@ -215,7 +215,7 @@ const ContactFormSection = () => {
                     <div>
                       <p className="font-semibold text-dark-foreground">Co-Founder</p>
                     </div>
-                    <Button asChild variant="icon-circle" size="icon" className="h-8 w-8">
+                    <Button asChild variant="icon-dark" size="icon-sm" className="!h-8 !w-8">
                       <a href="#">
                         <Linkedin />
                       </a>

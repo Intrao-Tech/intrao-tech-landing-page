@@ -101,8 +101,8 @@ const Footer = () => {
                 <Button
                   key={social.label}
                   asChild
-                  variant="icon-circle"
-                  size="icon"
+                  variant="icon-light"
+                  size="icon-md"
                 >
                   <a href={social.href} aria-label={social.label}>
                     <social.icon />
