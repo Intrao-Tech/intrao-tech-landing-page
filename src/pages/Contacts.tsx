@@ -3,9 +3,10 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { ArrowRight, Linkedin, Mail } from "lucide-react";
+import { ArrowRight, Linkedin } from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
+import { ArrowLink } from "@/components/ui/arrow-link";
 
 const Contacts = () => {
   const [formData, setFormData] = useState({
@@ -76,7 +77,7 @@ const Contacts = () => {
 
       <main>
         {/* Hero Section */}
-        <section data-header-theme="dark" className="bg-dark text-dark-foreground pt-32 pb-16">
+        <section data-header-theme="dark" className="bg-dark text-dark-foreground pt-32 pb-12">
           <div className="container mx-auto px-6">
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -101,69 +102,70 @@ const Contacts = () => {
         </section>
 
         {/* Contact Form Section */}
-        <section data-header-theme="dark" className="relative bg-dark text-dark-foreground py-20">
+        <section data-header-theme="dark" className="relative z-10 bg-dark text-dark-foreground pb-24 lg:pb-32">
           <div className="container mx-auto px-6">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
+            <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] border-t border-dark-muted/30">
               {/* Form */}
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
-                className="lg:col-span-2"
+                className="pt-12 lg:pr-12 lg:border-r lg:border-dark-muted/30"
               >
-                <form onSubmit={handleSubmit} className="space-y-8">
-                  <div>
-                    <label className="text-dark-muted text-xs uppercase tracking-[0.2em] mb-3 block">
-                      Your Name
-                    </label>
-                    <input
-                      type="text"
-                      value={formData.name}
-                      onChange={(e) =>
-                        setFormData({ ...formData, name: e.target.value })
-                      }
-                      placeholder="Enter your name"
-                      required
-                      className="w-full bg-transparent border-0 border-b border-dark-muted/30 pb-4 text-lg text-dark-foreground placeholder:text-dark-muted/50 focus:outline-none focus:border-primary transition-colors duration-300"
-                    />
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                    <div>
+                      <label className="label text-dark-muted mb-2 block">
+                        YOUR NAME
+                      </label>
+                      <input
+                        type="text"
+                        value={formData.name}
+                        onChange={(e) =>
+                          setFormData({ ...formData, name: e.target.value })
+                        }
+                        placeholder="ENTER YOUR NAME *"
+                        required
+                        className="w-full bg-transparent border-b border-dark-muted/30 py-4 text-dark-foreground placeholder:text-dark-muted placeholder:uppercase focus:outline-none focus:border-primary transition-colors duration-300"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="label text-dark-muted mb-2 block">
+                        YOUR EMAIL
+                      </label>
+                      <input
+                        type="email"
+                        value={formData.email}
+                        onChange={(e) =>
+                          setFormData({ ...formData, email: e.target.value })
+                        }
+                        placeholder="ENTER YOUR EMAIL *"
+                        required
+                        className="w-full bg-transparent border-b border-dark-muted/30 py-4 text-dark-foreground placeholder:text-dark-muted placeholder:uppercase focus:outline-none focus:border-primary transition-colors duration-300"
+                      />
+                    </div>
                   </div>
 
                   <div>
-                    <label className="text-dark-muted text-xs uppercase tracking-[0.2em] mb-3 block">
-                      Your Email
-                    </label>
-                    <input
-                      type="email"
-                      value={formData.email}
-                      onChange={(e) =>
-                        setFormData({ ...formData, email: e.target.value })
-                      }
-                      placeholder="Enter your email"
-                      required
-                      className="w-full bg-transparent border-0 border-b border-dark-muted/30 pb-4 text-lg text-dark-foreground placeholder:text-dark-muted/50 focus:outline-none focus:border-primary transition-colors duration-300"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="text-dark-muted text-xs uppercase tracking-[0.2em] mb-3 block">
-                      Message
+                    <label className="label text-dark-muted mb-2 block">
+                      MESSAGE
                     </label>
                     <textarea
                       value={formData.message}
                       onChange={(e) =>
                         setFormData({ ...formData, message: e.target.value })
                       }
-                      placeholder="Tell us about your project"
-                      rows={3}
-                      required
-                      className="w-full bg-transparent border-0 border-b border-dark-muted/30 pb-4 text-lg text-dark-foreground placeholder:text-dark-muted/50 focus:outline-none focus:border-primary transition-colors duration-300 resize-none"
+                      placeholder="TELL US ABOUT YOUR PROJECT"
+                      rows={4}
+                      className="w-full bg-transparent border-b border-dark-muted/30 py-4 text-dark-foreground placeholder:text-dark-muted placeholder:uppercase focus:outline-none focus:border-primary transition-colors duration-300 resize-none"
                     />
                   </div>
 
                   <div>
-                    <label className="text-dark-muted text-xs uppercase tracking-[0.2em] mb-4 block">
-                      Your budget for this project?
+                    <label className="label text-dark-muted mb-4 block">
+                      YOUR BUDGET FOR THIS PROJECT?
                     </label>
                     <div className="flex flex-wrap gap-3">
                       {budgetOptions.map((option) => (
@@ -171,10 +173,10 @@ const Contacts = () => {
                           key={option}
                           type="button"
                           onClick={() => setFormData({ ...formData, budget: option })}
-                          className={`px-5 py-3 text-sm rounded-lg transition-all duration-300 ${
+                          className={`px-6 py-3 rounded-lg text-sm uppercase transition-all duration-300 ${
                             formData.budget === option
-                              ? "bg-primary text-primary-foreground"
-                              : "border border-dark-muted/30 text-dark-muted hover:text-dark-foreground hover:border-dark-foreground"
+                              ? "bg-dark-foreground text-dark"
+                              : "border border-dark-muted/50 text-dark-foreground hover:border-dark-foreground"
                           }`}
                         >
                           {option}
@@ -183,77 +185,94 @@ const Contacts = () => {
                     </div>
                   </div>
 
-                  <Button type="submit" size="lg" className="group mt-4">
-                    Submit
-                    <ArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
-                  </Button>
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-4 mt-4">
+                    <Button type="submit" size="lg" className="group">
+                      Submit
+                      <ArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
+                    </Button>
+                    <p className="text-sm text-dark-muted uppercase">
+                      BY CLICKING THIS BUTTON YOU ACCEPT{" "}
+                      <ArrowLink href="#" variant="light" showArrow={false}>
+                        TERMS OF SERVICE
+                      </ArrowLink>{" "}
+                      AND{" "}
+                      <ArrowLink href="#" variant="light" showArrow={false}>
+                        PRIVACY POLICY
+                      </ArrowLink>
+                    </p>
+                  </div>
                 </form>
               </motion.div>
 
-              {/* Contact Cards */}
+              {/* Contact Info */}
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="lg:col-span-1 space-y-6"
+                className="border-t border-dark-muted/30 lg:border-t-0"
               >
-                {/* Card 1 - Project Discussion */}
-                <div className="border border-dark-muted/20 rounded-lg p-6">
-                  <h3 className="text-xl font-semibold mb-5">
+                {/* First contact */}
+                <div className="pt-12 pb-8 lg:pl-12">
+                  <h3 className="heading-4 mb-8 text-dark-foreground">
                     Have a project to discuss?
                   </h3>
-
                   <div className="flex items-start gap-4">
-                    <div className="relative flex-shrink-0">
-                      <div className="w-14 h-14 rounded-full bg-gradient-to-br from-rose-400 to-rose-600 flex items-center justify-center overflow-hidden">
-                        <span className="text-xl font-semibold text-dark-foreground">AE</span>
-                      </div>
-                      <Button asChild variant="icon-dark" size="icon-sm" className="absolute -bottom-1 -right-1 !h-7 !w-7 [&_svg]:!size-3.5">
-                        <a href="#" aria-label="LinkedIn">
-                          <Linkedin />
-                        </a>
-                      </Button>
+                    <div className="w-20 h-20 bg-muted rounded-lg overflow-hidden flex-shrink-0">
+                      <img
+                        src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop"
+                        alt="Account Executive"
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                     <div className="flex-1">
-                      <p className="font-semibold">Account Executive</p>
-                      <a
-                        href="mailto:hello@intrao.tech"
-                        className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors duration-300 text-sm mt-2"
-                      >
-                        <Mail className="w-4 h-4" />
-                        hello@intrao.tech
-                      </a>
+                      <div className="flex items-start justify-between">
+                        <div>
+                          <p className="font-semibold text-dark-foreground">Account Executive</p>
+                        </div>
+                        <Button asChild variant="icon-dark" size="icon-sm" className="!h-8 !w-8">
+                          <a href="#">
+                            <Linkedin />
+                          </a>
+                        </Button>
+                      </div>
+                      <ArrowLink href="mailto:hello@intrao.tech" variant="light" showArrow={false} className="mt-3">
+                        HELLO@INTRAO.TECH
+                      </ArrowLink>
                     </div>
                   </div>
                 </div>
 
-                {/* Card 2 - Partnership */}
-                <div className="border border-dark-muted/20 rounded-lg p-6">
-                  <h3 className="text-dark-muted text-xs uppercase tracking-[0.2em] mb-5">
-                    Have a partnership in mind?
-                  </h3>
+                {/* Divider - extends to vertical border */}
+                <div className="border-t border-dark-muted/30" />
 
+                {/* Second contact */}
+                <div className="pt-8 lg:pl-12">
+                  <h4 className="heading-4 mb-6 text-dark-foreground">
+                    Have a partnership in mind?
+                  </h4>
                   <div className="flex items-start gap-4">
-                    <div className="relative flex-shrink-0">
-                      <div className="w-14 h-14 rounded-full bg-gradient-to-br from-blue-400 to-indigo-600 flex items-center justify-center overflow-hidden">
-                        <span className="text-xl font-semibold text-dark-foreground">CF</span>
-                      </div>
-                      <Button asChild variant="icon-dark" size="icon-sm" className="absolute -bottom-1 -right-1 !h-7 !w-7 [&_svg]:!size-3.5">
-                        <a href="#" aria-label="LinkedIn">
-                          <Linkedin />
-                        </a>
-                      </Button>
+                    <div className="w-20 h-20 bg-dark-muted/20 rounded-lg overflow-hidden flex-shrink-0">
+                      <img
+                        src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&h=200&fit=crop"
+                        alt="Founder"
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                     <div className="flex-1">
-                      <p className="font-semibold">Co-Founder</p>
-                      <a
-                        href="mailto:partner@intrao.tech"
-                        className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors duration-300 text-sm mt-2"
-                      >
-                        <Mail className="w-4 h-4" />
-                        partner@intrao.tech
-                      </a>
+                      <div className="flex items-start justify-between">
+                        <div>
+                          <p className="font-semibold text-dark-foreground">Co-Founder</p>
+                        </div>
+                        <Button asChild variant="icon-dark" size="icon-sm" className="!h-8 !w-8">
+                          <a href="#">
+                            <Linkedin />
+                          </a>
+                        </Button>
+                      </div>
+                      <ArrowLink href="mailto:partner@intrao.tech" variant="light" showArrow={false} className="mt-3">
+                        PARTNER@INTRAO.TECH
+                      </ArrowLink>
                     </div>
                   </div>
                 </div>
@@ -294,10 +313,12 @@ const Contacts = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="heading-1 mb-16 max-w-4xl"
+              className="heading-1 max-w-4xl"
             >
               Collaborating across borders to deliver seamless solutions — wherever you are
             </motion.h2>
+
+            <div className="border-b border-border mt-12 mb-12" />
 
             {/* Map Container */}
             <motion.div
