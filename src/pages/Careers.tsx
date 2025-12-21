@@ -10,28 +10,44 @@ import { ButtonArrows } from "@/components/ui/button-arrows";
 const Careers = () => {
   const openPositions = [
     {
-      title: "Senior Frontend Developer",
+      title: "React Developer (Mid-Level)",
       department: "Engineering",
+      description: "Build interactive interfaces for fintech and e-commerce clients",
       location: "Remote",
       type: "Full-time",
+      isNew: true,
     },
     {
-      title: "UI/UX Designer",
+      title: "Product Designer",
       department: "Design",
+      description: "Own the end-to-end design process from research to handoff",
       location: "Remote",
       type: "Full-time",
+      isNew: true,
     },
     {
-      title: "Project Manager",
-      department: "Operations",
+      title: "Motion Designer",
+      department: "Design",
+      description: "Create micro-interactions and animations that delight users",
       location: "Remote",
-      type: "Full-time",
+      type: "Contract",
+      isNew: false,
     },
     {
-      title: "Backend Developer",
+      title: "Full Stack Engineer",
       department: "Engineering",
+      description: "Work across Node.js backends and React frontends",
+      location: "Remote / Kyiv",
+      type: "Full-time",
+      isNew: false,
+    },
+    {
+      title: "Account Manager",
+      department: "Client Services",
+      description: "Be the bridge between our team and growing startup clients",
       location: "Remote",
       type: "Full-time",
+      isNew: false,
     },
   ];
 
@@ -49,7 +65,7 @@ const Careers = () => {
 
       <main>
         {/* Hero Section */}
-        <section data-header-theme="dark" className="bg-dark text-dark-foreground pt-32 pb-20">
+        <section data-header-theme="dark" className="relative bg-dark text-dark-foreground pt-32 pb-20">
           <div className="container mx-auto px-6">
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -66,8 +82,7 @@ const Careers = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="heading-1 mb-8 max-w-4xl"
             >
-              Build your career with{" "}
-              <span className="text-primary">Intrao Tech</span>
+              Build your career with Intrao Tech
             </motion.h1>
 
             <motion.p
@@ -79,10 +94,24 @@ const Careers = () => {
               We're always looking for talented individuals who share our passion for creating exceptional digital experiences.
             </motion.p>
           </div>
+
+          {/* Bottom wave */}
+          <div className="absolute bottom-0 left-0 w-full translate-y-full pointer-events-none z-20">
+            <svg
+              viewBox="0 0 1440 120"
+              preserveAspectRatio="none"
+              className="w-full h-[60px] md:h-[80px] lg:h-[100px]"
+            >
+              <path
+                className="fill-dark"
+                d="M0,0 L0,0 C360,0 360,80 720,80 C1080,80 1080,0 1440,0 L1440,0 Z"
+              />
+            </svg>
+          </div>
         </section>
 
         {/* Open Positions Section */}
-        <section data-header-theme="light" className="bg-background text-foreground py-24">
+        <section data-header-theme="light" className="bg-background text-foreground py-24 pb-32">
           <div className="container mx-auto px-6">
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
@@ -102,27 +131,34 @@ const Careers = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="group border border-border rounded-lg p-6 hover:border-primary transition-colors duration-300"
+                  className="group border border-border rounded-lg p-6 hover:border-primary hover:border-l-primary hover:border-l-4 transition-all duration-300"
                 >
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                    <div>
-                      <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
-                        {position.title}
-                      </h3>
-                      <p className="text-muted-foreground">{position.department}</p>
+                  <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+                    <div className="flex-1">
+                      <div className="flex items-center gap-3 mb-2">
+                        <h3 className="text-xl font-semibold group-hover:text-primary transition-colors">
+                          {position.title}
+                        </h3>
+                        {position.isNew && (
+                          <span className="px-2 py-0.5 text-xs font-medium bg-primary/10 text-primary rounded-full">
+                            New
+                          </span>
+                        )}
+                      </div>
+                      <p className="text-muted-foreground">{position.description}</p>
                     </div>
-                    <div className="flex flex-wrap items-center gap-4">
-                      <span className="flex items-center gap-2 text-sm text-muted-foreground">
+                    <div className="flex flex-wrap items-center gap-4 md:flex-nowrap">
+                      <span className="flex items-center gap-2 text-sm text-muted-foreground whitespace-nowrap">
                         <MapPin className="w-4 h-4" />
                         {position.location}
                       </span>
-                      <span className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <span className="flex items-center gap-2 text-sm text-muted-foreground whitespace-nowrap">
                         <Clock className="w-4 h-4" />
                         {position.type}
                       </span>
                       <Link
                         to="/contacts"
-                        className="inline-flex items-center gap-2 text-primary font-medium hover:underline"
+                        className="inline-flex items-center gap-2 text-primary font-medium hover:underline whitespace-nowrap"
                       >
                         Apply
                         <ArrowRight className="w-4 h-4" />
@@ -136,7 +172,20 @@ const Careers = () => {
         </section>
 
         {/* CTA Section */}
-        <section data-header-theme="dark" className="bg-dark text-dark-foreground py-24">
+        <section data-header-theme="dark" className="relative bg-dark text-dark-foreground py-24">
+          {/* Top curve */}
+          <div className="absolute top-0 left-0 w-full -translate-y-full pointer-events-none z-20">
+            <svg
+              viewBox="0 0 1440 120"
+              preserveAspectRatio="none"
+              className="w-full h-[60px] md:h-[80px] lg:h-[100px]"
+            >
+              <path
+                className="fill-dark"
+                d="M0,120 L0,120 C360,120 360,40 720,40 C1080,40 1080,120 1440,120 L1440,120 Z"
+              />
+            </svg>
+          </div>
           <div className="container mx-auto px-6 text-center">
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
@@ -169,6 +218,20 @@ const Careers = () => {
                 </Link>
               </Button>
             </motion.div>
+          </div>
+
+          {/* Bottom curve */}
+          <div className="absolute bottom-0 left-0 w-full translate-y-full pointer-events-none z-20">
+            <svg
+              viewBox="0 0 1440 120"
+              preserveAspectRatio="none"
+              className="w-full h-[60px] md:h-[80px] lg:h-[100px]"
+            >
+              <path
+                className="fill-dark"
+                d="M0,0 L0,0 C360,0 360,80 720,80 C1080,80 1080,0 1440,0 L1440,0 Z"
+              />
+            </svg>
           </div>
         </section>
       </main>
