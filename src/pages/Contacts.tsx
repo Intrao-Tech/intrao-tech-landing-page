@@ -192,11 +192,11 @@ const Contacts = () => {
                     </Button>
                     <p className="text-sm text-dark-muted uppercase">
                       BY CLICKING THIS BUTTON YOU ACCEPT{" "}
-                      <ArrowLink href="#" variant="light" showArrow={false}>
+                      <ArrowLink href="/terms-of-use" variant="light" showArrow={false}>
                         TERMS OF SERVICE
                       </ArrowLink>{" "}
                       AND{" "}
-                      <ArrowLink href="#" variant="light" showArrow={false}>
+                      <ArrowLink href="/privacy-policy" variant="light" showArrow={false}>
                         PRIVACY POLICY
                       </ArrowLink>
                     </p>

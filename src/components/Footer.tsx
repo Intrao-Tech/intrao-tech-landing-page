@@ -70,9 +70,9 @@ const Footer = () => {
   ];
 
   const legalLinks = [
-    { name: "Terms of Use", href: "/terms" },
-    { name: "Privacy Policy", href: "/privacy" },
-    { name: "Cookies Policy", href: "/cookies" },
+    { name: "Terms of Use", href: "/terms-of-use" },
+    { name: "Privacy Policy", href: "/privacy-policy" },
+    { name: "Cookies Policy", href: "/cookies-policy" },
   ];
 
   const allServices = [

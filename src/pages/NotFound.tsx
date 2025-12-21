@@ -119,15 +119,15 @@ const NotFound = () => {
             <div className="flex flex-wrap items-center gap-2 text-base text-dark-muted">
               <span>Intrao Tech © {new Date().getFullYear()}</span>
               <span>/</span>
-              <a href="/terms" className="hover:text-dark-foreground transition-colors">
+              <a href="/terms-of-use" className="hover:text-dark-foreground transition-colors">
                 Terms of Use
               </a>
               <span>/</span>
-              <a href="/privacy" className="hover:text-dark-foreground transition-colors">
+              <a href="/privacy-policy" className="hover:text-dark-foreground transition-colors">
                 Privacy Policy
               </a>
               <span>/</span>
-              <a href="/cookies" className="hover:text-dark-foreground transition-colors">
+              <a href="/cookies-policy" className="hover:text-dark-foreground transition-colors">
                 Cookies Policy
               </a>
             </div>
