@@ -167,33 +167,33 @@ const Team = () => {
           </div>
         </section>
 
+        {/* Wave Divider */}
+        <div className="bg-dark">
+          <svg
+            className="w-full h-[80px] md:h-[120px] lg:h-[150px]"
+            viewBox="0 0 1440 150"
+            preserveAspectRatio="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0,150 L0,100 Q360,0 720,80 Q1080,160 1440,60 L1440,150 Z"
+              className="fill-background"
+            />
+          </svg>
+        </div>
+
         {/* Leadership Team Section */}
         <section data-header-theme="light" className="bg-background text-foreground py-24">
           <div className="container mx-auto px-6">
-            <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-16">
-              <motion.h2
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-0"
-              >
-                Our leadership team
-              </motion.h2>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-              >
-                <Button asChild variant="secondary" size="sm" className="rounded-lg group">
-                  <Link to="/contacts">
-                    Get in Touch
-                    <ButtonArrows />
-                  </Link>
-                </Button>
-              </motion.div>
-            </div>
+            <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-16"
+            >
+              Our leadership team
+            </motion.h2>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {teamMembers.map((member, index) => (
@@ -260,12 +260,12 @@ const Team = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center p-6 rounded-lg transition-all duration-300 cursor-pointer ${
+                  className={`grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 items-center p-6 rounded-lg transition-all duration-300 cursor-pointer ${
                     activeAdvisor === index ? "bg-muted/30" : "hover:bg-muted/20"
                   }`}
                   onClick={() => setActiveAdvisor(index)}
                 >
-                  <div className="aspect-[4/5] max-w-md overflow-hidden rounded-lg">
+                  <div className="aspect-[4/5] overflow-hidden rounded-lg">
                     <img
                       src={advisor.image}
                       alt={advisor.name}
@@ -279,8 +279,8 @@ const Team = () => {
                       {advisor.name.split(" ").slice(1).join(" ")}
                     </h3>
                     <p className="text-muted-foreground mb-6">{advisor.role}</p>
-                    <button className="inline-flex items-center gap-2 bg-dark text-dark-foreground px-5 py-3 rounded-lg text-sm font-semibold uppercase tracking-wider transition-all duration-300 hover:bg-dark/90 mb-6">
-                      <ArrowUpRight className="w-4 h-4" />
+                    <button className="inline-flex items-center gap-2 bg-dark text-dark-foreground px-6 py-4 rounded-lg text-base font-semibold uppercase tracking-wider transition-all duration-300 hover:bg-dark/90 mb-6">
+                      <ArrowUpRight className="w-5 h-5" />
                       Visit Website
                     </button>
                     <p className="text-muted-foreground leading-relaxed">{advisor.bio}</p>
@@ -338,55 +338,22 @@ const Team = () => {
           </div>
         </section>
 
-        {/* Awards Section */}
-        <section data-header-theme="light" className="bg-background text-foreground py-24">
-          <div className="container mx-auto px-6">
-            <motion.h2
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-16"
-            >
-              Wins that inspire us forward
-            </motion.h2>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {awards.map((award, index) => (
-                <motion.div
-                  key={award.name}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="border-t border-border pt-6 pb-8"
-                >
-                  <h3 className="text-2xl font-bold mb-3">{award.name}</h3>
-                  <p className="text-muted-foreground mb-6">{award.description}</p>
-                  <a
-                    href={award.link}
-                    className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider hover:text-primary transition-colors"
-                  >
-                    View on {award.name.split(" ")[0]}
-                    <ArrowUpRight className="w-4 h-4" />
-                  </a>
-                </motion.div>
-              ))}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: awards.length * 0.1 }}
-                className="bg-muted/30 rounded-lg p-8 flex items-center justify-center"
-              >
-                <p className="text-4xl md:text-5xl font-bold">32+ others</p>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
         {/* CTA Section */}
-        <section data-header-theme="dark" className="bg-dark text-dark-foreground py-24">
+        <section data-header-theme="dark" className="relative z-10 bg-dark text-dark-foreground py-24">
+          {/* Top curve */}
+          <div className="absolute top-0 left-0 w-full -translate-y-full pointer-events-none z-20">
+            <svg
+              viewBox="0 0 1440 120"
+              preserveAspectRatio="none"
+              className="w-full h-[60px] md:h-[80px] lg:h-[100px]"
+            >
+              <path
+                className="fill-dark"
+                d="M0,120 L0,120 C360,120 360,40 720,40 C1080,40 1080,120 1440,120 L1440,120 Z"
+              />
+            </svg>
+          </div>
+
           <div className="container mx-auto px-6 text-center">
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
@@ -410,6 +377,20 @@ const Team = () => {
                 </Link>
               </Button>
             </motion.div>
+          </div>
+
+          {/* Bottom curve */}
+          <div className="absolute bottom-0 left-0 w-full translate-y-full pointer-events-none z-20">
+            <svg
+              viewBox="0 0 1440 120"
+              preserveAspectRatio="none"
+              className="w-full h-[60px] md:h-[80px] lg:h-[100px]"
+            >
+              <path
+                className="fill-dark"
+                d="M0,0 L0,0 C360,0 360,80 720,80 C1080,80 1080,0 1440,0 L1440,0 Z"
+              />
+            </svg>
           </div>
         </section>
       </main>
