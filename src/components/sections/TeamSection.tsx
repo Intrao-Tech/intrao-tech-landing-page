@@ -45,7 +45,7 @@ const TeamSection = () => {
             Meet the team driving your product's success
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            Established in 2019, Intrao Tech was built with one goal—to become the leading digital product design agency for startups looking to launch, scale, and innovate. Our team of strategists, designers, developers, and product experts spans Canada, the U.S., Ukraine, Poland, Estonia, and Switzerland, bringing global expertise to every project.
+            Founded in 2019 by a team of experienced designers and developers, Intrao Tech was built with one goal—to become a trusted partner for startups and growing businesses looking to launch, scale, and innovate. Our founder-led team spans London, Canada, the U.S., Ukraine, Poland, and Estonia, bringing global expertise to every project.
           </p>
         </motion.div>
 
@@ -168,7 +168,7 @@ const TeamSection = () => {
           >
             <div>
               <h3 className="text-3xl md:text-4xl lg:text-5xl font-medium leading-tight">
-                50+ team members
+                6+ years of expertise
               </h3>
             </div>
             <ArrowLink to="/about" variant="dark" className="mt-auto">

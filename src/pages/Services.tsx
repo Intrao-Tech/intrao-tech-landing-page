@@ -130,7 +130,7 @@ const Services = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="text-dark-muted text-xl max-w-2xl"
             >
-              From design to development, we offer comprehensive services to help you build and scale your digital products.
+              From startups to local businesses, we offer comprehensive services to help you build and scale your digital products.
             </motion.p>
           </div>
         </section>

@@ -32,6 +32,13 @@ const Contacts = () => {
 
   const locations = [
     {
+      flag: "🇬🇧",
+      country: "UNITED KINGDOM",
+      city: "LONDON",
+      company: "Intrao Tech Ltd",
+      details: "71-75 Shelton Street, Covent Garden, WC2H 9JQ",
+    },
+    {
       flag: "🇺🇸",
       country: "UNITED STATES",
       city: "NEW YORK",
@@ -55,12 +62,12 @@ const Contacts = () => {
   ];
 
   const flagPositions = [
+    { flag: "🇬🇧", top: "26%", left: "48%" },
     { flag: "🇨🇦", top: "28%", left: "18%" },
     { flag: "🇺🇸", top: "42%", left: "22%" },
     { flag: "🇪🇪", top: "22%", left: "58%" },
     { flag: "🇵🇱", top: "32%", left: "54%" },
     { flag: "🇺🇦", top: "34%", left: "60%" },
-    { flag: "🇨🇭", top: "38%", left: "52%" },
   ];
 
   return (

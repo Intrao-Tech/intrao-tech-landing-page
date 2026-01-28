@@ -40,7 +40,7 @@ const About = () => {
   const stats = [
     { value: "500M+", label: "Investments raised by clients" },
     { value: "120+", label: "Launched products" },
-    { value: "60+", label: "Team members" },
+    { value: "6+", label: "Years in business" },
     { value: "5", label: "Years in the market" },
   ];
 
@@ -219,7 +219,7 @@ const About = () => {
               className="grid grid-cols-1 md:grid-cols-2 gap-12"
             >
               <p className="text-muted-foreground text-lg leading-relaxed">
-                Since 2019, Intrao Tech has grown into a top-tier global design and development studio, with teams based in Switzerland, Poland, Ukraine, Estonia, US, and Canada.
+                Since 2019, Intrao Tech has grown into a top-tier global design and development studio, with teams based in London, Poland, Ukraine, Estonia, US, and Canada.
               </p>
               <p className="text-muted-foreground text-lg leading-relaxed">
                 Over the past five years, we've built a lean, expert team that thrives on speed, clarity, and measurable impact. Our mission is simple: to help fast-moving startups turn ideas into well-crafted, user-loved products — from brand to build.

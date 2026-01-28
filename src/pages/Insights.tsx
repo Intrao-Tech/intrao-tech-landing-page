@@ -38,7 +38,7 @@ const Insights = () => {
       date: "Dec 10, 2025",
       readTime: "6 min read",
       excerpt:
-        "Learn how to boost your conversion rates by focusing on UX design. Phenomenon Studio offers expert strategies to turn your UX into a conversion machine.",
+        "Learn how to boost your conversion rates by focusing on UX design. Intrao Tech offers expert strategies to turn your UX into a conversion machine.",
       image:
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop",
       author: "Anastasiia Yemelianova",
