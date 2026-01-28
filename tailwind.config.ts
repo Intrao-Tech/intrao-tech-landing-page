@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        helvetica: ['Helvetica', 'Arial', 'sans-serif'],
         poppins: ['Poppins', 'sans-serif'],
+        inter: ['Inter', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -63,6 +63,7 @@ export default {
           "muted-foreground": "hsl(var(--light-muted-foreground))",
           border: "hsl(var(--light-border))",
         },
+        violet: "hsl(var(--violet))",
       },
       borderRadius: {
         lg: "var(--radius)",
