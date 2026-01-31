@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { HeaderThemeProvider } from "@/contexts/HeaderThemeContext";
+import ScrollToTop from "@/components/ScrollToTop";
 import Index from "./pages/Index";
 import Services from "./pages/Services";
 import Cases from "./pages/Cases";
@@ -39,6 +40,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <ScrollToTop />
           <HeaderThemeProvider>
             <Routes>
               <Route path="/" element={<Index />} />
