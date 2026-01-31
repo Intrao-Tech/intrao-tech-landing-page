@@ -322,7 +322,7 @@ const Contacts = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="grid grid-cols-12 gap-4 py-8 border-b border-border items-center"
+                  className="grid grid-cols-12 gap-4 py-8 items-center"
                 >
                   {/* Flag */}
                   <div className="col-span-2 md:col-span-1">
