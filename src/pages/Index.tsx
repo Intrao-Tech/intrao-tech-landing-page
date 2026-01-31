@@ -5,7 +5,7 @@ import ParallaxHeroSection from "@/components/sections/ParallaxHeroSection";
 import ClientsSection from "@/components/sections/ClientsSection";
 import ChallengesSection from "@/components/sections/ChallengesSection";
 import ServicesSection from "@/components/sections/ServicesSection";
-import CasesSection from "@/components/sections/CasesSection";
+// import CasesSection from "@/components/sections/CasesSection";
 import ExpertiseSection from "@/components/sections/ExpertiseSection";
 import TeamSection from "@/components/sections/TeamSection";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
@@ -33,7 +33,7 @@ const Index = () => {
         <ClientsSection />
         <ChallengesSection />
         <ServicesSection />
-        <CasesSection />
+        {/* <CasesSection /> */}
         <ExpertiseSection />
         <TeamSection />
         <TestimonialsSection />
