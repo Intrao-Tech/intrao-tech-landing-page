@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import WorldMap from "@/components/WorldMap";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { ArrowRight, Linkedin } from "lucide-react";
@@ -36,38 +37,8 @@ const Contacts = () => {
       country: "UNITED KINGDOM",
       city: "LONDON",
       company: "Intrao Tech Ltd",
-      details: "71-75 Shelton Street, Covent Garden, WC2H 9JQ",
+      details: "150 Minories, London EC3N 1LS, United Kingdom",
     },
-    {
-      flag: "🇺🇸",
-      country: "UNITED STATES",
-      city: "NEW YORK",
-      company: "Intrao Tech Inc.",
-      details: "123 Tech Avenue, Suite 500, NY 10001",
-    },
-    {
-      flag: "🇵🇱",
-      country: "POLAND",
-      city: "WARSAW",
-      company: "Intrao Tech Sp. z o.o.",
-      details: "ul. Marszałkowska 1/100, 00-001",
-    },
-    {
-      flag: "🇺🇦",
-      country: "UKRAINE",
-      city: "KYIV",
-      company: "Intrao Tech LLC",
-      details: "1 Khreshchatyk St, Kyiv 01001",
-    },
-  ];
-
-  const flagPositions = [
-    { flag: "🇬🇧", top: "26%", left: "48%" },
-    { flag: "🇨🇦", top: "28%", left: "18%" },
-    { flag: "🇺🇸", top: "42%", left: "22%" },
-    { flag: "🇪🇪", top: "22%", left: "58%" },
-    { flag: "🇵🇱", top: "32%", left: "54%" },
-    { flag: "🇺🇦", top: "34%", left: "60%" },
   ];
 
   return (
@@ -333,47 +304,9 @@ const Contacts = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative w-full aspect-[2/1] max-w-5xl mx-auto"
+              className="w-full aspect-[2/1] max-w-5xl mx-auto"
             >
-              {/* World Map SVG */}
-              <svg
-                viewBox="0 0 1000 500"
-                className="w-full h-full"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                {/* Simplified world map paths */}
-                <g fill="currentColor" className="text-muted-foreground/10">
-                  {/* North America */}
-                  <path d="M150 120 Q180 100 220 110 Q260 105 280 130 Q290 160 270 180 Q280 200 260 230 Q240 250 200 260 Q170 270 140 250 Q120 230 130 200 Q110 170 130 140 Q140 120 150 120 Z" />
-                  <path d="M180 260 Q220 270 240 300 Q250 330 230 360 Q200 380 170 370 Q140 350 150 320 Q160 290 180 260 Z" />
-                  {/* South America */}
-                  <path d="M250 350 Q280 340 300 360 Q320 400 310 450 Q290 480 260 470 Q230 450 240 410 Q235 380 250 350 Z" />
-                  {/* Europe */}
-                  <path d="M480 130 Q520 120 560 130 Q590 140 600 160 Q610 190 590 210 Q560 230 520 220 Q490 210 480 180 Q470 150 480 130 Z" />
-                  {/* Africa */}
-                  <path d="M500 250 Q540 240 570 260 Q600 290 590 340 Q570 390 530 400 Q490 390 480 350 Q470 300 500 250 Z" />
-                  {/* Asia */}
-                  <path d="M620 100 Q700 90 780 110 Q840 130 860 180 Q870 230 840 270 Q800 300 740 290 Q680 280 650 240 Q620 200 610 160 Q610 120 620 100 Z" />
-                  {/* Australia */}
-                  <path d="M780 360 Q820 350 850 370 Q880 400 870 440 Q850 470 810 460 Q770 450 770 410 Q765 380 780 360 Z" />
-                </g>
-              </svg>
-
-              {/* Flag Markers */}
-              {flagPositions.map((pos, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, scale: 0 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
-                  className="absolute text-2xl md:text-3xl"
-                  style={{ top: pos.top, left: pos.left }}
-                >
-                  {pos.flag}
-                </motion.div>
-              ))}
+              <WorldMap variant="full" />
             </motion.div>
           </div>
         </section>
