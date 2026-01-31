@@ -276,8 +276,8 @@ const CookiesPolicy = () => {
                       contact us
                     </a>
                     {" "}or email us at{" "}
-                    <a href="mailto:legal@intrao.tech" className="text-primary hover:underline">
-                      legal@intrao.tech
+                    <a href="mailto:info@intrao.tech" className="text-primary hover:underline">
+                      info@intrao.tech
                     </a>
                     .
                   </p>

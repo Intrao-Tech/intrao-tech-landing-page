@@ -187,8 +187,8 @@ const ContactFormSection = () => {
                       </a>
                     </Button>
                   </div>
-                  <ArrowLink href="mailto:hello@intrao.tech" variant="light" showArrow={false} className="mt-3">
-                    HELLO@INTRAO.TECH
+                  <ArrowLink href="mailto:info@intrao.tech" variant="light" showArrow={false} className="mt-3">
+                    INFO@INTRAO.TECH
                   </ArrowLink>
                 </div>
               </div>
@@ -221,8 +221,8 @@ const ContactFormSection = () => {
                       </a>
                     </Button>
                   </div>
-                  <ArrowLink href="mailto:partner@intrao.tech" variant="light" showArrow={false} className="mt-3">
-                    PARTNER@INTRAO.TECH
+                  <ArrowLink href="mailto:info@intrao.tech" variant="light" showArrow={false} className="mt-3">
+                    INFO@INTRAO.TECH
                   </ArrowLink>
                 </div>
               </div>

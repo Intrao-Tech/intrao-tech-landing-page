@@ -62,8 +62,8 @@ const TermsOfUse = () => {
                   </p>
                   <p>
                     You can contact us by email at{" "}
-                    <a href="mailto:legal@intrao.tech" className="text-primary hover:underline">
-                      legal@intrao.tech
+                    <a href="mailto:info@intrao.tech" className="text-primary hover:underline">
+                      info@intrao.tech
                     </a>{" "}
                     or by mail to 123 Tech Avenue, Suite 500, NY 10001, United States.
                   </p>
@@ -121,8 +121,8 @@ const TermsOfUse = () => {
                   </p>
                   <p>
                     If you wish to make any use of the Services, Content, or Marks other than as set out in this section or elsewhere in our Legal Terms, please address your request to:{" "}
-                    <a href="mailto:legal@intrao.tech" className="text-primary hover:underline">
-                      legal@intrao.tech
+                    <a href="mailto:info@intrao.tech" className="text-primary hover:underline">
+                      info@intrao.tech
                     </a>
                     . If we ever grant you the permission to post, reproduce, or publicly display any part of our Services or Content, you must identify us as the owners or licensors of the Services, Content, or Marks and ensure that any copyright or proprietary notice appears or is visible on posting, reproducing, or displaying our Content.
                   </p>
@@ -390,8 +390,8 @@ const TermsOfUse = () => {
                     <p>New York, NY 10001</p>
                     <p>United States</p>
                     <p className="mt-2">
-                      <a href="mailto:legal@intrao.tech" className="text-primary hover:underline">
-                        legal@intrao.tech
+                      <a href="mailto:info@intrao.tech" className="text-primary hover:underline">
+                        info@intrao.tech
                       </a>
                     </p>
                   </address>

@@ -80,12 +80,12 @@ const NotFound = () => {
 
           {/* Email */}
           <ArrowLink
-            href="mailto:hello@intrao.tech"
+            href="mailto:info@intrao.tech"
             variant="light"
             showArrow={false}
             className="mb-8"
           >
-            hello@intrao.tech
+            info@intrao.tech
           </ArrowLink>
 
           {/* Social Icons */}

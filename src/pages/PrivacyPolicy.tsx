@@ -64,8 +64,8 @@ const PrivacyPolicy = () => {
                   </ul>
                   <p>
                     <strong>Questions or concerns?</strong> Reading this privacy notice will help you understand your privacy rights and choices. If you do not agree with our policies and practices, please do not use our Services. If you still have any questions or concerns, please contact us at{" "}
-                    <a href="mailto:legal@intrao.tech" className="text-primary hover:underline">
-                      legal@intrao.tech
+                    <a href="mailto:info@intrao.tech" className="text-primary hover:underline">
+                      info@intrao.tech
                     </a>
                     .
                   </p>
@@ -400,8 +400,8 @@ const PrivacyPolicy = () => {
                   </p>
                   <p>
                     If you have questions or comments about your privacy rights, you may email us at{" "}
-                    <a href="mailto:legal@intrao.tech" className="text-primary hover:underline">
-                      legal@intrao.tech
+                    <a href="mailto:info@intrao.tech" className="text-primary hover:underline">
+                      info@intrao.tech
                     </a>
                     .
                   </p>
@@ -622,15 +622,15 @@ const PrivacyPolicy = () => {
                   </ul>
                   <p>
                     To submit a request to exercise these rights described above, please email{" "}
-                    <a href="mailto:legal@intrao.tech" className="text-primary hover:underline">
-                      legal@intrao.tech
+                    <a href="mailto:info@intrao.tech" className="text-primary hover:underline">
+                      info@intrao.tech
                     </a>
                     {" "}or submit a data subject access request.
                   </p>
                   <p>
                     If we decline to take action regarding your request and you wish to appeal our decision, please email us at{" "}
-                    <a href="mailto:legal@intrao.tech" className="text-primary hover:underline">
-                      legal@intrao.tech
+                    <a href="mailto:info@intrao.tech" className="text-primary hover:underline">
+                      info@intrao.tech
                     </a>
                     . Within forty-five (45) days of receipt of an appeal, we will inform you in writing of any action taken or not taken in response to the appeal, including a written explanation of the reasons for the decisions.
                   </p>
@@ -649,15 +649,15 @@ const PrivacyPolicy = () => {
                   </ul>
                   <p>
                     To submit a request to exercise these rights described above, please email{" "}
-                    <a href="mailto:legal@intrao.tech" className="text-primary hover:underline">
-                      legal@intrao.tech
+                    <a href="mailto:info@intrao.tech" className="text-primary hover:underline">
+                      info@intrao.tech
                     </a>
                     {" "}or submit a data subject access request.
                   </p>
                   <p>
                     If we decline to take action regarding your request and you wish to appeal our decision, please email us at{" "}
-                    <a href="mailto:legal@intrao.tech" className="text-primary hover:underline">
-                      legal@intrao.tech
+                    <a href="mailto:info@intrao.tech" className="text-primary hover:underline">
+                      info@intrao.tech
                     </a>
                     . Within sixty (60) days of receipt of an appeal, we will inform you in writing of any action taken or not taken in response to the appeal, including a written explanation of the reasons for the decisions.
                   </p>
@@ -675,8 +675,8 @@ const PrivacyPolicy = () => {
                   </ul>
                   <p>
                     To submit a request to exercise these rights described above, please email{" "}
-                    <a href="mailto:legal@intrao.tech" className="text-primary hover:underline">
-                      legal@intrao.tech
+                    <a href="mailto:info@intrao.tech" className="text-primary hover:underline">
+                      info@intrao.tech
                     </a>
                     {" "}or submit a data subject access request.
                   </p>
@@ -709,8 +709,8 @@ const PrivacyPolicy = () => {
                   <p className="mt-4"><strong>Exercise your rights provided under the Virginia VCDPA</strong></p>
                   <p>
                     You may contact us by email at{" "}
-                    <a href="mailto:legal@intrao.tech" className="text-primary hover:underline">
-                      legal@intrao.tech
+                    <a href="mailto:info@intrao.tech" className="text-primary hover:underline">
+                      info@intrao.tech
                     </a>
                     {" "}or submit a data subject access request.
                   </p>
@@ -729,8 +729,8 @@ const PrivacyPolicy = () => {
                   <p className="mt-4"><strong>Right to appeal</strong></p>
                   <p>
                     If we decline to take action regarding your request, we will inform you of our decision and reasoning behind it. If you wish to appeal our decision, please email us at{" "}
-                    <a href="mailto:legal@intrao.tech" className="text-primary hover:underline">
-                      legal@intrao.tech
+                    <a href="mailto:info@intrao.tech" className="text-primary hover:underline">
+                      info@intrao.tech
                     </a>
                     . Within sixty (60) days of receipt of an appeal, we will inform you in writing of any action taken or not taken in response to the appeal, including a written explanation of the reasons for the decisions. If your appeal is denied, you may contact the Attorney General to submit a complaint.
                   </p>
@@ -792,8 +792,8 @@ const PrivacyPolicy = () => {
                   <h3 className="text-xl font-bold uppercase">13. How Can You Contact Us About This Notice?</h3>
                   <p>
                     If you have questions or comments about this notice, you may email us at{" "}
-                    <a href="mailto:legal@intrao.tech" className="text-primary hover:underline">
-                      legal@intrao.tech
+                    <a href="mailto:info@intrao.tech" className="text-primary hover:underline">
+                      info@intrao.tech
                     </a>
                     {" "}or contact us by post at:
                   </p>
