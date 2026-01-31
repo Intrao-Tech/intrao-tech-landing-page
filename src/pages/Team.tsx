@@ -3,69 +3,29 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowUpRight, TrendingUp, Globe, Handshake } from "lucide-react";
-import { useState } from "react";
+import { TrendingUp, Globe, Handshake } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ButtonArrows } from "@/components/ui/button-arrows";
+import antonImg from "@/assets/anton.jpg";
+import artemImg from "@/assets/artem.jpg";
+import ihorImg from "@/assets/ihor.jpeg";
 
 const Team = () => {
-  const [activeAdvisor, setActiveAdvisor] = useState(0);
-
   const teamMembers = [
     {
-      name: "Polina Chebanova",
-      role: "Co-founder & Chief Partnership Officer",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop",
+      name: "Anton",
+      role: "Co-founder & CEO",
+      image: antonImg,
     },
     {
-      name: "Valerii Filimonov",
-      role: "CEO & Co-founder",
-      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop",
+      name: "Artem",
+      role: "Co-founder & CTO",
+      image: artemImg,
     },
     {
-      name: "Yuliia Apanasenko",
-      role: "Head of Product Business Unit",
-      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop",
-    },
-    {
-      name: "Anatolii Sakhno",
-      role: "Head of Development",
-      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop",
-    },
-    {
-      name: "Alina Sanotska",
-      role: "HR & Operations Director",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
-    },
-    {
-      name: "Ruslan Vashchenko",
-      role: "Head of Design",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
-    },
-    {
-      name: "Adam Kyle Wilson",
-      role: "Head of Design, North America",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop",
-    },
-    {
-      name: "Mike Abbott",
-      role: "Head of Operations, North America",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
-    },
-    {
-      name: "Joshua Caleb",
-      role: "Head of US Development",
-      image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop",
-    },
-    {
-      name: "Mike Kimelman",
-      role: "Head of US Sales",
-      image: "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=400&h=400&fit=crop",
-    },
-    {
-      name: "Craig Tortolani",
-      role: "Head of US Marketing",
-      image: "https://images.unsplash.com/photo-1463453091185-61582044d556?w=400&h=400&fit=crop",
+      name: "Ihor",
+      role: "Co-founder & CPO",
+      image: ihorImg,
     },
   ];
 
@@ -220,8 +180,8 @@ const Team = () => {
           </div>
         </section>
 
-        {/* Company Advisors Section */}
-        <section data-header-theme="light" className="bg-background text-foreground py-24">
+        {/* Company Advisors Section - Hidden for now */}
+        {/* <section data-header-theme="light" className="bg-background text-foreground py-24">
           <div className="container mx-auto px-6">
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
@@ -251,7 +211,6 @@ const Team = () => {
               </p>
             </div>
 
-            {/* Advisor Cards */}
             <div className="space-y-8">
               {advisors.map((advisor, index) => (
                 <motion.div
@@ -289,10 +248,10 @@ const Team = () => {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Principles Section */}
-        <section data-header-theme="light" className="bg-background text-foreground py-24">
+        <section data-header-theme="light" className="bg-background text-foreground pt-24 pb-40">
           <div className="container mx-auto px-6">
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
@@ -324,8 +283,8 @@ const Team = () => {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="relative pt-8"
                 >
-                  {/* Gradient top border */}
-                  <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-primary/30 rounded-full" />
+                  {/* Gray top border */}
+                  <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-muted-foreground/50 to-muted-foreground/20 rounded-full" />
 
                   <div className="pt-6">
                     <principle.icon className="w-10 h-10 text-muted-foreground mb-6" strokeWidth={1.5} />
