@@ -1,12 +1,7 @@
 import { Link } from "react-router-dom";
-import { Linkedin, Instagram, Twitter, Facebook, ArrowRight } from "lucide-react";
+import { Linkedin, Instagram, Twitter, Facebook } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import logoDark from "@/assets/logo-dark.svg";
 
 // Custom Behance icon (lucide-react doesn't have it)
 const BehanceIcon = ({ className }: { className?: string }) => (
@@ -73,29 +68,6 @@ const Footer = () => {
     { name: "Terms of Use", href: "/terms-of-use" },
     { name: "Privacy Policy", href: "/privacy-policy" },
     { name: "Cookies Policy", href: "/cookies-policy" },
-  ];
-
-  const allServices = [
-    { name: "UX Design Audit", href: "/services/ux-audit" },
-    { name: "Mobile App Development", href: "/services/mobile-development" },
-    { name: "Custom MVP Development", href: "/services/web-development" },
-    { name: "Product Redesign", href: "/services/website-redesign" },
-    { name: "Web App Design", href: "/services/web-app-design" },
-    { name: "Technical Workshop", href: "/services/product-discovery" },
-    { name: "Blockchain Development", href: "/services/blockchain-development" },
-    { name: "Website Design Services", href: "/services/website-design" },
-    { name: "Dedicated Team", href: "/services/web-development" },
-    { name: "No-Code Development", href: "/services/no-code-development" },
-    { name: "Rapid MVP Development", href: "/services/web-development" },
-    { name: "Branding", href: "/services/branding" },
-    { name: "Website Redesign", href: "/services/website-redesign" },
-    { name: "Team Extension", href: "/services/web-development" },
-    { name: "Product Discovery", href: "/services/product-discovery" },
-    { name: "Website Development", href: "/services/website-development" },
-    { name: "Design Prototype", href: "/services/web-app-design" },
-    { name: "UX/UI Design", href: "/services/mobile-app-design" },
-    { name: "Product Design", href: "/services/web-app-design" },
-    { name: "AI Chatbot Development", href: "/services/blockchain-development" },
   ];
 
   return (
@@ -165,34 +137,26 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* All Services Accordion */}
-      <div className="border-t border-border">
+      {/* Big Logo with Blur Effect */}
+      <div className="relative overflow-hidden mt-8">
         <div className="container mx-auto px-6">
-          <Accordion type="single" collapsible>
-            <AccordionItem value="services" className="border-b-0">
-              <AccordionTrigger className="py-6 hover:no-underline">
-                <span className="flex items-center gap-2">
-                  <span className="text-xl md:text-2xl font-medium">All services</span>
-                  <span className="text-xl md:text-2xl text-muted-foreground">{allServices.length}</span>
-                </span>
-              </AccordionTrigger>
-              <AccordionContent>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-4 pb-8">
-                  {allServices.map((service) => (
-                    <Link
-                      key={service.name}
-                      to={service.href}
-                      className="group flex items-center gap-2 text-sm uppercase tracking-wider text-foreground hover:text-primary transition-colors duration-300"
-                    >
-                      <span className="underline underline-offset-4">{service.name}</span>
-                      <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                    </Link>
-                  ))}
-                </div>
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
+          <img
+            src={logoDark}
+            alt="Intrao"
+            className="w-full max-w-none select-none"
+          />
         </div>
+        {/* Blur fade overlay */}
+        <div
+          className="absolute bottom-0 left-0 right-0 h-1/2 pointer-events-none"
+          style={{
+            background: 'linear-gradient(to bottom, transparent 0%, hsl(var(--background)) 100%)',
+            backdropFilter: 'blur(8px)',
+            WebkitBackdropFilter: 'blur(8px)',
+            maskImage: 'linear-gradient(to bottom, transparent 0%, black 100%)',
+            WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 100%)',
+          }}
+        />
       </div>
     </footer>
   );
