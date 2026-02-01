@@ -2,6 +2,9 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ButtonArrows } from "@/components/ui/button-arrows";
+import antonImg from "@/assets/anton.jpg";
+import artemImg from "@/assets/artem.jpg";
+import ihorImg from "@/assets/ihor.jpeg";
 
 const ChallengesSection = () => {
   const challenges = [
@@ -11,7 +14,7 @@ const ChallengesSection = () => {
         "Hiring in-house takes time—posting jobs, sorting resumes, and onboarding. We can get you a dedicated designer or developer ready to start tomorrow, helping you hit your deadlines without the wait.",
       cta: "Extend My Team",
       href: "/services",
-      image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&h=800&fit=crop",
+      image: antonImg,
     },
     {
       question: "Your product needs to scale, but your user experience is holding you back?",
@@ -19,7 +22,7 @@ const ChallengesSection = () => {
         "As a digital product design agency, we know seamless scaling starts with consistency. We implement design systems and optimize your UX to keep users engaged—ensuring rapid growth doesn't compromise quality.",
       cta: "Redesign My Product",
       href: "/services",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=800&fit=crop",
+      image: artemImg,
     },
     {
       question: "Have big ideas but need to launch an MVP quickly?",
@@ -27,7 +30,7 @@ const ChallengesSection = () => {
         "Our discovery process helps you focus on what matters most, and with pre-built development frameworks, we can speed up your MVP development by 50%. Launch faster without sacrificing quality.",
       cta: "Launch My MVP",
       href: "/services",
-      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600&h=800&fit=crop",
+      image: ihorImg,
     },
   ];
 
