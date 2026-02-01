@@ -4,6 +4,7 @@ import { ArrowRight, Linkedin } from "lucide-react";
 import { ArrowLink } from "@/components/ui/arrow-link";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
+import antonPhoto from "@/assets/anton.jpg";
 
 const ContactFormSection = () => {
   const [formData, setFormData] = useState({
@@ -189,60 +190,26 @@ const ContactFormSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="border-t border-dark-muted/30 lg:border-t-0"
           >
-            {/* First contact */}
-            <div className="pt-12 pb-8 lg:pl-12">
+            <div className="pt-12 lg:pl-12">
               <h3 className="heading-4 mb-8 text-dark-foreground">
                 Have a project to discuss?
               </h3>
               <div className="flex items-start gap-4">
                 <div className="w-20 h-20 bg-muted rounded-lg overflow-hidden flex-shrink-0">
                   <img
-                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop"
-                    alt="Account Executive"
+                    src={antonPhoto}
+                    alt="Anton Palmer"
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="flex-1">
                   <div className="flex items-start justify-between">
                     <div>
-                      <p className="font-semibold text-dark-foreground">Account Executive</p>
+                      <p className="font-semibold text-dark-foreground">Anton Palmer</p>
+                      <p className="text-sm text-dark-muted">Co-Founder & CEO</p>
                     </div>
                     <Button asChild variant="icon-dark" size="icon-sm" className="!h-8 !w-8">
-                      <a href="#">
-                        <Linkedin />
-                      </a>
-                    </Button>
-                  </div>
-                  <ArrowLink href="mailto:info@intrao.tech" variant="light" showArrow={false} className="mt-3">
-                    INFO@INTRAO.TECH
-                  </ArrowLink>
-                </div>
-              </div>
-            </div>
-
-            {/* Divider - extends to vertical border */}
-            <div className="border-t border-dark-muted/30" />
-
-            {/* Second contact */}
-            <div className="pt-8 lg:pl-12">
-              <h4 className="heading-4 mb-6 text-dark-foreground">
-                Have a partnership in mind?
-              </h4>
-              <div className="flex items-start gap-4">
-                <div className="w-20 h-20 bg-dark-muted/20 rounded-lg overflow-hidden flex-shrink-0">
-                  <img
-                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&h=200&fit=crop"
-                    alt="Founder"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="flex-1">
-                  <div className="flex items-start justify-between">
-                    <div>
-                      <p className="font-semibold text-dark-foreground">Co-Founder</p>
-                    </div>
-                    <Button asChild variant="icon-dark" size="icon-sm" className="!h-8 !w-8">
-                      <a href="#">
+                      <a href="https://www.linkedin.com/in/anthony-palmer-390167359/" target="_blank" rel="noopener noreferrer">
                         <Linkedin />
                       </a>
                     </Button>
