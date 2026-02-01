@@ -25,8 +25,8 @@
     --secondary: 0 0% 100%;
     --secondary-foreground: 0 0% 7%;
 
-    /* Muted - White */
-    --muted: 0 0% 100%;
+    /* Muted - Light gray for card backgrounds */
+    --muted: 0 0% 96%;
     --muted-foreground: 0 0% 45%;
 
     /* Accent */

@@ -164,7 +164,7 @@ const TeamSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.8 }}
-            className="col-span-12 md:col-span-4 lg:col-span-3 h-[280px] md:h-[450px] bg-light rounded-2xl p-8 md:p-10 flex flex-col justify-between"
+            className="col-span-12 md:col-span-4 lg:col-span-3 h-[280px] md:h-[450px] bg-muted rounded-2xl p-8 md:p-10 flex flex-col justify-between"
           >
             <div>
               <h3 className="text-3xl md:text-4xl lg:text-5xl font-medium leading-tight">
