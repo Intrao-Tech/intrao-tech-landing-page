@@ -12,6 +12,7 @@ const ContactFormSection = () => {
     message: "",
     budget: "",
   });
+  const [isLoading, setIsLoading] = useState(false);
 
   const budgetOptions = [
     "up to $10k",
@@ -21,10 +22,35 @@ const ContactFormSection = () => {
     ">$100k",
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Thank you for reaching out! We'll get back to you soon.");
-    setFormData({ name: "", email: "", message: "", budget: "" });
+    setIsLoading(true);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          access_key: import.meta.env.VITE_WEB3FORMS_KEY,
+          subject: `New Contact from ${formData.name}`,
+          from_name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          budget: formData.budget || "Not specified",
+        }),
+      });
+
+      if (response.ok) {
+        toast.success("Thank you! We'll get back to you soon.");
+        setFormData({ name: "", email: "", message: "", budget: "" });
+      } else {
+        toast.error("Something went wrong. Please try again.");
+      }
+    } catch {
+      toast.error("Failed to send message. Please try again.");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -137,9 +163,9 @@ const ContactFormSection = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row sm:items-center gap-4 mt-4">
-                <Button type="submit" size="lg" className="group">
-                  Submit
-                  <ArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
+                <Button type="submit" size="lg" className="group" disabled={isLoading}>
+                  {isLoading ? "Sending..." : "Submit"}
+                  {!isLoading && <ArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />}
                 </Button>
                 <p className="text-sm text-dark-muted uppercase">
                   BY CLICKING THIS BUTTON YOU ACCEPT{" "}
