@@ -10,87 +10,91 @@ interface Service {
   description: string;
 }
 
-interface Stage {
+interface ServiceCategory {
   id: string;
   name: string;
   headline: string;
   services: Service[];
 }
 
-const stages: Stage[] = [
+const serviceCategories: ServiceCategory[] = [
   {
-    id: "pre-seed",
-    name: "Pre-seed",
-    headline: "Validate your idea & attract early investors",
+    id: "design",
+    name: "Design",
+    headline: "Craft beautiful, user-centered experiences",
     services: [
       {
-        name: "Design prototype",
-        description: "Test product ideas fast with clickable user journeys and visual flows.",
+        name: "Web app design",
+        description: "Design intuitive interfaces that users love and that drive engagement.",
       },
       {
-        name: "Product discovery",
-        description: "Map out key features, user flows, and architecture to align your team and reduce risks.",
+        name: "Mobile app design",
+        description: "Create seamless mobile experiences optimized for iOS and Android.",
       },
       {
-        name: "Website development",
-        description: "Launch a fast, scalable site that converts and supports product growth.",
+        name: "Website design",
+        description: "Build stunning websites that convert visitors into customers.",
+      },
+      {
+        name: "Website redesign",
+        description: "Modernize your web presence with fresh design and improved UX.",
+      },
+      {
+        name: "Branding",
+        description: "Develop a brand identity that resonates visually and emotionally.",
       },
     ],
   },
   {
-    id: "seed",
-    name: "Seed",
-    headline: "Build your product & gain market traction",
+    id: "development",
+    name: "Development",
+    headline: "Build scalable, high-performance products",
     services: [
       {
-        name: "Branding",
-        description: "Develop a brand that resonates — visually, emotionally, and strategically.",
+        name: "Web development",
+        description: "Build robust, scalable web applications with modern technologies.",
+      },
+      {
+        name: "Mobile development",
+        description: "Develop native and cross-platform apps for iOS and Android.",
+      },
+      {
+        name: "Website development",
+        description: "Launch fast, responsive websites optimized for performance.",
+      },
+      {
+        name: "No-code development",
+        description: "Rapidly build and iterate using powerful no-code platforms.",
+      },
+      {
+        name: "Blockchain development",
+        description: "Create decentralized applications and smart contracts.",
+      },
+    ],
+  },
+  {
+    id: "research",
+    name: "Research",
+    headline: "Make informed decisions with deep insights",
+    services: [
+      {
+        name: "UX audit",
+        description: "Identify usability issues and optimize for better conversions.",
+      },
+      {
+        name: "Product discovery",
+        description: "Define features, user flows, and architecture to reduce risk.",
       },
       {
         name: "Technical workshop",
         description: "Validate your tech stack, architecture, and scalability path.",
-      },
-      {
-        name: "Custom MVP development",
-        description: "Expand your prototype into a fully functional, production-ready product.",
-      },
-      {
-        name: "Rapid MVP development",
-        description: "Get your MVP 50% faster with lean sprints and pre-built frameworks.",
-      },
-      {
-        name: "Dedicated team",
-        description: "Access a team of experts to fuel your product's growth.",
-      },
-    ],
-  },
-  {
-    id: "series-a",
-    name: "Series A & beyond",
-    headline: "Scale, optimize & reach more users",
-    services: [
-      {
-        name: "UX audit",
-        description: "Identify usability bottlenecks, improve engagement, and optimize for conversions.",
-      },
-      {
-        name: "Product redesign",
-        description: "Upgrade legacy interfaces with scalable, business-driven UX and UI from a top-notch design agency.",
-      },
-      {
-        name: "Team extension",
-        description: "Instantly scale with dedicated designers and developers ready to start.",
-      },
-      {
-        name: "Website redesign",
-        description: "Modernize your web presence with a digital product design agency that drives engagement and brand authority.",
       },
     ],
   },
 ];
 
 const ServicesSection = () => {
-  const [activeStage, setActiveStage] = useState(0);
+  const [activeCategory, setActiveCategory] = useState(0);
   const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
@@ -102,7 +106,7 @@ const ServicesSection = () => {
           (entries) => {
             entries.forEach((entry) => {
               if (entry.isIntersecting) {
-                setActiveStage(index);
+                setActiveCategory(index);
               }
             });
           },
@@ -121,7 +125,7 @@ const ServicesSection = () => {
     };
   }, []);
 
-  const scrollToStage = (index: number) => {
+  const scrollToCategory = (index: number) => {
     sectionRefs.current[index]?.scrollIntoView({
       behavior: "smooth",
       block: "start",
@@ -154,15 +158,15 @@ const ServicesSection = () => {
           className="mb-16 lg:mb-24"
         >
           <p className="label text-dark-muted mb-4">
-            Product Design and Development Agency Services
+            Design, Development & Research
           </p>
           <h2 className="heading-2 mb-6">
-            Tailored support from first prototype
+            Full-service digital solutions
             <br />
-            <span className="text-dark-muted">to long-term scale</span>
+            <span className="text-dark-muted">for every business stage</span>
           </h2>
           <p className="text-dark-muted text-lg max-w-3xl">
-            Great products don't happen by accident. As a digital product design agency, we help startups grow through smart strategy, solid UX, and scalable development from day one.
+            We help businesses of all sizes — from startups to established local companies — bring their ideas to life through thoughtful design, solid development, and strategic research.
           </p>
         </motion.div>
 
@@ -177,17 +181,17 @@ const ServicesSection = () => {
             className="lg:w-48 lg:sticky lg:top-32 lg:self-start"
           >
             <nav className="flex flex-row lg:flex-col gap-2 lg:gap-4 mb-8 lg:mb-12">
-              {stages.map((stage, index) => (
+              {serviceCategories.map((category, index) => (
                 <button
-                  key={stage.id}
-                  onClick={() => scrollToStage(index)}
+                  key={category.id}
+                  onClick={() => scrollToCategory(index)}
                   className={`text-left text-lg lg:text-xl font-medium transition-colors duration-300 ${
-                    activeStage === index
+                    activeCategory === index
                       ? "text-dark-foreground"
                       : "text-dark-muted hover:text-dark-foreground"
                   }`}
                 >
-                  {stage.name}
+                  {category.name}
                 </button>
               ))}
             </nav>
@@ -201,11 +205,11 @@ const ServicesSection = () => {
 
           {/* Content Sections */}
           <div className="flex-1">
-            {stages.map((stage, stageIndex) => (
+            {serviceCategories.map((category, categoryIndex) => (
               <div
-                key={stage.id}
-                ref={(el) => (sectionRefs.current[stageIndex] = el)}
-                className={stageIndex < stages.length - 1 ? "mb-24 lg:mb-32" : ""}
+                key={category.id}
+                ref={(el) => (sectionRefs.current[categoryIndex] = el)}
+                className={categoryIndex < serviceCategories.length - 1 ? "mb-24 lg:mb-32" : ""}
               >
                 <motion.h3
                   initial={{ opacity: 0, y: 20 }}
@@ -214,11 +218,11 @@ const ServicesSection = () => {
                   transition={{ duration: 0.5 }}
                   className="heading-3 mb-12"
                 >
-                  {stage.headline}
+                  {category.headline}
                 </motion.h3>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8">
-                  {stage.services.map((service, serviceIndex) => (
+                  {category.services.map((service, serviceIndex) => (
                     <motion.div
                       key={service.name}
                       initial={{ opacity: 0, y: 20 }}
