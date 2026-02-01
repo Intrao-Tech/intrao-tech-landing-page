@@ -1,33 +1,13 @@
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
-import { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ButtonArrows } from "@/components/ui/button-arrows";
+import { Link2, Puzzle, FileText, DollarSign, Users, BadgeCheck, Globe, Coins, Wrench } from "lucide-react";
 
 const BlockchainDevelopment = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
-  const fadeInUp = {
-    initial: { opacity: 0, y: 20 },
-    whileInView: { opacity: 1, y: 0 },
-    viewport: { once: true },
-    transition: { duration: 0.6 },
-  };
-
-  const staggerContainer = {
-    initial: {},
-    whileInView: {
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-    viewport: { once: true },
-  };
-
   const challenges = [
     {
       question: "Struggling to find a reliable blockchain development company?",
@@ -87,101 +67,31 @@ const BlockchainDevelopment = () => {
 
   const benefits = [
     {
-      icon: (
-        <svg
-          className="w-8 h-8"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={1.5}
-            d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"
-          />
-        </svg>
-      ),
+      icon: Puzzle,
       title: "Custom-Tailored Solutions",
       description:
         "Business-specific blockchain applications designed for optimal performance and your unique requirements.",
     },
     {
-      icon: (
-        <svg
-          className="w-8 h-8"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={1.5}
-            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-          />
-        </svg>
-      ),
+      icon: FileText,
       title: "Smart Contract Development",
       description:
         "Automating processes with secure, audited, and reliable smart contracts that execute flawlessly.",
     },
     {
-      icon: (
-        <svg
-          className="w-8 h-8"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={1.5}
-            d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-          />
-        </svg>
-      ),
+      icon: DollarSign,
       title: "Cost-Effective Development",
       description:
         "Minimizing costs while maximizing efficiency and security through optimized development processes.",
     },
     {
-      icon: (
-        <svg
-          className="w-8 h-8"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={1.5}
-            d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-          />
-        </svg>
-      ),
+      icon: Users,
       title: "Expert Team",
       description:
         "Mid-level and senior blockchain developers with 7+ years of industry experience in Web3 technologies.",
     },
     {
-      icon: (
-        <svg
-          className="w-8 h-8"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={1.5}
-            d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
-          />
-        </svg>
-      ),
+      icon: BadgeCheck,
       title: "Proven Trust",
       description:
         "98% client satisfaction rate reflecting our commitment to delivering outstanding blockchain solutions.",
@@ -214,38 +124,44 @@ const BlockchainDevelopment = () => {
     {
       number: "01",
       title: "Product Discovery",
+      subtitle: "Evaluating use cases and selecting the right blockchain",
       description:
-        "Evaluating use cases, selecting the right blockchain, and reviewing tokenomics to ensure the best foundation for your project.",
+        "We review tokenomics and assess your project requirements to ensure the best foundation for your project.",
     },
     {
       number: "02",
       title: "Architecture Design",
+      subtitle: "Designing smart contract logic and data structures",
       description:
-        "Designing smart contract logic and efficient data structures that scale with your application's needs.",
+        "We create efficient architectures that scale with your application's needs.",
     },
     {
       number: "03",
       title: "Protocol Design",
+      subtitle: "Writing and testing smart contracts",
       description:
-        "Writing and testing smart contracts with comprehensive unit and integration testing on testnets.",
+        "Comprehensive unit and integration testing on testnets to ensure reliability.",
     },
     {
       number: "04",
       title: "Security Audit",
+      subtitle: "Conducting internal reviews and third-party audits",
       description:
-        "Conducting internal reviews and third-party audits to identify and fix vulnerabilities before deployment.",
+        "We identify and fix vulnerabilities before deployment to mainnet.",
     },
     {
       number: "05",
       title: "Frontend & Wallet Integration",
+      subtitle: "Creating user interfaces that connect to smart contracts",
       description:
-        "Creating user interfaces that seamlessly connect to smart contracts with intuitive wallet experiences.",
+        "Intuitive wallet experiences and seamless blockchain interactions.",
     },
     {
       number: "06",
       title: "Deployment & Monitoring",
+      subtitle: "Launching on mainnet and implementing monitoring",
       description:
-        "Launching on mainnet and implementing monitoring systems to track contract activity and performance.",
+        "We track contract activity and performance post-launch.",
     },
   ];
 
@@ -277,363 +193,444 @@ const BlockchainDevelopment = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <>
+      <Helmet>
+        <title>Blockchain Development Services | Intrao Tech</title>
+        <meta
+          name="description"
+          content="Blockchain Development Services. Build decentralized applications, secure enterprise solutions, and blockchain-based platforms."
+        />
+      </Helmet>
+
       <Header />
 
-      {/* Hero Section */}
-      <section
-        data-header-theme="dark"
-        className="bg-dark text-dark-foreground pt-32 pb-20 md:pt-40 md:pb-32 relative overflow-hidden"
-      >
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
-        </div>
+      <main>
+        {/* Hero Section */}
+        <section data-header-theme="dark" className="bg-dark text-dark-foreground pt-32 pb-20">
+          <div className="container mx-auto px-6">
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-dark-muted text-sm uppercase tracking-[0.3em] mb-8"
+            >
+              Blockchain Development
+            </motion.p>
 
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <motion.div {...fadeInUp}>
-              <span className="inline-block px-4 py-2 bg-primary/20 text-primary rounded-lg text-sm font-medium mb-6">
-                BLOCKCHAIN DEVELOPMENT
-              </span>
-              <h1 className="heading-2 mb-6">
-                Blockchain Development Services
-              </h1>
-              <p className="text-xl text-dark-foreground/80 mb-8">
-                Unlock the potential of blockchain for your business. We build
-                decentralized applications, secure enterprise solutions, and
-                blockchain-based platforms with seamless execution.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button asChild className="group">
-                  <Link to="/contacts">
-                    LET'S TALK
-                    <ButtonArrows />
-                  </Link>
-                </Button>
-                <Button asChild variant="outline-dark" className="group">
-                  <Link to="/cases">
-                    VIEW OUR CASES
-                    <ButtonArrows />
-                  </Link>
-                </Button>
-              </div>
+            <motion.h1
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="heading-2 mb-10 max-w-4xl"
+            >
+              Blockchain Development Services
+            </motion.h1>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="flex flex-wrap gap-4 mb-16"
+            >
+              <Button asChild className="group">
+                <Link to="/contacts">
+                  Let's Talk
+                  <ButtonArrows />
+                </Link>
+              </Button>
+              <Button asChild variant="outline-dark" className="group">
+                <Link to="/cases">
+                  View Our Cases
+                  <ButtonArrows />
+                </Link>
+              </Button>
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative"
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
             >
-              <div className="aspect-square bg-gradient-to-br from-primary/20 to-primary/5 rounded-lg flex items-center justify-center">
-                <div className="text-9xl font-bold text-primary/30">BC</div>
+              <div className="bg-dark-muted/20 rounded-lg p-8 aspect-video flex items-center justify-center">
+                <div className="text-dark-muted text-center">
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-lg bg-dark-muted/30 flex items-center justify-center">
+                    <Link2 className="w-8 h-8" />
+                  </div>
+                  <p className="text-sm">Blockchain Platform Preview</p>
+                </div>
+              </div>
+              <div>
+                <p className="text-xl md:text-2xl leading-relaxed text-dark-foreground">
+                  Unlock the potential of blockchain for your business. We build
+                  decentralized applications, secure enterprise solutions, and
+                  blockchain-based platforms with seamless execution.
+                </p>
               </div>
             </motion.div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Challenges Section */}
-      <section
-        data-header-theme="light"
-        className="bg-background text-foreground py-24"
-      >
-        <div className="container mx-auto px-6">
-          <motion.div {...fadeInUp} className="max-w-3xl mb-16">
-            <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-lg text-sm font-medium mb-6">
-              CHALLENGES
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+        {/* Challenges Section */}
+        <section data-header-theme="light" className="bg-background text-foreground py-24">
+          <div className="container mx-auto px-6">
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-muted-foreground text-sm uppercase tracking-[0.3em] mb-6"
+            >
+              Challenges
+            </motion.p>
+
+            <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="text-3xl md:text-4xl lg:text-5xl font-bold leading-[1.1] mb-16 max-w-3xl"
+            >
               We build blockchain solutions that solve real problems
-            </h2>
-          </motion.div>
+            </motion.h2>
 
-          <motion.div
-            {...staggerContainer}
-            className="grid md:grid-cols-1 gap-8"
-          >
-            {challenges.map((challenge, index) => (
-              <motion.div
-                key={index}
-                variants={{
-                  initial: { opacity: 0, y: 20 },
-                  whileInView: { opacity: 1, y: 0 },
-                }}
-                className="grid md:grid-cols-2 gap-8 py-8 border-b border-border last:border-0"
-              >
-                <h3 className="text-xl font-semibold">{challenge.question}</h3>
-                <p className="text-muted-foreground">{challenge.answer}</p>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
+            <div className="space-y-0">
+              {challenges.map((challenge, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="grid grid-cols-1 lg:grid-cols-2 gap-8 py-12 border-t border-border"
+                >
+                  <p className="text-lg text-muted-foreground">
+                    {challenge.question}
+                  </p>
+                  <p className="text-lg leading-relaxed">
+                    {challenge.answer}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-      {/* Services Offered Section */}
-      <section
-        data-header-theme="dark"
-        className="bg-dark text-dark-foreground py-24"
-      >
-        <div className="container mx-auto px-6">
-          <motion.div {...fadeInUp} className="max-w-3xl mb-16">
-            <span className="inline-block px-4 py-2 bg-primary/20 text-primary rounded-lg text-sm font-medium mb-6">
-              OUR SERVICES
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+        {/* Services Offered Section */}
+        <section data-header-theme="dark" className="bg-dark text-dark-foreground py-24">
+          <div className="container mx-auto px-6">
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-dark-muted text-sm uppercase tracking-[0.3em] mb-6"
+            >
+              Our Services
+            </motion.p>
+
+            <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="text-3xl md:text-4xl lg:text-5xl font-bold leading-[1.1] mb-8 max-w-3xl"
+            >
               Blockchain development services
-            </h2>
-            <p className="text-dark-foreground/70">
+            </motion.h2>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-lg text-dark-muted max-w-3xl mb-16"
+            >
               From DeFi platforms to NFT marketplaces, we deliver end-to-end
               blockchain solutions.
-            </p>
-          </motion.div>
+            </motion.p>
 
-          <motion.div
-            {...staggerContainer}
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-          >
-            {services.map((service, index) => (
-              <motion.div
-                key={index}
-                variants={{
-                  initial: { opacity: 0, y: 20 },
-                  whileInView: { opacity: 1, y: 0 },
-                }}
-                className="p-8 bg-dark-foreground/5 rounded-lg border border-dark-foreground/10 hover:border-primary/50 transition-colors"
-              >
-                <span className="text-primary text-sm font-medium">
-                  {service.number}
-                </span>
-                <h3 className="text-xl font-semibold mt-4 mb-3">
-                  {service.title}
-                </h3>
-                <p className="text-dark-foreground/70">{service.description}</p>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section
-        data-header-theme="dark"
-        className="bg-dark text-dark-foreground py-24 border-t border-dark-foreground/10"
-      >
-        <div className="container mx-auto px-6">
-          <motion.div {...fadeInUp} className="max-w-3xl mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Why choose our blockchain development company?
-            </h2>
-          </motion.div>
-
-          <motion.div
-            {...staggerContainer}
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-          >
-            {benefits.map((benefit, index) => (
-              <motion.div
-                key={index}
-                variants={{
-                  initial: { opacity: 0, y: 20 },
-                  whileInView: { opacity: 1, y: 0 },
-                }}
-                className="p-8 bg-dark-foreground/5 rounded-lg"
-              >
-                <div className="text-primary mb-4">{benefit.icon}</div>
-                <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
-                <p className="text-dark-foreground/70">{benefit.description}</p>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Tech Stack Section */}
-      <section
-        data-header-theme="dark"
-        className="bg-dark text-dark-foreground py-24 border-t border-dark-foreground/10"
-      >
-        <div className="container mx-auto px-6">
-          <motion.div {...fadeInUp} className="max-w-3xl mb-16">
-            <span className="inline-block px-4 py-2 bg-primary/20 text-primary rounded-lg text-sm font-medium mb-6">
-              TECHNOLOGY STACK
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Blockchain technologies we work with
-            </h2>
-          </motion.div>
-
-          <div className="space-y-12">
-            <motion.div {...fadeInUp}>
-              <h3 className="text-xl font-semibold mb-6 text-primary">
-                Networks
-              </h3>
-              <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-4">
-                {techStack.networks.map((tech, index) => (
-                  <div
-                    key={index}
-                    className="p-4 bg-dark-foreground/5 rounded-lg border border-dark-foreground/10"
-                  >
-                    <h4 className="font-semibold mb-1">{tech.name}</h4>
-                    <p className="text-dark-foreground/60 text-sm">
-                      {tech.description}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-
-            <motion.div {...fadeInUp}>
-              <h3 className="text-xl font-semibold mb-6 text-primary">
-                Token Standards
-              </h3>
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-                {techStack.tokens.map((tech, index) => (
-                  <div
-                    key={index}
-                    className="p-4 bg-dark-foreground/5 rounded-lg border border-dark-foreground/10"
-                  >
-                    <h4 className="font-semibold mb-1">{tech.name}</h4>
-                    <p className="text-dark-foreground/60 text-sm">
-                      {tech.description}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-
-            <motion.div {...fadeInUp}>
-              <h3 className="text-xl font-semibold mb-6 text-primary">
-                Development Tools
-              </h3>
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-                {techStack.tools.map((tech, index) => (
-                  <div
-                    key={index}
-                    className="p-4 bg-dark-foreground/5 rounded-lg border border-dark-foreground/10"
-                  >
-                    <h4 className="font-semibold mb-1">{tech.name}</h4>
-                    <p className="text-dark-foreground/60 text-sm">
-                      {tech.description}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {services.map((service, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="p-8 border border-dark-muted/30 rounded-lg"
+                >
+                  <span className="text-dark-muted text-sm">
+                    {service.number}
+                  </span>
+                  <h3 className="text-xl font-semibold mt-4 mb-3">
+                    {service.title}
+                  </h3>
+                  <p className="text-dark-muted leading-relaxed">{service.description}</p>
+                </motion.div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Process Section */}
-      <section
-        data-header-theme="light"
-        className="bg-background text-foreground py-24"
-      >
-        <div className="container mx-auto px-6">
-          <motion.div {...fadeInUp} className="max-w-3xl mb-16">
-            <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-lg text-sm font-medium mb-6">
-              OUR PROCESS
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+        {/* Benefits Section */}
+        <section data-header-theme="dark" className="bg-dark text-dark-foreground py-24">
+          <div className="container mx-auto px-6">
+            <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-3xl md:text-4xl lg:text-5xl font-bold leading-[1.1] mb-16 max-w-3xl"
+            >
+              Why choose our blockchain development company?
+            </motion.h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((item, index) => (
+                <motion.div
+                  key={item.title}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="p-8 border border-dark-muted/30 rounded-lg"
+                >
+                  <item.icon className="w-8 h-8 text-dark-muted mb-8" strokeWidth={1.5} />
+                  <h3 className="text-xl font-semibold mb-4">{item.title}</h3>
+                  <p className="text-dark-muted leading-relaxed">{item.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Tech Stack Section */}
+        <section data-header-theme="dark" className="bg-dark text-dark-foreground py-24">
+          <div className="container mx-auto px-6">
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-dark-muted text-sm uppercase tracking-[0.3em] mb-6"
+            >
+              Technology Stack
+            </motion.p>
+
+            <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="text-3xl md:text-4xl lg:text-5xl font-bold leading-[1.1] mb-16 max-w-3xl"
+            >
+              Blockchain technologies we work with
+            </motion.h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="p-6 border border-dark-muted/30 rounded-lg"
+              >
+                <h3 className="text-lg font-semibold mb-6 flex items-center gap-2">
+                  <Globe className="w-5 h-5" />
+                  Networks
+                </h3>
+                <div className="space-y-4">
+                  {techStack.networks.map((tech) => (
+                    <div key={tech.name}>
+                      <p className="font-medium">{tech.name}</p>
+                      <p className="text-dark-muted text-sm">{tech.description}</p>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="p-6 border border-dark-muted/30 rounded-lg"
+              >
+                <h3 className="text-lg font-semibold mb-6 flex items-center gap-2">
+                  <Coins className="w-5 h-5" />
+                  Token Standards
+                </h3>
+                <div className="space-y-4">
+                  {techStack.tokens.map((tech) => (
+                    <div key={tech.name}>
+                      <p className="font-medium">{tech.name}</p>
+                      <p className="text-dark-muted text-sm">{tech.description}</p>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="p-6 border border-dark-muted/30 rounded-lg"
+              >
+                <h3 className="text-lg font-semibold mb-6 flex items-center gap-2">
+                  <Wrench className="w-5 h-5" />
+                  Development Tools
+                </h3>
+                <div className="space-y-4">
+                  {techStack.tools.map((tech) => (
+                    <div key={tech.name}>
+                      <p className="font-medium">{tech.name}</p>
+                      <p className="text-dark-muted text-sm">{tech.description}</p>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Process Section */}
+        <section data-header-theme="light" className="bg-background text-foreground py-24">
+          <div className="container mx-auto px-6">
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-muted-foreground text-sm uppercase tracking-[0.3em] mb-6"
+            >
+              Our Process
+            </motion.p>
+
+            <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="text-3xl md:text-4xl lg:text-5xl font-bold leading-[1.1] mb-8 max-w-4xl"
+            >
               How we deliver blockchain projects
-            </h2>
-            <p className="text-muted-foreground">
+            </motion.h2>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-lg text-muted-foreground max-w-3xl mb-16"
+            >
               Our structured approach ensures secure, scalable blockchain
               solutions from concept to deployment.
-            </p>
-          </motion.div>
+            </motion.p>
 
-          <motion.div
-            {...staggerContainer}
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-          >
-            {processSteps.map((step, index) => (
-              <motion.div
-                key={index}
-                variants={{
-                  initial: { opacity: 0, y: 20 },
-                  whileInView: { opacity: 1, y: 0 },
-                }}
-                className="relative"
-              >
-                <div className="text-6xl font-bold text-primary/10 mb-4">
-                  {step.number}
-                </div>
-                <h3 className="text-xl font-semibold mb-3">{step.title}</h3>
-                <p className="text-muted-foreground">{step.description}</p>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
+            <div className="space-y-0">
+              {processSteps.map((step, index) => (
+                <motion.div
+                  key={step.number}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.05 }}
+                  className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8 py-12 border-t border-border"
+                >
+                  <div>
+                    <span className="text-muted-foreground text-sm">{step.title}</span>
+                  </div>
+                  <div>
+                    <h3 className="text-2xl md:text-3xl font-bold mb-4">{step.subtitle}</h3>
+                    <p className="text-muted-foreground leading-relaxed max-w-2xl">{step.description}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-      {/* Success Cards Section */}
-      <section
-        data-header-theme="light"
-        className="bg-background text-foreground py-24 border-t border-border"
-      >
-        <div className="container mx-auto px-6">
-          <motion.div {...fadeInUp} className="max-w-3xl mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold">
+        {/* Success Section */}
+        <section data-header-theme="light" className="bg-background text-foreground py-24">
+          <div className="container mx-auto px-6">
+            <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-3xl md:text-4xl lg:text-5xl font-bold leading-[1.1] mb-16 max-w-2xl"
+            >
               Your success is our priority
-            </h2>
-          </motion.div>
+            </motion.h2>
 
-          <motion.div
-            {...staggerContainer}
-            className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
-          >
-            {successCards.map((card, index) => (
-              <motion.div
-                key={index}
-                variants={{
-                  initial: { opacity: 0, y: 20 },
-                  whileInView: { opacity: 1, y: 0 },
-                }}
-                className="p-6 bg-muted/30 rounded-lg"
-              >
-                <span className="text-xs font-medium text-primary">
-                  {card.label}
-                </span>
-                <h3 className="text-lg font-semibold mt-2 mb-3">
-                  {card.title}
-                </h3>
-                <p className="text-muted-foreground text-sm">
-                  {card.description}
-                </p>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {successCards.map((card, index) => (
+                <motion.div
+                  key={card.label}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-muted/50 p-8 rounded-lg"
+                >
+                  <p className="text-muted-foreground text-xs uppercase tracking-[0.2em] mb-4">
+                    {card.label}
+                  </p>
+                  <h3 className="text-xl md:text-2xl font-bold mb-6 leading-tight">
+                    {card.title}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {card.description}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-      {/* CTA Section */}
-      <section
-        data-header-theme="dark"
-        className="bg-dark text-dark-foreground py-24"
-      >
-        <div className="container mx-auto px-6">
-          <motion.div {...fadeInUp} className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">
+        {/* CTA Section */}
+        <section data-header-theme="dark" className="bg-dark text-dark-foreground py-24">
+          <div className="container mx-auto px-6 text-center">
+            <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8"
+            >
               Ready to build on blockchain?
-            </h2>
-            <p className="text-xl text-dark-foreground/70 mb-8">
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="text-dark-muted text-lg mb-10 max-w-2xl mx-auto"
+            >
               Let's unlock the potential of decentralized technology for your
               business.
-            </p>
-            <Button asChild className="group">
-              <Link to="/contacts">
-                GET IN TOUCH
-                <ButtonArrows />
-              </Link>
-            </Button>
-          </motion.div>
-        </div>
-      </section>
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <Button asChild size="lg" className="group">
+                <Link to="/contacts">
+                  Get in Touch
+                  <ButtonArrows />
+                </Link>
+              </Button>
+            </motion.div>
+          </div>
+        </section>
+      </main>
 
       <Footer />
-    </div>
+    </>
   );
 };
 
