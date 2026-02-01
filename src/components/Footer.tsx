@@ -125,7 +125,7 @@ const Footer = () => {
           </div>
 
           {/* World Map with London marker */}
-          <div className="hidden lg:block">
+          <div>
             <WorldMap />
           </div>
         </div>
