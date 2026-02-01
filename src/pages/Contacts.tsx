@@ -5,6 +5,7 @@ import WorldMap from "@/components/WorldMap";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { ArrowRight, Linkedin } from "lucide-react";
+import ukFlag from "@/assets/flag-united-kingdom.svg";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { ArrowLink } from "@/components/ui/arrow-link";
@@ -33,7 +34,7 @@ const Contacts = () => {
 
   const locations = [
     {
-      flag: "🇬🇧",
+      flag: ukFlag,
       country: "UNITED KINGDOM",
       city: "LONDON",
       company: "Intrao Tech Ltd",
@@ -326,7 +327,7 @@ const Contacts = () => {
                 >
                   {/* Flag */}
                   <div className="col-span-2 md:col-span-1">
-                    <span className="text-3xl md:text-4xl">{location.flag}</span>
+                    <img src={location.flag} alt={location.country} className="w-8 h-8 md:w-10 md:h-10" />
                   </div>
 
                   {/* Location */}
