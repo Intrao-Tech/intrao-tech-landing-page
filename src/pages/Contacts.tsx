@@ -239,7 +239,7 @@ const Contacts = () => {
                           <p className="text-sm text-dark-muted">Co-Founder & CEO</p>
                         </div>
                         <Button asChild variant="icon-dark" size="icon-sm" className="!h-8 !w-8">
-                          <a href="https://www.linkedin.com/in/muliavchyk/" target="_blank" rel="noopener noreferrer">
+                          <a href="https://www.linkedin.com/in/muliavchyk/" target="_blank" rel="noopener noreferrer" aria-label="Anton Muliavchyk on LinkedIn">
                             <Linkedin />
                           </a>
                         </Button>
@@ -268,7 +268,7 @@ const Contacts = () => {
                             <p className="text-sm text-dark-muted">Co-Founder & CPO</p>
                           </div>
                           <Button asChild variant="icon-dark" size="icon-sm" className="!h-8 !w-8">
-                            <a href="https://www.linkedin.com/in/ihor-muliar/" target="_blank" rel="noopener noreferrer">
+                            <a href="https://www.linkedin.com/in/ihor-muliar/" target="_blank" rel="noopener noreferrer" aria-label="Ihor Muliar on LinkedIn">
                               <Linkedin />
                             </a>
                           </Button>
