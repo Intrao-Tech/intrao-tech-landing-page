@@ -123,11 +123,6 @@ const Careers = () => {
     },
     {
       icon: CalendarDays,
-      title: "Public holidays off",
-      description: "Enjoy all public holidays without worrying about work",
-    },
-    {
-      icon: Users,
       title: "Team events",
       description: "Regular virtual and in-person team building activities",
     },
