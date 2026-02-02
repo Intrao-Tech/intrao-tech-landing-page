@@ -214,6 +214,7 @@ const MobileDevelopment = () => {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
             >
+              {/*
               <div className="bg-dark-muted/20 rounded-lg p-8 aspect-video flex items-center justify-center">
                 <div className="text-dark-muted text-center">
                   <div className="w-16 h-16 mx-auto mb-4 rounded-lg bg-dark-muted/30 flex items-center justify-center">
@@ -222,6 +223,7 @@ const MobileDevelopment = () => {
                   <p className="text-sm">Mobile App Development Preview</p>
                 </div>
               </div>
+              */}
               <div>
                 <p className="text-xl md:text-2xl leading-relaxed text-dark-foreground">
                   Launch a high-impact mobile app with confidence. Whether you're launching a new app or improving an existing one, our mobile app development services ensure high performance, seamless user experience, and scalable solutions tailored to your needs.

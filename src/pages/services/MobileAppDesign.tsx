@@ -304,6 +304,7 @@ const MobileAppDesign = () => {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
             >
+              {/*
               <div className="bg-dark-muted/20 rounded-lg p-8 aspect-video flex items-center justify-center">
                 <div className="text-dark-muted text-center">
                   <div className="w-16 h-16 mx-auto mb-4 rounded-lg bg-dark-muted/30 flex items-center justify-center">
@@ -312,6 +313,7 @@ const MobileAppDesign = () => {
                   <p className="text-sm">Mobile App Interface Preview</p>
                 </div>
               </div>
+              */}
               <div>
                 <p className="text-xl md:text-2xl leading-relaxed text-dark-foreground">
                   We help businesses create mobile apps that users love. Our

@@ -213,7 +213,7 @@ const ContactFormSection = () => {
                       <p className="text-sm text-dark-muted">Co-Founder & CEO</p>
                     </div>
                     <Button asChild variant="icon-dark" size="icon-sm" className="!h-8 !w-8">
-                      <a href="https://www.linkedin.com/in/anthony-palmer-390167359/" target="_blank" rel="noopener noreferrer">
+                      <a href="https://www.linkedin.com/in/muliavchyk/" target="_blank" rel="noopener noreferrer">
                         <Linkedin />
                       </a>
                     </Button>
