@@ -264,28 +264,34 @@ const Services = () => {
               </motion.div>
             </div>
 
-            {/* Stats Row */}
+            {/* Stats Grid */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-12 border-t border-dark-muted/20"
             >
-              {stats.map((stat, index) => (
-                <motion.div
-                  key={stat.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
-                >
-                  <p className="text-4xl md:text-5xl font-bold text-dark-foreground mb-2">
-                    {stat.value}
-                  </p>
-                  <p className="text-sm text-dark-muted uppercase tracking-wider">
-                    {stat.label}
-                  </p>
-                </motion.div>
-              ))}
+              <p className="text-dark-muted text-sm uppercase tracking-[0.3em] mb-6">
+                Intrao in Facts and Numbers
+              </p>
+              <div className="border-t border-dark-muted/15">
+                <div className="grid grid-cols-1 md:grid-cols-3">
+                  {stats.map((stat, index) => (
+                    <div
+                      key={stat.label}
+                      className={`text-center py-12 ${
+                        index < stats.length - 1
+                          ? "md:border-r border-b md:border-b-0 border-dark-muted/15"
+                          : ""
+                      }`}
+                    >
+                      <p className="text-5xl md:text-6xl font-bold text-dark-foreground mb-2">
+                        {stat.value}
+                      </p>
+                      <p className="text-dark-muted text-base">{stat.label}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </motion.div>
           </div>
         </section>
