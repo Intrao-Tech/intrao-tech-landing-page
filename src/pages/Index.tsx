@@ -19,8 +19,8 @@ const Index = () => {
   return (
     <>
       <SEOHead
-        title="Intrao Tech | Web Development Agency - Launch, Scale, Succeed"
-        description="Intrao Tech is a web development agency helping startups and businesses launch, scale, and succeed faster with custom web development, UI/UX design, and MVP development."
+        title="Intrao Tech | Founder-Led Dev & Design Studio for Startups"
+        description="Your dev team, without the payroll. Founder-led studio building MVPs, apps, and websites for high-velocity startups. One partner, no handoffs."
         canonical="/"
         structuredData={[generateOrganizationSchema(), generateWebSiteSchema()]}
       />

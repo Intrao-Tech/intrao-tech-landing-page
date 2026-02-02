@@ -189,8 +189,8 @@ const Services = () => {
   return (
     <>
       <SEOHead
-        title="Services | Intrao Tech - Web Development & Design Services"
-        description="Explore our web development, UI/UX design, MVP development, and team extension services. We help businesses launch, scale, and succeed."
+        title="Services | One Partner, Design to Deployed - Intrao Tech"
+        description="Full-service dev & design from one lean team. We build fast because we're not a 50-person agency. MVP development, UI/UX design, and web apps."
         canonical="/services"
       />
 
@@ -209,7 +209,7 @@ const Services = () => {
                   transition={{ duration: 0.6 }}
                   className="label text-dark-muted mb-6"
                 >
-                  Designed for Founders, Built for Growth
+                  One Partner. Design to Deployed.
                 </motion.p>
 
                 <motion.h1
@@ -218,7 +218,7 @@ const Services = () => {
                   transition={{ duration: 0.8, delay: 0.1 }}
                   className="heading-1 mb-6"
                 >
-                  From idea to market, we've got you covered
+                  We build fast because we're not a 50-person agency
                 </motion.h1>
 
                 <motion.p
@@ -227,7 +227,7 @@ const Services = () => {
                   transition={{ duration: 0.6, delay: 0.2 }}
                   className="text-dark-muted text-lg mb-8 max-w-xl"
                 >
-                  Learn more about the team of professionals who care about your product as much as you do and the fields we can help you with.
+                  Full-service dev & design from one lean team. No handoffs between vendors, no bureaucracy - just a direct line to decision-makers who ship.
                 </motion.p>
 
                 <motion.div
@@ -259,7 +259,7 @@ const Services = () => {
                 className="flex flex-col justify-center"
               >
                 <p className="text-dark-muted text-lg leading-relaxed">
-                  Whether you need a product redesign, an MVP, or a scalable development team, we turn your vision into reality. Fast execution, expert insights, and seamless collaboration-so you can focus on scaling.
+                  Whether you need a product redesign, an MVP, or a scalable development team, we turn your vision into reality. Founder-led execution, lean processes, and direct communication - so you can focus on scaling.
                 </p>
               </motion.div>
             </div>

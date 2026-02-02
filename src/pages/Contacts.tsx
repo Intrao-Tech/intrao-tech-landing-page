@@ -73,8 +73,8 @@ const Contacts = () => {
   return (
     <>
       <SEOHead
-        title="Contact Us | Intrao Tech - Get in Touch"
-        description="Ready to start your project? Contact Intrao Tech today. Let's discuss how we can help you launch, scale, and succeed."
+        title="Contact Us | Talk Directly to Our Founders - Intrao Tech"
+        description="Talk directly to our founders, not account managers. London-based, remote-capable. From idea to live - no handoffs, no excuses."
         canonical="/contacts"
       />
 
@@ -90,7 +90,7 @@ const Contacts = () => {
               transition={{ duration: 0.6 }}
               className="label text-dark-muted mb-8"
             >
-              We turn bold ideas into successful products
+              Talk directly to our founders, not account managers
             </motion.p>
 
             <motion.h1

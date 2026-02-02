@@ -75,7 +75,7 @@ const ParallaxHeroSection = () => {
           transition={{ duration: 0.6 }}
           className="label text-dark-muted mb-8"
         >
-          Product Design and Development Agency
+          Founder-Led Dev & Design Studio
         </motion.p>
 
         {/* Main Heading */}
@@ -85,7 +85,7 @@ const ParallaxHeroSection = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="heading-1 mb-12 max-w-5xl"
         >
-          Empowering startups to launch, scale, and succeed faster
+          Your dev team, without the payroll
         </motion.h1>
 
         {/* CTA Buttons */}
@@ -137,7 +137,7 @@ const ParallaxHeroSection = () => {
               transition={{ duration: 0.6 }}
               className="text-quote"
             >
-              From MVP to market domination - your reliable partner in UI/UX design and development
+              From idea to live - no handoffs, no excuses. One partner for design and development.
             </motion.h2>
           </div>
 

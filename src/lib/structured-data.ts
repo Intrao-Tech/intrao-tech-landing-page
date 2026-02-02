@@ -12,12 +12,41 @@ export function generateOrganizationSchema() {
     name: SITE_CONFIG.name,
     url: SITE_CONFIG.domain,
     logo: `${SITE_CONFIG.domain}/logo.svg`,
-    sameAs: ["https://twitter.com/IntraoTech"],
-    contactPoint: {
-      "@type": "ContactPoint",
-      contactType: "sales",
-      url: `${SITE_CONFIG.domain}/contacts`,
-    },
+    slogan: "Your dev team, without the payroll",
+    foundingDate: "2023",
+    founders: [
+      {
+        "@type": "Person",
+        name: "Anton Muliavchyk",
+        jobTitle: "Co-Founder & CEO",
+      },
+      {
+        "@type": "Person",
+        name: "Ihor Muliar",
+        jobTitle: "Co-Founder & CPO",
+      },
+    ],
+    areaServed: [
+      { "@type": "Country", name: "United Kingdom" },
+      { "@type": "Country", name: "European Union" },
+      { "@type": "Country", name: "United States" },
+    ],
+    sameAs: [
+      "https://twitter.com/IntraoTech",
+      "https://www.linkedin.com/company/intrao-tech",
+    ],
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        contactType: "sales",
+        url: `${SITE_CONFIG.domain}/contacts`,
+      },
+      {
+        "@type": "ContactPoint",
+        contactType: "customer service",
+        email: "info@intrao.tech",
+      },
+    ],
   };
 }
 

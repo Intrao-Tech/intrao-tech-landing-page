@@ -117,8 +117,8 @@ const About = () => {
   return (
     <>
       <SEOHead
-        title="About Us | Intrao Tech - Our Story & Team"
-        description="Learn about Intrao Tech, our mission, values, and the talented team behind our success. We're a web development agency dedicated to your digital success."
+        title="About | Three Founders, No Bureaucracy - Intrao Tech"
+        description="Three founders. Technical and commercial. Young, hungry, no bureaucracy. We ship fast because we're a lean team, not a 50-person agency."
         canonical="/about"
       />
 
@@ -134,7 +134,7 @@ const About = () => {
               transition={{ duration: 0.8 }}
               className="heading-1 mb-8 max-w-5xl"
             >
-              International full-cycle product development company
+              Three founders. Young, hungry, no bureaucracy.
             </motion.h1>
 
             <motion.p
@@ -143,7 +143,7 @@ const About = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-dark-muted text-lg md:text-xl max-w-2xl mb-10"
             >
-              A team of top-performers who leverage their expertise in Business Analysis, UI&UX Design, and Development to build products that 'wow' users.
+              We build fast because we're not a 50-person agency. Technical and commercial expertise combined to create products users love.
             </motion.p>
 
             <motion.div
@@ -196,7 +196,7 @@ const About = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="heading-1 mb-16 max-w-5xl"
             >
-              Delivering innovative digital products and solutions, which users do want, for our clients worldwide.
+              One partner from design to deployed. Without the overhead of multiple vendors.
             </motion.h2>
 
             <motion.h3
@@ -217,10 +217,10 @@ const About = () => {
               className="grid grid-cols-1 md:grid-cols-2 gap-12"
             >
               <p className="text-muted-foreground text-lg leading-relaxed">
-                Since 2023, Intrao Tech has grown into a top-tier global design and development studio, with teams based in London, Poland, Ukraine, Estonia, US, and Canada.
+                Founded in 2023, we're a founder-led studio based in London. We work directly with founders and decision-makers - no account managers, no layers of bureaucracy.
               </p>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                Over the past five years, we've built a lean, expert team that thrives on speed, clarity, and measurable impact. Our mission is simple: to help fast-moving startups turn ideas into well-crafted, user-loved products - from brand to build.
+                We built a lean, expert team that thrives on speed, clarity, and measurable impact. Our mission: help high-velocity startups and local businesses turn ideas into well-crafted products - from brand to build.
               </p>
             </motion.div>
           </div>
