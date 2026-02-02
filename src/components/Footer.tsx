@@ -148,9 +148,11 @@ const Footer = () => {
                 </span>
               ))}
             </div>
-            <p className="text-sm text-muted-foreground uppercase tracking-wider">
-              INTRAO TECH © 2025
-            </p>
+            <div className="text-sm text-muted-foreground text-center md:text-right">
+              <p className="uppercase tracking-wider">INTRAO TECH LTD © {new Date().getFullYear()}</p>
+              <p>Registered in England. Company Number: 16900600</p>
+              <p>124 City Road, London, EC1V 2NX</p>
+            </div>
           </div>
         </div>
       </div>
