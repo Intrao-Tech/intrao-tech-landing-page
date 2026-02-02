@@ -21,7 +21,7 @@ const ChallengesSection = () => {
       question:
         "Your product needs to scale, but your user experience is holding you back?",
       answer:
-        "As a digital product design agency, we know seamless scaling starts with consistency. We implement design systems and optimize your UX to keep users engaged—ensuring rapid growth doesn't compromise quality.",
+        "As a digital product dev & design agency, we know seamless scaling starts with consistency. We implement design systems and optimize your UX to keep users engaged—ensuring rapid growth doesn't compromise quality.",
       cta: "Redesign My Product",
       href: "/services",
       image: artemImg,
