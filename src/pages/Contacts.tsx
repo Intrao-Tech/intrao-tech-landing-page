@@ -7,6 +7,7 @@ import { useState } from "react";
 import { ArrowRight, Linkedin } from "lucide-react";
 import ukFlag from "@/assets/flag-united-kingdom.svg";
 import antonPhoto from "@/assets/anton.jpg";
+import ihorPhoto from "@/assets/ihor.jpeg";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { ArrowLink } from "@/components/ui/arrow-link";
@@ -110,15 +111,18 @@ const Contacts = () => {
         {/* Contact Form Section */}
         <section data-header-theme="dark" className="relative z-10 bg-dark text-dark-foreground pb-24 lg:pb-32">
           <div className="container mx-auto px-6">
-            <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] border-t border-dark-muted/30">
+          <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] border-t border-dark-muted/30">
               {/* Form */}
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
-                className="pt-12 lg:pr-12 lg:border-r lg:border-dark-muted/30"
+                className="pt-12 lg:pr-12"
               >
+                <p className="text-sm text-dark-muted uppercase mt-2 mb-6">
+                  Free consultation · We respond within 1 hour
+                </p>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                     <div>
@@ -216,24 +220,24 @@ const Contacts = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="border-t border-dark-muted/30 lg:border-t-0"
+                className="border-t border-dark-muted/30 lg:border-t-0 lg:border-l lg:border-dark-muted/30"
               >
                 <div className="pt-12 lg:pl-12">
-                  <h3 className="heading-4 mb-8 text-dark-foreground">
-                    Have a project to discuss?
-                  </h3>
+                  <p className="text-sm uppercase text-dark-muted mb-4">
+                    Have a partnership in mind?
+                  </p>
                   <div className="flex items-start gap-4">
                     <div className="w-20 h-20 bg-muted rounded-lg overflow-hidden flex-shrink-0">
                       <img
                         src={antonPhoto}
-                        alt="Anton Palmer"
+                        alt="Anton Muliavchyk"
                         className="w-full h-full object-cover"
                       />
                     </div>
                     <div className="flex-1">
                       <div className="flex items-start justify-between">
                         <div>
-                          <p className="font-semibold text-dark-foreground">Anton Palmer</p>
+                          <p className="font-semibold text-dark-foreground">Anton Muliavchyk</p>
                           <p className="text-sm text-dark-muted">Co-Founder & CEO</p>
                         </div>
                         <Button asChild variant="icon-dark" size="icon-sm" className="!h-8 !w-8">
@@ -245,6 +249,36 @@ const Contacts = () => {
                       <ArrowLink href="mailto:info@intrao.tech" variant="light" showArrow={false} className="mt-3">
                         INFO@INTRAO.TECH
                       </ArrowLink>
+                    </div>
+                  </div>
+                  <div className="border-t border-dark-muted/30 mt-6 pt-6">
+                    <p className="text-sm uppercase text-dark-muted mb-4">
+                      Have a project to discuss?
+                    </p>
+                    <div className="flex items-start gap-4">
+                      <div className="w-20 h-20 bg-muted rounded-lg overflow-hidden flex-shrink-0">
+                        <img
+                          src={ihorPhoto}
+                          alt="Ihor Muliar"
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <div className="flex-1">
+                        <div className="flex items-start justify-between">
+                          <div>
+                            <p className="font-semibold text-dark-foreground">Ihor Muliar</p>
+                            <p className="text-sm text-dark-muted">Co-Founder & CPO</p>
+                          </div>
+                          <Button asChild variant="icon-dark" size="icon-sm" className="!h-8 !w-8">
+                            <a href="https://www.linkedin.com/in/ihor-muliar/" target="_blank" rel="noopener noreferrer">
+                              <Linkedin />
+                            </a>
+                          </Button>
+                        </div>
+                        <ArrowLink href="mailto:info@intrao.tech" variant="light" showArrow={false} className="mt-3">
+                          INFO@INTRAO.TECH
+                        </ArrowLink>
+                      </div>
                     </div>
                   </div>
                 </div>

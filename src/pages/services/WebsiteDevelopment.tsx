@@ -5,7 +5,14 @@ import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ButtonArrows } from "@/components/ui/button-arrows";
-import { Globe, Lightbulb, TrendingUp, Smile, Users, BadgeCheck } from "lucide-react";
+import {
+  Globe,
+  Lightbulb,
+  TrendingUp,
+  Smile,
+  Users,
+  BadgeCheck,
+} from "lucide-react";
 
 const WebsiteDevelopment = () => {
   const challenges = [
@@ -133,15 +140,13 @@ const WebsiteDevelopment = () => {
       number: "02",
       title: "Design & Prototyping",
       subtitle: "Information architecture and responsive UX/UI",
-      description:
-        "Component libraries and interactive prototypes for review.",
+      description: "Component libraries and interactive prototypes for review.",
     },
     {
       number: "03",
       title: "Backend Architecture",
       subtitle: "Server setup and database structure",
-      description:
-        "API integration and deployment pipelines configuration.",
+      description: "API integration and deployment pipelines configuration.",
     },
     {
       number: "04",
@@ -154,8 +159,7 @@ const WebsiteDevelopment = () => {
       number: "05",
       title: "QA & Testing",
       subtitle: "Functional testing and cross-browser validation",
-      description:
-        "Accessibility audits and security testing before launch.",
+      description: "Accessibility audits and security testing before launch.",
     },
     {
       number: "06",
@@ -207,7 +211,10 @@ const WebsiteDevelopment = () => {
 
       <main>
         {/* Hero Section */}
-        <section data-header-theme="dark" className="bg-dark text-dark-foreground pt-32 pb-20">
+        <section
+          data-header-theme="dark"
+          className="bg-dark text-dark-foreground pt-32 pb-20"
+        >
           <div className="container mx-auto px-6">
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -273,7 +280,10 @@ const WebsiteDevelopment = () => {
         </section>
 
         {/* Challenges Section */}
-        <section data-header-theme="light" className="bg-background text-foreground py-24">
+        <section
+          data-header-theme="light"
+          className="bg-background text-foreground py-24"
+        >
           <div className="container mx-auto px-6">
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -308,9 +318,7 @@ const WebsiteDevelopment = () => {
                   <p className="text-lg text-muted-foreground">
                     {challenge.question}
                   </p>
-                  <p className="text-lg leading-relaxed">
-                    {challenge.answer}
-                  </p>
+                  <p className="text-lg leading-relaxed">{challenge.answer}</p>
                 </motion.div>
               ))}
             </div>
@@ -318,7 +326,10 @@ const WebsiteDevelopment = () => {
         </section>
 
         {/* Services Offered Section */}
-        <section data-header-theme="dark" className="bg-dark text-dark-foreground py-24">
+        <section
+          data-header-theme="dark"
+          className="bg-dark text-dark-foreground py-24"
+        >
           <div className="container mx-auto px-6">
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -348,7 +359,8 @@ const WebsiteDevelopment = () => {
               className="text-lg text-dark-muted max-w-3xl mb-16"
             >
               We create custom solutions that captivate audiences and boost
-              functionality using advanced technologies and user-centric design.
+              functionality using advanced technologies and user-friendly
+              design.
             </motion.p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -367,7 +379,9 @@ const WebsiteDevelopment = () => {
                   <h3 className="text-xl font-semibold mt-4 mb-3">
                     {service.title}
                   </h3>
-                  <p className="text-dark-muted leading-relaxed">{service.description}</p>
+                  <p className="text-dark-muted leading-relaxed">
+                    {service.description}
+                  </p>
                 </motion.div>
               ))}
             </div>
@@ -375,7 +389,10 @@ const WebsiteDevelopment = () => {
         </section>
 
         {/* Benefits Section */}
-        <section data-header-theme="dark" className="bg-dark text-dark-foreground py-24">
+        <section
+          data-header-theme="dark"
+          className="bg-dark text-dark-foreground py-24"
+        >
           <div className="container mx-auto px-6">
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
@@ -397,9 +414,14 @@ const WebsiteDevelopment = () => {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="p-8 border border-dark-muted/30 rounded-lg"
                 >
-                  <item.icon className="w-8 h-8 text-dark-muted mb-8" strokeWidth={1.5} />
+                  <item.icon
+                    className="w-8 h-8 text-dark-muted mb-8"
+                    strokeWidth={1.5}
+                  />
                   <h3 className="text-xl font-semibold mb-4">{item.title}</h3>
-                  <p className="text-dark-muted leading-relaxed">{item.description}</p>
+                  <p className="text-dark-muted leading-relaxed">
+                    {item.description}
+                  </p>
                 </motion.div>
               ))}
             </div>
@@ -407,7 +429,10 @@ const WebsiteDevelopment = () => {
         </section>
 
         {/* Tech Stack Section */}
-        <section data-header-theme="dark" className="bg-dark text-dark-foreground py-24">
+        <section
+          data-header-theme="dark"
+          className="bg-dark text-dark-foreground py-24"
+        >
           <div className="container mx-auto px-6">
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -451,9 +476,7 @@ const WebsiteDevelopment = () => {
                   className="p-6 border border-dark-muted/30 rounded-lg"
                 >
                   <h3 className="text-lg font-semibold mb-2">{tech.name}</h3>
-                  <p className="text-dark-muted text-sm">
-                    {tech.description}
-                  </p>
+                  <p className="text-dark-muted text-sm">{tech.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -461,7 +484,10 @@ const WebsiteDevelopment = () => {
         </section>
 
         {/* Process Section */}
-        <section data-header-theme="light" className="bg-background text-foreground py-24">
+        <section
+          data-header-theme="light"
+          className="bg-background text-foreground py-24"
+        >
           <div className="container mx-auto px-6">
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -505,11 +531,17 @@ const WebsiteDevelopment = () => {
                   className="grid grid-cols-1 lg:grid-cols-[200px_1fr] gap-8 py-12 border-t border-border"
                 >
                   <div>
-                    <span className="text-muted-foreground text-sm">{step.title}</span>
+                    <span className="text-muted-foreground text-sm">
+                      {step.title}
+                    </span>
                   </div>
                   <div>
-                    <h3 className="text-2xl md:text-3xl font-bold mb-4">{step.subtitle}</h3>
-                    <p className="text-muted-foreground leading-relaxed max-w-2xl">{step.description}</p>
+                    <h3 className="text-2xl md:text-3xl font-bold mb-4">
+                      {step.subtitle}
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed max-w-2xl">
+                      {step.description}
+                    </p>
                   </div>
                 </motion.div>
               ))}
@@ -518,7 +550,10 @@ const WebsiteDevelopment = () => {
         </section>
 
         {/* Success Section */}
-        <section data-header-theme="light" className="bg-background text-foreground py-24">
+        <section
+          data-header-theme="light"
+          className="bg-background text-foreground py-24"
+        >
           <div className="container mx-auto px-6">
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
@@ -556,7 +591,10 @@ const WebsiteDevelopment = () => {
         </section>
 
         {/* CTA Section */}
-        <section data-header-theme="dark" className="bg-dark text-dark-foreground py-24">
+        <section
+          data-header-theme="dark"
+          className="bg-dark text-dark-foreground py-24"
+        >
           <div className="container mx-auto px-6 text-center">
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
