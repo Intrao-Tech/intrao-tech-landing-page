@@ -26,6 +26,7 @@ import NoCodeDevelopment from "./pages/services/NoCodeDevelopment";
 import BlockchainDevelopment from "./pages/services/BlockchainDevelopment";
 import UXAudit from "./pages/services/UXAudit";
 import ProductDiscovery from "./pages/services/ProductDiscovery";
+import TechnicalWorkshop from "./pages/services/TechnicalWorkshop";
 import TermsOfUse from "./pages/TermsOfUse";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import CookiesPolicy from "./pages/CookiesPolicy";
@@ -63,6 +64,7 @@ const App = () => (
               <Route path="/services/blockchain-development" element={<BlockchainDevelopment />} />
               <Route path="/services/ux-audit" element={<UXAudit />} />
               <Route path="/services/product-discovery" element={<ProductDiscovery />} />
+              <Route path="/services/technical-workshop" element={<TechnicalWorkshop />} />
               <Route path="/terms-of-use" element={<TermsOfUse />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/cookies-policy" element={<CookiesPolicy />} />

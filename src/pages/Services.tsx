@@ -70,7 +70,7 @@ const Services = () => {
       {
         name: "Technical workshop",
         description: "Validate your tech stack, architecture, and scalability path.",
-        link: "/contacts",
+        link: "/services/technical-workshop",
       },
       {
         name: "Custom MVP development",
@@ -127,7 +127,7 @@ const Services = () => {
       {
         name: "Technical workshop",
         description: "Validate your tech stack, architecture, and scalability path.",
-        link: "/contacts",
+        link: "/services/technical-workshop",
       },
     ],
     design: [
