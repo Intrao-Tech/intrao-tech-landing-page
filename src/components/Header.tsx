@@ -43,7 +43,7 @@ const Header = () => {
   }, [location]);
 
   const navLinks = [
-    { name: "Services", href: "#", hasDropdown: true, dropdownType: "services" },
+    { name: "Services", href: "/services", hasDropdown: true, dropdownType: "services" },
     { name: "Cases", href: "/cases" },
     { name: "Company", href: "#", hasDropdown: true, dropdownType: "company" },
     { name: "Insights", href: "/insights" },
@@ -164,7 +164,7 @@ const Header = () => {
           <nav className="hidden lg:flex items-center gap-8">
             {navLinks.map((link, index) => {
               const isServicesActive = link.dropdownType === "services" &&
-                (location.pathname.startsWith("/services/") || isServicesDropdownOpen);
+                (location.pathname === "/services" || location.pathname.startsWith("/services/") || isServicesDropdownOpen);
               const isCompanyActive = link.dropdownType === "company" &&
                 ["/about", "/team", "/careers"].includes(location.pathname);
               const isDropdownOpen = link.dropdownType === "services"
@@ -196,7 +196,8 @@ const Header = () => {
                   }}
                 >
                   {link.hasDropdown ? (
-                    <button
+                    <Link
+                      to={link.href}
                       className={`flex items-center gap-1 text-sm font-medium uppercase tracking-wider transition-colors duration-300 ${
                         isServicesActive || isCompanyActive
                           ? "text-primary"
@@ -211,7 +212,7 @@ const Header = () => {
                           isDropdownOpen ? "rotate-180" : ""
                         }`}
                       />
-                    </button>
+                    </Link>
                   ) : (
                     <Link
                       to={link.href}
@@ -439,23 +440,34 @@ const Header = () => {
                     {link.hasDropdown ? (
                       link.dropdownType === "services" ? (
                         <div>
-                          <button
-                            onClick={() => setIsMobileServicesExpanded(!isMobileServicesExpanded)}
-                            className={`flex items-center gap-2 text-2xl font-semibold uppercase tracking-wider transition-colors duration-300 ${
-                              location.pathname.startsWith("/services/")
-                                ? "text-primary"
-                                : isLight
+                          <div className="flex items-center gap-2">
+                            <Link
+                              to="/services"
+                              className={`text-2xl font-semibold uppercase tracking-wider transition-colors duration-300 ${
+                                location.pathname === "/services" || location.pathname.startsWith("/services/")
+                                  ? "text-primary"
+                                  : isLight
+                                    ? "text-foreground hover:text-primary"
+                                    : "text-dark-foreground hover:text-primary"
+                              }`}
+                            >
+                              {link.name}
+                            </Link>
+                            <button
+                              onClick={() => setIsMobileServicesExpanded(!isMobileServicesExpanded)}
+                              className={`p-1 transition-colors duration-300 ${
+                                isLight
                                   ? "text-foreground hover:text-primary"
                                   : "text-dark-foreground hover:text-primary"
-                            }`}
-                          >
-                            {link.name}
-                            <ChevronDown
-                              className={`w-5 h-5 transition-transform duration-300 ${
-                                isMobileServicesExpanded ? "rotate-180" : ""
                               }`}
-                            />
-                          </button>
+                            >
+                              <ChevronDown
+                                className={`w-5 h-5 transition-transform duration-300 ${
+                                  isMobileServicesExpanded ? "rotate-180" : ""
+                                }`}
+                              />
+                            </button>
+                          </div>
                           <AnimatePresence>
                             {isMobileServicesExpanded && (
                               <motion.div

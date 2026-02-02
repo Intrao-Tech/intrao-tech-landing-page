@@ -60,7 +60,7 @@ const ParallaxHeroSection = () => {
   const stats = [
     { value: "98", suffix: "%", label: "Customer satisfaction rate" },
     { value: "35", suffix: "%+", label: "Boost in conversions after redesign" },
-    { value: "6", suffix: "+", label: "Years delivering excellence" },
+    { value: "3", suffix: "+", label: "Years delivering excellence" },
     { value: "100", suffix: "+", label: "Projects delivered successfully" },
   ];
 
