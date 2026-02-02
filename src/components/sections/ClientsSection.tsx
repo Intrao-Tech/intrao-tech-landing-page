@@ -192,33 +192,36 @@ const ClientCard = ({ client, index }: ClientCardProps) => {
 
 const ClientsSection = () => {
   return (
-    <section data-header-theme="light" className="relative z-10 bg-background text-foreground py-20 overflow-hidden rounded-t-[60px] -mt-16">
-      <div className="container mx-auto px-6 mb-12">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="flex flex-col gap-4"
-        >
-          <p className="label text-muted-foreground">
-            Product Design and Development Agency
-          </p>
-          <h2 className="heading-1 text-foreground">
-            Our featured client wins
-          </h2>
-        </motion.div>
-      </div>
-
-      {/* Client Grid */}
-      <div className="container mx-auto px-6">
-        <div className="grid grid-cols-2 md:grid-cols-4">
-          {clients.map((client, index) => (
-            <ClientCard key={client.id} client={client} index={index} />
-          ))}
+    <>
+      {/*
+      <section data-header-theme="light" className="relative z-10 bg-background text-foreground py-20 overflow-hidden rounded-t-[60px] -mt-16">
+        <div className="container mx-auto px-6 mb-12">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="flex flex-col gap-4"
+          >
+            <p className="label text-muted-foreground">
+              Product Design and Development Agency
+            </p>
+            <h2 className="heading-1 text-foreground">
+              Our featured client wins
+            </h2>
+          </motion.div>
         </div>
-      </div>
-    </section>
+
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-2 md:grid-cols-4">
+            {clients.map((client, index) => (
+              <ClientCard key={client.id} client={client} index={index} />
+            ))}
+          </div>
+        </div>
+      </section>
+      */}
+    </>
   );
 };
 
