@@ -273,6 +273,7 @@ const About = () => {
         </section>
 
         {/* Reviews Section */}
+        {false && (
         <section data-header-theme="dark" className="relative z-10 bg-dark text-dark-foreground py-24">
           {/* Top curve */}
           <div className="absolute top-[1px] left-0 w-full -translate-y-full pointer-events-none z-20">
@@ -375,6 +376,7 @@ const About = () => {
             </Carousel>
           </div>
         </section>
+        )}
 
         {/* Get a Quote CTA */}
         <section data-header-theme="dark" className="bg-dark text-dark-foreground py-12 -mt-[1px] -mb-[1px]">
