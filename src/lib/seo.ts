@@ -4,7 +4,7 @@ export const SITE_CONFIG = {
   defaultTitle: "Intrao Tech | Founder-Led Dev & Design Studio for Startups",
   defaultDescription:
     "Your dev team, without the payroll. Founder-led studio building MVPs, apps, and websites for high-velocity startups. One partner, no handoffs.",
-  twitterHandle: "@IntraoTech",
+  twitterHandle: "@Intrao_Tech",
   ogImage: "/og-image.png",
 } as const;
 

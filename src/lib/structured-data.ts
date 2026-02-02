@@ -32,8 +32,12 @@ export function generateOrganizationSchema() {
       { "@type": "Country", name: "United States" },
     ],
     sameAs: [
-      "https://twitter.com/IntraoTech",
       "https://www.linkedin.com/company/intrao-tech",
+      "https://x.com/Intrao_Tech",
+      "https://www.instagram.com/intrao.tech/",
+      "https://www.threads.com/@intrao.tech",
+      "https://www.behance.net/intraotech",
+      "https://dribbble.com/intrao-tech",
     ],
     contactPoint: [
       {
