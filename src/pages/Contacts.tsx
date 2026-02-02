@@ -253,11 +253,11 @@ const Contacts = () => {
           </div>
 
           {/* Bottom curve */}
-          <div className="absolute bottom-0 left-0 w-full translate-y-full pointer-events-none z-20">
+          <div className="absolute bottom-[1px] left-0 w-full translate-y-full pointer-events-none z-20">
             <svg
               viewBox="0 0 1440 120"
               preserveAspectRatio="none"
-              className="w-full h-[60px] md:h-[80px] lg:h-[100px]"
+              className="block w-full h-[60px] md:h-[80px] lg:h-[100px]"
             >
               <path
                 className="fill-dark"

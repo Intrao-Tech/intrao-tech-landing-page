@@ -164,9 +164,9 @@ const About = () => {
         </section>
 
         {/* Wave Divider */}
-        <div className="bg-dark">
+        <div className="bg-dark -mt-[1px] -mb-[1px]">
           <svg
-            className="w-full h-[80px] md:h-[120px] lg:h-[150px]"
+            className="block w-full h-[80px] md:h-[120px] lg:h-[150px]"
             viewBox="0 0 1440 150"
             preserveAspectRatio="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -275,11 +275,11 @@ const About = () => {
         {/* Reviews Section */}
         <section data-header-theme="dark" className="relative z-10 bg-dark text-dark-foreground py-24">
           {/* Top curve */}
-          <div className="absolute top-0 left-0 w-full -translate-y-full pointer-events-none z-20">
+          <div className="absolute top-[1px] left-0 w-full -translate-y-full pointer-events-none z-20">
             <svg
               viewBox="0 0 1440 120"
               preserveAspectRatio="none"
-              className="w-full h-[60px] md:h-[80px] lg:h-[100px]"
+              className="block w-full h-[60px] md:h-[80px] lg:h-[100px]"
             >
               <path
                 className="fill-dark"
@@ -377,7 +377,7 @@ const About = () => {
         </section>
 
         {/* Get a Quote CTA */}
-        <section data-header-theme="dark" className="bg-dark text-dark-foreground py-12">
+        <section data-header-theme="dark" className="bg-dark text-dark-foreground py-12 -mt-[1px] -mb-[1px]">
           <div className="container mx-auto px-6">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -409,11 +409,11 @@ const About = () => {
         {/* Awards Section */}
         <section data-header-theme="dark" className="relative z-10 bg-dark text-dark-foreground py-24">
           {/* Bottom curve */}
-          <div className="absolute bottom-0 left-0 w-full translate-y-full pointer-events-none z-20">
+          <div className="absolute bottom-[1px] left-0 w-full translate-y-full pointer-events-none z-20">
             <svg
               viewBox="0 0 1440 120"
               preserveAspectRatio="none"
-              className="w-full h-[60px] md:h-[80px] lg:h-[100px]"
+              className="block w-full h-[60px] md:h-[80px] lg:h-[100px]"
             >
               <path
                 className="fill-dark"
