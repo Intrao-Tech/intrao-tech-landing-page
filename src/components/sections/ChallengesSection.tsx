@@ -9,15 +9,17 @@ import ihorImg from "@/assets/ihor.jpeg";
 const ChallengesSection = () => {
   const challenges = [
     {
-      question: "Need to meet tight deadlines but don't have enough hands on deck?",
+      question:
+        "Need to meet tight deadlines but don't have enough hands on deck?",
       answer:
-        "Hiring in-house takes time—posting jobs, sorting resumes, and onboarding. We can get you a dedicated designer or developer ready to start tomorrow, helping you hit your deadlines without the wait.",
+        "Hiring in-house takes time - posting jobs, sorting resumes, and onboarding. We can get you a dedicated designer or developer ready to start tomorrow, helping you hit your deadlines without the wait.",
       cta: "Extend My Team",
       href: "/services",
       image: antonImg,
     },
     {
-      question: "Your product needs to scale, but your user experience is holding you back?",
+      question:
+        "Your product needs to scale, but your user experience is holding you back?",
       answer:
         "As a digital product design agency, we know seamless scaling starts with consistency. We implement design systems and optimize your UX to keep users engaged—ensuring rapid growth doesn't compromise quality.",
       cta: "Redesign My Product",
@@ -35,7 +37,10 @@ const ChallengesSection = () => {
   ];
 
   return (
-    <section data-header-theme="light" className="bg-background text-foreground">
+    <section
+      data-header-theme="light"
+      className="bg-background text-foreground"
+    >
       {/* Section Header */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
