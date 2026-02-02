@@ -404,7 +404,7 @@ const WebAppDesign = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="p-8 border-t border-l border-dark-muted/30 first:border-l-0 [&:nth-child(3n+1)]:border-l-0 [&:nth-child(-n+3)]:border-t-0 md:[&:nth-child(3)]:border-t md:[&:nth-child(-n+2)]:border-t-0 md:[&:nth-child(2n+1)]:border-l-0 md:[&:nth-child(3n+1)]:border-l lg:[&:nth-child(2n+1)]:border-l lg:[&:nth-child(3n+1)]:border-l-0 lg:[&:nth-child(-n+3)]:border-t-0"
+                  className="p-8 border-t border-l border-dark-muted/30 first:border-l-0 [&:nth-child(3n+1)]:border-l-0 [&:nth-child(-n+3)]:border-t-0 md:[&:nth-child(-n+2)]:border-t-0 md:[&:nth-child(2n+1)]:border-l-0 md:[&:nth-child(3n+1)]:border-l lg:[&:nth-child(2n+1)]:border-l lg:[&:nth-child(3n+1)]:border-l-0 lg:[&:nth-child(-n+3)]:border-t-0"
                 >
                   <span className="text-dark-muted text-sm">
                     {industry.number}
