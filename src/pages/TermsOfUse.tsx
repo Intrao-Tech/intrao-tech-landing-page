@@ -65,7 +65,7 @@ const TermsOfUse = () => {
                     <a href="mailto:info@intrao.tech" className="text-primary hover:underline">
                       info@intrao.tech
                     </a>{" "}
-                    or by mail to 123 Tech Avenue, Suite 500, NY 10001, United States.
+                    or by mail to 124 City Rd, London EC1V 2NX, UK.
                   </p>
                   <p>
                     These Legal Terms constitute a legally binding agreement made between you, whether personally or on behalf of an entity ("you"), and Intrao Tech, concerning your access to and use of the Services. You agree that by accessing the Services, you have read, understood, and agreed to be bound by all of these Legal Terms. IF YOU DO NOT AGREE WITH ALL OF THESE LEGAL TERMS, THEN YOU ARE EXPRESSLY PROHIBITED FROM USING THE SERVICES AND YOU MUST DISCONTINUE USE IMMEDIATELY.
@@ -88,7 +88,7 @@ const TermsOfUse = () => {
                     The information provided when using the Services is not intended for distribution to or use by any person or entity in any jurisdiction or country where such distribution or use would be contrary to law or regulation or which would subject us to any registration requirement within such jurisdiction or country. Accordingly, those persons who choose to access the Services from other locations do so on their own initiative and are solely responsible for compliance with local laws, if and to the extent local laws are applicable.
                   </p>
                   <p>
-                    The Services are not tailored to comply with industry-specific regulations (Health Insurance Portability and Accountability Act (HIPAA), Federal Information Security Management Act (FISMA), etc.), so if your interactions would be subjected to such laws, you may not use the Services. You may not use the Services in a way that would violate the Gramm-Leach-Bliley Act (GLBA).
+                    The Services are not tailored to comply with industry-specific regulations, so if your interactions would be subjected to such laws, you may not use the Services.
                   </p>
                 </div>
 
@@ -170,7 +170,7 @@ const TermsOfUse = () => {
                   <h3 className="text-xl font-bold uppercase">4. Purchases and Payment</h3>
                   <p>We accept the following forms of payment:</p>
                   <p>
-                    You agree to provide current, complete, and accurate purchase and account information for all purchases made via the Services. You further agree to promptly update account and payment information, including email address, payment method, and payment card expiration date, so that we can complete your transactions and contact you as needed. Sales tax will be added to the price of purchases as deemed required by us. We may change prices at any time. All payments shall be in USD.
+                    You agree to provide current, complete, and accurate purchase and account information for all purchases made via the Services. You further agree to promptly update account and payment information, including email address, payment method, and payment card expiration date, so that we can complete your transactions and contact you as needed. VAT will be added to the price of purchases as required by law. We may change prices at any time. All payments shall be in GBP unless otherwise agreed.
                   </p>
                   <p>
                     You agree to pay all charges at the prices then in effect for your purchases and any applicable shipping fees, and you authorize us to charge your chosen payment provider for any such amounts upon placing your order. We reserve the right to correct any errors or mistakes in pricing, even if we have already requested or received payment.
@@ -260,7 +260,7 @@ const TermsOfUse = () => {
                 <div className="space-y-4">
                   <h3 className="text-xl font-bold uppercase">11. Privacy Policy</h3>
                   <p>
-                    We care about data privacy and security. By using the Services, you agree to be bound by our Privacy Policy posted on the Services, which is incorporated into these Legal Terms. Please be advised the Services are hosted in the United States. If you access the Services from any other region of the world with laws or other requirements governing personal data collection, use, or disclosure that differ from applicable laws in the United States, then through your continued use of the Services, you are transferring your data to the United States, and you expressly consent to have your data transferred to and processed in the United States.
+                    We care about data privacy and security. By using the Services, you agree to be bound by our Privacy Policy posted on the Services, which is incorporated into these Legal Terms. Please be advised the Services are hosted in the United Kingdom and the European Economic Area. Your data is processed in accordance with the UK GDPR and EU GDPR.
                   </p>
                 </div>
 
@@ -290,7 +290,7 @@ const TermsOfUse = () => {
                 <div className="space-y-4">
                   <h3 className="text-xl font-bold uppercase">14. Governing Law</h3>
                   <p>
-                    These Legal Terms shall be governed by and defined following the laws of the United States and the State of New York. Intrao Tech and yourself irrevocably consent that the courts of New York shall have exclusive jurisdiction to resolve any dispute which may arise in connection with these Legal Terms.
+                    These Legal Terms shall be governed by and construed in accordance with the laws of England and Wales. Intrao Tech and yourself irrevocably consent that the courts of England and Wales shall have exclusive jurisdiction to resolve any dispute which may arise in connection with these Legal Terms.
                   </p>
                 </div>
 
@@ -364,31 +364,23 @@ const TermsOfUse = () => {
 
                 {/* Section 22 */}
                 <div className="space-y-4">
-                  <h3 className="text-xl font-bold uppercase">22. California Users and Residents</h3>
-                  <p>
-                    If any complaint with us is not satisfactorily resolved, you can contact the Complaint Assistance Unit of the Division of Consumer Services of the California Department of Consumer Affairs in writing at 1625 North Market Blvd., Suite N 112, Sacramento, California 95834 or by telephone at (800) 952-5210 or (916) 445-1254.
-                  </p>
-                </div>
-
-                {/* Section 23 */}
-                <div className="space-y-4">
-                  <h3 className="text-xl font-bold uppercase">23. Miscellaneous</h3>
+                  <h3 className="text-xl font-bold uppercase">22. Miscellaneous</h3>
                   <p>
                     These Legal Terms and any policies or operating rules posted by us on the Services or in respect to the Services constitute the entire agreement and understanding between you and us. Our failure to exercise or enforce any right or provision of these Legal Terms shall not operate as a waiver of such right or provision. These Legal Terms operate to the fullest extent permissible by law. We may assign any or all of our rights and obligations to others at any time. We shall not be responsible or liable for any loss, damage, delay, or failure to act caused by any cause beyond our reasonable control. If any provision or part of a provision of these Legal Terms is determined to be unlawful, void, or unenforceable, that provision or part of the provision is deemed severable from these Legal Terms and does not affect the validity and enforceability of any remaining provisions. There is no joint venture, partnership, employment or agency relationship created between you and us as a result of these Legal Terms or use of the Services. You agree that these Legal Terms will not be construed against us by virtue of having drafted them. You hereby waive any and all defenses you may have based on the electronic form of these Legal Terms and the lack of signing by the parties hereto to execute these Legal Terms.
                   </p>
                 </div>
 
-                {/* Section 24 */}
+                {/* Section 23 */}
                 <div className="space-y-4">
-                  <h3 className="text-xl font-bold uppercase">24. Contact Us</h3>
+                  <h3 className="text-xl font-bold uppercase">23. Contact Us</h3>
                   <p>
                     In order to resolve a complaint regarding the Services or to receive further information regarding use of the Services, please contact us at:
                   </p>
                   <address className="not-italic">
                     <p className="font-semibold">Intrao Tech</p>
-                    <p>123 Tech Avenue, Suite 500</p>
-                    <p>New York, NY 10001</p>
-                    <p>United States</p>
+                    <p>124 City Rd</p>
+                    <p>London EC1V 2NX</p>
+                    <p>United Kingdom</p>
                     <p className="mt-2">
                       <a href="mailto:info@intrao.tech" className="text-primary hover:underline">
                         info@intrao.tech

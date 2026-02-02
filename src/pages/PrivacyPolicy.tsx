@@ -417,328 +417,7 @@ const PrivacyPolicy = () => {
 
                 {/* Section 10 */}
                 <div className="space-y-6">
-                  <h3 className="text-xl font-bold uppercase">10. Do United States Residents Have Specific Privacy Rights?</h3>
-                  <p className="italic text-muted-foreground">
-                    In Short: If you are a resident of Virginia, Utah, Connecticut, Colorado or California, you are granted specific rights regarding access to your personal information.
-                  </p>
-
-                  <h4 className="font-semibold mt-4">What categories of personal information do we collect?</h4>
-                  <p>We have collected the following categories of personal information in the past twelve (12) months:</p>
-
-                  <div className="overflow-x-auto">
-                    <table className="w-full border-collapse text-sm mt-4">
-                      <thead>
-                        <tr className="border-b border-border">
-                          <th className="text-left py-3 pr-4 font-semibold">Category</th>
-                          <th className="text-left py-3 pr-4 font-semibold">Examples</th>
-                          <th className="text-left py-3 font-semibold">Collected</th>
-                        </tr>
-                      </thead>
-                      <tbody className="text-muted-foreground">
-                        <tr className="border-b border-border">
-                          <td className="py-3 pr-4">A. Identifiers</td>
-                          <td className="py-3 pr-4">Contact details, such as real name, alias, postal address, telephone or mobile contact number, unique personal identifier, online identifier, Internet Protocol address, email address, and account name</td>
-                          <td className="py-3">YES</td>
-                        </tr>
-                        <tr className="border-b border-border">
-                          <td className="py-3 pr-4">B. Personal information (California Customer Records)</td>
-                          <td className="py-3 pr-4">Name, contact information, education, employment, employment history, and financial information</td>
-                          <td className="py-3">YES</td>
-                        </tr>
-                        <tr className="border-b border-border">
-                          <td className="py-3 pr-4">C. Protected classification characteristics</td>
-                          <td className="py-3 pr-4">Gender and date of birth</td>
-                          <td className="py-3">YES</td>
-                        </tr>
-                        <tr className="border-b border-border">
-                          <td className="py-3 pr-4">D. Commercial information</td>
-                          <td className="py-3 pr-4">Transaction information, purchase history, financial details, and payment information</td>
-                          <td className="py-3">YES</td>
-                        </tr>
-                        <tr className="border-b border-border">
-                          <td className="py-3 pr-4">E. Biometric information</td>
-                          <td className="py-3 pr-4">Fingerprints and voiceprints</td>
-                          <td className="py-3">NO</td>
-                        </tr>
-                        <tr className="border-b border-border">
-                          <td className="py-3 pr-4">F. Internet or similar network activity</td>
-                          <td className="py-3 pr-4">Browsing history, search history, online behavior, interest data, and interactions with our and other websites, applications, systems, and advertisements</td>
-                          <td className="py-3">YES</td>
-                        </tr>
-                        <tr className="border-b border-border">
-                          <td className="py-3 pr-4">G. Geolocation data</td>
-                          <td className="py-3 pr-4">Device location</td>
-                          <td className="py-3">NO</td>
-                        </tr>
-                        <tr className="border-b border-border">
-                          <td className="py-3 pr-4">H. Audio, electronic, visual, thermal, olfactory, or similar information</td>
-                          <td className="py-3 pr-4">Images and audio, video or call recordings created in connection with our business activities</td>
-                          <td className="py-3">NO</td>
-                        </tr>
-                        <tr className="border-b border-border">
-                          <td className="py-3 pr-4">I. Professional or employment-related information</td>
-                          <td className="py-3 pr-4">Business contact details in order to provide you our Services at a business level or job title, work history, and professional qualifications if you apply for a job with us</td>
-                          <td className="py-3">YES</td>
-                        </tr>
-                        <tr className="border-b border-border">
-                          <td className="py-3 pr-4">J. Education Information</td>
-                          <td className="py-3 pr-4">Student records and directory information</td>
-                          <td className="py-3">NO</td>
-                        </tr>
-                        <tr className="border-b border-border">
-                          <td className="py-3 pr-4">K. Inferences drawn from collected personal information</td>
-                          <td className="py-3 pr-4">Inferences drawn from any of the collected personal information listed above to create a profile or summary about, for example, an individual's preferences and characteristics</td>
-                          <td className="py-3">NO</td>
-                        </tr>
-                        <tr className="border-b border-border">
-                          <td className="py-3 pr-4">L. Sensitive personal Information</td>
-                          <td className="py-3 pr-4"></td>
-                          <td className="py-3">NO</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-
-                  <p className="mt-4">We will use and retain the collected personal information as needed to provide the Services or for:</p>
-                  <ul className="list-disc pl-6 space-y-2">
-                    <li>Category A - As long as the user has an account with us</li>
-                    <li>Category B - As long as the user has an account with us</li>
-                    <li>Category C - As long as the user has an account with us</li>
-                    <li>Category D - As long as the user has an account with us</li>
-                    <li>Category F - As long as the user has an account with us</li>
-                    <li>Category I - As long as the user has an account with us</li>
-                  </ul>
-
-                  <p className="mt-4">We may also collect other personal information outside of these categories through instances where you interact with us in person, online, or by phone or mail in the context of:</p>
-                  <ul className="list-disc pl-6 space-y-2">
-                    <li>Receiving help through our customer support channels;</li>
-                    <li>Participation in customer surveys or contests; and</li>
-                    <li>Facilitation in the delivery of our Services and to respond to your inquiries.</li>
-                  </ul>
-
-                  <h4 className="font-semibold mt-6">How do we use and share your personal information?</h4>
-                  <p>Learn about how we use your personal information in the section, "HOW DO WE PROCESS YOUR INFORMATION?"</p>
-                  <p>We collect and share your personal information through:</p>
-                  <ul className="list-disc pl-6 space-y-2">
-                    <li>Targeting cookies/Marketing cookies</li>
-                    <li>Social media cookies</li>
-                    <li>Beacons/Pixels/Tags</li>
-                  </ul>
-
-                  <h4 className="font-semibold mt-6">Will your information be shared with anyone else?</h4>
-                  <p>
-                    We may disclose your personal information with our service providers pursuant to a written contract between us and each service provider. Learn more about how we disclose personal information to in the section, "WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?"
-                  </p>
-                  <p>
-                    We may use your personal information for our own business purposes, such as for undertaking internal research for technological development and demonstration. This is not considered to be "selling" of your personal information.
-                  </p>
-                  <p>
-                    We have not sold or shared any personal information to third parties for a business or commercial purpose in the preceding twelve (12) months. We have disclosed the following categories of personal information to third parties for a business or commercial purpose in the preceding twelve (12) months:
-                  </p>
-                  <p>
-                    The categories of third parties to whom we disclosed personal information for a business or commercial purpose can be found under "WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?"
-                  </p>
-
-                  <h4 className="font-semibold mt-6">California Residents</h4>
-                  <p>
-                    California Civil Code Section 1798.83, also known as the "Shine The Light" law permits our users who are California residents to request and obtain from us, once a year and free of charge, information about categories of personal information (if any) we disclosed to third parties for direct marketing purposes and the names and addresses of all third parties with which we shared personal information in the immediately preceding calendar year. If you are a California resident and would like to make such a request, please submit your request in writing to us using the contact information provided below.
-                  </p>
-                  <p>
-                    If you are under 18 years of age, reside in California, and have a registered account with the Services, you have the right to request removal of unwanted data that you publicly post on the Services. To request removal of such data, please contact us using the contact information provided below and include the email address associated with your account and a statement that you reside in California. We will make sure the data is not publicly displayed on the Services, but please be aware that the data may not be completely or comprehensively removed from all our systems (e.g., backups, etc.).
-                  </p>
-
-                  <h4 className="font-semibold mt-6">CCPA Privacy Notice</h4>
-                  <p>This section applies only to California residents. Under the California Consumer Privacy Act (CCPA), you have the rights listed below.</p>
-                  <p>The California Code of Regulations defines a "residents" as:</p>
-                  <ul className="list-disc pl-6 space-y-2">
-                    <li>(1) every individual who is in the State of California for other than a temporary or transitory purpose and</li>
-                    <li>(2) every individual who is domiciled in the State of California who is outside the State of California for a temporary or transitory purpose</li>
-                  </ul>
-                  <p>All other individuals are defined as "non-residents."</p>
-                  <p>If this definition of "resident" applies to you, we must adhere to certain rights and obligations regarding your personal information.</p>
-
-                  <h4 className="font-semibold mt-4">Your rights with respect to your personal data</h4>
-                  <p><strong>Right to request deletion of the data - Request to delete</strong></p>
-                  <p>
-                    You can ask for the deletion of your personal information. If you ask us to delete your personal information, we will respect your request and delete your personal information, subject to certain exceptions provided by law, such as (but not limited to) the exercise by another consumer of his or her right to free speech, our compliance requirements resulting from a legal obligation, or any processing that may be required to protect against illegal activities.
-                  </p>
-
-                  <p className="mt-4"><strong>Right to be informed - Request to know</strong></p>
-                  <p>Depending on the circumstances, you have a right to know:</p>
-                  <ul className="list-disc pl-6 space-y-2">
-                    <li>whether we collect and use your personal information;</li>
-                    <li>the categories of personal information that we collect;</li>
-                    <li>the purposes for which the collected personal information is used;</li>
-                    <li>whether we sell or share personal information to third parties;</li>
-                    <li>the categories of personal information that we sold, shared, or disclosed for a business purpose;</li>
-                    <li>the categories of third parties to whom the personal information was sold, shared, or disclosed for a business purpose;</li>
-                    <li>the business or commercial purpose for collecting, selling, or sharing personal information; and</li>
-                    <li>the specific pieces of personal information we collected about you.</li>
-                  </ul>
-                  <p>
-                    In accordance with applicable law, we are not obligated to provide or delete consumer information that is de-identified in response to a consumer request or to re-identify individual data to verify a consumer request.
-                  </p>
-
-                  <p className="mt-4"><strong>Right to Non-Discrimination for the Exercise of a Consumer's Privacy Rights</strong></p>
-                  <p>We will not discriminate against you if you exercise your privacy rights.</p>
-
-                  <p className="mt-4"><strong>Right to Limit Use and Disclosure of Sensitive Personal Information</strong></p>
-                  <p>We do not process consumer's sensitive personal information.</p>
-
-                  <h4 className="font-semibold mt-6">Verification process</h4>
-                  <p>
-                    Upon receiving your request, we will need to verify your identity to determine you are the same person about whom we have the information in our system. These verification efforts require us to ask you to provide information so that we can match it with information you have previously provided us. For instance, depending on the type of request you submit, we may ask you to provide certain information so that we can match the information you provide with the information we already have on file, or we may contact you through a communication method (e.g., phone or email) that you have previously provided to us. We may also use other verification methods as the circumstances dictate.
-                  </p>
-                  <p>
-                    We will only use personal information provided in your request to verify your identity or authority to make the request. To the extent possible, we will avoid requesting additional information from you for the purposes of verification. However, if we cannot verify your identity from the information already maintained by us, we may request that you provide additional information for the purposes of verifying your identity and for security or fraud-prevention purposes. We will delete such additionally provided information as soon as we finish verifying you.
-                  </p>
-
-                  <h4 className="font-semibold mt-6">Other privacy rights</h4>
-                  <ul className="list-disc pl-6 space-y-2">
-                    <li>You may object to the processing of your personal information.</li>
-                    <li>You may request correction of your personal data if it is incorrect or no longer relevant, or ask to restrict the processing of the information.</li>
-                    <li>You can designate an authorized agent to make a request under the CCPA on your behalf. We may deny a request from an authorized agent that does not submit proof that they have been validly authorized to act on your behalf in accordance with the CCPA.</li>
-                    <li>You may request to opt out from future selling or sharing of your personal information to third parties. Upon receiving an opt-out request, we will act upon the request as soon as feasibly possible, but no later than fifteen (15) days from the date of the request submission.</li>
-                  </ul>
-                  <p>
-                    To exercise these rights, you can contact us by submitting a data subject access request, by visiting{" "}
-                    <a href="/contacts" className="text-primary hover:underline">
-                      our contact page
-                    </a>
-                    , or by referring to the contact details at the bottom of this document. If you have a complaint about how we handle your data, we would like to hear from you.
-                  </p>
-
-                  <h4 className="font-semibold mt-6">Colorado Residents</h4>
-                  <p>
-                    This section applies only to Colorado residents. Under the Colorado Privacy Act (CPA), you have the rights listed below. However, these rights are not absolute, and in certain cases, we may decline your request as permitted by law.
-                  </p>
-                  <ul className="list-disc pl-6 space-y-2">
-                    <li>Right to be informed whether or not we are processing your personal data</li>
-                    <li>Right to access your personal data</li>
-                    <li>Right to correct inaccuracies in your personal data</li>
-                    <li>Right to request deletion of your personal data</li>
-                    <li>Right to obtain a copy of the personal data you previously shared with us</li>
-                    <li>Right to opt out of the processing of your personal data if it is used for targeted advertising, the sale of personal data, or profiling in furtherance of decisions that produce legal or similarly significant effects ("profiling")</li>
-                  </ul>
-                  <p>
-                    To submit a request to exercise these rights described above, please email{" "}
-                    <a href="mailto:info@intrao.tech" className="text-primary hover:underline">
-                      info@intrao.tech
-                    </a>
-                    {" "}or submit a data subject access request.
-                  </p>
-                  <p>
-                    If we decline to take action regarding your request and you wish to appeal our decision, please email us at{" "}
-                    <a href="mailto:info@intrao.tech" className="text-primary hover:underline">
-                      info@intrao.tech
-                    </a>
-                    . Within forty-five (45) days of receipt of an appeal, we will inform you in writing of any action taken or not taken in response to the appeal, including a written explanation of the reasons for the decisions.
-                  </p>
-
-                  <h4 className="font-semibold mt-6">Connecticut Residents</h4>
-                  <p>
-                    This section applies only to Connecticut residents. Under the Connecticut Data Privacy Act (CTDPA), you have the rights listed below. However, these rights are not absolute, and in certain cases, we may decline your request as permitted by law.
-                  </p>
-                  <ul className="list-disc pl-6 space-y-2">
-                    <li>Right to be informed whether or not we are processing your personal data</li>
-                    <li>Right to access your personal data</li>
-                    <li>Right to correct inaccuracies in your personal data</li>
-                    <li>Right to request deletion of your personal data</li>
-                    <li>Right to obtain a copy of the personal data you previously shared with us</li>
-                    <li>Right to opt out of the processing of your personal data if it is used for targeted advertising, the sale of personal data, or profiling in furtherance of decisions that produce legal or similarly significant effects ("profiling")</li>
-                  </ul>
-                  <p>
-                    To submit a request to exercise these rights described above, please email{" "}
-                    <a href="mailto:info@intrao.tech" className="text-primary hover:underline">
-                      info@intrao.tech
-                    </a>
-                    {" "}or submit a data subject access request.
-                  </p>
-                  <p>
-                    If we decline to take action regarding your request and you wish to appeal our decision, please email us at{" "}
-                    <a href="mailto:info@intrao.tech" className="text-primary hover:underline">
-                      info@intrao.tech
-                    </a>
-                    . Within sixty (60) days of receipt of an appeal, we will inform you in writing of any action taken or not taken in response to the appeal, including a written explanation of the reasons for the decisions.
-                  </p>
-
-                  <h4 className="font-semibold mt-6">Utah Residents</h4>
-                  <p>
-                    This section applies only to Utah residents. Under the Utah Consumer Privacy Act (UCPA), you have the rights listed below. However, these rights are not absolute, and in certain cases, we may decline your request as permitted by law.
-                  </p>
-                  <ul className="list-disc pl-6 space-y-2">
-                    <li>Right to be informed whether or not we are processing your personal data</li>
-                    <li>Right to access your personal data</li>
-                    <li>Right to request deletion of your personal data</li>
-                    <li>Right to obtain a copy of the personal data you previously shared with us</li>
-                    <li>Right to opt out of the processing of your personal data if it is used for targeted advertising or the sale of personal data</li>
-                  </ul>
-                  <p>
-                    To submit a request to exercise these rights described above, please email{" "}
-                    <a href="mailto:info@intrao.tech" className="text-primary hover:underline">
-                      info@intrao.tech
-                    </a>
-                    {" "}or submit a data subject access request.
-                  </p>
-
-                  <h4 className="font-semibold mt-6">Virginia Residents</h4>
-                  <p>Under the Virginia Consumer Data Protection Act (VCDPA):</p>
-                  <p>
-                    "Consumer" means a natural person who is a resident of the Commonwealth acting only in an individual or household context. It does not include a natural person acting in a commercial or employment context.
-                  </p>
-                  <p>
-                    "Personal data" means any information that is linked or reasonably linkable to an identified or identifiable natural person. "Personal data" does not include de-identified data or publicly available information.
-                  </p>
-                  <p>
-                    "Sale of personal data" means the exchange of personal data for monetary consideration.
-                  </p>
-                  <p>
-                    If this definition of "consumer" applies to you, we must adhere to certain rights and obligations regarding your personal data.
-                  </p>
-
-                  <p className="mt-4"><strong>Your rights with respect to your personal data</strong></p>
-                  <ul className="list-disc pl-6 space-y-2">
-                    <li>Right to be informed whether or not we are processing your personal data</li>
-                    <li>Right to access your personal data</li>
-                    <li>Right to correct inaccuracies in your personal data</li>
-                    <li>Right to request deletion of your personal data</li>
-                    <li>Right to obtain a copy of the personal data you previously shared with us</li>
-                    <li>Right to opt out of the processing of your personal data if it is used for targeted advertising, the sale of personal data, or profiling in furtherance of decisions that produce legal or similarly significant effects ("profiling")</li>
-                  </ul>
-
-                  <p className="mt-4"><strong>Exercise your rights provided under the Virginia VCDPA</strong></p>
-                  <p>
-                    You may contact us by email at{" "}
-                    <a href="mailto:info@intrao.tech" className="text-primary hover:underline">
-                      info@intrao.tech
-                    </a>
-                    {" "}or submit a data subject access request.
-                  </p>
-                  <p>
-                    If you are using an authorized agent to exercise your rights, we may deny a request if the authorized agent does not submit proof that they have been validly authorized to act on your behalf.
-                  </p>
-
-                  <p className="mt-4"><strong>Verification process</strong></p>
-                  <p>
-                    We may request that you provide additional information reasonably necessary to verify you and your consumer's request. If you submit the request through an authorized agent, we may need to collect additional information to verify your identity before processing your request.
-                  </p>
-                  <p>
-                    Upon receiving your request, we will respond without undue delay, but in all cases, within forty-five (45) days of receipt. The response period may be extended once by forty-five (45) additional days when reasonably necessary. We will inform you of any such extension within the initial 45-day response period, together with the reason for the extension.
-                  </p>
-
-                  <p className="mt-4"><strong>Right to appeal</strong></p>
-                  <p>
-                    If we decline to take action regarding your request, we will inform you of our decision and reasoning behind it. If you wish to appeal our decision, please email us at{" "}
-                    <a href="mailto:info@intrao.tech" className="text-primary hover:underline">
-                      info@intrao.tech
-                    </a>
-                    . Within sixty (60) days of receipt of an appeal, we will inform you in writing of any action taken or not taken in response to the appeal, including a written explanation of the reasons for the decisions. If your appeal is denied, you may contact the Attorney General to submit a complaint.
-                  </p>
-                </div>
-
-                {/* Section 11 */}
-                <div className="space-y-6">
-                  <h3 className="text-xl font-bold uppercase">11. Do Other Regions Have Specific Privacy Rights?</h3>
+                  <h3 className="text-xl font-bold uppercase">10. Do Other Regions Have Specific Privacy Rights?</h3>
                   <p className="italic text-muted-foreground">
                     In Short: You may have additional rights based on the country you reside in.
                   </p>
@@ -776,9 +455,9 @@ const PrivacyPolicy = () => {
                   </address>
                 </div>
 
-                {/* Section 12 */}
+                {/* Section 11 */}
                 <div className="space-y-6">
-                  <h3 className="text-xl font-bold uppercase">12. Do We Make Updates to This Notice?</h3>
+                  <h3 className="text-xl font-bold uppercase">11. Do We Make Updates to This Notice?</h3>
                   <p className="italic text-muted-foreground">
                     In Short: Yes, we will update this notice as necessary to stay compliant with relevant laws.
                   </p>
@@ -787,9 +466,9 @@ const PrivacyPolicy = () => {
                   </p>
                 </div>
 
-                {/* Section 13 */}
+                {/* Section 12 */}
                 <div className="space-y-6">
-                  <h3 className="text-xl font-bold uppercase">13. How Can You Contact Us About This Notice?</h3>
+                  <h3 className="text-xl font-bold uppercase">12. How Can You Contact Us About This Notice?</h3>
                   <p>
                     If you have questions or comments about this notice, you may email us at{" "}
                     <a href="mailto:info@intrao.tech" className="text-primary hover:underline">
@@ -799,15 +478,15 @@ const PrivacyPolicy = () => {
                   </p>
                   <address className="not-italic mt-4">
                     <p className="font-semibold">Intrao Tech</p>
-                    <p>123 Tech Avenue, Suite 500</p>
-                    <p>New York, NY 10001</p>
-                    <p>United States</p>
+                    <p>124 City Rd</p>
+                    <p>London EC1V 2NX</p>
+                    <p>United Kingdom</p>
                   </address>
                 </div>
 
-                {/* Section 14 */}
+                {/* Section 13 */}
                 <div className="space-y-6">
-                  <h3 className="text-xl font-bold uppercase">14. How Can You Review, Update, or Delete the Data We Collect From You?</h3>
+                  <h3 className="text-xl font-bold uppercase">13. How Can You Review, Update, or Delete the Data We Collect From You?</h3>
                   <p>
                     Based on the applicable laws of your country, you may have the right to request access to the personal information we collect from you, change that information, or delete it. To request to review, update, or delete your personal information, please fill out and submit a{" "}
                     <a href="/contacts" className="text-primary hover:underline">
