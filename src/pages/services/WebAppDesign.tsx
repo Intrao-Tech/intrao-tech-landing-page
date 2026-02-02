@@ -113,7 +113,7 @@ const WebAppDesign = () => {
       title: "Stakeholder interview",
       subtitle: "Defining your goals, users, and technical context",
       description:
-        "At our web app agency, we start with your goals, team structure, and tech context to shape how the product should work.",
+        "At our dev & design studio, we start with your goals, team structure, and tech context to shape how the product should work.",
       keySteps: [
         "Business goals",
         "Internal workflows",
@@ -484,7 +484,7 @@ const WebAppDesign = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-3xl md:text-4xl lg:text-5xl font-bold leading-[1.1] mb-8 max-w-4xl"
             >
-              How our web app agency structures design to avoid rework and ship
+              How our dev & design studio structures design to avoid rework and ship
               your product faster
             </motion.h2>
 
