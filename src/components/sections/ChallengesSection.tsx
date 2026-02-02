@@ -12,7 +12,7 @@ const ChallengesSection = () => {
       question:
         "Need to meet tight deadlines but don't have enough hands on deck?",
       answer:
-        "Hiring in-house takes time - posting jobs, sorting resumes, and onboarding. We can get you a dedicated designer or developer ready to start tomorrow, helping you hit your deadlines without the wait.",
+        "Hiring in-house takes time - posting jobs, sorting resumes, and onboarding. We can get you a dedicated specialist ready to start tomorrow, helping you hit your deadlines without the wait.",
       cta: "Extend My Team",
       href: "/services",
       image: antonImg,
