@@ -25,6 +25,11 @@ export function generateOrganizationSchema() {
         name: "Ihor Muliar",
         jobTitle: "Co-Founder & CPO",
       },
+      {
+        "@type": "Person",
+        name: "Artem But",
+        jobTitle: "Co-Founder & CTO",
+      },
     ],
     areaServed: [
       { "@type": "Country", name: "United Kingdom" },
