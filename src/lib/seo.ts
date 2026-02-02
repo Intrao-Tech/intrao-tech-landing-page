@@ -5,7 +5,7 @@ export const SITE_CONFIG = {
   defaultDescription:
     "Your dev team, without the payroll. Founder-led studio building MVPs, apps, and websites for high-velocity startups. One partner, no handoffs.",
   twitterHandle: "@Intrao_Tech",
-  ogImage: "/og-image.png",
+  ogImage: "/logo-full.jpg",
 } as const;
 
 export function generateCanonicalUrl(path: string): string {

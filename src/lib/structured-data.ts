@@ -11,7 +11,7 @@ export function generateOrganizationSchema() {
     "@type": "Organization",
     name: SITE_CONFIG.name,
     url: SITE_CONFIG.domain,
-    logo: `${SITE_CONFIG.domain}/logo.svg`,
+    logo: `${SITE_CONFIG.domain}/logo-short.jpg`,
     slogan: "Your dev team, without the payroll",
     foundingDate: "2023",
     founders: [
@@ -97,5 +97,55 @@ export function generateServiceSchema(service: {
       name: SITE_CONFIG.name,
       url: SITE_CONFIG.domain,
     },
+  };
+}
+
+export function generateLocalBusinessSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    name: SITE_CONFIG.name,
+    url: SITE_CONFIG.domain,
+    image: `${SITE_CONFIG.domain}/logo-full.jpg`,
+    logo: `${SITE_CONFIG.domain}/logo-short.jpg`,
+    description: SITE_CONFIG.defaultDescription,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "124 City Rd",
+      addressLocality: "London",
+      postalCode: "EC1V 2NX",
+      addressCountry: "GB",
+    },
+    priceRange: "$$",
+    openingHours: "Mo-Fr 09:00-18:00",
+    email: "info@intrao.tech",
+    sameAs: [
+      "https://www.linkedin.com/company/intrao-tech",
+      "https://x.com/Intrao_Tech",
+      "https://www.instagram.com/intrao.tech/",
+      "https://www.threads.com/@intrao.tech",
+      "https://www.behance.net/intraotech",
+      "https://dribbble.com/intrao-tech",
+    ],
+  };
+}
+
+export interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+export function generateFAQSchema(faqs: FAQItem[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
   };
 }

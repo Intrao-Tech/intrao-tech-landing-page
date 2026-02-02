@@ -1,5 +1,5 @@
 import { SEOHead } from "@/components/SEOHead";
-import { generateServiceSchema, generateBreadcrumbSchema } from "@/lib/structured-data";
+import { generateServiceSchema, generateBreadcrumbSchema, generateFAQSchema } from "@/lib/structured-data";
 import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -188,6 +188,7 @@ const ProductDiscovery = () => {
             { name: "Services", url: "/services" },
             { name: "Product Discovery", url: "/services/product-discovery" },
           ]),
+          generateFAQSchema(challenges),
         ]}
       />
 

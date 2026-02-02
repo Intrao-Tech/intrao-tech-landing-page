@@ -352,7 +352,7 @@ const Contacts = () => {
                 >
                   {/* Flag */}
                   <div className="col-span-2 md:col-span-1">
-                    <img src={location.flag} alt={location.country} className="w-8 h-8 md:w-10 md:h-10" />
+                    <img src={location.flag} alt={location.country} className="w-8 h-8 md:w-10 md:h-10" loading="lazy" />
                   </div>
 
                   {/* Location */}

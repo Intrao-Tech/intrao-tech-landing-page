@@ -2,6 +2,7 @@ import { SEOHead } from "@/components/SEOHead";
 import {
   generateOrganizationSchema,
   generateWebSiteSchema,
+  generateLocalBusinessSchema,
 } from "@/lib/structured-data";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -22,7 +23,7 @@ const Index = () => {
         title="Intrao Tech | Founder-Led Dev & Design Studio for Startups"
         description="Your dev team, without the payroll. Founder-led studio building MVPs, apps, and websites for high-velocity startups. One partner, no handoffs."
         canonical="/"
-        structuredData={[generateOrganizationSchema(), generateWebSiteSchema()]}
+        structuredData={[generateOrganizationSchema(), generateWebSiteSchema(), generateLocalBusinessSchema()]}
       />
 
       <Header />

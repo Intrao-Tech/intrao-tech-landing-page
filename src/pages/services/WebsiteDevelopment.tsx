@@ -1,5 +1,5 @@
 import { SEOHead } from "@/components/SEOHead";
-import { generateServiceSchema, generateBreadcrumbSchema } from "@/lib/structured-data";
+import { generateServiceSchema, generateBreadcrumbSchema, generateFAQSchema } from "@/lib/structured-data";
 import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -215,6 +215,7 @@ const WebsiteDevelopment = () => {
             { name: "Services", url: "/services" },
             { name: "Website Development", url: "/services/website-development" },
           ]),
+          generateFAQSchema(challenges),
         ]}
       />
 

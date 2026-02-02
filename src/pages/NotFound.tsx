@@ -2,6 +2,7 @@ import { useLocation, Link } from "react-router-dom";
 import { useEffect } from "react";
 import { Linkedin, Instagram, Twitter, Facebook } from "lucide-react";
 import Header from "@/components/Header";
+import { SEOHead } from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { ButtonArrows } from "@/components/ui/button-arrows";
 import { ArrowLink } from "@/components/ui/arrow-link";
@@ -80,6 +81,12 @@ const NotFound = () => {
 
   return (
     <>
+      <SEOHead
+        title="Page Not Found | Intrao Tech"
+        description="The page you're looking for doesn't exist."
+        noIndex={true}
+      />
+
       <Header />
 
       <main className="relative min-h-screen bg-dark" data-header-theme="dark">

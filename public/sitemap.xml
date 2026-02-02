@@ -3,41 +3,49 @@
   <!-- Main Pages -->
   <url>
     <loc>https://intrao.tech/</loc>
+    <lastmod>2026-02-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://intrao.tech/services</loc>
+    <lastmod>2026-02-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://intrao.tech/cases</loc>
+    <lastmod>2026-02-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://intrao.tech/about</loc>
+    <lastmod>2026-02-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://intrao.tech/contacts</loc>
+    <lastmod>2026-02-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://intrao.tech/insights</loc>
+    <lastmod>2026-02-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://intrao.tech/team</loc>
+    <lastmod>2026-02-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://intrao.tech/careers</loc>
+    <lastmod>2026-02-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -45,61 +53,73 @@
   <!-- Service Pages -->
   <url>
     <loc>https://intrao.tech/services/web-development</loc>
+    <lastmod>2026-02-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://intrao.tech/services/mobile-development</loc>
+    <lastmod>2026-02-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://intrao.tech/services/website-development</loc>
+    <lastmod>2026-02-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://intrao.tech/services/website-design</loc>
+    <lastmod>2026-02-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://intrao.tech/services/website-redesign</loc>
+    <lastmod>2026-02-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://intrao.tech/services/web-app-design</loc>
+    <lastmod>2026-02-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://intrao.tech/services/mobile-app-design</loc>
+    <lastmod>2026-02-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://intrao.tech/services/branding</loc>
+    <lastmod>2026-02-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://intrao.tech/services/ux-audit</loc>
+    <lastmod>2026-02-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://intrao.tech/services/product-discovery</loc>
+    <lastmod>2026-02-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://intrao.tech/services/no-code-development</loc>
+    <lastmod>2026-02-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://intrao.tech/services/blockchain-development</loc>
+    <lastmod>2026-02-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -107,16 +127,19 @@
   <!-- Legal Pages -->
   <url>
     <loc>https://intrao.tech/terms-of-use</loc>
+    <lastmod>2026-02-02</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://intrao.tech/privacy-policy</loc>
+    <lastmod>2026-02-02</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://intrao.tech/cookies-policy</loc>
+    <lastmod>2026-02-02</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
