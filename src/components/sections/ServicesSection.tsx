@@ -25,23 +25,28 @@ const serviceCategories: ServiceCategory[] = [
     services: [
       {
         name: "Web app design",
-        description: "Design intuitive interfaces that users love and that drive engagement.",
+        description:
+          "Design intuitive interfaces that users love and that drive engagement.",
       },
       {
         name: "Mobile app design",
-        description: "Create seamless mobile experiences optimized for iOS and Android.",
+        description:
+          "Create seamless mobile experiences optimized for iOS and Android.",
       },
       {
         name: "Website design",
-        description: "Build stunning websites that convert visitors into customers.",
+        description:
+          "Build stunning websites that convert visitors into customers.",
       },
       {
         name: "Website redesign",
-        description: "Modernize your web presence with fresh design and improved UX.",
+        description:
+          "Modernize your web presence with fresh design and improved UX.",
       },
       {
         name: "Branding",
-        description: "Develop a brand identity that resonates visually and emotionally.",
+        description:
+          "Develop a brand identity that resonates visually and emotionally.",
       },
     ],
   },
@@ -52,19 +57,23 @@ const serviceCategories: ServiceCategory[] = [
     services: [
       {
         name: "Web development",
-        description: "Build robust, scalable web applications with modern technologies.",
+        description:
+          "Build robust, scalable web applications with modern technologies.",
       },
       {
         name: "Mobile development",
-        description: "Develop native and cross-platform apps for iOS and Android.",
+        description:
+          "Develop native and cross-platform apps for iOS and Android.",
       },
       {
         name: "Website development",
-        description: "Launch fast, responsive websites optimized for performance.",
+        description:
+          "Launch fast, responsive websites optimized for performance.",
       },
       {
         name: "No-code development",
-        description: "Rapidly build and iterate using powerful no-code platforms.",
+        description:
+          "Rapidly build and iterate using powerful no-code platforms.",
       },
       {
         name: "Blockchain development",
@@ -79,15 +88,18 @@ const serviceCategories: ServiceCategory[] = [
     services: [
       {
         name: "UX audit",
-        description: "Identify usability issues and optimize for better conversions.",
+        description:
+          "Identify usability issues and optimize for better conversions.",
       },
       {
         name: "Product discovery",
-        description: "Define features, user flows, and architecture to reduce risk.",
+        description:
+          "Define features, user flows, and architecture to reduce risk.",
       },
       {
         name: "Technical workshop",
-        description: "Validate your tech stack, architecture, and scalability path.",
+        description:
+          "Validate your tech stack, architecture, and scalability path.",
       },
     ],
   },
@@ -113,7 +125,7 @@ const ServicesSection = () => {
           {
             rootMargin: "-40% 0px -40% 0px",
             threshold: 0,
-          }
+          },
         );
         observer.observe(ref);
         observers.push(observer);
@@ -133,7 +145,10 @@ const ServicesSection = () => {
   };
 
   return (
-    <section data-header-theme="dark" className="relative z-10 bg-dark text-dark-foreground py-24 lg:py-32">
+    <section
+      data-header-theme="dark"
+      className="relative z-10 bg-dark text-dark-foreground py-24 lg:py-32"
+    >
       {/* Top curve */}
       <div className="absolute top-[1px] left-0 w-full -translate-y-full pointer-events-none z-20">
         <svg
@@ -163,10 +178,12 @@ const ServicesSection = () => {
           <h2 className="heading-2 mb-6">
             Full-service digital solutions
             <br />
-            <span className="text-dark-muted">for every business stage</span>
+            for every business stage
           </h2>
           <p className="text-dark-muted text-lg max-w-3xl">
-            We help businesses of all sizes — from startups to established local companies — bring their ideas to life through thoughtful design, solid development, and strategic research.
+            We help businesses of all sizes — from startups to established local
+            companies — bring their ideas to life through thoughtful design,
+            solid development, and strategic research.
           </p>
         </motion.div>
 
@@ -209,7 +226,11 @@ const ServicesSection = () => {
               <div
                 key={category.id}
                 ref={(el) => (sectionRefs.current[categoryIndex] = el)}
-                className={categoryIndex < serviceCategories.length - 1 ? "mb-24 lg:mb-32" : ""}
+                className={
+                  categoryIndex < serviceCategories.length - 1
+                    ? "mb-24 lg:mb-32"
+                    : ""
+                }
               >
                 <motion.h3
                   initial={{ opacity: 0, y: 20 }}
