@@ -43,11 +43,13 @@ export function generateOrganizationSchema() {
       {
         "@type": "ContactPoint",
         contactType: "sales",
+        telephone: "+44-7862-010693",
         url: `${SITE_CONFIG.domain}/contacts`,
       },
       {
         "@type": "ContactPoint",
         contactType: "customer service",
+        telephone: "+44-7862-010693",
         email: "info@intrao.tech",
       },
     ],
@@ -118,6 +120,7 @@ export function generateLocalBusinessSchema() {
     },
     priceRange: "$$",
     openingHours: "Mo-Fr 09:00-18:00",
+    telephone: "+44-7862-010693",
     email: "info@intrao.tech",
     sameAs: [
       "https://www.linkedin.com/company/intrao-tech",
