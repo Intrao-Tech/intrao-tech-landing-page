@@ -63,7 +63,7 @@ const TermsOfUse = () => {
                     <a href="mailto:info@intrao.tech" className="text-primary hover:underline">
                       info@intrao.tech
                     </a>{" "}
-                    or by mail to 124 City Rd, London EC1V 2NX, UK.
+                    or by mail to 124 City Road, London EC1V 2NX, UK.
                   </p>
                   <p>
                     These Legal Terms constitute a legally binding agreement made between you, whether personally or on behalf of an entity ("you"), and Intrao Tech, concerning your access to and use of the Services. You agree that by accessing the Services, you have read, understood, and agreed to be bound by all of these Legal Terms. IF YOU DO NOT AGREE WITH ALL OF THESE LEGAL TERMS, THEN YOU ARE EXPRESSLY PROHIBITED FROM USING THE SERVICES AND YOU MUST DISCONTINUE USE IMMEDIATELY.
@@ -376,7 +376,7 @@ const TermsOfUse = () => {
                   </p>
                   <address className="not-italic">
                     <p className="font-semibold">Intrao Tech</p>
-                    <p>124 City Rd</p>
+                    <p>124 City Road</p>
                     <p>London EC1V 2NX</p>
                     <p>United Kingdom</p>
                     <p className="mt-2">

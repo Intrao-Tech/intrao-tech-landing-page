@@ -476,7 +476,7 @@ const PrivacyPolicy = () => {
                   </p>
                   <address className="not-italic mt-4">
                     <p className="font-semibold">Intrao Tech</p>
-                    <p>124 City Rd</p>
+                    <p>124 City Road</p>
                     <p>London EC1V 2NX</p>
                     <p>United Kingdom</p>
                   </address>

@@ -66,7 +66,7 @@ const Contacts = () => {
       country: "UNITED KINGDOM",
       city: "LONDON",
       company: "Intrao Tech Ltd",
-      details: "150 Minories, London EC3N 1LS, United Kingdom",
+      details: "124 City Road, London EC1V 2NX, United Kingdom",
     },
   ];
 

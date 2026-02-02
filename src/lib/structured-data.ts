@@ -118,7 +118,7 @@ export function generateLocalBusinessSchema() {
     description: SITE_CONFIG.defaultDescription,
     address: {
       "@type": "PostalAddress",
-      streetAddress: "124 City Rd",
+      streetAddress: "124 City Road",
       addressLocality: "London",
       postalCode: "EC1V 2NX",
       addressCountry: "GB",
