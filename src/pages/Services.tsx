@@ -39,9 +39,8 @@ const ServiceCard = ({ service, index }: ServiceCardProps) => (
 const Services = () => {
   const stats = [
     { value: "98%", label: "customer satisfaction rate" },
-    { value: "500M+", label: "investments raised by our clients" },
+    { value: "100+", label: "projects delivered successfully" },
     { value: "120+", label: "successful project launches" },
-    { value: "50+", label: "world-class team members" },
   ];
 
   const growthStageServices = {

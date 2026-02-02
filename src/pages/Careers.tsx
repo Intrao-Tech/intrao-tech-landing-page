@@ -21,7 +21,7 @@ import {
 const Careers = () => {
   const stats = [
     { value: "3+", label: "Years in market" },
-    { value: "30+", label: "Projects delivered" },
+    { value: "100+", label: "Projects delivered" },
     { value: "10+", label: "Professionals on board" },
   ];
 
