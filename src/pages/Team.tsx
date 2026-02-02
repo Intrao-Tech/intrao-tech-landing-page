@@ -7,7 +7,7 @@ import { TrendingUp, Globe, Handshake } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ButtonArrows } from "@/components/ui/button-arrows";
 import antonImg from "@/assets/anton.jpg";
-import artemImg from "@/assets/artem.jpg";
+import artemImg from "@/assets/artem.png";
 import ihorImg from "@/assets/ihor.jpeg";
 
 const Team = () => {
