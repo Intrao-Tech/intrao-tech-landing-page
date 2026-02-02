@@ -166,7 +166,7 @@ const ProductDiscovery = () => {
       label: "COLLABORATION",
       title: "Direct Access",
       description:
-        "Work directly with the doers — not a chain of account managers. Get answers and decisions fast.",
+        "Work directly with the doers - not a chain of account managers. Get answers and decisions fast.",
     },
   ];
 

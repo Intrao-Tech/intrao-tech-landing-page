@@ -27,7 +27,7 @@ const About = () => {
     },
     {
       number: "03",
-      title: "Unconventional — and highly effective",
+      title: "Unconventional - and highly effective",
       description: "We work as true partners, not just vendors. Our unconventional approach delivers exceptional results.",
     },
     {
@@ -222,7 +222,7 @@ const About = () => {
                 Since 2019, Intrao Tech has grown into a top-tier global design and development studio, with teams based in London, Poland, Ukraine, Estonia, US, and Canada.
               </p>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                Over the past five years, we've built a lean, expert team that thrives on speed, clarity, and measurable impact. Our mission is simple: to help fast-moving startups turn ideas into well-crafted, user-loved products — from brand to build.
+                Over the past five years, we've built a lean, expert team that thrives on speed, clarity, and measurable impact. Our mission is simple: to help fast-moving startups turn ideas into well-crafted, user-loved products - from brand to build.
               </p>
             </motion.div>
           </div>

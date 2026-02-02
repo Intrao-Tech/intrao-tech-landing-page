@@ -54,12 +54,12 @@ const Team = () => {
     {
       icon: TrendingUp,
       title: "Focus on business results",
-      description: "We do not just create for the sake of creating – we're focused on building products that bring results. With our full-cycle product services and trusted business advisors, we know how to design & develop a product, find its product/market fit, and expand it to new markets.",
+      description: "We do not just create for the sake of creating - we're focused on building products that bring results. With our full-cycle product services and trusted business advisors, we know how to design & develop a product, find its product/market fit, and expand it to new markets.",
     },
     {
       icon: Globe,
       title: "Transparency in everything",
-      description: "We promote transparency everywhere – in our daily communication with our dedicated team and customers. We are guided by it on every project and every interaction. We believe that transparency is a key to fruitful collaboration and trust.",
+      description: "We promote transparency everywhere - in our daily communication with our dedicated team and customers. We are guided by it on every project and every interaction. We believe that transparency is a key to fruitful collaboration and trust.",
     },
     {
       icon: Handshake,

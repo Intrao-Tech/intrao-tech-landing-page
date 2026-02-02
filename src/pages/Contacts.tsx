@@ -321,7 +321,7 @@ const Contacts = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="heading-1 max-w-4xl"
             >
-              Collaborating across borders to deliver seamless solutions — wherever you are
+              Collaborating across borders to deliver seamless solutions - wherever you are
             </motion.h2>
 
             <div className="border-b border-border mt-12 mb-12" />

@@ -137,7 +137,7 @@ const ParallaxHeroSection = () => {
               transition={{ duration: 0.6 }}
               className="text-quote"
             >
-              From MVP to market domination – your reliable partner in UI/UX design and development
+              From MVP to market domination - your reliable partner in UI/UX design and development
             </motion.h2>
           </div>
 

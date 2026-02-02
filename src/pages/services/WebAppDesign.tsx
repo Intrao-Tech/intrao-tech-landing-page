@@ -91,7 +91,7 @@ const WebAppDesign = () => {
       icon: Code,
       title: "Design with development in mind",
       description:
-        "Our designs are not just visually stunning—they are built for seamless implementation. We create scalable, development-ready designs that follow UX best practices, ensuring smooth integration, faster development cycles, and reduced rework.",
+        "Our designs are not just visually stunning-they are built for seamless implementation. We create scalable, development-ready designs that follow UX best practices, ensuring smooth integration, faster development cycles, and reduced rework.",
     },
     {
       icon: Sparkles,
@@ -135,7 +135,7 @@ const WebAppDesign = () => {
     {
       number: "03",
       title: "Feature breakdown",
-      subtitle: "Defining what to design now—and what can wait",
+      subtitle: "Defining what to design now-and what can wait",
       description:
         "We prioritize features based on user impact and business value to focus on what matters most.",
       keySteps: [
@@ -200,14 +200,14 @@ const WebAppDesign = () => {
       label: "DESIGN THAT MEETS REGULATION",
       title: "HIPAA- and GDPR-certified expertise for Healthcare and beyond.",
       description:
-        "Since 2019, we've gained HIPAA and GDPR certifications and industry recognition, delivering hundreds of products in Healthcare, SaaS, FinTech, and EdTech — where compliance and UX go hand in hand.",
+        "Since 2019, we've gained HIPAA and GDPR certifications and industry recognition, delivering hundreds of products in Healthcare, SaaS, FinTech, and EdTech - where compliance and UX go hand in hand.",
     },
     {
       label: "DESIGN THAT LASTS BEYOND TRENDS",
       title:
         "We don't chase fads. We build digital products that stay relevant.",
       description:
-        "Our work looks sharp today and stays usable tomorrow — designed around long-term value, not short-term gimmicks. Scalable systems, brand consistency, and smart UX that grows with your product.",
+        "Our work looks sharp today and stays usable tomorrow - designed around long-term value, not short-term gimmicks. Scalable systems, brand consistency, and smart UX that grows with your product.",
     },
     {
       label: "DESIGN THAT'S DEVELOPER-READY",
@@ -217,7 +217,7 @@ const WebAppDesign = () => {
     },
     {
       label: "LOCAL PRESENCE. GLOBAL DELIVERY.",
-      title: "Work directly with the doers — not a chain of account managers.",
+      title: "Work directly with the doers - not a chain of account managers.",
       description:
         "Our team combines North American strategists with European development teams, giving you direct access to the people doing the work, with timezone-friendly communication.",
     },
@@ -297,7 +297,7 @@ const WebAppDesign = () => {
               <div>
                 <p className="text-xl md:text-2xl leading-relaxed text-dark-foreground">
                   We create intuitive, user-friendly designs that simplify
-                  workflows, enhance usability, and boost conversions — ensuring
+                  workflows, enhance usability, and boost conversions - ensuring
                   your web app is both functional and future-proof.
                 </p>
               </div>

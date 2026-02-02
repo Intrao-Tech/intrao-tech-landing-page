@@ -65,7 +65,7 @@ const Services = () => {
     build: [
       {
         name: "Branding",
-        description: "Develop a brand that resonates — visually, emotionally, and strategically.",
+        description: "Develop a brand that resonates - visually, emotionally, and strategically.",
         link: "/services/branding",
       },
       {
@@ -154,7 +154,7 @@ const Services = () => {
       },
       {
         name: "Branding",
-        description: "Develop a brand that resonates — visually, emotionally, and strategically.",
+        description: "Develop a brand that resonates - visually, emotionally, and strategically.",
         link: "/services/branding",
       },
     ],
@@ -262,7 +262,7 @@ const Services = () => {
                 className="flex flex-col justify-center"
               >
                 <p className="text-dark-muted text-lg leading-relaxed">
-                  Whether you need a product redesign, an MVP, or a scalable development team, we turn your vision into reality. Fast execution, expert insights, and seamless collaboration—so you can focus on scaling.
+                  Whether you need a product redesign, an MVP, or a scalable development team, we turn your vision into reality. Fast execution, expert insights, and seamless collaboration-so you can focus on scaling.
                 </p>
               </motion.div>
             </div>
@@ -394,7 +394,7 @@ const Services = () => {
                 className="max-w-2xl"
               >
                 <p className="label text-muted-foreground mb-4">
-                  Research, Design & Development – All in One Place
+                  Research, Design & Development - All in One Place
                 </p>
                 <h2 className="heading-2">
                   A full-cycle approach to digital product success

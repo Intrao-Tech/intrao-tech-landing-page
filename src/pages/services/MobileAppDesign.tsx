@@ -95,7 +95,7 @@ const MobileAppDesign = () => {
       icon: Code,
       title: "Design with development in mind",
       description:
-        "Our designs are not just visually stunning—they are built for seamless implementation. We create scalable, development-ready designs that follow UX best practices, ensuring smooth integration, faster development cycles, and reduced rework.",
+        "Our designs are not just visually stunning-they are built for seamless implementation. We create scalable, development-ready designs that follow UX best practices, ensuring smooth integration, faster development cycles, and reduced rework.",
     },
     {
       icon: Sparkles,
@@ -140,7 +140,7 @@ const MobileAppDesign = () => {
     {
       number: "03",
       title: "Feature prioritization",
-      subtitle: "Structuring what to build — now vs. next",
+      subtitle: "Structuring what to build - now vs. next",
       description:
         "We help you avoid bloat and dead features. Using business impact and dev feasibility, we define a roadmap-ready feature set for your mobile app MVP or V1 release.",
       keySteps: [
@@ -217,14 +217,14 @@ const MobileAppDesign = () => {
       label: "DESIGN THAT MEETS REGULATION",
       title: "HIPAA- and GDPR-certified expertise for Healthcare and beyond.",
       description:
-        "Since 2019, we've gained HIPAA and GDPR certifications and industry recognition, delivering hundreds of products in Healthcare, SaaS, FinTech, and EdTech — where compliance and UX go hand in hand.",
+        "Since 2019, we've gained HIPAA and GDPR certifications and industry recognition, delivering hundreds of products in Healthcare, SaaS, FinTech, and EdTech - where compliance and UX go hand in hand.",
     },
     {
       label: "DESIGN THAT LASTS BEYOND TRENDS",
       title:
         "We don't chase fads. We build digital products that stay relevant.",
       description:
-        "Our work looks sharp today and stays usable tomorrow — designed around long-term value, not short-term gimmicks. Scalable systems, brand consistency, and smart UX that grows with your product.",
+        "Our work looks sharp today and stays usable tomorrow - designed around long-term value, not short-term gimmicks. Scalable systems, brand consistency, and smart UX that grows with your product.",
     },
     {
       label: "DESIGN THAT'S DEVELOPER-READY",
@@ -234,7 +234,7 @@ const MobileAppDesign = () => {
     },
     {
       label: "LOCAL PRESENCE. GLOBAL DELIVERY.",
-      title: "Work directly with the doers — not a chain of account managers.",
+      title: "Work directly with the doers - not a chain of account managers.",
       description:
         "Collaborate with UX strategists in North America, while our senior design and development teams in Europe deliver fast, consistent results. We integrate into your tools and workflow, working as part of your team.",
     },

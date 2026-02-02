@@ -193,7 +193,7 @@ const StackingCard = ({ caseItem, index, totalCards }: StackingCardProps) => {
 
             {/* Title */}
             <h3 className="heading-3 text-light-foreground mb-6">
-              {caseItem.title} – {caseItem.subtitle}
+              {caseItem.title} - {caseItem.subtitle}
             </h3>
 
             {/* Company & Location Pills */}

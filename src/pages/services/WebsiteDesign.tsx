@@ -74,7 +74,7 @@ const WebsiteDesign = () => {
       number: "04",
       title: "UI/UX design",
       subtitle: "Building the complete website experience",
-      description: "Here, strategy becomes design. We create the full visual experience – responsive, accessible, and brand-consistent – ready for launch or direct implementation.",
+      description: "Here, strategy becomes design. We create the full visual experience - responsive, accessible, and brand-consistent - ready for launch or direct implementation.",
     },
     {
       number: "05",
@@ -94,12 +94,12 @@ const WebsiteDesign = () => {
     {
       label: "DESIGN THAT MEETS REGULATION",
       title: "HIPAA- and GDPR-certified expertise for Healthcare and beyond.",
-      description: "Since 2019, we've gained HIPAA and GDPR certifications and industry recognition, delivering hundreds of products in Healthcare, SaaS, FinTech, and EdTech — where compliance and UX go hand in hand.",
+      description: "Since 2019, we've gained HIPAA and GDPR certifications and industry recognition, delivering hundreds of products in Healthcare, SaaS, FinTech, and EdTech - where compliance and UX go hand in hand.",
     },
     {
       label: "DESIGN THAT LASTS BEYOND TRENDS",
       title: "We don't chase fads. We build digital products that stay relevant.",
-      description: "Our work looks sharp today and stays usable tomorrow — designed around long-term value, not short-term gimmicks. Scalable systems, brand consistency, and smart UX that grows with your product.",
+      description: "Our work looks sharp today and stays usable tomorrow - designed around long-term value, not short-term gimmicks. Scalable systems, brand consistency, and smart UX that grows with your product.",
     },
     {
       label: "DESIGN THAT'S DEVELOPER-READY",
@@ -108,7 +108,7 @@ const WebsiteDesign = () => {
     },
     {
       label: "LOCAL PRESENCE. GLOBAL DELIVERY.",
-      title: "Work directly with the doers — not a chain of account managers.",
+      title: "Work directly with the doers - not a chain of account managers.",
       description: "Collaborate with UX strategists in North America, while our senior design and development teams in Europe deliver fast, consistent results. We integrate into your tools and workflow, working as part of your team.",
     },
   ];
@@ -287,7 +287,7 @@ const WebsiteDesign = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-3xl md:text-4xl lg:text-5xl font-bold leading-[1.1] mb-8 max-w-4xl"
             >
-              From strategy to launch — how we build websites that perform
+              From strategy to launch - how we build websites that perform
             </motion.h2>
 
             <motion.p

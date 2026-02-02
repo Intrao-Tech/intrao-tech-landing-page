@@ -12,7 +12,7 @@ const NoCodeDevelopment = () => {
     {
       question: "Frustrated with slow traditional development?",
       answer:
-        "With low-code no-code app development, you can create a fully functional digital product in weeks instead of months—without sacrificing quality.",
+        "With low-code no-code app development, you can create a fully functional digital product in weeks instead of months-without sacrificing quality.",
     },
     {
       question: "Worried about development costs?",
@@ -31,7 +31,7 @@ const NoCodeDevelopment = () => {
       number: "01",
       title: "FlutterFlow Development",
       description:
-        "We leverage FlutterFlow to build visually stunning, fully functional mobile apps with native performance—without writing code. This approach speeds up development while maintaining flexibility and scalability.",
+        "We leverage FlutterFlow to build visually stunning, fully functional mobile apps with native performance-without writing code. This approach speeds up development while maintaining flexibility and scalability.",
     },
     {
       number: "02",
@@ -43,7 +43,7 @@ const NoCodeDevelopment = () => {
       number: "03",
       title: "Webflow Development",
       description:
-        "Using Webflow, we design and develop responsive, high-performance websites that combine sleek visuals with intuitive user experiences—ideal for startups, agencies, and enterprises.",
+        "Using Webflow, we design and develop responsive, high-performance websites that combine sleek visuals with intuitive user experiences-ideal for startups, agencies, and enterprises.",
     },
   ];
 
@@ -166,7 +166,7 @@ const NoCodeDevelopment = () => {
       label: "REACH",
       title: "Local Presence, Global Delivery",
       description:
-        "Work directly with the doers — not a chain of account managers. Collaborate with strategists while our senior teams deliver fast results.",
+        "Work directly with the doers - not a chain of account managers. Collaborate with strategists while our senior teams deliver fast results.",
     },
   ];
 

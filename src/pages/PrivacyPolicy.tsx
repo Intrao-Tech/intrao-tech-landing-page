@@ -133,7 +133,7 @@ const PrivacyPolicy = () => {
 
                   <h4 className="font-semibold mt-6">Information automatically collected</h4>
                   <p className="italic text-muted-foreground">
-                    In Short: Some information — such as your Internet Protocol (IP) address and/or browser and device characteristics — is collected automatically when you visit our Services.
+                    In Short: Some information - such as your Internet Protocol (IP) address and/or browser and device characteristics - is collected automatically when you visit our Services.
                   </p>
                   <p>
                     We automatically collect certain information when you visit, use, or navigate the Services. This information does not reveal your specific identity (like your name or contact information) but may include device and usage information, such as your IP address, browser and device characteristics, operating system, language preferences, referring URLs, device name, country, location, information about how and when you use our Services, and other technical information. This information is primarily needed to maintain the security and operation of our Services, and for our internal analytics and reporting purposes.
@@ -387,7 +387,7 @@ const PrivacyPolicy = () => {
 
                   <h4 className="font-semibold mt-4">Opting out of marketing and promotional communications</h4>
                   <p>
-                    You can unsubscribe from our marketing and promotional communications at any time by clicking on the unsubscribe link in the emails that we send, or by contacting us using the details provided in the section "HOW CAN YOU CONTACT US ABOUT THIS NOTICE?" below. You will then be removed from the marketing lists. However, we may still communicate with you — for example, to send you service-related messages that are necessary for the administration and use of your account, to respond to service requests, or for other non-marketing purposes.
+                    You can unsubscribe from our marketing and promotional communications at any time by clicking on the unsubscribe link in the emails that we send, or by contacting us using the details provided in the section "HOW CAN YOU CONTACT US ABOUT THIS NOTICE?" below. You will then be removed from the marketing lists. However, we may still communicate with you - for example, to send you service-related messages that are necessary for the administration and use of your account, to respond to service requests, or for other non-marketing purposes.
                   </p>
 
                   <h4 className="font-semibold mt-4">Cookies and similar technologies</h4>
@@ -501,12 +501,12 @@ const PrivacyPolicy = () => {
 
                   <p className="mt-4">We will use and retain the collected personal information as needed to provide the Services or for:</p>
                   <ul className="list-disc pl-6 space-y-2">
-                    <li>Category A – As long as the user has an account with us</li>
-                    <li>Category B – As long as the user has an account with us</li>
-                    <li>Category C – As long as the user has an account with us</li>
-                    <li>Category D – As long as the user has an account with us</li>
-                    <li>Category F – As long as the user has an account with us</li>
-                    <li>Category I – As long as the user has an account with us</li>
+                    <li>Category A - As long as the user has an account with us</li>
+                    <li>Category B - As long as the user has an account with us</li>
+                    <li>Category C - As long as the user has an account with us</li>
+                    <li>Category D - As long as the user has an account with us</li>
+                    <li>Category F - As long as the user has an account with us</li>
+                    <li>Category I - As long as the user has an account with us</li>
                   </ul>
 
                   <p className="mt-4">We may also collect other personal information outside of these categories through instances where you interact with us in person, online, or by phone or mail in the context of:</p>
@@ -558,12 +558,12 @@ const PrivacyPolicy = () => {
                   <p>If this definition of "resident" applies to you, we must adhere to certain rights and obligations regarding your personal information.</p>
 
                   <h4 className="font-semibold mt-4">Your rights with respect to your personal data</h4>
-                  <p><strong>Right to request deletion of the data — Request to delete</strong></p>
+                  <p><strong>Right to request deletion of the data - Request to delete</strong></p>
                   <p>
                     You can ask for the deletion of your personal information. If you ask us to delete your personal information, we will respect your request and delete your personal information, subject to certain exceptions provided by law, such as (but not limited to) the exercise by another consumer of his or her right to free speech, our compliance requirements resulting from a legal obligation, or any processing that may be required to protect against illegal activities.
                   </p>
 
-                  <p className="mt-4"><strong>Right to be informed — Request to know</strong></p>
+                  <p className="mt-4"><strong>Right to be informed - Request to know</strong></p>
                   <p>Depending on the circumstances, you have a right to know:</p>
                   <ul className="list-disc pl-6 space-y-2">
                     <li>whether we collect and use your personal information;</li>

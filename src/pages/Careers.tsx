@@ -38,7 +38,7 @@ const Careers = () => {
       title: "Genuinely friendly",
       heading: "Built on honesty and mutual respect",
       description:
-        "Honesty and unforced mutual respect in the team. We strive to create a space where everyone feels seen and respected — a place to grow as a professional and as a person while staying true to oneself.",
+        "Honesty and unforced mutual respect in the team. We strive to create a space where everyone feels seen and respected - a place to grow as a professional and as a person while staying true to oneself.",
     },
     {
       number: "03",
@@ -285,7 +285,7 @@ const Careers = () => {
               Intrao Tech was founded with a simple belief: great products come
               from teams that truly care. Our founders came from backgrounds in
               design and engineering, frustrated by agencies that prioritized
-              speed over quality. We built Intrao Tech to be different — a place
+              speed over quality. We built Intrao Tech to be different - a place
               where craft matters, where every detail is considered, and where
               our team has the autonomy to do their best work. Today, we're a
               distributed team across Europe and North America, united by our

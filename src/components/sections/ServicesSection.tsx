@@ -181,8 +181,8 @@ const ServicesSection = () => {
             for every business stage
           </h2>
           <p className="text-dark-muted text-lg max-w-3xl">
-            We help businesses of all sizes — from startups to established local
-            companies — bring their ideas to life through thoughtful design,
+            We help businesses of all sizes - from startups to established local
+            companies - bring their ideas to life through thoughtful design,
             solid development, and strategic research.
           </p>
         </motion.div>
