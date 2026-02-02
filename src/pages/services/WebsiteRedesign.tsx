@@ -43,7 +43,7 @@ const WebsiteRedesign = () => {
     {
       icon: Sparkles,
       title: "Mid-level and senior experts",
-      description: "Our team consists of mid-level and senior web designers & developers with 7+ years of expertise in your specific industry, ensuring your website is perfectly aligned with your audience's expectations.",
+      description: "Our team consists of mid-level and senior web designers & developers with 3+ years of expertise in your specific industry, ensuring your website is perfectly aligned with your audience's expectations.",
     },
     {
       icon: Heart,

@@ -89,7 +89,7 @@ const UXAudit = () => {
       icon: Users,
       title: "Senior Team",
       description:
-        "Mid-level and senior experts with 7+ years of expertise in your specific industry.",
+        "Mid-level and senior experts with 3+ years of expertise in your specific industry.",
     },
     {
       icon: BadgeCheck,

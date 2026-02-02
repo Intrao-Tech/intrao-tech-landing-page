@@ -76,7 +76,7 @@ const WebDevelopment = () => {
     {
       icon: Sparkles,
       title: "Mid-level and senior experts",
-      description: "Our team consists of experienced developers with 7+ years of expertise, ensuring high-quality code and best practices.",
+      description: "Our team consists of experienced developers with 3+ years of expertise, ensuring high-quality code and best practices.",
     },
     {
       icon: Heart,

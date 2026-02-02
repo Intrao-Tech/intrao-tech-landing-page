@@ -71,7 +71,7 @@ const NoCodeDevelopment = () => {
       icon: Users,
       title: "Mid-Level and Senior Experts",
       description:
-        "Our team consists of mid-level and senior developers with 7+ years of expertise in your specific industry.",
+        "Our team consists of mid-level and senior developers with 3+ years of expertise in your specific industry.",
     },
     {
       icon: BadgeCheck,

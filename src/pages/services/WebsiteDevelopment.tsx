@@ -96,7 +96,7 @@ const WebsiteDevelopment = () => {
       icon: Users,
       title: "Senior Expertise",
       description:
-        "Mid-level and senior professionals with 7+ years of industry-specific experience.",
+        "Mid-level and senior professionals with 3+ years of industry-specific experience.",
     },
     {
       icon: BadgeCheck,

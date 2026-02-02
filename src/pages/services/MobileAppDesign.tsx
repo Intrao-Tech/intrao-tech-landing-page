@@ -102,7 +102,7 @@ const MobileAppDesign = () => {
       icon: Sparkles,
       title: "Mid-level and senior experts",
       description:
-        "Our team consists of seasoned designers with 7+ years of experience, specializing in your industry. This expertise ensures your mobile app is strategically designed to meet both business goals and user expectations.",
+        "Our team consists of seasoned designers with 3+ years of experience, specializing in your industry. This expertise ensures your mobile app is strategically designed to meet both business goals and user expectations.",
     },
     {
       icon: Heart,

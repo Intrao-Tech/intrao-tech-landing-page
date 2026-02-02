@@ -89,7 +89,7 @@ const ProductDiscovery = () => {
       icon: Users,
       title: "Mid-Level and Senior Experts",
       description:
-        "Product designers & developers with 7+ years of expertise ensuring your product aligns with audience expectations.",
+        "Product designers & developers with 3+ years of expertise ensuring your product aligns with audience expectations.",
     },
     {
       icon: BadgeCheck,

@@ -89,7 +89,7 @@ const BlockchainDevelopment = () => {
       icon: Users,
       title: "Expert Team",
       description:
-        "Mid-level and senior blockchain developers with 7+ years of industry experience in Web3 technologies.",
+        "Mid-level and senior blockchain developers with 3+ years of industry experience in Web3 technologies.",
     },
     {
       icon: BadgeCheck,

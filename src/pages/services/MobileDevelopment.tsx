@@ -61,7 +61,7 @@ const MobileDevelopment = () => {
     {
       icon: Sparkles,
       title: "Mid-level and senior experts",
-      description: "Our team consists of experienced mobile developers with 7+ years of expertise in iOS, Android, and cross-platform development.",
+      description: "Our team consists of experienced mobile developers with 3+ years of expertise in iOS, Android, and cross-platform development.",
     },
     {
       icon: Heart,

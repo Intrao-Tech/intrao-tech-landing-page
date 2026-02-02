@@ -168,7 +168,7 @@ const TeamSection = () => {
           >
             <div>
               <h3 className="text-3xl md:text-4xl lg:text-5xl font-medium leading-tight">
-                6+ years of expertise
+                3+ years of expertise
               </h3>
             </div>
             <ArrowLink to="/about" variant="dark" className="mt-auto">

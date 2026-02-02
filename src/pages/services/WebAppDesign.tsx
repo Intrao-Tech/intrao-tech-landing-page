@@ -98,7 +98,7 @@ const WebAppDesign = () => {
       icon: Sparkles,
       title: "Mid-level and senior experts",
       description:
-        "Our team consists of seasoned web designers with 7+ years of experience, specializing in your industry. This expertise ensures your web app is strategically designed to meet both business goals and user expectations.",
+        "Our team consists of seasoned web designers with 3+ years of experience, specializing in your industry. This expertise ensures your web app is strategically designed to meet both business goals and user expectations.",
     },
     {
       icon: Heart,
