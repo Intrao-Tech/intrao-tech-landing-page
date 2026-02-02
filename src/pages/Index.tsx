@@ -1,4 +1,8 @@
-import { Helmet } from "react-helmet-async";
+import { SEOHead } from "@/components/SEOHead";
+import {
+  generateOrganizationSchema,
+  generateWebSiteSchema,
+} from "@/lib/structured-data";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ParallaxHeroSection from "@/components/sections/ParallaxHeroSection";
@@ -14,17 +18,12 @@ import ContactFormSection from "@/components/sections/ContactFormSection";
 const Index = () => {
   return (
     <>
-      <Helmet>
-        <title>Intrao Tech | Web Development Agency - Launch, Scale, Succeed</title>
-        <meta
-          name="description"
-          content="Intrao Tech is a web development agency helping startups and businesses launch, scale, and succeed faster with custom web development, UI/UX design, and MVP development."
-        />
-        <meta
-          name="keywords"
-          content="web development, UI/UX design, MVP development, startup agency, digital product agency"
-        />
-      </Helmet>
+      <SEOHead
+        title="Intrao Tech | Web Development Agency - Launch, Scale, Succeed"
+        description="Intrao Tech is a web development agency helping startups and businesses launch, scale, and succeed faster with custom web development, UI/UX design, and MVP development."
+        canonical="/"
+        structuredData={[generateOrganizationSchema(), generateWebSiteSchema()]}
+      />
 
       <Header />
       

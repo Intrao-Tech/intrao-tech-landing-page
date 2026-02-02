@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import { SEOHead } from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
@@ -6,13 +6,11 @@ import { motion } from "framer-motion";
 const CookiesPolicy = () => {
   return (
     <>
-      <Helmet>
-        <title>Cookies Policy | Intrao Tech</title>
-        <meta
-          name="description"
-          content="Cookie policy for Intrao Tech - how we use cookies and how you can control them."
-        />
-      </Helmet>
+      <SEOHead
+        title="Cookies Policy | Intrao Tech"
+        description="Cookie policy for Intrao Tech - how we use cookies and how you can control them."
+        canonical="/cookies-policy"
+      />
 
       <Header />
 

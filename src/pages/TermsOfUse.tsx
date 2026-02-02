@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import { SEOHead } from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
@@ -6,13 +6,11 @@ import { motion } from "framer-motion";
 const TermsOfUse = () => {
   return (
     <>
-      <Helmet>
-        <title>Terms of Use | Intrao Tech</title>
-        <meta
-          name="description"
-          content="Terms and conditions for using Intrao Tech's services and website."
-        />
-      </Helmet>
+      <SEOHead
+        title="Terms of Use | Intrao Tech"
+        description="Terms and conditions for using Intrao Tech's services and website."
+        canonical="/terms-of-use"
+      />
 
       <Header />
 

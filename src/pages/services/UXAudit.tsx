@@ -1,4 +1,5 @@
-import { Helmet } from "react-helmet-async";
+import { SEOHead } from "@/components/SEOHead";
+import { generateServiceSchema, generateBreadcrumbSchema } from "@/lib/structured-data";
 import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -179,13 +180,23 @@ const UXAudit = () => {
 
   return (
     <>
-      <Helmet>
-        <title>UX Audit Services | Intrao Tech</title>
-        <meta
-          name="description"
-          content="UX Design Audit. Boost engagement, conversions, and user satisfaction with our comprehensive UX audit."
-        />
-      </Helmet>
+      <SEOHead
+        title="UX Audit Services | Intrao Tech"
+        description="UX Design Audit. Boost engagement, conversions, and user satisfaction with our comprehensive UX audit."
+        canonical="/services/ux-audit"
+        structuredData={[
+          generateServiceSchema({
+            name: "UX Audit Services",
+            description: "UX Design Audit. Boost engagement, conversions, and user satisfaction with our comprehensive UX audit.",
+            url: "/services/ux-audit",
+          }),
+          generateBreadcrumbSchema([
+            { name: "Home", url: "/" },
+            { name: "Services", url: "/services" },
+            { name: "UX Audit", url: "/services/ux-audit" },
+          ]),
+        ]}
+      />
 
       <Header />
 

@@ -1,4 +1,5 @@
-import { Helmet } from "react-helmet-async";
+import { SEOHead } from "@/components/SEOHead";
+import { generateServiceSchema, generateBreadcrumbSchema } from "@/lib/structured-data";
 import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -172,13 +173,23 @@ const NoCodeDevelopment = () => {
 
   return (
     <>
-      <Helmet>
-        <title>No-Code Development Services | Intrao Tech</title>
-        <meta
-          name="description"
-          content="Build faster with No-Code Development. Launch scalable applications without writing a single line of code."
-        />
-      </Helmet>
+      <SEOHead
+        title="No-Code Development Services | Intrao Tech"
+        description="Build faster with No-Code Development. Launch scalable applications without writing a single line of code."
+        canonical="/services/no-code-development"
+        structuredData={[
+          generateServiceSchema({
+            name: "No-Code Development Services",
+            description: "Build faster with No-Code Development. Launch scalable applications without writing a single line of code.",
+            url: "/services/no-code-development",
+          }),
+          generateBreadcrumbSchema([
+            { name: "Home", url: "/" },
+            { name: "Services", url: "/services" },
+            { name: "No-Code Development", url: "/services/no-code-development" },
+          ]),
+        ]}
+      />
 
       <Header />
 

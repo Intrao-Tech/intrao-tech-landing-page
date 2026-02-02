@@ -1,4 +1,5 @@
-import { Helmet } from "react-helmet-async";
+import { SEOHead } from "@/components/SEOHead";
+import { generateServiceSchema, generateBreadcrumbSchema } from "@/lib/structured-data";
 import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -194,13 +195,23 @@ const BlockchainDevelopment = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Blockchain Development Services | Intrao Tech</title>
-        <meta
-          name="description"
-          content="Blockchain Development Services. Build decentralized applications, secure enterprise solutions, and blockchain-based platforms."
-        />
-      </Helmet>
+      <SEOHead
+        title="Blockchain Development Services | Intrao Tech"
+        description="Blockchain Development Services. Build decentralized applications, secure enterprise solutions, and blockchain-based platforms."
+        canonical="/services/blockchain-development"
+        structuredData={[
+          generateServiceSchema({
+            name: "Blockchain Development Services",
+            description: "Blockchain Development Services. Build decentralized applications, secure enterprise solutions, and blockchain-based platforms.",
+            url: "/services/blockchain-development",
+          }),
+          generateBreadcrumbSchema([
+            { name: "Home", url: "/" },
+            { name: "Services", url: "/services" },
+            { name: "Blockchain Development", url: "/services/blockchain-development" },
+          ]),
+        ]}
+      />
 
       <Header />
 

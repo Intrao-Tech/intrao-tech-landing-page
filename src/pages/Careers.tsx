@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import { SEOHead } from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
@@ -137,13 +137,11 @@ const Careers = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Careers | Intrao Tech - Join Our Team</title>
-        <meta
-          name="description"
-          content="Join Intrao Tech and be part of a team that's shaping the future of digital products. Explore our open positions and start your journey with us."
-        />
-      </Helmet>
+      <SEOHead
+        title="Careers | Intrao Tech - Join Our Team"
+        description="Join Intrao Tech and be part of a team that's shaping the future of digital products. Explore our open positions and start your journey with us."
+        canonical="/careers"
+      />
 
       <Header />
 

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Helmet } from "react-helmet-async";
+import { SEOHead } from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
@@ -106,13 +106,11 @@ const Insights = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Insights | Intrao Tech - Web Development Blog & Resources</title>
-        <meta
-          name="description"
-          content="Explore our insights on web development, UI/UX design, and digital product strategy. Learn from our experts and stay ahead of the curve."
-        />
-      </Helmet>
+      <SEOHead
+        title="Insights | Intrao Tech - Web Development Blog & Resources"
+        description="Explore our insights on web development, UI/UX design, and digital product strategy. Learn from our experts and stay ahead of the curve."
+        canonical="/insights"
+      />
 
       <Header />
 
@@ -168,6 +166,7 @@ const Insights = () => {
           className="bg-background text-foreground pb-24"
         >
           <div className="container mx-auto px-6">
+            <h2 className="sr-only">Articles</h2>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {filteredArticles.map((article, index) => (
                 <motion.article

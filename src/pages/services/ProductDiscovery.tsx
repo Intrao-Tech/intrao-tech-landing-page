@@ -1,4 +1,5 @@
-import { Helmet } from "react-helmet-async";
+import { SEOHead } from "@/components/SEOHead";
+import { generateServiceSchema, generateBreadcrumbSchema } from "@/lib/structured-data";
 import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -172,13 +173,23 @@ const ProductDiscovery = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Product Discovery Services | Intrao Tech</title>
-        <meta
-          name="description"
-          content="Product Discovery. Transform your app idea into a launch-ready roadmap with our product discovery services."
-        />
-      </Helmet>
+      <SEOHead
+        title="Product Discovery Services | Intrao Tech"
+        description="Product Discovery. Transform your app idea into a launch-ready roadmap with our product discovery services."
+        canonical="/services/product-discovery"
+        structuredData={[
+          generateServiceSchema({
+            name: "Product Discovery Services",
+            description: "Product Discovery. Transform your app idea into a launch-ready roadmap with our product discovery services.",
+            url: "/services/product-discovery",
+          }),
+          generateBreadcrumbSchema([
+            { name: "Home", url: "/" },
+            { name: "Services", url: "/services" },
+            { name: "Product Discovery", url: "/services/product-discovery" },
+          ]),
+        ]}
+      />
 
       <Header />
 

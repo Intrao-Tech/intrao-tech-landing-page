@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import { SEOHead } from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WorldMap from "@/components/WorldMap";
@@ -72,13 +72,11 @@ const Contacts = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Contact Us | Intrao Tech - Get in Touch</title>
-        <meta
-          name="description"
-          content="Ready to start your project? Contact Intrao Tech today. Let's discuss how we can help you launch, scale, and succeed."
-        />
-      </Helmet>
+      <SEOHead
+        title="Contact Us | Intrao Tech - Get in Touch"
+        description="Ready to start your project? Contact Intrao Tech today. Let's discuss how we can help you launch, scale, and succeed."
+        canonical="/contacts"
+      />
 
       <Header />
 

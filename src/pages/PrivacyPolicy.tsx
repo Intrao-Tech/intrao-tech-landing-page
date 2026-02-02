@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import { SEOHead } from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
@@ -6,13 +6,11 @@ import { motion } from "framer-motion";
 const PrivacyPolicy = () => {
   return (
     <>
-      <Helmet>
-        <title>Privacy Policy | Intrao Tech</title>
-        <meta
-          name="description"
-          content="Privacy policy for Intrao Tech - how we collect, store, use, and share your information."
-        />
-      </Helmet>
+      <SEOHead
+        title="Privacy Policy | Intrao Tech"
+        description="Privacy policy for Intrao Tech - how we collect, store, use, and share your information."
+        canonical="/privacy-policy"
+      />
 
       <Header />
 

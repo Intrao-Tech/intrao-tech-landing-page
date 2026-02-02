@@ -1,4 +1,5 @@
-import { Helmet } from "react-helmet-async";
+import { SEOHead } from "@/components/SEOHead";
+import { generateServiceSchema, generateBreadcrumbSchema } from "@/lib/structured-data";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
@@ -148,13 +149,23 @@ const WebsiteRedesign = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Website Redesign Services | Intrao Tech</title>
-        <meta
-          name="description"
-          content="Transform your website into a high-performing digital asset. Increase traffic, generate leads, and boost revenue with our website redesign services."
-        />
-      </Helmet>
+      <SEOHead
+        title="Website Redesign Services | Intrao Tech"
+        description="Transform your website into a high-performing digital asset. Increase traffic, generate leads, and boost revenue with our website redesign services."
+        canonical="/services/website-redesign"
+        structuredData={[
+          generateServiceSchema({
+            name: "Website Redesign Services",
+            description: "Transform your website into a high-performing digital asset. Increase traffic, generate leads, and boost revenue with our website redesign services.",
+            url: "/services/website-redesign",
+          }),
+          generateBreadcrumbSchema([
+            { name: "Home", url: "/" },
+            { name: "Services", url: "/services" },
+            { name: "Website Redesign", url: "/services/website-redesign" },
+          ]),
+        ]}
+      />
 
       <Header />
 
