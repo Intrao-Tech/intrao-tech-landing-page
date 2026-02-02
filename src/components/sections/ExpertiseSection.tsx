@@ -86,114 +86,109 @@ const ExpertiseSection = () => {
   ];
 
   return (
-    <section data-header-theme="light" className="bg-background text-foreground py-24 lg:py-32">
-      <div className="container mx-auto px-6">
-        {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mb-12"
-        >
-          <p className="label text-muted-foreground mb-4">
-            Key Industries
-          </p>
-          <h2 className="heading-1">
-            Our areas of expertise
-          </h2>
-        </motion.div>
+    <>
+      {/*
+      <section data-header-theme="light" className="bg-background text-foreground py-24 lg:py-32">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-12"
+          >
+            <p className="label text-muted-foreground mb-4">
+              Key Industries
+            </p>
+            <h2 className="heading-1">
+              Our areas of expertise
+            </h2>
+          </motion.div>
 
-        {/* Industry Tabs */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex flex-wrap gap-2 mb-12 border-b border-border pb-8"
-        >
-          {industries.map((industry, index) => (
-            <Button
-              key={industry.name}
-              variant="tab"
-              size="sm"
-              onClick={() => setActiveIndustry(index)}
-              data-active={activeIndustry === index}
-              className="rounded-lg"
-            >
-              {industry.name}
-            </Button>
-          ))}
-        </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="flex flex-wrap gap-2 mb-12 border-b border-border pb-8"
+          >
+            {industries.map((industry, index) => (
+              <Button
+                key={industry.name}
+                variant="tab"
+                size="sm"
+                onClick={() => setActiveIndustry(index)}
+                data-active={activeIndustry === index}
+                className="rounded-lg"
+              >
+                {industry.name}
+              </Button>
+            ))}
+          </motion.div>
 
-        {/* Content - Image left, content right */}
-        <motion.div
-          key={activeIndustry}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}
-          className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16"
-        >
-          {/* Image */}
-          <div className="rounded-lg overflow-hidden">
-            <img
-              src={industries[activeIndustry].image}
-              alt={industries[activeIndustry].name}
-              className="w-full h-full object-cover aspect-[4/3]"
-            />
-          </div>
-
-          {/* Content */}
-          <div>
-            <h3 className="heading-3 mb-10">
-              {industries[activeIndustry].title}
-            </h3>
-            
-            <div>
-              {/* Headers */}
-              <div className="grid grid-cols-1 md:grid-cols-2 border-b border-border">
-                <p className="label-small text-muted-foreground pb-4 md:pr-8">
-                  Challenges:
-                </p>
-                <p className="label-small text-muted-foreground pb-4 md:pl-8">
-                  How we solve them:
-                </p>
-              </div>
-
-              {/* Content */}
-              <div className="grid grid-cols-1 md:grid-cols-2">
-                {/* Challenges */}
-                <ul className="space-y-4 pt-6 md:pr-8">
-                  {industries[activeIndustry].challenges.map((challenge, i) => (
-                    <li key={i} className="flex items-start gap-3">
-                      <span className="text-primary mt-1">✱</span>
-                      <span className="text-foreground">{challenge}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                {/* Solutions */}
-                <ul className="space-y-4 pt-6 md:border-l md:border-border md:pl-8">
-                  {industries[activeIndustry].solutions.map((solution, i) => (
-                    <li key={i} className="flex items-start gap-3">
-                      <span className="text-primary mt-1">✱</span>
-                      <span className="text-foreground">{solution}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+          <motion.div
+            key={activeIndustry}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+            className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16"
+          >
+            <div className="rounded-lg overflow-hidden">
+              <img
+                src={industries[activeIndustry].image}
+                alt={industries[activeIndustry].name}
+                className="w-full h-full object-cover aspect-[4/3]"
+              />
             </div>
 
-            <Button asChild className="mt-10">
-              <Link to="/cases">
-                Explore
-                <ArrowRight />
-              </Link>
-            </Button>
-          </div>
-        </motion.div>
-      </div>
-    </section>
+            <div>
+              <h3 className="heading-3 mb-10">
+                {industries[activeIndustry].title}
+              </h3>
+
+              <div>
+                <div className="grid grid-cols-1 md:grid-cols-2 border-b border-border">
+                  <p className="label-small text-muted-foreground pb-4 md:pr-8">
+                    Challenges:
+                  </p>
+                  <p className="label-small text-muted-foreground pb-4 md:pl-8">
+                    How we solve them:
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2">
+                  <ul className="space-y-4 pt-6 md:pr-8">
+                    {industries[activeIndustry].challenges.map((challenge, i) => (
+                      <li key={i} className="flex items-start gap-3">
+                        <span className="text-primary mt-1">✱</span>
+                        <span className="text-foreground">{challenge}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <ul className="space-y-4 pt-6 md:border-l md:border-border md:pl-8">
+                    {industries[activeIndustry].solutions.map((solution, i) => (
+                      <li key={i} className="flex items-start gap-3">
+                        <span className="text-primary mt-1">✱</span>
+                        <span className="text-foreground">{solution}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              <Button asChild className="mt-10">
+                <Link to="/cases">
+                  Explore
+                  <ArrowRight />
+                </Link>
+              </Button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      */}
+    </>
   );
 };
 
