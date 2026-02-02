@@ -148,7 +148,7 @@ const NoCodeDevelopment = () => {
       label: "COMPLIANCE",
       title: "Design Meets Regulation",
       description:
-        "HIPAA- and GDPR-certified expertise for Healthcare and beyond. We've gained industry certifications and recognition since 2019.",
+        "HIPAA- and GDPR-certified expertise for Healthcare and beyond. We've gained industry certifications and recognition since 2023.",
     },
     {
       label: "LONGEVITY",

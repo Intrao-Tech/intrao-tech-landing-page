@@ -45,7 +45,7 @@ const TeamSection = () => {
             Meet the team driving your product's success
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            Founded in 2019 by a team of experienced designers and developers, Intrao Tech was built with one goal-to become a trusted partner for startups and growing businesses looking to launch, scale, and innovate. Our founder-led team spans London, Canada, the U.S., Ukraine, Poland, and Estonia, bringing global expertise to every project.
+            Founded in 2023 by a team of experienced designers and developers, Intrao Tech was built with one goal-to become a trusted partner for startups and growing businesses looking to launch, scale, and innovate. Our founder-led team spans London, Canada, the U.S., Ukraine, Poland, and Estonia, bringing global expertise to every project.
           </p>
         </motion.div>
 

@@ -170,7 +170,7 @@ const BlockchainDevelopment = () => {
       label: "COMPLIANCE",
       title: "Design That Meets Regulation",
       description:
-        "HIPAA and GDPR certifications since 2019. We build compliant blockchain solutions for regulated industries.",
+        "HIPAA and GDPR certifications since 2023. We build compliant blockchain solutions for regulated industries.",
     },
     {
       label: "LONGEVITY",

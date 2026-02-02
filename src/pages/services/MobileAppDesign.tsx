@@ -217,7 +217,7 @@ const MobileAppDesign = () => {
       label: "DESIGN THAT MEETS REGULATION",
       title: "HIPAA- and GDPR-certified expertise for Healthcare and beyond.",
       description:
-        "Since 2019, we've gained HIPAA and GDPR certifications and industry recognition, delivering hundreds of products in Healthcare, SaaS, FinTech, and EdTech - where compliance and UX go hand in hand.",
+        "Since 2023, we've gained HIPAA and GDPR certifications and industry recognition, delivering hundreds of products in Healthcare, SaaS, FinTech, and EdTech - where compliance and UX go hand in hand.",
     },
     {
       label: "DESIGN THAT LASTS BEYOND TRENDS",
