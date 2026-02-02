@@ -42,226 +42,239 @@ const CookiesPolicy = () => {
                   <h2 className="text-2xl md:text-3xl font-bold uppercase mb-4">
                     Cookies Policy
                   </h2>
-                  <p className="text-muted-foreground">Last updated December 21, 2024</p>
+                  <p className="text-muted-foreground">Last updated January 15, 2026</p>
                 </div>
 
                 {/* Introduction */}
                 <div className="space-y-6">
                   <p>
-                    This Cookie Policy explains what cookies are and how Intrao Tech uses them. You should read this policy to understand what cookies are, how we use them, the types of cookies we use (i.e. the information we collect using cookies) and how that information is used and how to control the cookie preferences. For further information on how we use, store and keep your personal data secure, see our{" "}
+                    This Cookie Policy explains what cookies are and how INTRAO TECH LTD (company number 16900600) ("we", "us", or "our") uses them on our website{" "}
+                    <a href="https://intrao.tech" className="text-primary hover:underline">
+                      https://intrao.tech
+                    </a>
+                    . You should read this policy to understand what cookies are, how we use them, the types of cookies we use, and how you can control your cookie preferences.
+                  </p>
+                  <p>
+                    For further information on how we use, store, and keep your personal data secure, see our{" "}
                     <a href="/privacy-policy" className="text-primary hover:underline">
                       Privacy Policy
                     </a>
                     .
                   </p>
                   <p>
-                    You can at any time change or withdraw your consent from the Cookie Declaration on our website.
-                  </p>
-                  <p>
-                    Learn more about who we are, how you can contact us and how we process personal data in our{" "}
-                    <a href="/privacy-policy" className="text-primary hover:underline">
-                      Privacy Policy
-                    </a>
-                    .
-                  </p>
-                  <p>
-                    Your consent applies to the following domains: intrao.tech
+                    Your consent applies to the following domain: intrao.tech
                   </p>
                 </div>
 
                 {/* What are cookies */}
                 <div className="space-y-4">
-                  <h3 className="text-xl font-bold uppercase">What are cookies?</h3>
+                  <h3 className="text-xl font-bold uppercase">What Are Cookies?</h3>
                   <p>
-                    Cookies are small text files that are used to store small pieces of information. The cookies are stored on your device when the website is loaded on your browser. These cookies help us make the website function properly, make the website more secure, provide better user experience, and understand how the website performs and to analyze what works and where it needs improvement.
+                    Cookies are small text files that are stored on your computer or mobile device when you visit a website. They are widely used to make websites work more efficiently, provide information to website owners, and improve the user experience.
+                  </p>
+                  <p>
+                    Cookies can be "persistent" or "session" cookies. Persistent cookies remain on your device when you go offline, while session cookies are deleted as soon as you close your web browser.
                   </p>
                 </div>
 
                 {/* How do we use cookies */}
                 <div className="space-y-4">
-                  <h3 className="text-xl font-bold uppercase">How do we use cookies?</h3>
+                  <h3 className="text-xl font-bold uppercase">How Do We Use Cookies?</h3>
                   <p>
-                    As most of the online services, our website uses cookies first-party and third-party cookies for a number of purposes. The first-party cookies are mostly necessary for the website to function the right way, and they do not collect any of your personally identifiable data.
+                    We use cookies for several purposes. Some cookies are necessary for technical reasons for our website to operate, and we refer to these as "essential" or "strictly necessary" cookies. Other cookies enable us to track and target the interests of our users to enhance the experience on our website.
                   </p>
                   <p>
-                    The third-party cookies used on our websites are used mainly for understanding how the website performs, how you interact with our website, keeping our services secure, providing advertisements that are relevant to you, and all in all providing you with a better and improved user experience and help speed up your future interactions with our website.
+                    The specific types of first-party and third-party cookies served through our website and the purposes they perform are described below.
                   </p>
                 </div>
 
-                {/* What types of cookies */}
+                {/* Types of cookies */}
                 <div className="space-y-6">
-                  <h3 className="text-xl font-bold uppercase">What types of cookies do we use?</h3>
+                  <h3 className="text-xl font-bold uppercase">Types of Cookies We Use</h3>
 
                   <div className="space-y-4">
-                    <h4 className="font-semibold">Essential</h4>
+                    <h4 className="font-semibold">Essential Cookies</h4>
                     <p>
-                      Some cookies are essential for you to be able to experience the full functionality of our site. They allow us to maintain user sessions and prevent any security threats. They do not collect or store any personal information. For example, these cookies allow you to log-in to your account and add products to your basket and checkout securely.
+                      These cookies are strictly necessary to provide you with services available through our website and to use some of its features. Because these cookies are strictly necessary to deliver the website, you cannot refuse them without impacting how our website functions.
+                    </p>
+                    <div className="overflow-x-auto">
+                      <table className="w-full text-sm border border-border">
+                        <thead className="bg-muted">
+                          <tr>
+                            <th className="text-left p-3 border-b border-border">Cookie</th>
+                            <th className="text-left p-3 border-b border-border">Purpose</th>
+                            <th className="text-left p-3 border-b border-border">Duration</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td className="p-3 border-b border-border font-mono text-xs">__vercel_live_token</td>
+                            <td className="p-3 border-b border-border">Vercel hosting authentication</td>
+                            <td className="p-3 border-b border-border">Session</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                  <div className="space-y-4">
+                    <h4 className="font-semibold">Performance and Analytics Cookies</h4>
+                    <p>
+                      These cookies collect information about how visitors use our website, such as which pages visitors go to most often. We use this information to improve our website and provide a better user experience. All information these cookies collect is aggregated and therefore anonymous.
+                    </p>
+                    <p className="text-muted-foreground italic">
+                      Note: We currently do not use analytics cookies on our website. If we implement analytics in the future, we will update this policy and seek your consent where required.
                     </p>
                   </div>
 
                   <div className="space-y-4">
-                    <h4 className="font-semibold">Statistics</h4>
+                    <h4 className="font-semibold">Functional Cookies</h4>
                     <p>
-                      These cookies store information like the number of visitors to the website, the number of unique visitors, which pages of the website have been visited, the source of the visit etc. These data help us understand and analyze how well the website performs and where it needs improvement.
+                      These cookies enable the website to provide enhanced functionality and personalisation. They may be set by us or by third-party providers whose services we have added to our pages.
+                    </p>
+                    <p className="text-muted-foreground italic">
+                      Note: We currently do not use functional cookies that require consent.
                     </p>
                   </div>
 
                   <div className="space-y-4">
-                    <h4 className="font-semibold">Functional</h4>
+                    <h4 className="font-semibold">Marketing and Advertising Cookies</h4>
                     <p>
-                      These are the cookies that help certain non-essential functionalities on our website. These functionalities include embedding content like videos or sharing contents on the website on social media platforms.
+                      These cookies are used to make advertising messages more relevant to you. They perform functions like preventing the same ad from continuously reappearing, ensuring that ads are properly displayed, and in some cases selecting advertisements that are based on your interests.
                     </p>
-                  </div>
-
-                  <div className="space-y-4">
-                    <h4 className="font-semibold">Preferences</h4>
-                    <p>
-                      These cookies help us store your settings and browsing preferences like language preferences so that you have a better and efficient experience on future visits to the website.
+                    <p className="text-muted-foreground italic">
+                      Note: We currently do not use marketing or advertising cookies on our website.
                     </p>
                   </div>
                 </div>
 
-                {/* How to control */}
+                {/* Third-party services */}
                 <div className="space-y-4">
-                  <h3 className="text-xl font-bold uppercase">How can I control the cookie preferences?</h3>
+                  <h3 className="text-xl font-bold uppercase">Third-Party Services</h3>
                   <p>
-                    Should you decide to change your preferences later through your browsing session, you can click on the "Privacy & Cookie Policy" tab at the bottom of your screen. This will display the consent notice again enabling you to change your preferences or withdraw your consent entirely.
+                    Our website uses the following third-party services that may set cookies or collect data:
+                  </p>
+                  <ul className="list-disc pl-6 space-y-4">
+                    <li>
+                      <strong>Vercel (Website Hosting)</strong>
+                      <p className="text-muted-foreground mt-1">
+                        Our website is hosted on Vercel. Vercel may set essential cookies for security and performance purposes. For more information, see{" "}
+                        <a href="https://vercel.com/legal/privacy-policy" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">
+                          Vercel's Privacy Policy
+                        </a>
+                        .
+                      </p>
+                    </li>
+                    <li>
+                      <strong>Web3Forms (Contact Form)</strong>
+                      <p className="text-muted-foreground mt-1">
+                        We use Web3Forms to process contact form submissions. Web3Forms does not set cookies on your device. For more information, see{" "}
+                        <a href="https://web3forms.com/privacy" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">
+                          Web3Forms Privacy Policy
+                        </a>
+                        .
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* How to control cookies */}
+                <div className="space-y-4">
+                  <h3 className="text-xl font-bold uppercase">How Can You Control Cookies?</h3>
+                  <p>
+                    You have the right to decide whether to accept or reject cookies. You can exercise your cookie preferences by adjusting your browser settings.
                   </p>
                   <p>
-                    In addition to this, different browsers provide different methods to block and delete cookies used by websites. You can change the settings of your browser to block/delete the cookies. To find out more out more on how to manage and delete cookies, visit{" "}
-                    <a href="https://wikipedia.org" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">
-                      wikipedia.org
-                    </a>
-                    ,{" "}
+                    Most web browsers allow some control of most cookies through the browser settings. To find out more about cookies, including how to see what cookies have been set and how to manage and delete them, visit{" "}
                     <a href="https://www.allaboutcookies.org" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">
                       www.allaboutcookies.org
                     </a>
                     .
                   </p>
+
+                  <h4 className="font-semibold mt-6">Browser-specific instructions:</h4>
+                  <ul className="list-disc pl-6 space-y-2">
+                    <li>
+                      <a href="https://support.google.com/chrome/answer/95647" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">
+                        Google Chrome
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">
+                        Mozilla Firefox
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://support.apple.com/guide/safari/manage-cookies-sfri11471/mac" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">
+                        Safari
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://support.microsoft.com/en-us/microsoft-edge/delete-cookies-in-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">
+                        Microsoft Edge
+                      </a>
+                    </li>
+                  </ul>
+
+                  <p className="mt-4">
+                    Please note that if you choose to block cookies, you may not be able to use the full functionality of our website.
+                  </p>
                 </div>
 
-                {/* Privacy Policy for Intrao Tech */}
+                {/* Do Not Track */}
                 <div className="space-y-4">
-                  <h3 className="text-xl font-bold uppercase">Privacy Policy for Intrao Tech</h3>
+                  <h3 className="text-xl font-bold uppercase">Do Not Track Signals</h3>
                   <p>
-                    At Intrao Tech, accessible from{" "}
-                    <a href="https://intrao.tech" className="text-primary hover:underline">
-                      https://intrao.tech
-                    </a>
-                    , one of our main priorities is the privacy of our visitors. This Privacy Policy document contains the types of information that is collected and recorded by Intrao Tech and how we use it.
-                  </p>
-                  <p>
-                    If you have additional questions or require more information about our Privacy Policy, do not hesitate to{" "}
-                    <a href="/contacts" className="text-primary hover:underline">
-                      contact us
-                    </a>
-                    .
+                    Some browsers include a "Do Not Track" (DNT) feature that signals to websites that you do not want to have your online activity tracked. Because there is no uniform standard for DNT signals, our website does not currently respond to DNT browser signals. If a standard for online tracking is adopted that we must follow in the future, we will inform you about that practice in a revised version of this Cookie Policy.
                   </p>
                 </div>
 
-                {/* GDPR */}
+                {/* Updates */}
                 <div className="space-y-4">
-                  <h3 className="text-xl font-bold uppercase">General Data Protection Regulation (GDPR)</h3>
-                  <p>We are a Data Controller of your information.</p>
+                  <h3 className="text-xl font-bold uppercase">Updates to This Policy</h3>
                   <p>
-                    Intrao Tech's legal basis for collecting and using the personal information described in this Privacy Policy depends on the Personal Information we collect and the specific context in which we collect the information:
+                    We may update this Cookie Policy from time to time in order to reflect changes to the cookies we use or for other operational, legal, or regulatory reasons. Please therefore revisit this Cookie Policy regularly to stay informed about our use of cookies and related technologies.
+                  </p>
+                  <p>
+                    The date at the top of this Cookie Policy indicates when it was last updated.
+                  </p>
+                </div>
+
+                {/* UK GDPR Compliance */}
+                <div className="space-y-4">
+                  <h3 className="text-xl font-bold uppercase">UK GDPR and PECR Compliance</h3>
+                  <p>
+                    We comply with the UK General Data Protection Regulation (UK GDPR) and the Privacy and Electronic Communications Regulations (PECR) regarding the use of cookies.
+                  </p>
+                  <p>
+                    Under PECR, we are required to obtain your consent before placing any cookies on your device that are not strictly necessary for the operation of our website. As noted above, we currently only use essential cookies that do not require consent.
+                  </p>
+                  <p>
+                    If we introduce non-essential cookies in the future (such as analytics or marketing cookies), we will implement a cookie consent mechanism to obtain your explicit consent before setting those cookies.
+                  </p>
+                </div>
+
+                {/* Your Rights */}
+                <div className="space-y-4">
+                  <h3 className="text-xl font-bold uppercase">Your Rights</h3>
+                  <p>
+                    Under UK data protection law, you have rights in relation to your personal data, including the right to:
                   </p>
                   <ul className="list-disc pl-6 space-y-2">
-                    <li>Intrao Tech needs to perform a contract with you.</li>
-                    <li>You have given Intrao Tech permission to do so.</li>
-                    <li>Processing your personal information is in Intrao Tech's legitimate interests.</li>
-                    <li>Intrao Tech needs to comply with the law.</li>
+                    <li>Access your personal data</li>
+                    <li>Rectify inaccurate personal data</li>
+                    <li>Request erasure of your personal data</li>
+                    <li>Object to processing of your personal data</li>
+                    <li>Request restriction of processing</li>
+                    <li>Data portability</li>
+                    <li>Withdraw consent at any time</li>
                   </ul>
                   <p>
-                    Intrao Tech will retain your personal information only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use your information to the extent necessary to comply with our legal obligations, resolve disputes, and enforce our policies.
-                  </p>
-                  <p>
-                    If you are a resident of the European Economic Area (EEA), you have certain data protection rights. If you wish to be informed what Personal Information we hold about you and if you want it to be removed from our systems, please{" "}
-                    <a href="/contacts" className="text-primary hover:underline">
-                      contact us
+                    For more information about your rights, please see our{" "}
+                    <a href="/privacy-policy" className="text-primary hover:underline">
+                      Privacy Policy
                     </a>
                     .
-                  </p>
-                  <p>In certain circumstances, you have the following data protection rights:</p>
-                  <ul className="list-disc pl-6 space-y-2">
-                    <li>The right to access, update or to delete the information we have on you.</li>
-                    <li>The right of rectification.</li>
-                    <li>The right to object.</li>
-                    <li>The right of restriction.</li>
-                    <li>The right to data portability.</li>
-                    <li>The right to withdraw consent.</li>
-                  </ul>
-                </div>
-
-                {/* Log Files */}
-                <div className="space-y-4">
-                  <h3 className="text-xl font-bold uppercase">Log Files</h3>
-                  <p>
-                    Intrao Tech follows a standard procedure of using log files. These files log visitors when they visit websites. All hosting companies do this and a part of hosting services' analytics. The information collected by log files include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages and, possibly, the number of clicks. These are not linked to any information that is personally identifiable. The purpose of the information is for analyzing trends, administering the site, tracking users' movement on the website, and gathering demographic information.
-                  </p>
-                </div>
-
-                {/* Cookies and Web Beacons */}
-                <div className="space-y-4">
-                  <h3 className="text-xl font-bold uppercase">Cookies and Web Beacons</h3>
-                  <p>
-                    Like any other website, Intrao Tech uses "cookies". Cookies are small text files that are used to store small pieces of information. The cookies are stored on your device when the website is loaded on your browser. Cookies are used to store information including visitors' preferences, and the pages on the website that the visitor accessed or visited. The information is used to optimize the users' experience by customizing web page content based on visitors' browser type and/or other information.
-                  </p>
-                </div>
-
-                {/* Privacy Policies */}
-                <div className="space-y-4">
-                  <h3 className="text-xl font-bold uppercase">Privacy Policies</h3>
-                  <p>
-                    You may consult this list to find the Privacy Policy for each of the advertising partners of Intrao Tech.
-                  </p>
-                  <p>
-                    Third-party ad servers or ad networks use technologies like cookies, JavaScript, or Web Beacons that are used in their respective advertisements and links that appear on Intrao Tech, which are sent directly to users' browser. They automatically receive your IP address when this occurs. These technologies are used to measure the effectiveness of their advertising campaigns and/or to personalize the advertising content that you see on websites that you visit.
-                  </p>
-                  <p>
-                    Note that Intrao Tech has no access to, or control over, cookies used by third-party advertisers.
-                  </p>
-                </div>
-
-                {/* Third Party Privacy Policies */}
-                <div className="space-y-4">
-                  <h3 className="text-xl font-bold uppercase">Third Party Privacy Policies</h3>
-                  <p>
-                    Intrao Tech's Privacy Policy does not apply to other advertisers or websites. Thus, we are advising you to consult the respective Privacy Policies of these third-party ad servers for more detailed information. It may include their practices and instructions about how to opt-out of certain options.
-                  </p>
-                  <p>
-                    You can choose to disable cookies through your individual browser options. For detailed information about cookie management with specific web browsers, please visit your browser's respective website.
-                  </p>
-                </div>
-
-                {/* Children's Information */}
-                <div className="space-y-4">
-                  <h3 className="text-xl font-bold uppercase">Children's Information</h3>
-                  <p>
-                    Another part of our priority is adding protection for children while using the internet. We encourage parents and guardians to observe, participate in, and/or monitor and guide their online activity.
-                  </p>
-                  <p>
-                    Intrao Tech does not knowingly collect any Personal Identifiable Information from children under the age of 13. If you think that your child provided this kind of information on our website, we strongly encourage you to{" "}
-                    <a href="/contacts" className="text-primary hover:underline">
-                      contact us
-                    </a>
-                    {" "}immediately and we will do our best efforts to promptly remove such information from our records.
-                  </p>
-                </div>
-
-                {/* Online Privacy Policy Only */}
-                <div className="space-y-4">
-                  <h3 className="text-xl font-bold uppercase">Online Privacy Policy Only</h3>
-                  <p>
-                    Our Privacy Policy applies only to the online activities of Intrao Tech and is valid for visitors to our website with regard to the information that they shared and/or collected via Intrao Tech. This policy is not applicable to any information collected offline or via channels other than this website.
-                  </p>
-                </div>
-
-                {/* Consent */}
-                <div className="space-y-4">
-                  <h3 className="text-xl font-bold uppercase">Consent</h3>
-                  <p>
-                    By using our website, you hereby consent to our Privacy Policy and agree to its terms.
                   </p>
                 </div>
 
@@ -269,16 +282,23 @@ const CookiesPolicy = () => {
                 <div className="space-y-4">
                   <h3 className="text-xl font-bold uppercase">Contact Us</h3>
                   <p>
-                    If you have any questions about this Cookies Policy, please{" "}
-                    <a href="/contacts" className="text-primary hover:underline">
-                      contact us
-                    </a>
-                    {" "}or email us at{" "}
-                    <a href="mailto:info@intrao.tech" className="text-primary hover:underline">
-                      info@intrao.tech
-                    </a>
-                    .
+                    If you have any questions about our use of cookies or this Cookie Policy, please contact us:
                   </p>
+                  <address className="not-italic mt-4">
+                    <p className="font-semibold">INTRAO TECH LTD</p>
+                    <p>124 City Road</p>
+                    <p>London, England</p>
+                    <p>EC1V 2NX</p>
+                    <p>United Kingdom</p>
+                    <p className="mt-2">Company Number: 16900600</p>
+                    <p>Registered in England</p>
+                    <p className="mt-2">
+                      Email:{" "}
+                      <a href="mailto:info@intrao.tech" className="text-primary hover:underline">
+                        info@intrao.tech
+                      </a>
+                    </p>
+                  </address>
                 </div>
               </motion.div>
             </div>
