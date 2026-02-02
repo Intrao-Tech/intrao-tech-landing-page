@@ -85,7 +85,7 @@ const ParallaxHeroSection = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="heading-1 mb-12 max-w-5xl"
         >
-          Your dev team, without the payroll
+          Your dev team,<br />without the payroll
         </motion.h1>
 
         {/* CTA Buttons */}
