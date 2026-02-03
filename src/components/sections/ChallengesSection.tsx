@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ButtonArrows } from "@/components/ui/button-arrows";
 import antonImg from "@/assets/anton.jpg";
-import artemImg from "@/assets/artem.png";
+import artemImg from "@/assets/artem.jpg";
 import ihorImg from "@/assets/ihor.jpeg";
 
 const ChallengesSection = () => {

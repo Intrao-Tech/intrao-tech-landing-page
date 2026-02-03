@@ -7,7 +7,7 @@ import { TrendingUp, Globe, Handshake } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ButtonArrows } from "@/components/ui/button-arrows";
 import antonImg from "@/assets/anton.jpg";
-import artemImg from "@/assets/artem.png";
+import artemImg from "@/assets/artem.jpg";
 import ihorImg from "@/assets/ihor.jpeg";
 
 const Team = () => {
@@ -33,19 +33,22 @@ const Team = () => {
     {
       name: "Oleg Zubchenok",
       role: "CBDO, CDTO, Commercial Director, Board Advisor",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=600&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=600&fit=crop",
       bio: "Oleg, an MBA graduate, is a seasoned business consultant, mentor, and advisor specializing in offering valuable insights to business owners and management teams. With a strong foundation in Physics and Biophysics, coupled with a BA in Economics, he garnered extensive experience in retail network development and operations over 14 years.",
     },
     {
       name: "Adam Kyle Wilson",
       role: "Co-founder/CEO at Polyform, Techstars Mentor",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&h=600&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&h=600&fit=crop",
       bio: "Adam is a serial entrepreneur and product visionary with over 150 products launched and 50+ industry awards. As a Techstars mentor, he guides startups through product development and market fit challenges, bringing deep expertise in AR/VR and emerging technologies.",
     },
     {
       name: "Diego Pavan",
       role: "XR Product Manager/Consultant",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&h=600&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&h=600&fit=crop",
       bio: "Diego brings over 10 years of XR experience and an MBA to his role as product consultant. He specializes in helping companies navigate the complexities of extended reality product development, from ideation to market launch.",
     },
   ];
@@ -54,26 +57,45 @@ const Team = () => {
     {
       icon: TrendingUp,
       title: "Focus on business results",
-      description: "We do not just create for the sake of creating - we're focused on building products that bring results. With our full-cycle product services and trusted business advisors, we know how to design & develop a product, find its product/market fit, and expand it to new markets.",
+      description:
+        "We do not just create for the sake of creating - we're focused on building products that bring results. With our full-cycle product services and trusted business advisors, we know how to design & develop a product, find its product/market fit, and expand it to new markets.",
     },
     {
       icon: Globe,
       title: "Transparency in everything",
-      description: "We promote transparency everywhere - in our daily communication with our dedicated team and customers. We are guided by it on every project and every interaction. We believe that transparency is a key to fruitful collaboration and trust.",
+      description:
+        "We promote transparency everywhere - in our daily communication with our dedicated team and customers. We are guided by it on every project and every interaction. We believe that transparency is a key to fruitful collaboration and trust.",
     },
     {
       icon: Handshake,
       title: "Partners, not just vendors",
-      description: "We are not just your another vendor, but a reliable partner that cares about your product as much as you do. We dive into each process, offer our expertise and make every effort to give you the maximum value. We're a part of your team and will always have your back.",
+      description:
+        "We are not just your another vendor, but a reliable partner that cares about your product as much as you do. We dive into each process, offer our expertise and make every effort to give you the maximum value. We're a part of your team and will always have your back.",
     },
   ];
 
   const awards = [
-    { name: "Clutch", description: "Top product design company 2024", link: "#" },
-    { name: "Upwork", description: "Top rated plus agency by Upwork", link: "#" },
-    { name: "Webflow", description: "Professional partner by Webflow", link: "#" },
+    {
+      name: "Clutch",
+      description: "Top product design company 2024",
+      link: "#",
+    },
+    {
+      name: "Upwork",
+      description: "Top rated plus agency by Upwork",
+      link: "#",
+    },
+    {
+      name: "Webflow",
+      description: "Professional partner by Webflow",
+      link: "#",
+    },
     { name: "UX Design Awards", description: "Nominee 2024", link: "#" },
-    { name: "Awwwards", description: "Site of the Day & honorable mentions", link: "#" },
+    {
+      name: "Awwwards",
+      description: "Site of the Day & honorable mentions",
+      link: "#",
+    },
   ];
 
   return (
@@ -88,7 +110,10 @@ const Team = () => {
 
       <main>
         {/* Hero Section */}
-        <section data-header-theme="dark" className="bg-dark text-dark-foreground pt-32 pb-24 min-h-[70vh] flex items-center">
+        <section
+          data-header-theme="dark"
+          className="bg-dark text-dark-foreground pt-32 pb-24 min-h-[70vh] flex items-center"
+        >
           <div className="container mx-auto px-6">
             <motion.h1
               initial={{ opacity: 0, y: 40 }}
@@ -97,8 +122,7 @@ const Team = () => {
               className="heading-1 mb-8 max-w-4xl"
             >
               Intrao Tech Team
-              <br />
-              & Advisors
+              <br />& Advisors
             </motion.h1>
 
             <motion.p
@@ -107,7 +131,9 @@ const Team = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-dark-muted text-lg md:text-xl max-w-xl mb-10"
             >
-              Meet a team of trusted experts & savvy advisors dedicated to delivering profound business results by driving innovation and excellence.
+              Meet a team of trusted experts & savvy advisors dedicated to
+              delivering profound business results by driving innovation and
+              excellence.
             </motion.p>
 
             <motion.div
@@ -141,7 +167,10 @@ const Team = () => {
         </div>
 
         {/* Leadership Team Section */}
-        <section data-header-theme="light" className="bg-background text-foreground py-24">
+        <section
+          data-header-theme="light"
+          className="bg-background text-foreground py-24"
+        >
           <div className="container mx-auto px-6">
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
@@ -249,7 +278,10 @@ const Team = () => {
         </section> */}
 
         {/* Principles Section */}
-        <section data-header-theme="light" className="bg-background text-foreground pt-24 pb-40">
+        <section
+          data-header-theme="light"
+          className="bg-background text-foreground pt-24 pb-40"
+        >
           <div className="container mx-auto px-6">
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
@@ -268,7 +300,8 @@ const Team = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-muted-foreground text-lg max-w-2xl mb-16"
             >
-              Intrao Tech is a team of like-minded professionals who are united by similar goals, principles, values and approaches to what we do.
+              Intrao Tech is a team of like-minded professionals who are united
+              by similar goals, principles, values and approaches to what we do.
             </motion.p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -285,9 +318,16 @@ const Team = () => {
                   <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-muted-foreground/50 to-muted-foreground/20 rounded-full" />
 
                   <div className="pt-6">
-                    <principle.icon className="w-10 h-10 text-muted-foreground mb-6" strokeWidth={1.5} />
-                    <h3 className="text-2xl font-bold mb-4">{principle.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed">{principle.description}</p>
+                    <principle.icon
+                      className="w-10 h-10 text-muted-foreground mb-6"
+                      strokeWidth={1.5}
+                    />
+                    <h3 className="text-2xl font-bold mb-4">
+                      {principle.title}
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      {principle.description}
+                    </p>
                   </div>
                 </motion.div>
               ))}
@@ -296,7 +336,10 @@ const Team = () => {
         </section>
 
         {/* CTA Section */}
-        <section data-header-theme="dark" className="relative z-10 bg-dark text-dark-foreground py-24">
+        <section
+          data-header-theme="dark"
+          className="relative z-10 bg-dark text-dark-foreground py-24"
+        >
           {/* Top curve */}
           <div className="absolute top-[1px] left-0 w-full -translate-y-full pointer-events-none z-20">
             <svg
