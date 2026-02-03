@@ -118,7 +118,7 @@ const About = () => {
     <>
       <SEOHead
         title="About | Three Founders, No Bureaucracy - Intrao Tech"
-        description="Three founders. Technical and commercial. Young, hungry, no bureaucracy. We ship fast because we're a lean team, not a 50-person agency."
+        description="Three founders. Technical and commercial. Young, hungry, no bureaucracy. We ship fast because you talk directly to decision-makers."
         canonical="/about"
       />
 
@@ -143,7 +143,7 @@ const About = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-dark-muted text-lg md:text-xl max-w-2xl mb-10"
             >
-              We build fast because we're not a 50-person agency. Technical and commercial expertise combined to create products users love.
+              We build fast because there's no bureaucracy and you talk directly to the founders. Technical and commercial expertise combined to create products users love.
             </motion.p>
 
             <motion.div

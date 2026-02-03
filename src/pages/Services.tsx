@@ -190,7 +190,7 @@ const Services = () => {
     <>
       <SEOHead
         title="Services | One Partner, Design to Deployed - Intrao Tech"
-        description="Full-service dev & design from one lean team. We build fast because we're not a 50-person agency. MVP development, UI/UX design, and web apps."
+        description="Full-service dev & design from one lean team. We build fast because there's no bureaucracy. MVP development, UI/UX design, and web apps."
         canonical="/services"
       />
 
@@ -218,7 +218,7 @@ const Services = () => {
                   transition={{ duration: 0.8, delay: 0.1 }}
                   className="heading-1 mb-6"
                 >
-                  We build fast because we're not a 50-person agency
+                  We build fast because there's no bureaucracy
                 </motion.h1>
 
                 <motion.p
