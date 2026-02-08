@@ -516,7 +516,7 @@ const Careers = () => {
                   transition={{ duration: 0.6, delay: 0.2 }}
                 >
                   <Button asChild size="lg" className="group">
-                    <a href="mailto:info@intrao.tech?subject=Career Application&body=Hi, I'm interested in joining Intrao Tech. Here's a bit about me:%0A%0A">
+                    <a href="mailto:hr@intrao.tech?subject=Career Application&body=Hi, I'm interested in joining Intrao Tech. Here's a bit about me:%0A%0A">
                       Apply Now
                       <ButtonArrows />
                     </a>
