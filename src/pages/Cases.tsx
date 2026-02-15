@@ -80,7 +80,7 @@ const casesData: CaseItem[] = [
     link: "#",
   },
   {
-    title: "MediCare Plus - HIPAA-compliant patient portal for healthcare providers",
+    title: "MediCare Plus - Secure patient portal for healthcare providers",
     company: "MEDICARE PLUS",
     location: "CANADA",
     locationFlag: "🇨🇦",
@@ -89,7 +89,7 @@ const casesData: CaseItem[] = [
     techStack: "Vue.js, Python, GCP",
     timeline: "8 months",
     results: [
-      "HIPAA compliant",
+      "Compliance-ready",
       "+50% patient engagement",
       "30% reduction in admin tasks",
     ],
@@ -200,7 +200,7 @@ const Cases = () => {
 
       <Header />
 
-      <main>
+      <main id="main-content">
         {/* Coming Soon Section */}
         <section
           data-header-theme="light"
@@ -338,6 +338,7 @@ const Cases = () => {
                       className="relative aspect-[4/3] overflow-hidden bg-muted rounded-lg"
                     >
                       <img
+                        loading="lazy"
                         src={caseItem.image}
                         alt={caseItem.title}
                         className="w-full h-full object-cover"

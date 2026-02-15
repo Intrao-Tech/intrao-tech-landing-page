@@ -60,6 +60,7 @@ const TeamSection = () => {
             className="col-span-6 md:col-span-4 lg:col-span-3 h-[280px] md:h-[350px] rounded-2xl overflow-hidden"
           >
             <img
+              loading="lazy"
               src={teamPhotos[0].src}
               alt={teamPhotos[0].alt}
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
@@ -77,6 +78,7 @@ const TeamSection = () => {
             className="col-span-6 md:col-span-8 lg:col-span-7 h-[280px] md:h-[350px] rounded-2xl overflow-hidden"
           >
             <img
+              loading="lazy"
               src={teamPhotos[1].src}
               alt={teamPhotos[1].alt}
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
@@ -92,6 +94,7 @@ const TeamSection = () => {
             className="col-span-6 md:col-span-4 lg:col-span-3 h-[300px] md:h-[380px] rounded-2xl overflow-hidden"
           >
             <img
+              loading="lazy"
               src={teamPhotos[2].src}
               alt={teamPhotos[2].alt}
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
@@ -106,6 +109,7 @@ const TeamSection = () => {
             className="col-span-6 md:col-span-4 lg:col-span-3 h-[300px] md:h-[380px] rounded-2xl overflow-hidden"
           >
             <img
+              loading="lazy"
               src={teamPhotos[3].src}
               alt={teamPhotos[3].alt}
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
@@ -123,6 +127,7 @@ const TeamSection = () => {
             className="col-span-6 md:col-span-4 lg:col-span-4 h-[300px] md:h-[380px] rounded-2xl overflow-hidden"
           >
             <img
+              loading="lazy"
               src={teamPhotos[4].src}
               alt={teamPhotos[4].alt}
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
@@ -138,6 +143,7 @@ const TeamSection = () => {
             className="col-span-6 md:col-span-4 lg:col-span-4 h-[350px] md:h-[450px] rounded-2xl overflow-hidden"
           >
             <img
+              loading="lazy"
               src={teamPhotos[5].src}
               alt={teamPhotos[5].alt}
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
@@ -152,6 +158,7 @@ const TeamSection = () => {
             className="col-span-6 md:col-span-4 lg:col-span-5 h-[350px] md:h-[450px] rounded-2xl overflow-hidden"
           >
             <img
+              loading="lazy"
               src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&h=600&fit=crop"
               alt="Team gathering"
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"

@@ -109,8 +109,8 @@ const Branding = () => {
   const successCards = [
     {
       label: "DESIGN THAT MEETS REGULATION",
-      title: "HIPAA- and GDPR-certified expertise for Healthcare and beyond.",
-      description: "Since 2023, we've gained HIPAA and GDPR certifications and industry recognition, delivering hundreds of products in Healthcare, SaaS, FinTech, and EdTech - where compliance and UX go hand in hand.",
+      title: "Compliance-aware design for Healthcare, FinTech, and regulated industries.",
+      description: "We bring deep experience across Healthcare, SaaS, FinTech, and EdTech — delivering hundreds of products where compliance-aware design and great UX go hand in hand.",
     },
     {
       label: "DESIGN THAT LASTS BEYOND TRENDS",
@@ -125,7 +125,7 @@ const Branding = () => {
     {
       label: "LOCAL PRESENCE. GLOBAL DELIVERY.",
       title: "Work directly with the doers - not a chain of account managers.",
-      description: "Collaborate with UX strategists in North America, while our senior design and development teams in Europe deliver fast, consistent results. We integrate into your tools and workflow, working as part of your team.",
+      description: "Work directly with our London-based founders and senior design team across Europe. We integrate into your tools and workflow, delivering fast, consistent results as part of your team.",
     },
   ];
 
@@ -152,7 +152,7 @@ const Branding = () => {
 
       <Header />
 
-      <main>
+      <main id="main-content">
         {/* Hero Section */}
         <section data-header-theme="dark" className="bg-dark text-dark-foreground pt-32 pb-20">
           <div className="container mx-auto px-6">

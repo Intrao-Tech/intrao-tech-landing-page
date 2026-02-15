@@ -89,7 +89,7 @@ const NotFound = () => {
 
       <Header />
 
-      <main className="relative min-h-screen bg-dark" data-header-theme="dark">
+      <main id="main-content" className="relative min-h-screen bg-dark" data-header-theme="dark">
         <section className="container mx-auto px-6 pt-40 pb-24">
           {/* Label */}
           <p className="text-dark-muted uppercase tracking-widest text-sm mb-6">

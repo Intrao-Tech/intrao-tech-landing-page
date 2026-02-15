@@ -191,7 +191,7 @@ const TechnicalWorkshop = () => {
       label: "COMPLIANCE",
       title: "Regulatory Expertise",
       description:
-        "HIPAA- and GDPR-certified expertise for Healthcare, FinTech, and other regulated industries.",
+        "Compliance-aware design for Healthcare, FinTech, and regulated industries.",
     },
     {
       label: "LONGEVITY",
@@ -236,7 +236,7 @@ const TechnicalWorkshop = () => {
 
       <Header />
 
-      <main>
+      <main id="main-content">
         {/* Hero Section */}
         <section data-header-theme="dark" className="bg-dark text-dark-foreground pt-32 pb-20">
           <div className="container mx-auto px-6">

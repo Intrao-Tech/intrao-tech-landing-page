@@ -108,7 +108,7 @@ const Team = () => {
 
       <Header />
 
-      <main>
+      <main id="main-content">
         {/* Hero Section */}
         <section
           data-header-theme="dark"
@@ -194,6 +194,7 @@ const Team = () => {
                 >
                   <div className="aspect-[4/5] overflow-hidden rounded-lg mb-5">
                     <img
+                      loading="lazy"
                       src={member.image}
                       alt={member.name}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -253,6 +254,7 @@ const Team = () => {
                 >
                   <div className="aspect-[4/5] overflow-hidden rounded-lg">
                     <img
+                      loading="lazy"
                       src={advisor.image}
                       alt={advisor.name}
                       className="w-full h-full object-cover"

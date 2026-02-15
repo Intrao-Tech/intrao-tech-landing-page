@@ -103,6 +103,7 @@ const ChallengesSection = () => {
                   className="relative aspect-[3/4] lg:aspect-[4/5] rounded-lg overflow-hidden bg-muted order-first lg:order-last"
                 >
                   <img
+                    loading="lazy"
                     src={challenge.image}
                     alt=""
                     className="w-full h-full object-cover"

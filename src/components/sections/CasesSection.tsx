@@ -171,6 +171,7 @@ const StackingCard = ({ caseItem, index, totalCards }: StackingCardProps) => {
             className="relative aspect-[4/3] overflow-hidden rounded-lg"
           >
             <img
+              loading="lazy"
               src={caseItem.image}
               alt={caseItem.title}
               className="w-full h-full object-cover"

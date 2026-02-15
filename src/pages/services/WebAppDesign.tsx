@@ -199,9 +199,9 @@ const WebAppDesign = () => {
   const successCards = [
     {
       label: "DESIGN THAT MEETS REGULATION",
-      title: "HIPAA- and GDPR-certified expertise for Healthcare and beyond.",
+      title: "Compliance-aware design for Healthcare, FinTech, and regulated industries.",
       description:
-        "Since 2023, we've gained HIPAA and GDPR certifications and industry recognition, delivering hundreds of products in Healthcare, SaaS, FinTech, and EdTech - where compliance and UX go hand in hand.",
+        "We bring deep experience across Healthcare, SaaS, FinTech, and EdTech — delivering hundreds of products where compliance-aware design and great UX go hand in hand.",
     },
     {
       label: "DESIGN THAT LASTS BEYOND TRENDS",
@@ -220,7 +220,7 @@ const WebAppDesign = () => {
       label: "LOCAL PRESENCE. GLOBAL DELIVERY.",
       title: "Work directly with the doers - not a chain of account managers.",
       description:
-        "Our team combines North American strategists with European development teams, giving you direct access to the people doing the work, with timezone-friendly communication.",
+        "Our London-based founders work alongside senior design and development teams across Europe, giving you direct access to the people doing the work, with timezone-friendly communication.",
     },
   ];
 
@@ -247,7 +247,7 @@ const WebAppDesign = () => {
 
       <Header />
 
-      <main>
+      <main id="main-content">
         {/* Hero Section */}
         <section
           data-header-theme="dark"

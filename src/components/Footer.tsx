@@ -161,6 +161,7 @@ const Footer = () => {
       <div className="relative overflow-hidden mt-8">
         <div className="container mx-auto px-6">
           <img
+            loading="lazy"
             src={logoDark}
             alt="Intrao"
             className="w-full max-w-none select-none"
