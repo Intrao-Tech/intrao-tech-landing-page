@@ -162,7 +162,7 @@ const Insights = () => {
 
       <Header />
 
-      <main>
+      <main id="main-content">
         {/* Coming Soon Section */}
         <section
           data-header-theme="light"
@@ -308,6 +308,7 @@ const Insights = () => {
                   <Link to="#" className="block">
                     <div className="relative aspect-[16/10] overflow-hidden rounded-lg mb-6">
                       <img
+                        loading="lazy"
                         src={article.image}
                         alt={article.title}
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
@@ -316,6 +317,7 @@ const Insights = () => {
 
                     <div className="flex items-center gap-3 mb-4">
                       <img
+                        loading="lazy"
                         src={article.authorAvatar}
                         alt={article.author}
                         className="w-8 h-8 rounded-full object-cover"

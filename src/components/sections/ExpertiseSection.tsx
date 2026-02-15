@@ -25,11 +25,11 @@ const ExpertiseSection = () => {
     },
     {
       name: "Healthcare",
-      title: "HIPAA-compliant design for health tech products",
+      title: "Compliance-aware design for health tech products",
       image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=800&h=600&fit=crop",
       challenges: [
         "UX complexity in health tracking and telehealth",
-        "Data privacy and HIPAA compliance",
+        "Data privacy and regulatory compliance",
         "Building trust with patients and practitioners",
       ],
       solutions: [
@@ -135,6 +135,7 @@ const ExpertiseSection = () => {
           >
             <div className="rounded-lg overflow-hidden">
               <img
+                loading="lazy"
                 src={industries[activeIndustry].image}
                 alt={industries[activeIndustry].name}
                 className="w-full h-full object-cover aspect-[4/3]"

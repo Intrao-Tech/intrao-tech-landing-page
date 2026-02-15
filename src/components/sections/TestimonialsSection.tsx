@@ -128,6 +128,7 @@ const TestimonialsSection = () => {
                         </div>
                       ) : (
                         <img
+                          loading="lazy"
                           src={testimonial.avatar}
                           alt={testimonial.author}
                           className="w-16 h-16 rounded-full object-cover"
@@ -143,6 +144,7 @@ const TestimonialsSection = () => {
 
                     <div className="relative flex-1 min-h-[300px] group cursor-pointer rounded-xl overflow-hidden">
                       <img
+                        loading="lazy"
                         src={testimonial.videoThumbnail}
                         alt="Video testimonial"
                         className="w-full h-full object-cover"
@@ -163,6 +165,7 @@ const TestimonialsSection = () => {
                   <div className="flex flex-col h-full min-h-[350px]">
                     <div className="flex items-center gap-4 mb-8">
                       <img
+                        loading="lazy"
                         src={testimonial.avatar}
                         alt={testimonial.author}
                         className="w-16 h-16 rounded-full object-cover"

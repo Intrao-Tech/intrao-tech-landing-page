@@ -201,6 +201,7 @@ const ContactFormSection = () => {
               <div className="flex items-start gap-4">
                 <div className="w-20 h-20 bg-muted rounded-lg overflow-hidden flex-shrink-0">
                   <img
+                    loading="lazy"
                     src={antonPhoto}
                     alt="Anton Muliavchyk"
                     className="w-full h-full object-cover"
@@ -230,6 +231,7 @@ const ContactFormSection = () => {
                 <div className="flex items-start gap-4">
                   <div className="w-20 h-20 bg-muted rounded-lg overflow-hidden flex-shrink-0">
                     <img
+                      loading="lazy"
                       src={ihorPhoto}
                       alt="Ihor Muliar"
                       className="w-full h-full object-cover"

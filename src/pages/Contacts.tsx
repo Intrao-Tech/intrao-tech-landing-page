@@ -80,7 +80,7 @@ const Contacts = () => {
 
       <Header />
 
-      <main>
+      <main id="main-content">
         {/* Hero Section */}
         <section data-header-theme="dark" className="bg-dark text-dark-foreground pt-32 pb-12">
           <div className="container mx-auto px-6">
@@ -227,6 +227,7 @@ const Contacts = () => {
                   <div className="flex items-start gap-4">
                     <div className="w-20 h-20 bg-muted rounded-lg overflow-hidden flex-shrink-0">
                       <img
+                        loading="lazy"
                         src={antonPhoto}
                         alt="Anton Muliavchyk"
                         className="w-full h-full object-cover"
@@ -256,6 +257,7 @@ const Contacts = () => {
                     <div className="flex items-start gap-4">
                       <div className="w-20 h-20 bg-muted rounded-lg overflow-hidden flex-shrink-0">
                         <img
+                          loading="lazy"
                           src={ihorPhoto}
                           alt="Ihor Muliar"
                           className="w-full h-full object-cover"

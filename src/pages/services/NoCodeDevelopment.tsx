@@ -149,7 +149,7 @@ const NoCodeDevelopment = () => {
       label: "COMPLIANCE",
       title: "Design Meets Regulation",
       description:
-        "HIPAA- and GDPR-certified expertise for Healthcare and beyond. We've gained industry certifications and recognition since 2023.",
+        "Compliance-aware design for Healthcare, FinTech, and regulated industries. We've gained industry certifications and recognition since 2023.",
     },
     {
       label: "LONGEVITY",
@@ -194,7 +194,7 @@ const NoCodeDevelopment = () => {
 
       <Header />
 
-      <main>
+      <main id="main-content">
         {/* Hero Section */}
         <section data-header-theme="dark" className="bg-dark text-dark-foreground pt-32 pb-20">
           <div className="container mx-auto px-6">

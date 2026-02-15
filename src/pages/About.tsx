@@ -124,7 +124,7 @@ const About = () => {
 
       <Header />
 
-      <main>
+      <main id="main-content">
         {/* Hero Section */}
         <section data-header-theme="dark" className="bg-dark text-dark-foreground pt-32 pb-24 relative">
           <div className="container mx-auto px-6">

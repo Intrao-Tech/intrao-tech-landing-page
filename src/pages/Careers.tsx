@@ -145,7 +145,7 @@ const Careers = () => {
 
       <Header />
 
-      <main>
+      <main id="main-content">
         {/* Hero Section with Stats */}
         <section
           data-header-theme="dark"
@@ -281,7 +281,7 @@ const Careers = () => {
               speed over quality. We built Intrao Tech to be different - a place
               where craft matters, where every detail is considered, and where
               our team has the autonomy to do their best work. Today, we're a
-              distributed team across Europe and North America, united by our
+              distributed team across Europe, united by our
               passion for building products that users actually love.
             </motion.p>
           </div>
@@ -479,6 +479,7 @@ const Careers = () => {
                 className="w-full lg:w-1/2 flex justify-center"
               >
                 <img
+                  loading="lazy"
                   src={careerImage}
                   alt="Join our team"
                   className="w-full max-w-md lg:max-w-lg"

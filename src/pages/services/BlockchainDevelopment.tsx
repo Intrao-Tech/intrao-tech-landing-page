@@ -171,7 +171,7 @@ const BlockchainDevelopment = () => {
       label: "COMPLIANCE",
       title: "Design That Meets Regulation",
       description:
-        "HIPAA and GDPR certifications since 2023. We build compliant blockchain solutions for regulated industries.",
+        "Deep experience building compliant blockchain solutions for regulated industries, with a strong focus on data privacy and security.",
     },
     {
       label: "LONGEVITY",
@@ -216,7 +216,7 @@ const BlockchainDevelopment = () => {
 
       <Header />
 
-      <main>
+      <main id="main-content">
         {/* Hero Section */}
         <section data-header-theme="dark" className="bg-dark text-dark-foreground pt-32 pb-20">
           <div className="container mx-auto px-6">

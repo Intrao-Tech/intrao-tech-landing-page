@@ -2,49 +2,49 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Main Pages -->
   <url>
-    <loc>https://intrao.tech/</loc>
+    <loc>https://www.intrao.tech/</loc>
     <lastmod>2026-02-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://intrao.tech/services</loc>
+    <loc>https://www.intrao.tech/services</loc>
     <lastmod>2026-02-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://intrao.tech/cases</loc>
+    <loc>https://www.intrao.tech/cases</loc>
     <lastmod>2026-02-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://intrao.tech/about</loc>
+    <loc>https://www.intrao.tech/about</loc>
     <lastmod>2026-02-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://intrao.tech/contacts</loc>
+    <loc>https://www.intrao.tech/contacts</loc>
     <lastmod>2026-02-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://intrao.tech/insights</loc>
+    <loc>https://www.intrao.tech/insights</loc>
     <lastmod>2026-02-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://intrao.tech/team</loc>
+    <loc>https://www.intrao.tech/team</loc>
     <lastmod>2026-02-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://intrao.tech/careers</loc>
+    <loc>https://www.intrao.tech/careers</loc>
     <lastmod>2026-02-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -52,79 +52,79 @@
 
   <!-- Service Pages -->
   <url>
-    <loc>https://intrao.tech/services/web-development</loc>
+    <loc>https://www.intrao.tech/services/web-development</loc>
     <lastmod>2026-02-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://intrao.tech/services/mobile-development</loc>
+    <loc>https://www.intrao.tech/services/mobile-development</loc>
     <lastmod>2026-02-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://intrao.tech/services/website-development</loc>
+    <loc>https://www.intrao.tech/services/website-development</loc>
     <lastmod>2026-02-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://intrao.tech/services/website-design</loc>
+    <loc>https://www.intrao.tech/services/website-design</loc>
     <lastmod>2026-02-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://intrao.tech/services/website-redesign</loc>
+    <loc>https://www.intrao.tech/services/website-redesign</loc>
     <lastmod>2026-02-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://intrao.tech/services/web-app-design</loc>
+    <loc>https://www.intrao.tech/services/web-app-design</loc>
     <lastmod>2026-02-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://intrao.tech/services/mobile-app-design</loc>
+    <loc>https://www.intrao.tech/services/mobile-app-design</loc>
     <lastmod>2026-02-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://intrao.tech/services/branding</loc>
+    <loc>https://www.intrao.tech/services/branding</loc>
     <lastmod>2026-02-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://intrao.tech/services/ux-audit</loc>
+    <loc>https://www.intrao.tech/services/ux-audit</loc>
     <lastmod>2026-02-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://intrao.tech/services/product-discovery</loc>
+    <loc>https://www.intrao.tech/services/product-discovery</loc>
     <lastmod>2026-02-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://intrao.tech/services/no-code-development</loc>
+    <loc>https://www.intrao.tech/services/no-code-development</loc>
     <lastmod>2026-02-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://intrao.tech/services/blockchain-development</loc>
+    <loc>https://www.intrao.tech/services/blockchain-development</loc>
     <lastmod>2026-02-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://intrao.tech/services/technical-workshop</loc>
+    <loc>https://www.intrao.tech/services/technical-workshop</loc>
     <lastmod>2026-02-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -132,19 +132,19 @@
 
   <!-- Legal Pages -->
   <url>
-    <loc>https://intrao.tech/terms-of-use</loc>
+    <loc>https://www.intrao.tech/terms-of-use</loc>
     <lastmod>2026-02-02</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://intrao.tech/privacy-policy</loc>
+    <loc>https://www.intrao.tech/privacy-policy</loc>
     <lastmod>2026-02-02</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://intrao.tech/cookies-policy</loc>
+    <loc>https://www.intrao.tech/cookies-policy</loc>
     <lastmod>2026-02-02</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>

@@ -154,7 +154,7 @@ const UXAudit = () => {
   const successCards = [
     {
       label: "COMPLIANCE",
-      title: "HIPAA & GDPR Certified",
+      title: "Compliance-Aware Design",
       description:
         "We maintain strict compliance standards for Healthcare, FinTech, and other regulated industries.",
     },
@@ -174,7 +174,7 @@ const UXAudit = () => {
       label: "REACH",
       title: "Global Expertise",
       description:
-        "Local presence in North America with senior design and development teams in Europe.",
+        "London-based founders with senior design and development teams across Europe.",
     },
   ];
 
@@ -201,7 +201,7 @@ const UXAudit = () => {
 
       <Header />
 
-      <main>
+      <main id="main-content">
         {/* Hero Section */}
         <section data-header-theme="dark" className="bg-dark text-dark-foreground pt-32 pb-20">
           <div className="container mx-auto px-6">

@@ -174,7 +174,7 @@ const WebsiteDevelopment = () => {
   const successCards = [
     {
       label: "COMPLIANCE",
-      title: "HIPAA & GDPR Certified",
+      title: "Compliance-Aware Design",
       description:
         "We maintain strict compliance standards serving Healthcare, SaaS, FinTech, and EdTech sectors with confidence.",
     },
@@ -221,7 +221,7 @@ const WebsiteDevelopment = () => {
 
       <Header />
 
-      <main>
+      <main id="main-content">
         {/* Hero Section */}
         <section
           data-header-theme="dark"

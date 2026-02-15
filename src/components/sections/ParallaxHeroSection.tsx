@@ -88,6 +88,16 @@ const ParallaxHeroSection = () => {
           Your dev team,<br />without the payroll
         </motion.h1>
 
+        {/* Keyword Subtitle */}
+        <motion.p
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.3 }}
+          className="text-lg lg:text-xl text-dark-muted mb-12 max-w-3xl"
+        >
+          London-based design &amp; development studio for startups and growing businesses
+        </motion.p>
+
         {/* CTA Buttons */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -121,8 +131,12 @@ const ParallaxHeroSection = () => {
               muted
               loop
               playsInline
+              aria-label="Intrao Tech showreel"
+              poster="/logo-full.jpg"
               className="w-full h-full object-cover"
-            />
+            >
+              <track kind="captions" src="" label="English" srcLang="en" default />
+            </video>
           </div>
         </div>
 

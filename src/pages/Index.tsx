@@ -28,7 +28,7 @@ const Index = () => {
 
       <Header />
       
-      <main>
+      <main id="main-content">
         <ParallaxHeroSection />
         <ClientsSection />
         <ChallengesSection />

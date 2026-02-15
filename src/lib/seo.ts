@@ -1,6 +1,6 @@
 export const SITE_CONFIG = {
   name: "Intrao Tech",
-  domain: "https://intrao.tech",
+  domain: "https://www.intrao.tech",
   defaultTitle: "Intrao Tech | Founder-Led Dev & Design Studio for Startups",
   defaultDescription:
     "Your dev team, without the payroll. Founder-led studio building MVPs, apps, and websites for high-velocity startups. One partner, no handoffs.",
