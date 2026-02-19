@@ -11,20 +11,20 @@ import { ButtonArrows } from "@/components/ui/button-arrows";
 const Branding = () => {
   const challenges = [
     {
-      question: "Is inconsistent branding hurting your credibility?",
-      answer: "A clear and consistent brand image is essential for building trust and credibility. We create cohesive visual systems that reinforce your brand at every touchpoint.",
+      question: "How does inconsistent branding actually hurt my business?",
+      answer: "Research shows consistent branding improves recognition by up to 23%. When your visual identity, tone of voice, and messaging vary across channels, prospects struggle to remember you. We audit every touchpoint — website, social profiles, pitch decks, product User Interface (UI) — and build a unified brand system that holds across all of them.",
     },
     {
-      question: "Struggling to differentiate from competitors?",
-      answer: "When your visual identity resembles competitors too closely, you become forgettable. We craft unique brand identities that set you apart and make a lasting impression.",
+      question: "What makes your brand strategy go beyond just a new logo?",
+      answer: "A logo is one artifact. Our branding process starts with competitive positioning: we map your market landscape, identify white space, and define a brand platform — mission, values, personality, and messaging hierarchy. You receive a full brand book with logo, typography, color system, tone-of-voice guidelines, and application templates for digital and print.",
     },
     {
-      question: "Preparing for growth or entering new markets?",
-      answer: "Rebranding is a key step when entering new markets or scaling your business. We help you evolve your brand to match your ambitions while maintaining brand equity.",
+      question: "How long does a full rebrand take from kickoff to delivery?",
+      answer: "A complete rebrand typically takes 4–6 weeks. Week 1 is a discovery workshop with your team, weeks 2–3 focus on concept exploration and moodboarding, and weeks 4–6 cover refinement, asset production, and handoff of your brand book in Figma and PDF formats.",
     },
     {
-      question: "Need stronger market positioning?",
-      answer: "Brands need a strong visual presence to stand out in their industries. We build brand identities that position you as a leader and command attention.",
+      question: "Can you align our brand with a product launch or funding round?",
+      answer: "Yes — we frequently time branding work to coincide with seed rounds and product launches. We coordinate with your marketing timeline, delivering investor-ready pitch deck templates and launch assets alongside the core brand system. Our 98% client satisfaction rate reflects this attention to strategic timing.",
     },
   ];
 
@@ -212,7 +212,7 @@ const Branding = () => {
               */}
               <div>
                 <p className="text-xl md:text-2xl leading-relaxed text-dark-foreground">
-                  Engage your audience with a brand that stands out, builds trust, and makes an impact. We create distinctive brand identities that resonate with your target audience and drive business growth.
+                  Engage your audience with a brand that stands out, builds trust, and makes an impact. Intrao Tech creates distinctive brand identities that resonate with your target audience and drive business growth.
                 </p>
               </div>
             </motion.div>
@@ -409,7 +409,7 @@ const Branding = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-dark-muted text-lg mb-10 max-w-2xl mx-auto"
             >
-              Let's discuss how we can help you create a brand identity that stands out and drives business growth.
+              Let's discuss how Intrao Tech can help you create a brand identity that stands out and drives business growth.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}

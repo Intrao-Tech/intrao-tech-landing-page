@@ -11,16 +11,16 @@ import { ButtonArrows } from "@/components/ui/button-arrows";
 const WebsiteRedesign = () => {
   const challenges = [
     {
-      question: "Is your website outdated and misaligned with your brand?",
-      answer: "A modern, professional look builds trust. Our website redesign agency ensures your website stays relevant, visually appealing, and competitive.",
+      question: "How do you determine what's working and what needs to change on my current site?",
+      answer: "We start with a comprehensive audit: analytics review (traffic patterns, drop-off points), User Experience (UX) heuristic evaluation, performance benchmarking, and competitive analysis. This evidence-based approach ensures we preserve the elements that already convert well and redesign only what's holding you back.",
     },
     {
-      question: "Are you struggling with low conversion rates?",
-      answer: "If your visitors aren't converting, our UX website redesign process is designed to streamline user journeys and boost engagement effectively.",
+      question: "Will a redesign hurt my search rankings or break existing links?",
+      answer: "We build a full redirect map and SEO migration plan before touching a single page. URL structures, meta data, and internal linking are preserved or improved. Our 6-step redesign process includes an SEO-ready architecture phase specifically to protect your organic visibility during and after the transition.",
     },
     {
-      question: "Is mobile usability a problem?",
-      answer: "Over 60% of web traffic comes from mobile devices. Our website redesign specialists create responsive designs to ensure seamless experiences across all screens.",
+      question: "What results can I realistically expect from a website redesign?",
+      answer: "Results depend on your starting point, but our redesigns consistently deliver 35%+ improvement in conversion rates, lower bounce rates, and improved Core Web Vitals scores. We set measurable targets during discovery and track performance for 30 days post-launch to ensure the redesign delivers on its goals.",
     },
   ];
 
@@ -230,7 +230,7 @@ const WebsiteRedesign = () => {
               */}
               <div>
                 <p className="text-xl md:text-2xl leading-relaxed text-dark-foreground">
-                  Increase traffic, generate leads, and boost revenue with our website redesign services. We transform your site into a powerful tool for conversions.
+                  Increase traffic, generate leads, and boost revenue with Intrao Tech's website redesign services. We transform your site into a powerful tool for conversions.
                 </p>
               </div>
             </motion.div>
@@ -469,7 +469,7 @@ const WebsiteRedesign = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-dark-muted text-lg mb-10 max-w-2xl mx-auto"
             >
-              Let's discuss how we can help you redesign your website into a high-performing digital asset.
+              Let's discuss how Intrao Tech can help you redesign your website into a high-performing digital asset.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}

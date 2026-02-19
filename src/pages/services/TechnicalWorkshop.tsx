@@ -11,19 +11,16 @@ import { Asterisk, Users, BadgeCheck } from "lucide-react";
 const TechnicalWorkshop = () => {
   const challenges = [
     {
-      question: "Is your product idea still vague?",
-      answer:
-        "Our high tech workshop refines your vision with expert analysis, transforming initial concepts into actionable plans.",
+      question: "What exactly happens during a technical workshop?",
+      answer: "Our 6-step workshop covers: (1) stakeholder alignment on goals and constraints, (2) architecture mapping for frontend, backend, and infrastructure, (3) technology stack evaluation, (4) risk identification and mitigation planning, (5) resource and timeline estimation, and (6) a documented technical roadmap. You walk away with a clear blueprint, not just a slide deck.",
     },
     {
-      question: "Struggling to align design with architecture?",
-      answer:
-        "Our technical workshop services ensure seamless integration between UX design and technical requirements, avoiding misalignment down the road.",
+      question: "How does a technical workshop reduce development costs?",
+      answer: "Teams that identify architectural challenges before coding starts reduce rework costs by up to 30% and improve budget accuracy by 20%. Our workshop surfaces integration risks, scalability bottlenecks, and tooling mismatches in days — not months — so your development sprint starts with validated decisions.",
     },
     {
-      question: "Unclear on costs and resource allocation?",
-      answer:
-        "Our technical resources workshop provides precise cost and timeline estimates, helping you manage budgets effectively.",
+      question: "Who should attend the workshop from our side?",
+      answer: "Ideally your product owner, lead developer (if you have one), and a business stakeholder. The workshop is designed for mixed audiences: we translate technical trade-offs into business impact so everyone leaves aligned. Sessions run 2–3 days, and you receive the full technical roadmap document within one week.",
     },
   ];
 
@@ -286,7 +283,7 @@ const TechnicalWorkshop = () => {
             >
               <div>
                 <p className="text-xl md:text-2xl leading-relaxed text-dark-foreground">
-                  Avoid costly mistakes with our technical workshop. In just a few sessions, you'll get a clear plan, reducing rework by up to 85% and ensuring a smooth path from concept to execution.
+                  Avoid costly mistakes with Intrao Tech's technical workshop. In just a few sessions, you'll get a clear plan, reducing rework by up to 85% and ensuring a smooth path from concept to execution.
                 </p>
               </div>
             </motion.div>
@@ -555,7 +552,7 @@ const TechnicalWorkshop = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-dark-muted text-lg mb-10 max-w-2xl mx-auto"
             >
-              Let's transform your technical challenges into a clear, actionable roadmap for successful development.
+              Let Intrao Tech transform your technical challenges into a clear, actionable roadmap for successful development.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}

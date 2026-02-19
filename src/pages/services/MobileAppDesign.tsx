@@ -24,19 +24,16 @@ import { ButtonArrows } from "@/components/ui/button-arrows";
 const MobileAppDesign = () => {
   const challenges = [
     {
-      question: "Users drop off before converting?",
-      answer:
-        "A confusing design can lead to low engagement and high churn rates. We craft mobile app UI that guides users seamlessly through your app, increasing retention and conversions.",
+      question: "Why are users dropping off before completing key actions in my app?",
+      answer: "Drop-off usually points to friction in onboarding or core flows. We run a User Experience (UX) audit of your existing screens, map every tap and swipe against user intent, and redesign the journey to reduce steps. Clients typically see a 35%+ improvement in task-completion rates after our redesign.",
     },
     {
-      question: "Struggling to differentiate in a crowded market?",
-      answer:
-        "A well-designed app is your competitive edge. Our mobile app design and development services ensure your app is visually compelling and functionally superior.",
+      question: "How do you differentiate my app's design in a crowded app store?",
+      answer: "We start with a competitive audit of the top 10 apps in your category, then conduct user research interviews to uncover unmet needs. This gives us a design direction grounded in real user gaps — not trends. From there, we create a distinctive visual language in Figma that stands out on both iOS and Android.",
     },
     {
-      question: "Does your app feel outdated or clunky?",
-      answer:
-        "UI/UX trends evolve, and so do user expectations. If your app needs a modern, user-friendly redesign, we'll enhance its usability and visual appeal to match today's standards.",
+      question: "What is your mobile app design process and timeline?",
+      answer: "Our 8-step process takes 4–8 weeks depending on complexity. It covers user research, information architecture, wireframing, User Interface (UI) design, prototyping, usability testing, design-system handoff, and developer support. You receive interactive Figma prototypes with two built-in feedback rounds.",
     },
   ];
 
@@ -328,8 +325,8 @@ const MobileAppDesign = () => {
               */}
               <div>
                 <p className="text-xl md:text-2xl leading-relaxed text-dark-foreground">
-                  We help businesses create mobile apps that users love. Our
-                  mobile app design company blends strategy, UI/UX expertise,
+                  Intrao Tech helps businesses create mobile apps that users love. Our
+                  mobile app design team blends strategy, UI/UX expertise,
                   and industry best practices to deliver intuitive, scalable,
                   and visually striking products.
                 </p>
@@ -617,7 +614,7 @@ const MobileAppDesign = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-dark-muted text-lg mb-10 max-w-2xl mx-auto"
             >
-              Let's discuss how we can help you create a mobile app that keeps
+              Let's discuss how Intrao Tech can help you create a mobile app that keeps
               users engaged and drives business growth.
             </motion.p>
             <motion.div

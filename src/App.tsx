@@ -30,6 +30,7 @@ import TechnicalWorkshop from "./pages/services/TechnicalWorkshop";
 import TermsOfUse from "./pages/TermsOfUse";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import CookiesPolicy from "./pages/CookiesPolicy";
+import ArticlePage from "./pages/insights/ArticlePage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -49,6 +50,7 @@ const App = () => (
               <Route path="/cases" element={<Cases />} />
               <Route path="/about" element={<About />} />
               <Route path="/insights" element={<Insights />} />
+              <Route path="/insights/:slug" element={<ArticlePage />} />
               <Route path="/contacts" element={<Contacts />} />
               <Route path="/team" element={<Team />} />
               <Route path="/careers" element={<Careers />} />

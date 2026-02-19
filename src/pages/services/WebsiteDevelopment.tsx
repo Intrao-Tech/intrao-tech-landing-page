@@ -18,19 +18,16 @@ import {
 const WebsiteDevelopment = () => {
   const challenges = [
     {
-      question: "Struggling with online visibility?",
-      answer:
-        "Poorly designed websites hinder customer discovery. Our custom development services enhance brand visibility, making it easy for customers to find and engage with your business online.",
+      question: "Is poor online visibility costing you leads and revenue?",
+      answer: "A website that isn't optimized for search engines is invisible to potential customers. We build every site with semantic HTML, structured data, Core Web Vitals optimization, and clean URL architecture. Whether we use Webflow, WordPress, Astro, or React, SEO-readiness is built in from day one — not bolted on later.",
     },
     {
-      question: "Losing credibility with visitors?",
-      answer:
-        "75% of consumers judge a company's credibility based on its website. We create professional, trustworthy digital experiences that establish trust and convert visitors into customers.",
+      question: "Is your current website hurting your credibility with visitors?",
+      answer: "Stanford research shows that 75% of consumers judge a company's credibility based on its website design. We develop fast, visually polished websites on modern stacks — Webflow for marketing sites, React for custom applications, or headless CMS setups for content-heavy platforms — so your first impression builds trust.",
     },
     {
-      question: "Finding it hard to scale and maintain?",
-      answer:
-        "Managing and updating websites shouldn't be difficult. Our solutions keep sites secure, efficient, and easy to scale as your business grows.",
+      question: "How do you handle ongoing maintenance and scaling after launch?",
+      answer: "Every website we build is designed for easy updates: component-based architecture, documented code, and a CMS your team can manage without developer help. We offer post-launch support packages and can scale your site as traffic grows — from adding new pages to migrating to more robust infrastructure.",
     },
   ];
 
@@ -284,8 +281,8 @@ const WebsiteDevelopment = () => {
               */}
               <div>
                 <p className="text-xl md:text-2xl leading-relaxed text-dark-foreground">
-                  Get a custom website to engage your audience and boost
-                  conversions. We create professional, high-performing websites
+                  At Intrao Tech, we build custom websites to engage your audience and boost
+                  conversions. Our team creates professional, high-performing websites
                   that establish trust and drive business growth.
                 </p>
               </div>
@@ -626,7 +623,7 @@ const WebsiteDevelopment = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-dark-muted text-lg mb-10 max-w-2xl mx-auto"
             >
-              Let's create a custom website that engages your audience and
+              Let Intrao Tech create a custom website that engages your audience and
               drives conversions.
             </motion.p>
             <motion.div

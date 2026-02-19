@@ -31,6 +31,10 @@ const allRoutes = [
   "/terms-of-use",
   "/privacy-policy",
   "/cookies-policy",
+  "/insights/saas-mvp-cost-2026",
+  "/insights/react-vs-nextjs-startups-2026",
+  "/insights/saas-mvp-investors-fund",
+  "/insights/startup-technical-roadmap-2026",
 ];
 
 // https://vitejs.dev/config/
@@ -52,14 +56,12 @@ export default defineConfig(({ mode }) => ({
         routes: allRoutes,
         renderer: new JSDOMRenderer(),
         rendererOptions: {
-          renderAfterTime: 3000,
+          renderAfterTime: 5000,
         },
         postProcess(renderedRoute) {
-          renderedRoute.html = renderedRoute.html.replace(
-            /http:\/\/localhost:\d+/g,
-            "https://www.intrao.tech"
-          );
-          return renderedRoute;
+          renderedRoute.html = renderedRoute.html
+            .replace(/http:\/\/localhost:\d+/g, "https://www.intrao.tech")
+            .replace(/about:blank/g, "https://www.intrao.tech");
         },
       }),
   ].filter(Boolean),

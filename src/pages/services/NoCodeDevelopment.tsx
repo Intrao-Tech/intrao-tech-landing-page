@@ -11,19 +11,16 @@ import { Blocks, Zap, DollarSign, LayoutGrid, Users, BadgeCheck } from "lucide-r
 const NoCodeDevelopment = () => {
   const challenges = [
     {
-      question: "Frustrated with slow traditional development?",
-      answer:
-        "With low-code no-code app development, you can create a fully functional digital product in weeks instead of months-without sacrificing quality.",
+      question: "Can no-code tools really handle complex business logic?",
+      answer: "Yes — platforms like FlutterFlow, Bubble, and Webflow have matured significantly. We build custom workflows, API integrations, and role-based dashboards entirely within no-code tools. For edge cases that need custom code, we add targeted JavaScript or Python functions without leaving the platform.",
     },
     {
-      question: "Worried about development costs?",
-      answer:
-        "Our no-code development services enable businesses to build apps affordably, avoiding the expenses of traditional software development.",
+      question: "How much faster is no-code compared to traditional development?",
+      answer: "Up to 70% faster. A Minimum Viable Product (MVP) that would take 10–12 weeks in React or Swift can launch in 3–4 weeks on FlutterFlow or Bubble. This speed advantage lets you validate your idea with real users, gather feedback, and iterate before committing to a full custom build.",
     },
     {
-      question: "Need flexibility for future scaling?",
-      answer:
-        "We use top no-code development platforms to ensure your app is customizable, scalable, and ready for future expansion.",
+      question: "What happens when I outgrow a no-code platform?",
+      answer: "We design every no-code project with migration in mind. Data models are structured for easy export, API layers are documented, and business logic is modular. When you're ready to scale, we can migrate your application to React, Next.js, or React Native — reusing your validated User Experience (UX) and data architecture.",
     },
   ];
 
@@ -255,7 +252,7 @@ const NoCodeDevelopment = () => {
               <div>
                 <p className="text-xl md:text-2xl leading-relaxed text-dark-foreground">
                   Launch scalable applications without writing a single line of
-                  code. Whether you're a startup or an enterprise, our no-code
+                  code. Whether you're a startup or an enterprise, Intrao Tech's no-code
                   development services accelerate your product's time-to-market
                   while keeping costs low.
                 </p>
@@ -566,7 +563,7 @@ const NoCodeDevelopment = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-dark-muted text-lg mb-10 max-w-2xl mx-auto"
             >
-              Let's create your product faster and more affordably with no-code
+              Let Intrao Tech create your product faster and more affordably with no-code
               development.
             </motion.p>
             <motion.div

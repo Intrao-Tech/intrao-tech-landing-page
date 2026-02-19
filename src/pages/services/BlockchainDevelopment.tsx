@@ -11,19 +11,16 @@ import { Link2, Puzzle, FileText, DollarSign, Users, BadgeCheck, Globe, Coins, W
 const BlockchainDevelopment = () => {
   const challenges = [
     {
-      question: "Struggling to find a reliable blockchain development company?",
-      answer:
-        "We specialize in building decentralized applications with proven expertise. Our team delivers secure, scalable blockchain solutions tailored to your specific business needs.",
+      question: "How do you ensure smart contract security before deployment?",
+      answer: "Every smart contract we write in Solidity or Rust undergoes a multi-layer review: automated static analysis, manual code audit, and testnet deployment with adversarial testing. We follow the checks-effects-interactions pattern and use tools like Slither and Foundry to catch vulnerabilities before mainnet launch.",
     },
     {
-      question: "Concerned about blockchain scalability and security?",
-      answer:
-        "We implement battle-tested security practices and choose the right blockchain architecture to ensure your application scales efficiently while maintaining robust security.",
+      question: "Can you build on multiple blockchain protocols, or only Ethereum?",
+      answer: "We develop across Ethereum, Polygon, Solana, and Binance Smart Chain. Our team evaluates your requirements — transaction throughput, gas costs, ecosystem maturity — and recommends the protocol that fits. For cross-chain projects, we integrate bridge solutions and multi-chain wallet support.",
     },
     {
-      question: "Looking to integrate blockchain into your enterprise ecosystem?",
-      answer:
-        "Our enterprise blockchain solutions seamlessly integrate with your existing infrastructure, bringing transparency and efficiency to your business processes.",
+      question: "What does a typical blockchain project timeline look like?",
+      answer: "A standard decentralized application (dApp) takes 8–14 weeks from architecture to mainnet. Week 1 covers smart contract architecture and tokenomics review, weeks 2–6 focus on contract development and frontend integration, and weeks 7–14 handle auditing, testnet QA, and phased deployment.",
     },
   ];
 
@@ -276,7 +273,7 @@ const BlockchainDevelopment = () => {
               */}
               <div>
                 <p className="text-xl md:text-2xl leading-relaxed text-dark-foreground">
-                  Unlock the potential of blockchain for your business. We build
+                  Unlock the potential of blockchain for your business. Intrao Tech builds
                   decentralized applications, secure enterprise solutions, and
                   blockchain-based platforms with seamless execution.
                 </p>
@@ -623,7 +620,7 @@ const BlockchainDevelopment = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-dark-muted text-lg mb-10 max-w-2xl mx-auto"
             >
-              Let's unlock the potential of decentralized technology for your
+              Let Intrao Tech unlock the potential of decentralized technology for your
               business.
             </motion.p>
             <motion.div

@@ -227,7 +227,7 @@ const Services = () => {
                   transition={{ duration: 0.6, delay: 0.2 }}
                   className="text-dark-muted text-lg mb-8 max-w-xl"
                 >
-                  Full-service dev & design from one lean team. No handoffs between vendors, no bureaucracy - just a direct line to decision-makers who ship.
+                  Intrao Tech offers full-service dev & design from one lean team. No handoffs between vendors, no bureaucracy - just a direct line to decision-makers who ship.
                 </motion.p>
 
                 <motion.div
@@ -271,7 +271,7 @@ const Services = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
             >
               <p className="text-dark-muted text-sm uppercase tracking-[0.3em] mb-6">
-                Intrao in Facts and Numbers
+                Intrao Tech in Facts and Numbers
               </p>
               <div className="border-t border-dark-muted/15">
                 <div className="grid grid-cols-1 md:grid-cols-3">

@@ -11,19 +11,16 @@ import { Compass, Settings, DollarSign, FileText, Users, BadgeCheck } from "luci
 const ProductDiscovery = () => {
   const challenges = [
     {
-      question: "Do you struggle with defining essential features?",
-      answer:
-        "Skipping the discovery phase can lead to unnecessary costs and inefficiencies. We help you focus on critical features that drive real value for your users and business.",
+      question: "How do you decide which features belong in the first release?",
+      answer: "We use a prioritization framework that scores each feature against user impact, technical effort, and business value. After stakeholder interviews and competitive analysis, you receive a prioritized feature matrix and a release roadmap. This ensures your Minimum Viable Product (MVP) includes only what drives early traction.",
     },
     {
-      question: "Do you lack technical clarity for development?",
-      answer:
-        "Architectural and system specification gaps create confusion. Our discovery services ensure architectural clarity, outlining system requirements, integrations, and scalability solutions.",
+      question: "What deliverables do I get from a product discovery engagement?",
+      answer: "You receive an architecture diagram, technical specifications, a clickable Figma prototype, a prioritized feature backlog, and a cost-and-timeline breakdown — all within 2 weeks. These deliverables are designed to align your team, inform investors, and give your development partner a clear starting point.",
     },
     {
-      question: "Need an accurate cost estimation?",
-      answer:
-        "With our discovery service, you'll receive a detailed cost breakdown, enabling you to plan your budget effectively and avoid unexpected expenses.",
+      question: "Is product discovery worth it if I already have a clear idea?",
+      answer: "Even with a clear vision, discovery reduces rework by validating assumptions early. Our 6-step process — stakeholder alignment, user research, information architecture, prototyping, technical scoping, and roadmap delivery — catches blind spots that typically add 20–30% to development budgets when discovered mid-build.",
     },
   ];
 
@@ -254,7 +251,7 @@ const ProductDiscovery = () => {
               */}
               <div>
                 <p className="text-xl md:text-2xl leading-relaxed text-dark-foreground">
-                  Transform your app idea into a launch-ready roadmap. We help you
+                  Transform your app idea into a launch-ready roadmap. Intrao Tech helps you
                   define critical features to ensure your app meets market needs,
                   saving development costs by preventing wasted resources on
                   unnecessary features.
@@ -516,7 +513,7 @@ const ProductDiscovery = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-dark-muted text-lg mb-10 max-w-2xl mx-auto"
             >
-              Let's transform your vision into a clear, actionable roadmap for
+              Let Intrao Tech transform your vision into a clear, actionable roadmap for
               successful development.
             </motion.p>
             <motion.div

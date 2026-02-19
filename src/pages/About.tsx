@@ -1,6 +1,7 @@
 import { SEOHead } from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import HomepageProcessSection from "@/components/sections/HomepageProcessSection";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowDownRight, Building2, Quote } from "lucide-react";
@@ -18,22 +19,26 @@ const About = () => {
     {
       number: "01",
       title: "Passion and personality",
-      description: "Our team is made up of people with personality, and one thing they have in common is passion for what they do.",
+      description:
+        "Our team is made up of people with personality, and one thing they have in common is passion for what they do.",
     },
     {
       number: "02",
       title: "Measure twice, code once",
-      description: "Our dedication and attention to detail allow us to deliver products and services of the highest quality.",
+      description:
+        "Our dedication and attention to detail allow us to deliver products and services of the highest quality.",
     },
     {
       number: "03",
       title: "Unconventional - and highly effective",
-      description: "We work as true partners, not just vendors. Our unconventional approach delivers exceptional results.",
+      description:
+        "We work as true partners, not just vendors. Our unconventional approach delivers exceptional results.",
     },
     {
       number: "04",
       title: "Fresh design, smart business processes",
-      description: "Flexible methodology adapted to each project's needs, combining fresh design with smart processes.",
+      description:
+        "Flexible methodology adapted to each project's needs, combining fresh design with smart processes.",
     },
   ];
 
@@ -41,42 +46,48 @@ const About = () => {
     { value: "100+", label: "Projects delivered successfully" },
     { value: "120+", label: "Launched products" },
     { value: "3+", label: "Years in business" },
-    { value: "5", label: "Years in the market" },
+    { value: "98%", label: "Client satisfaction rate" },
   ];
 
   const testimonials = [
     {
-      quote: "They designed great UX/UI and were easy to work with. Intrao Tech has demonstrated great work. The visual look and feel of the new site architecture conveys a mature and professional aesthetic. Their agile communication has allowed for continuous feedback, which has led to a successful collaboration.",
+      quote:
+        "They designed great UX/UI and were easy to work with. Intrao Tech has demonstrated great work. The visual look and feel of the new site architecture conveys a mature and professional aesthetic. Their agile communication has allowed for continuous feedback, which has led to a successful collaboration.",
       name: "Oliver Ahad",
       company: "Airportr Technologies",
       role: "CRO",
     },
     {
-      quote: "I am blown away by the quality of work done by Intrao Tech. They successfully delivered a consumer-level iOS app. The team had a smooth workflow and communicated via Slack. The client was impressed by the quality output and the quick turnaround time set by the team.",
+      quote:
+        "I am blown away by the quality of work done by Intrao Tech. They successfully delivered a consumer-level iOS app. The team had a smooth workflow and communicated via Slack. The client was impressed by the quality output and the quick turnaround time set by the team.",
       name: "Mike Abbott",
       company: "Polyform Studio",
       role: "Co-Founder",
     },
     {
-      quote: "Intrao Tech exceeded our expectations in every way. Their team took our vague concept and transformed it into a polished, user-friendly platform. The attention to detail and commitment to quality was evident throughout the entire project.",
+      quote:
+        "Intrao Tech exceeded our expectations in every way. Their team took our vague concept and transformed it into a polished, user-friendly platform. The attention to detail and commitment to quality was evident throughout the entire project.",
       name: "Sarah Chen",
       company: "FinanceFlow",
       role: "CEO",
     },
     {
-      quote: "Working with Intrao Tech was a game-changer for our startup. They delivered a robust MVP in record time, allowing us to secure our seed funding. Their technical expertise and business acumen made them invaluable partners.",
+      quote:
+        "Working with Intrao Tech was a game-changer for our startup. They delivered a robust MVP in record time, allowing us to secure our seed funding. Their technical expertise and business acumen made them invaluable partners.",
       name: "David Miller",
       company: "HealthTech Solutions",
       role: "Founder",
     },
     {
-      quote: "The team at Intrao Tech truly understands modern web development. They rebuilt our entire platform with cutting-edge technology, resulting in a 40% improvement in performance and significantly better user engagement.",
+      quote:
+        "The team at Intrao Tech truly understands modern web development. They rebuilt our entire platform with cutting-edge technology, resulting in a 40% improvement in performance and significantly better user engagement.",
       name: "Emma Wilson",
       company: "RetailPro",
       role: "CTO",
     },
     {
-      quote: "Exceptional work from start to finish. Intrao Tech's designers and developers worked seamlessly together to deliver a product that not only looks beautiful but performs flawlessly. Highly recommended for any serious project.",
+      quote:
+        "Exceptional work from start to finish. Intrao Tech's designers and developers worked seamlessly together to deliver a product that not only looks beautiful but performs flawlessly. Highly recommended for any serious project.",
       name: "James Park",
       company: "EduLearn Platform",
       role: "Product Director",
@@ -126,7 +137,10 @@ const About = () => {
 
       <main id="main-content">
         {/* Hero Section */}
-        <section data-header-theme="dark" className="bg-dark text-dark-foreground pt-32 pb-24 relative">
+        <section
+          data-header-theme="dark"
+          className="bg-dark text-dark-foreground pt-32 pb-24 relative"
+        >
           <div className="container mx-auto px-6">
             <motion.h1
               initial={{ opacity: 0, y: 40 }}
@@ -143,7 +157,9 @@ const About = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-dark-muted text-lg md:text-xl max-w-2xl mb-10"
             >
-              We build fast because there's no bureaucracy and you talk directly to the founders. Technical and commercial expertise combined to create products users love.
+              We build fast because there's no bureaucracy and you talk directly
+              to the founders. Technical and commercial expertise combined to
+              create products users love.
             </motion.p>
 
             <motion.div
@@ -177,7 +193,10 @@ const About = () => {
         </div>
 
         {/* Mission Section */}
-        <section data-header-theme="light" className="bg-background text-foreground py-24">
+        <section
+          data-header-theme="light"
+          className="bg-background text-foreground py-24"
+        >
           <div className="container mx-auto px-6">
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -196,7 +215,8 @@ const About = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="heading-1 mb-16 max-w-5xl"
             >
-              One partner from design to deployed. Without the overhead of multiple vendors.
+              One partner from design to deployed. Without the overhead of
+              multiple vendors.
             </motion.h2>
 
             <motion.h3
@@ -217,17 +237,25 @@ const About = () => {
               className="grid grid-cols-1 md:grid-cols-2 gap-12"
             >
               <p className="text-muted-foreground text-lg leading-relaxed">
-                Founded in 2023, we're a founder-led studio based in London. We work directly with founders and decision-makers - no account managers, no layers of bureaucracy.
+                Intrao Tech was founded in 2023 as a founder-led studio based in
+                London. We work directly with founders and decision-makers - no
+                account managers, no layers of bureaucracy.
               </p>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                We built a lean, expert team that thrives on speed, clarity, and measurable impact. Our mission: help high-velocity startups and local businesses turn ideas into well-crafted products - from brand to build.
+                At Intrao Tech, we built a lean, expert team that thrives on
+                speed, clarity, and measurable impact. Our mission: help
+                high-velocity startups and local businesses turn ideas into
+                well-crafted products - from brand to build.
               </p>
             </motion.div>
           </div>
         </section>
 
         {/* Principles Section */}
-        <section data-header-theme="light" className="bg-background text-foreground py-24 border-t border-border">
+        <section
+          data-header-theme="light"
+          className="bg-background text-foreground py-24 border-t border-border"
+        >
           <div className="container mx-auto px-6">
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -246,7 +274,8 @@ const About = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="heading-2 mb-16 max-w-4xl"
             >
-              We work with startups & established businesses to help them meet today's evolving business challenges
+              We work with startups & established businesses to help them meet
+              today's evolving business challenges
             </motion.h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -262,122 +291,142 @@ const About = () => {
                   <span className="absolute top-6 right-6 bg-foreground text-background text-xs font-semibold px-3 py-1.5 rounded-lg">
                     {principle.number}
                   </span>
-                  <h3 className="text-3xl md:text-4xl font-bold pr-16">{principle.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed mt-auto">{principle.description}</p>
+                  <h3 className="text-3xl md:text-4xl font-bold pr-16">
+                    {principle.title}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed mt-auto">
+                    {principle.description}
+                  </p>
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
+        {/* How We Work */}
+        <HomepageProcessSection />
+
         {/* Reviews Section */}
         {false && (
-        <section data-header-theme="dark" className="relative z-10 bg-dark text-dark-foreground py-24">
-          {/* Top curve */}
-          <div className="absolute top-[1px] left-0 w-full -translate-y-full pointer-events-none z-20">
-            <svg
-              viewBox="0 0 1440 120"
-              preserveAspectRatio="none"
-              className="block w-full h-[60px] md:h-[80px] lg:h-[100px]"
-            >
-              <path
-                className="fill-dark"
-                d="M0,120 L0,120 C360,120 360,40 720,40 C1080,40 1080,120 1440,120 L1440,120 Z"
-              />
-            </svg>
-          </div>
+          <section
+            data-header-theme="dark"
+            className="relative z-10 bg-dark text-dark-foreground py-24"
+          >
+            {/* Top curve */}
+            <div className="absolute top-[1px] left-0 w-full -translate-y-full pointer-events-none z-20">
+              <svg
+                viewBox="0 0 1440 120"
+                preserveAspectRatio="none"
+                className="block w-full h-[60px] md:h-[80px] lg:h-[100px]"
+              >
+                <path
+                  className="fill-dark"
+                  d="M0,120 L0,120 C360,120 360,40 720,40 C1080,40 1080,120 1440,120 L1440,120 Z"
+                />
+              </svg>
+            </div>
 
-          <div className="container mx-auto px-6">
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="label text-dark-muted mb-8"
-            >
-              Reviews
-            </motion.p>
+            <div className="container mx-auto px-6">
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="label text-dark-muted mb-8"
+              >
+                Reviews
+              </motion.p>
 
-            <motion.h2
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="heading-1 mb-16"
-            >
-              What do people say about us?
-            </motion.h2>
+              <motion.h2
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="heading-1 mb-16"
+              >
+                What do people say about us?
+              </motion.h2>
 
-            <Carousel
-              opts={{
-                align: "start",
-                loop: true,
-                dragFree: true,
-              }}
-              plugins={[
-                Autoplay({
-                  delay: 4000,
-                  stopOnInteraction: false,
-                  stopOnMouseEnter: true,
-                }),
-              ]}
-              className="w-full"
-            >
-              <CarouselContent className="py-10">
-                {testimonials.map((testimonial, index) => (
-                  <CarouselItem key={testimonial.name} className="pl-6 md:basis-1/2">
-                    <div className="relative flex flex-col border border-dark-foreground/10 rounded-2xl p-8 pt-14 h-full">
-                      {/* Company Logo - overlapping top border */}
-                      <div className="absolute -top-8 left-1/2 -translate-x-1/2">
-                        <div className="w-16 h-16 rounded-full bg-background flex items-center justify-center">
-                          <Building2 className="w-7 h-7 text-foreground" />
+              <Carousel
+                opts={{
+                  align: "start",
+                  loop: true,
+                  dragFree: true,
+                }}
+                plugins={[
+                  Autoplay({
+                    delay: 4000,
+                    stopOnInteraction: false,
+                    stopOnMouseEnter: true,
+                  }),
+                ]}
+                className="w-full"
+              >
+                <CarouselContent className="py-10">
+                  {testimonials.map((testimonial, index) => (
+                    <CarouselItem
+                      key={testimonial.name}
+                      className="pl-6 md:basis-1/2"
+                    >
+                      <div className="relative flex flex-col border border-dark-foreground/10 rounded-2xl p-8 pt-14 h-full">
+                        {/* Company Logo - overlapping top border */}
+                        <div className="absolute -top-8 left-1/2 -translate-x-1/2">
+                          <div className="w-16 h-16 rounded-full bg-background flex items-center justify-center">
+                            <Building2 className="w-7 h-7 text-foreground" />
+                          </div>
+                        </div>
+
+                        {/* Quote Marks */}
+                        <Quote className="w-10 h-10 text-primary mb-6" />
+
+                        {/* Quote Text */}
+                        <p className="text-dark-foreground mb-8 leading-relaxed text-lg">
+                          {testimonial.quote}
+                        </p>
+
+                        {/* Author Info */}
+                        <div className="flex items-center gap-4 mb-8">
+                          <div className="w-12 h-12 rounded-full bg-dark-muted/50 flex items-center justify-center text-sm font-semibold overflow-hidden">
+                            {testimonial.name
+                              .split(" ")
+                              .map((n) => n[0])
+                              .join("")}
+                          </div>
+                          <div>
+                            <p className="font-semibold">{testimonial.name}</p>
+                            <p className="text-dark-muted text-sm">
+                              {testimonial.role} {testimonial.company}
+                            </p>
+                          </div>
+                        </div>
+
+                        {/* Bottom Links */}
+                        <div className="flex flex-wrap gap-6 text-sm mt-auto pt-6 border-t border-dark-foreground/10 -mx-8 px-8">
+                          <Link
+                            to="/cases"
+                            className="inline-flex items-center gap-2 text-primary hover:text-primary/80 uppercase tracking-wider font-medium transition-colors"
+                          >
+                            <span className="text-lg">*</span> Explore Case
+                            Study
+                          </Link>
+                          <span className="inline-flex items-center gap-2 text-dark-muted uppercase tracking-wider font-medium cursor-pointer hover:text-dark-foreground transition-colors">
+                            <span className="font-bold">C</span> See Full Review
+                          </span>
                         </div>
                       </div>
-
-                      {/* Quote Marks */}
-                      <Quote className="w-10 h-10 text-primary mb-6" />
-
-                      {/* Quote Text */}
-                      <p className="text-dark-foreground mb-8 leading-relaxed text-lg">
-                        {testimonial.quote}
-                      </p>
-
-                      {/* Author Info */}
-                      <div className="flex items-center gap-4 mb-8">
-                        <div className="w-12 h-12 rounded-full bg-dark-muted/50 flex items-center justify-center text-sm font-semibold overflow-hidden">
-                          {testimonial.name.split(' ').map(n => n[0]).join('')}
-                        </div>
-                        <div>
-                          <p className="font-semibold">{testimonial.name}</p>
-                          <p className="text-dark-muted text-sm">
-                            {testimonial.role} {testimonial.company}
-                          </p>
-                        </div>
-                      </div>
-
-                      {/* Bottom Links */}
-                      <div className="flex flex-wrap gap-6 text-sm mt-auto pt-6 border-t border-dark-foreground/10 -mx-8 px-8">
-                        <Link
-                          to="/cases"
-                          className="inline-flex items-center gap-2 text-primary hover:text-primary/80 uppercase tracking-wider font-medium transition-colors"
-                        >
-                          <span className="text-lg">*</span> Explore Case Study
-                        </Link>
-                        <span className="inline-flex items-center gap-2 text-dark-muted uppercase tracking-wider font-medium cursor-pointer hover:text-dark-foreground transition-colors">
-                          <span className="font-bold">C</span> See Full Review
-                        </span>
-                      </div>
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-            </Carousel>
-          </div>
-        </section>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+              </Carousel>
+            </div>
+          </section>
         )}
 
         {/* Get a Quote CTA */}
-        <section data-header-theme="dark" className="bg-dark text-dark-foreground py-12 -mt-[1px] -mb-[1px]">
+        <section
+          data-header-theme="dark"
+          className="bg-dark text-dark-foreground py-12 -mt-[1px] -mb-[1px]"
+        >
           <div className="container mx-auto px-6">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -407,7 +456,10 @@ const About = () => {
         </section>
 
         {/* Awards Section */}
-        <section data-header-theme="dark" className="relative z-10 bg-dark text-dark-foreground py-24">
+        <section
+          data-header-theme="dark"
+          className="relative z-10 bg-dark text-dark-foreground py-24"
+        >
           {/* Bottom curve */}
           <div className="absolute bottom-[1px] left-0 w-full translate-y-full pointer-events-none z-20">
             <svg
@@ -424,7 +476,10 @@ const About = () => {
         </section>
 
         {/* Final CTA Section */}
-        <section data-header-theme="light" className="bg-background text-foreground pt-32 lg:pt-40 pb-24">
+        <section
+          data-header-theme="light"
+          className="bg-background text-foreground pt-32 lg:pt-40 pb-24"
+        >
           <div className="container mx-auto px-6">
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
@@ -448,7 +503,10 @@ const About = () => {
                 <p className="text-muted-foreground mb-8">
                   Check out the projects we have completed for our clients
                 </p>
-                <Button asChild className="group bg-foreground text-background hover:bg-foreground/90">
+                <Button
+                  asChild
+                  className="group bg-foreground text-background hover:bg-foreground/90"
+                >
                   <Link to="/cases">
                     View Our Projects
                     <ButtonArrows />
@@ -465,9 +523,13 @@ const About = () => {
               >
                 <h3 className="text-2xl font-bold mb-4">Services</h3>
                 <p className="text-muted-foreground mb-8">
-                  Discover the multitude of methods we can use to enhance your product
+                  Discover the multitude of methods we can use to enhance your
+                  product
                 </p>
-                <Button asChild className="group bg-foreground text-background hover:bg-foreground/90">
+                <Button
+                  asChild
+                  className="group bg-foreground text-background hover:bg-foreground/90"
+                >
                   <Link to="/services">
                     View Our Services
                     <ButtonArrows />

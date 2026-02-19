@@ -11,16 +11,16 @@ import { ButtonArrows } from "@/components/ui/button-arrows";
 const MobileDevelopment = () => {
   const challenges = [
     {
-      question: "Struggling to find the best mobile app development company?",
-      answer: "Finding the right development partner is crucial for success. We combine technical expertise with industry knowledge to deliver mobile apps that exceed expectations and drive real business results.",
+      question: "Should I build native apps or use a cross-platform framework?",
+      answer: "It depends on your budget, timeline, and performance requirements. For most startups, React Native or Flutter delivers near-native performance with a single codebase — cutting development time by 30–40%. We recommend native Swift or Kotlin only when you need deep hardware access or platform-specific animations.",
     },
     {
-      question: "Uncertain about mobile app development costs?",
-      answer: "We provide transparent pricing and detailed project scopes upfront. Our agile approach allows for flexibility while keeping your budget on track throughout the development process.",
+      question: "How much does mobile app development typically cost?",
+      answer: "A Minimum Viable Product (MVP) mobile app usually runs $25K–$60K depending on feature complexity. We scope every project during a free discovery call, then deliver a fixed-price proposal within 24 hours. Our pre-built component libraries in React Native and Flutter reduce boilerplate work and keep costs predictable.",
     },
     {
-      question: "Looking for cross-platform efficiency?",
-      answer: "Why build twice when you can build once? Our cross-platform solutions deliver native-like experiences on both iOS and Android, reducing development time and costs without sacrificing quality.",
+      question: "What does the mobile development timeline look like?",
+      answer: "An MVP typically takes 6–12 weeks from kickoff to App Store submission. Weeks 1–2 cover architecture and UI design, weeks 3–8 handle core development with weekly demo builds, and weeks 9–12 focus on QA, performance optimization, and store submission. We support both iOS and Android from a single codebase.",
     },
   ];
 
@@ -238,7 +238,7 @@ const MobileDevelopment = () => {
               */}
               <div>
                 <p className="text-xl md:text-2xl leading-relaxed text-dark-foreground">
-                  Launch a high-impact mobile app with confidence. Whether you're launching a new app or improving an existing one, our mobile app development services ensure high performance, seamless user experience, and scalable solutions tailored to your needs.
+                  Launch a high-impact mobile app with confidence. Whether you're launching a new app or improving an existing one, Intrao Tech's mobile app development services ensure high performance, seamless user experience, and scalable solutions tailored to your needs.
                 </p>
               </div>
             </motion.div>
@@ -519,7 +519,7 @@ const MobileDevelopment = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-dark-muted text-lg mb-10 max-w-2xl mx-auto"
             >
-              Let's discuss how we can help you build a high-performance mobile app that engages users and drives growth.
+              Let's discuss how Intrao Tech can help you build a high-performance mobile app that engages users and drives growth.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}

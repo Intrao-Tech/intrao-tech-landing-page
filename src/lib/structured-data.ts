@@ -19,11 +19,13 @@ export function generateOrganizationSchema() {
         "@type": "Person",
         name: "Anton Muliavchyk",
         jobTitle: "Co-Founder & CEO",
+        sameAs: "https://www.linkedin.com/in/muliavchyk/",
       },
       {
         "@type": "Person",
         name: "Ihor Muliar",
         jobTitle: "Co-Founder & CPO",
+        sameAs: "https://www.linkedin.com/in/ihor-muliar/",
       },
       {
         "@type": "Person",
@@ -155,5 +157,123 @@ export function generateFAQSchema(faqs: FAQItem[]) {
         text: faq.answer,
       },
     })),
+  };
+}
+
+export function generateWebPageSchema(options: {
+  name: string;
+  description: string;
+  url: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: options.name,
+    description: options.description,
+    url: generateCanonicalUrl(options.url),
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["h1", "[data-speakable='summary']", "[data-speakable='faq']"],
+    },
+    publisher: {
+      "@type": "Organization",
+      name: SITE_CONFIG.name,
+      url: SITE_CONFIG.domain,
+    },
+  };
+}
+
+export interface HowToStep {
+  name: string;
+  text: string;
+}
+
+export function generateHowToSchema(options: {
+  name: string;
+  description: string;
+  steps: HowToStep[];
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: options.name,
+    description: options.description,
+    step: options.steps.map((step, index) => ({
+      "@type": "HowToStep",
+      position: index + 1,
+      name: step.name,
+      text: step.text,
+    })),
+  };
+}
+
+export function generatePersonSchema(options: {
+  name: string;
+  jobTitle: string;
+  sameAs?: string[];
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: options.name,
+    jobTitle: options.jobTitle,
+    worksFor: {
+      "@type": "Organization",
+      name: SITE_CONFIG.name,
+      url: SITE_CONFIG.domain,
+    },
+    ...(options.sameAs && { sameAs: options.sameAs }),
+  };
+}
+
+export function generateArticleSchema(options: {
+  headline: string;
+  description: string;
+  url: string;
+  datePublished: string;
+  dateModified?: string;
+  author: { name: string; jobTitle: string; sameAs?: string[] };
+  image?: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: options.headline,
+    description: options.description,
+    url: generateCanonicalUrl(options.url),
+    datePublished: options.datePublished,
+    dateModified: options.dateModified || options.datePublished,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": generateCanonicalUrl(options.url),
+    },
+    author: {
+      "@type": "Person",
+      name: options.author.name,
+      jobTitle: options.author.jobTitle,
+      worksFor: {
+        "@type": "Organization",
+        name: SITE_CONFIG.name,
+        url: SITE_CONFIG.domain,
+      },
+      ...(options.author.sameAs && { sameAs: options.author.sameAs }),
+    },
+    publisher: {
+      "@type": "Organization",
+      name: SITE_CONFIG.name,
+      url: SITE_CONFIG.domain,
+      logo: {
+        "@type": "ImageObject",
+        url: `${SITE_CONFIG.domain}/logo-short.jpg`,
+      },
+    },
+    ...(options.image && {
+      image: {
+        "@type": "ImageObject",
+        url: options.image.startsWith("http")
+          ? options.image
+          : `${SITE_CONFIG.domain}${options.image}`,
+      },
+    }),
   };
 }

@@ -240,7 +240,7 @@ const Cases = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto mb-12"
             >
-              We're putting the finishing touches on our portfolio.
+              Intrao Tech is putting the finishing touches on our portfolio.
               Our latest projects and success stories will be showcased here soon.
             </motion.p>
 

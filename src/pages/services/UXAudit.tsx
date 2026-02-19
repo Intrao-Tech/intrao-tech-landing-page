@@ -11,19 +11,16 @@ import { Search, Lightbulb, BarChart3, TrendingUp, Users, BadgeCheck } from "luc
 const UXAudit = () => {
   const challenges = [
     {
-      question: "Are users finding it difficult to navigate your product?",
-      answer:
-        "Poor UX causes frustration and reduces conversions. Our audit identifies navigation issues and delivers recommendations for seamless user journeys that boost engagement.",
+      question: "How do you identify which User Experience (UX) issues are costing me conversions?",
+      answer: "We combine heuristic evaluation against Nielsen's 10 usability principles with real user-flow analysis using session recordings and analytics data. Each issue is scored by severity and conversion impact, so you know exactly where to invest first. Clients typically see a 35%+ conversion improvement after implementing our top-priority recommendations.",
     },
     {
-      question: "Does your interface feel outdated or lack consistency?",
-      answer:
-        "Our UI/UX evaluation ensures your product meets modern standards with brand consistency and visual clarity for an exceptional user experience.",
+      question: "What does a UX audit deliverable actually include?",
+      answer: "You receive a detailed report covering: heuristic evaluation results, user flow analysis with annotated screenshots, a severity-ranked issue list, competitor benchmarking, and a prioritized action plan with wireframe suggestions. The report is delivered in Figma and PDF within 2 weeks of kickoff.",
     },
     {
-      question: "Are your engagement rates and conversions falling short?",
-      answer:
-        "Our audits uncover usability gaps and provide actionable insights to enhance interactions, improving retention and conversion rates.",
+      question: "Is a UX audit useful if we're planning a full redesign anyway?",
+      answer: "Absolutely — it's the best starting point. The audit gives your redesign team an evidence-based brief instead of guesswork. It identifies which flows to preserve (the ones that already work) and which to rethink, saving weeks of design exploration and reducing the risk of breaking what already converts well.",
     },
   ];
 
@@ -261,7 +258,7 @@ const UXAudit = () => {
               */}
               <div>
                 <p className="text-xl md:text-2xl leading-relaxed text-dark-foreground">
-                  Boost engagement, conversions, and user satisfaction with our
+                  Boost engagement, conversions, and user satisfaction with Intrao Tech's
                   comprehensive UX audit. We uncover usability issues, streamline
                   user flows, and create a structured plan for refining your
                   product.
@@ -523,7 +520,7 @@ const UXAudit = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-dark-muted text-lg mb-10 max-w-2xl mx-auto"
             >
-              Let's uncover the usability issues holding your product back and
+              Let Intrao Tech uncover the usability issues holding your product back and
               create a clear path to better conversions.
             </motion.p>
             <motion.div

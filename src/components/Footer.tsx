@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Linkedin, Instagram, Twitter, Facebook } from "lucide-react";
+import { Linkedin, Instagram, Twitter, Facebook, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import WorldMap from "@/components/WorldMap";
 import logoDark from "@/assets/logo-dark.svg";
@@ -80,6 +80,11 @@ const Footer = () => {
     { icon: Twitter, href: "https://x.com/Intrao_Tech", label: "X" },
   ];
 
+  const verifiedLinks = [
+    { name: "Clutch", href: "https://clutch.co/profile/intrao-tech" },
+    { name: "Upwork", href: "https://www.upwork.com/freelancers/~0115bc8039cd17852f" },
+  ];
+
   const legalLinks = [
     { name: "Terms of Use", href: "/terms-of-use" },
     { name: "Privacy Policy", href: "/privacy-policy" },
@@ -121,6 +126,27 @@ const Footer = () => {
                   </a>
                 </Button>
               ))}
+            </div>
+
+            {/* Verified On */}
+            <div className="mt-6 pt-5 border-t border-border max-w-[300px]">
+              <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-3">
+                Verified on
+              </p>
+              <div className="flex gap-4">
+                {verifiedLinks.map((link) => (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-sm font-medium text-foreground hover:text-primary transition-colors"
+                  >
+                    {link.name}
+                    <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
 

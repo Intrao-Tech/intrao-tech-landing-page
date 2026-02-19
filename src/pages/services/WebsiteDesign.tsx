@@ -11,16 +11,16 @@ import { ButtonArrows } from "@/components/ui/button-arrows";
 const WebsiteDesign = () => {
   const challenges = [
     {
-      question: "Is your website struggling with a poor user experience and high bounce rates?",
-      answer: "Our website design services focus on giving your website a makeover to boost conversions, ensuring it aligns with your business objectives and appeals to your target audience.",
+      question: "Is your website's poor User Experience (UX) driving visitors away?",
+      answer: "A confusing layout or slow load time causes visitors to leave within seconds. We design websites with clear visual hierarchy, intuitive navigation, and optimized performance — addressing the top reasons for high bounce rates. Our clients see measurable improvements in time-on-site and page-per-session metrics after launch.",
     },
     {
-      question: "Are you facing challenges with weak branding and low visitor trust?",
-      answer: "We design professional, reliable websites that seamlessly blend aesthetics and functionality to deliver an exceptional user experience. Each design is tailored to showcase your brand's unique identity, inspiring trust and confidence in your audience.",
+      question: "Does weak branding on your website undermine trust with visitors?",
+      answer: "75% of users judge a company's credibility based on website design. We align your website's visual identity — typography, color, imagery, tone — with your brand strategy so every page reinforces trust. The result is a cohesive digital presence that converts browsers into leads.",
     },
     {
-      question: "Looking to boost your conversion rates?",
-      answer: "We specialize in website optimization, crafting intuitive navigation and persuasive calls-to-action to deliver a seamless user experience that maximizes results on every device.",
+      question: "What does your website design process look like from start to finish?",
+      answer: "Our 6-step process covers discovery, information architecture, wireframing, high-fidelity User Interface (UI) design, prototyping, and developer handoff. You receive interactive Figma prototypes with two feedback rounds built in. Most projects complete within 3–5 weeks, and every deliverable is ready for your development team to implement.",
     },
   ];
 
@@ -197,7 +197,7 @@ const WebsiteDesign = () => {
               */}
               <div>
                 <p className="text-xl md:text-2xl leading-relaxed text-dark-foreground">
-                  We specialize in crafting websites that balance business needs with creativity, ensuring your online presence not only looks impressive but also drives conversions and growth.
+                  At Intrao Tech, we specialize in crafting websites that balance business needs with creativity, ensuring your online presence not only looks impressive but also drives conversions and growth.
                 </p>
               </div>
             </motion.div>
@@ -394,7 +394,7 @@ const WebsiteDesign = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-dark-muted text-lg mb-10 max-w-2xl mx-auto"
             >
-              Let's discuss how we can help you create a website that drives conversions and grows your business.
+              Let's discuss how Intrao Tech can help you create a website that drives conversions and grows your business.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}

@@ -18,21 +18,16 @@ import { ButtonArrows } from "@/components/ui/button-arrows";
 const WebAppDesign = () => {
   const challenges = [
     {
-      question:
-        "Is your web app frustrating users with poor navigation and low engagement?",
-      answer:
-        "A confusing interface, slow load times, and lack of intuitive design can drive users away. We create seamless, user-friendly experiences with clear navigation, smart UI patterns, and accessibility best practices to keep users engaged and encourage retention.",
+      question: "Is poor navigation causing users to abandon your web application?",
+      answer: "Complex web apps often suffer from information overload. We restructure your information architecture and navigation patterns using card sorting and tree testing, then validate with real users. Our redesigns in Figma deliver intuitive dashboards and workflows that reduce user onboarding time by up to 40%.",
     },
     {
-      question:
-        "Are inefficient workflows slowing down productivity and frustrating your team?",
-      answer:
-        "Poorly structured apps lead to wasted time and errors. We design streamlined workflows that minimize friction, automate repetitive tasks, and create intuitive user journeys that boost team productivity.",
+      question: "Are inefficient workflows costing your team productivity?",
+      answer: "We audit your application's core workflows step by step, identify redundant clicks and data-entry friction, and redesign flows to minimize cognitive load. For SaaS and enterprise tools, this typically means fewer screens per task, smarter defaults, and inline validation — resulting in measurable productivity gains.",
     },
     {
-      question: "Struggling with low conversions and high drop-off rates?",
-      answer:
-        "Users abandoning your app before completing key actions results in lost revenue. We optimize conversion funnels, simplify user journeys, and implement data-driven design decisions to maximize engagement and conversions.",
+      question: "How do you design for both conversion and long-term retention?",
+      answer: "We balance first-use conversion (onboarding, activation) with long-term engagement (habit loops, progressive disclosure). Our 8-step User Interface (UI) design process covers both — from initial user research through to design-system handoff — so your web app converts new signups and keeps them coming back.",
     },
   ];
 
@@ -310,7 +305,7 @@ const WebAppDesign = () => {
               */}
               <div>
                 <p className="text-xl md:text-2xl leading-relaxed text-dark-foreground">
-                  We create intuitive, user-friendly designs that simplify
+                  At Intrao Tech, we create intuitive, user-friendly designs that simplify
                   workflows, enhance usability, and boost conversions - ensuring
                   your web app is both functional and future-proof.
                 </p>
@@ -618,7 +613,7 @@ const WebAppDesign = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-dark-muted text-lg mb-10 max-w-2xl mx-auto"
             >
-              Let's discuss how we can help you create a web app that drives
+              Let's discuss how Intrao Tech can help you create a web app that drives
               growth and engages users.
             </motion.p>
             <motion.div

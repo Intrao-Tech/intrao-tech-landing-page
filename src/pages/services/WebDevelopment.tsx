@@ -11,16 +11,16 @@ import { ButtonArrows } from "@/components/ui/button-arrows";
 const WebDevelopment = () => {
   const challenges = [
     {
-      question: "Struggling with outdated or underperforming websites?",
-      answer: "Legacy systems and outdated code can hold your business back. We modernize your web presence with cutting-edge technologies that improve performance, security, and user experience.",
+      question: "Is your current web application slow, unreliable, or difficult to maintain?",
+      answer: "Legacy codebases accumulate technical debt that slows features and frustrates users. We rebuild or refactor using React, Next.js, and TypeScript — with Tailwind CSS for styling and PostgreSQL or MongoDB for data. The result is a modern, maintainable stack that your team can extend confidently.",
     },
     {
-      question: "Looking for a development partner who understands your needs?",
-      answer: "Finding the right development team is crucial. We take time to understand your business goals, technical requirements, and user needs to deliver solutions that truly fit.",
+      question: "How do you ensure the development process stays on track and on budget?",
+      answer: "Every project starts with a scoped proposal and fixed-price estimate delivered within 24 hours of our discovery call. During development, we run weekly demos so you see working code — not just status reports. Our 98% client satisfaction rate comes from this transparency and predictability.",
     },
     {
-      question: "Having trouble with your web app's performance?",
-      answer: "Slow load times and poor performance hurt conversions. We optimize every aspect of your web application for speed, scalability, and reliability.",
+      question: "Can you work with our existing codebase and team?",
+      answer: "Yes — we frequently embed within client teams. We follow your Git workflow, join your Slack or Teams channels, and align with your CI/CD pipeline. Whether you need a full build from scratch or incremental feature development on an existing React or Node.js project, we integrate without disruption.",
     },
   ];
 
@@ -257,7 +257,7 @@ const WebDevelopment = () => {
               */}
               <div>
                 <p className="text-xl md:text-2xl leading-relaxed text-dark-foreground">
-                  From sleek marketing websites to powerful custom applications, our web development services ensure your business stands out. We create responsive, scalable, and high-performing web solutions tailored to your needs.
+                  At Intrao Tech, we build everything from sleek marketing websites to powerful custom applications. Our web development services ensure your business stands out with responsive, scalable, and high-performing web solutions tailored to your needs.
                 </p>
               </div>
             </motion.div>
@@ -550,7 +550,7 @@ const WebDevelopment = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-dark-muted text-lg mb-10 max-w-2xl mx-auto"
             >
-              Let's discuss how we can help you build a high-performance web solution that drives results.
+              Let's discuss how Intrao Tech can help you build a high-performance web solution that drives results.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
